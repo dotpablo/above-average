@@ -21,9 +21,9 @@ export default function BlogPage() {
       {currentPosts.length === 0 ? (
         <p className="text-neutral-500">Proximamente...</p>
       ) : (
-        <div className="divide-y divide-neutral-800/50">
+        <div className="flex flex-col gap-12">
           {currentPosts.map((post) => (
-            <div key={post.slug} className="py-4 first:pt-0 last:pb-0">
+            <div key={post.slug} className="border-b border-neutral-800/50 pb-12 last:border-0 last:pb-0">
               <PostCard post={post} />
             </div>
           ))}

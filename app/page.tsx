@@ -11,19 +11,21 @@ export default function Home() {
     <div className="space-y-20">
       {/* Hero */}
       <section className="flex flex-col-reverse items-center gap-10 sm:flex-row sm:items-start sm:gap-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-        <div className="flex-1 space-y-5">
-          <h1 className="font-serif text-4xl text-white sm:text-5xl tracking-tight leading-tight">
+        <div className="flex-1 space-y-6">
+          <h1 className="font-serif text-5xl text-white sm:text-6xl md:text-7xl tracking-tighter leading-[1.1]">
             Code is cheap<br />in the AI era.<br />
             <span className="text-neutral-500">Context is not.</span>
           </h1>
-          <p className="text-lg leading-relaxed text-neutral-400">
+          <p className="text-lg leading-relaxed text-neutral-400 max-w-xl">
             Soy Pablo Marichal: Senior SAP Tech Lead, AI Champion y 19x Marathoner.
-            Escribo sobre la intersección entre la robustez corporativa, la agilidad de la Inteligencia Artificial y los sistemas biológicos de alto rendimiento.
+            <br /><br />
+            Opero en la intersección exacta entre la robustez corporativa, la agilidad de la Inteligencia Artificial y la resistencia biológica.
+            <br /><br />
             Hablo fluido en <i>Legacy</i> y fluido en <i>Futuro</i>.
           </p>
           <div className="pt-2">
             <p className="mb-2.5 text-sm font-medium text-neutral-400">
-              Unete a +100 profesionales construyendo sistemas a prueba de IA. <br />
+              Únete a los profesionales que están construyendo sistemas (y carreras) a prueba de IA. <br />
               <span className="text-neutral-500 text-xs">Un newsletter técnico, directo y sin humo.</span>
             </p>
             <NewsletterForm />
@@ -85,9 +87,9 @@ export default function Home() {
               Ver todos &rarr;
             </Link>
           </div>
-          <div className="divide-y divide-neutral-800/50">
+          <div className="flex flex-col gap-8">
             {recentPosts.map((post) => (
-              <div key={post.slug} className="py-4 first:pt-0 last:pb-0">
+              <div key={post.slug} className="border-b border-neutral-800/50 pb-8 last:border-0 last:pb-0">
                 <PostCard post={post} />
               </div>
             ))}

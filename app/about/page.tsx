@@ -25,10 +25,10 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h1 className="font-serif text-3xl text-white">Pablo Marichal</h1>
           <p className="text-base leading-relaxed text-neutral-400">
-            Nací en Uruguay y viví muchos años en Venezuela. Soy <strong>Senior SAP Tech Lead</strong>, 19x Marathoner, y padre de Max y Mía.
+            Nací en Uruguay, me forjé en Venezuela y hoy construyo desde la nube. Soy <strong>Senior SAP Tech Lead</strong>, 19x Marathoner, y por encima de todo, padre de Max y Mía.
           </p>
           <p className="text-base leading-relaxed text-neutral-400">
-            Opero en la intersección entre la robustez corporativa y la velocidad de la IA. Por más de una década, me he dedicado a liderar migraciones cloud y asegurar que los "ERP Zombies" no hagan colapsar operaciones globales. Mi valor es simple: uso IA de frontera para acelerar, pero aplico años de cicatrices en ingeniería para garantizar seguridad.
+            Opero en la línea de fuego entre la pesada infraestructura corporativa y la velocidad esquizofrénica de la Inteligencia Artificial. Por más de una década, me he dedicado a liderar migraciones complejas y asegurar que los "ERP Zombies" no hagan colapsar operaciones globales. Mi propuesta de valor es simple: uso IA de frontera para acelerar, pero aplico años de cicatrices en producción para garantizar que el sistema no explote.
           </p>
         </div>
       </section>
@@ -46,10 +46,10 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h2 className="font-serif text-2xl text-white">Biological Clean Core</h2>
           <p className="text-base leading-relaxed text-neutral-400">
-            He cruzado la meta de 19 maratones alrededor del mundo (incluyendo Berlín, Chicago y Nueva York). Para mí, el running no es un pasatiempo; es la aplicación estricta del concepto <strong>Clean Core</strong> a mi propio sistema biológico.
+            He cruzado la meta de 19 maratones alrededor del mundo (incluyendo Berlín, Chicago y Nueva York, en camino a las 6 Majors). Para mí, el asfalto no es un pasatiempo; es la aplicación estricta del concepto <strong>Clean Core (Núcleo Limpio)</strong> de SAP a mi propio sistema biológico.
           </p>
           <p className="text-base leading-relaxed text-neutral-400">
-            Para liderar equipos de alto rendimiento en situaciones críticas, necesitas una fisiología que soporte la presión. Entender los límites de la máquina humana es el primer paso para construir software resiliente.
+            Para liderar equipos en situaciones críticas, necesitás una fisiología que soporte la presión. Entender los límites de la máquina humana a través del dolor infalsificable es el primer paso para construir software resiliente.
           </p>
         </div>
       </section>
@@ -60,17 +60,17 @@ export default function AboutPage() {
           El "Full Stack Human"
         </h2>
         <p className="text-base leading-relaxed text-neutral-400">
-          En la era de la IA, el código es barato. La sintaxis es gratis. Lo que no es barato es el <strong>Contexto, la Arquitectura y el Juicio Clínico</strong> para saber qué líneas de código destruirán un negocio en seis meses.
+          En la era de la IA, el código es un commodity. La sintaxis es gratis. Lo que vale oro es el <strong>Criterio, la Arquitectura y el Juicio Clínico</strong> para saber qué líneas de código te van a destruir el negocio en seis meses.
         </p>
         <p className="text-base leading-relaxed text-neutral-400">
-          Inicié <strong>Above Average</strong> como una respuesta contra la mediocridad automatizada y la "vegetalización" de la fuerza laboral. Este es mi laboratorio para explorar agentes de IA y, sobre todo, es un diario y legado digital escrito para mis hijos.
+          Inicié <strong>Above Average</strong> como un acto de rebelión contra la mediocridad automatizada y la "vegetalización" de la fuerza laboral. Este espacio es mi laboratorio para auditar agentes de IA en el mundo real y, sobre todo, es un manual de vida digital escrito para que el día de mañana, mis hijos sepan cómo se ve la disciplina.
         </p>
       </section>
 
       {/* Newsletter CTA */}
       <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
         <p className="mb-4 text-sm font-medium text-neutral-300">
-          Si esto resuena, suscribite al newsletter:
+          Si esta filosofía te resuena, sumate a la trinchera:
         </p>
         <div className="max-w-md">
           <NewsletterForm />
