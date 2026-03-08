@@ -1,0 +1,235 @@
+---
+title: "Serie scrum apuntes para entender esta metodologia agil 1"
+date: "2016-08-03"
+description: "Para saber en donde estamos aterrizando cuando hablamos de “Scrum” es bueno conocer su [definición](http://metodologiascrum.readthedocs.io/en/latest/Scrum.html#que-es-scrum):"
+source: "substack"
+---
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/b2afa03d-db5a-4720-a38f-0d79f5d649b2_744x624.jpeg)
+
+
+Para saber en donde estamos aterrizando cuando hablamos de “Scrum” es bueno conocer su [definición](http://metodologiascrum.readthedocs.io/en/latest/Scrum.html#que-es-scrum):
+
+> ***Scrum es un proceso en el que se aplican de manera regular un conjunto de procesos para trabajar en equipo, y obtener el mejor resultado posible de un proyecto, de una forma ágil.***
+
+Las metodologías ágiles en el desarrollo de software no es algo recién salido de la caja, pero desde hace un tiempo se viene escuchando un poco mas del tema en el mundo IT, específicamente en el área de software. Scrum es solo una de varias metodologías ágiles que existen.
+
+Esta serie esta basada en un documento que elabore hace un tiempo atrás construido sobre recopilaciones que hice sobre diferentes autores (y mis experiencias con la metodología) que hablan del tema y sus distintas experiencias en la aplicación de Scrum en muchos proyectos de software.
+
+La idea de esta serie de posts es entender los conceptos básicos que encierra Scrum y contar con los conocimientos necesarios para implementar la metodología y no morir en el intento.
+
+**Scrum** no es una metodología rígida y no solo se aplica para proyectos de desarrollo de software, ya que puede servir para cualquier proyecto.
+
+**No es necesario ser un [Scrum Master](https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm) certificado para implementarlo**, pero es prudente seguir los pasos y los preceptos fundamentales que Scrum contempla, para que poco a poco podamos ir adaptándola a nuestro equipo de trabajo y empezar a ver resultados positivos.
+
+Es importante que todos los participantes del proyecto (*gerente de proyecto, equipo de desarrollo, clientes, etc)* sepan y logren entender que al empezar a usar Scrum implica un cambio de paradigma en la manera en como se vienen haciendo las cosas. Y esto afecta fuertemente si venimos acostumbrados a trabajar bajo un modelo [Cascada (Waterfall)](https://es.wikipedia.org/wiki/Desarrollo_en_cascada) para el desarrollo de software a lo vieja escuela desde los ’70.
+
+Hay que acotar que sino hay una predisposición positiva del equipo de trabajo (estamos fritos) lamentablemente el* Scrum Maste*r no va a poder hacer magia para implementar la metodología y llevar a feliz termino el proyecto. Pasa muchas veces.
+
+Tanto el equipo como los demás involucrados del proyecto deben estar prestos a asumir su rol y participar activamente en ella.
+
+> ***Scrum es un compromiso de todos de forma definitiva hasta culminar el proyecto.***
+
+Todos estamos claros que desarrollar software esta plagado de contratiempos y variables negativas que inducen a desviar el proyecto en términos de tiempos y costos estimados, por lo que contar con nuevas formas probadas que ayuden a hacer las cosas mejor siempre son bienvenidas.
+
+> ***La interdependencia del costo, la calidad, el tiempo y los riesgos es algo vital a ser considerado al momento de emprender un proyecto de software. Una metodología nos ayuda y beneficia proporcionándonos un modelo de acción que nos permita controlar estas variables en la medida de nuestras habilidades.***
+
+La lista de riesgos puede convertirse en multi-factorial en caso de no contemplarse correctamente a la hora de planificar y no trabajar de una forma ordenada siguiendo una metodología especifica. Es algo que debe manejarse siempre con cautela.
+
+Antes de ver lo que es Scrum es adecuado integrar lo que es esta metodología con *la Gerencia de Proyectos formal*, a fin de que como gerentes de proyectos logremos consolidar los objetivos que nos planificamos.
+
+### La gerencia de proyectos y Scrum
+
+Para consolidar una gerencia de proyectos exitosa es necesario contar con un marco metodológico que permita documentar la realización del proyecto en todos y cada uno de sus procesos.
+
+**Scrum no hace uso de formalismos de las distintas áreas de conocimiento que plantea la Gerencia de Proyectos,** pero es conveniente contar con entregables claros que nos permitan gerenciar de forma ágil sin perder lo que anhelamos: *gerenciar eficazmente el proyecto*.
+
+Es necesario destacar que las metodologías y el conocimiento de la gerencia de proyectos aplicados al desarrollo de software permiten muchos beneficios tales como:
+
+- Que los directivos establezcan patrones de medición de logro sobre los hitos establecidos en la línea temporal del proyecto.
+- Que se enfoquen las actividades hacia los clientes y usuarios finales del producto.
+- Que se cuantifique el valor de la organización y su grado de madurez en la realización de proyectos a través de los resultados obtenidos en el tiempo.
+- Que se optimicen el uso de los recursos disponibles.
+- La incorporación de los principios de calidad y estándares de aceptación de los productos desarrollados.
+- La implementación de nuevos planes estratégicos enfocados a mejorar el desempeño en atención a la respuesta al mercado y/o cliente(s).
+- Que se innove en la construcción de nuevos productos y se generen nuevas formas de productivas de desarrollo de software.
+- Un mejoramiento a nivel de conocimientos sobre cómo desarrollar proyectos por parte de equipos multidisciplinarios y la aplicación de gerencia de conocimiento para proyectos a futuro.
+- Mejoramiento de los distintos niveles administrativos de la organización.
+
+Entre los mencionados existen muchos mas, solo es cuestión de óptica y de como se quieran hacer las cosas dentro de un marco coherente a nivel de proyectos.
+
+La necesidad de implementar un marco de desarrollo que permita desarrollar soluciones de software efectivas es algo fundamental y necesario para cualquier organización o empresa que se dedique a esta tarea.
+
+Los supuestos ágiles, hacen énfasis en poca o nula documentación, ***pero la gerencia de conocimientos no se alimenta de cuentos, anécdotas o leyendo entre líneas un código fuente***, por lo que contar con entregables (no muy tediosos) permitirán asegurar un gran entendimiento del proyecto que servirá de insumo para el futuro.
+
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/892dc235-6e91-47d3-9088-2498abcee818_744x391.jpeg)
+
+
+***Scrum es bastante light con el tema de la documentación,*** pienso que todo proyecto debe ser enfocado siguiendo los estándares del [PMI](http://www.pmi.org/) (sin saturar a los desarrolladores en la documentación) y al menos tener un documento de constitución del proyecto (Project Charter). Por lo que un “plus” para Scrum es contar paralelamente con documentos que permitan gerenciar el proyecto correctamente.
+
+Uno de estos documentos claves es*** el Project Charter,*** el cual permite darle un inicio coherente al proyecto y por defecto sentar las bases para utilizar la metodología de una vez.
+
+### El Project Charter adaptado a Scrum debería contar con lo siguiente:
+
+- Propósito del proyecto.
+- Misión
+- Visión
+- Contexto y Directivas de Negocio del proyecto.
+- Titulo de trabajo para el Proyecto.
+- Objetivo(s) del proyecto.
+- Criterios de Éxito del proyecto.
+- Complejidad del Proyecto.
+- Equipo del proyecto
+- Product Owner (*)
+- Scrum Master (*)
+- Team de Programadores (*)
+- Beneficios Potenciales del proyecto.
+- Declaración de Viabilidad del proyecto.
+- Recomendaciones del proyecto.
+- Situación de Evaluación y Planteamiento del Problema.
+- Opciones Consideradas del proyecto.
+- Reglas de Comunicación de Scrum. (*)
+- Reglas de Comportamiento del Equipo.
+- Alcance Propuesto del proyecto.
+- Supuestos del proyecto.
+- Restricciones del proyecto.
+- Estrategia de Implementaciones.
+- Esquema de Gestión del Proyecto — Estructura Organizacional.
+- Riesgos Claves y Problemas comunes del proyecto.
+
+*(*) Sera definido mas adelante cuando se explique la metodología.*
+
+La practica ha demostrado que hay que tener claro a que uno se enfrenta a la hora de realizar un proyecto, sino la ignorancia sale cara durante la ejecución y mas cara en el cierre del proyecto.
+
+**El Project Charter como herramienta en la gerencia de proyectos es algo vital y de uso casi obligatorio, **(aunque pocas veces se vea hecho en los proyectos) por eso es bueno siempre desarrollarlo en nuestros proyectos y es prudente nombrarla antes de empezar a conocer lo que es Scrum mas a fondo, ya que nos puede servir de gran utilidad en el próximo proyecto.
+
+Si definimos cada uno de los puntos anteriores del Project Charter antes de enfrentarnos al proyecto, podemos estar seguros que gran parte de lo que se nos presente en el desarrollo del proyecto lo podremos canalizar y desarrollar sin tantos contratiempos que no habiendo realizado este documento.
+
+El Project Charter no es la receta del éxito pero nos ayudara bastante a tener bastante claro el panorama en donde estamos aterrizando a la hora de emprender el proyecto.
+
+> ***El camino feliz es casi imposible de conseguirlo al desarrollar un proyecto de software, pero Scrum ayuda a no desviarse tanto del objetivo final y evitar las desviaciones típicas.***
+
+Los Project Charters se caracterizan por no ser muy extensos pero si valiosos en información. La calidad de esta dependerá de nosotros mismos.
+
+> ***Una buena planificación ahorrara mucho mas que aspirinas para futuros dolores de cabeza que se pudieran presentar en un proyecto.***
+
+### Los principios Ágiles y Scrum
+
+Basándonos en los preceptos del manifiesto ágil y su utilidad en el mundo de los proyectos es importante citarlos para conocerlos y entender por que es necesario este enfoque:
+
+- Individuos y sus relaciones sobre los procesos y herramientas.
+- Software funcional sobre una documentación exhaustiva.
+- Colaboración de los clientes sobre manejo de negociaciones.
+- Saber responder al plan en vez de seguir un plan detallado.
+
+### Por que utilizar Scrum
+
+- Para evitar los tortuosos y burocráticos caminos de las metodologías tradicionales (Waterfall)
+- Buscar realizar el trabajo a través de iteraciones de tiempo “cortas”.
+- Permitirnos evitar desviaciones no controlables en el tiempo.
+- Que cada iteración del ciclo de vida deba tener: planificación, análisis de requerimientos, diseño, codificación, revisión y documentación, con el fin de entregar un “producto utilizable” al cliente.
+- Definición clara de roles de trabajo entre los involucrados del proyecto.
+- Comunicación cara a cara en vez de tanta documentación.
+
+### Los valores de Scrum como metodología
+
+- **Compromiso**: Scrum provee a las personas toda la autoridad que necesitan para cumplir con los compromisos adquiridos.
+- **Enfoque**: Todos los esfuerzos y habilidades en hacer el trabajo al que se comprometió.
+- **Apertura**: Scrum mantiene todo lo relacionado con un proyecto visible para todos.
+- **Respeto**: Los individuos están moldeados por sus trasfondos y experiencias.
+- **Valentía**: Tener la valentía para comprometerse, para actuar, para ser abierto y para esperar respeto.
+
+### Por que Scrum es de utilidad para los desarrolladores de software
+
+- Es simple.
+- Hace hincapié en la visibilidad y en el ROI (Retorno de Inversión).
+- Tiene roles y normas claras.
+- Protege al equipo de desarrollo.
+- Se basa en el compromiso personal.
+- Soluciona los problemas día a día.
+
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/5239c15e-6643-44e7-ae16-00b7cd6eea77_744x386.jpeg)
+
+
+### Entender lo que es Scrum
+
+Para visualizar el contexto de acción de lo que implica la utilización de esta metodología en las tareas de creación de software, es necesario visualizar como lo interpretan los usuarios y como lo vemos también los desarrolladores del producto.
+
+De esta manera a continuación se visualizan ambas perspectivas:
+
+- **Scrum desde el punto de vista del usuario:**
+- Scrum es un proceso ágil que permite focalizar en la entrega del mayor valor de negocio en el menor plazo.
+- El negocio fija las prioridades. Los equipos se auto-gestionan para determinar la mejor manera de entregar las funcionalidades de mayor prioridad.
+- Permite inspeccionar software listo para ser liberado en forma rápida y continua.
+- Al final de cada iteración se puede ver el software funcionando.
+- Se decide liberarlo como está o continuar mejorándolo durante otra iteración.
+- **Scrum desde el punto del equipo de trabajo:**
+- Equipos auto-organizados.
+- Usa reglas generativas para crear un entorno ágil para la ejecución de proyectos.
+- No se prescriben prácticas de ingeniería.
+- El producto avanza en una serie de iteraciones (“sprints”) de 1 a 4 semanas.
+- Los requerimientos son capturados como ítems en la lista “Product backlog”.
+- Es uno de los “procesos ágiles”.
+
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/a2cca869-fc02-4370-8c3f-773d516590c1_744x419.jpeg)
+
+
+Lo primero que debemos conocer para manejar la terminología y como funciona Scrum, esta referido a ver quienes son los distintos actores que participan en ella, desde el punto de vista de funcionamiento y cuales son las tareas o modo de actuar en este proceso simbiótico, en el cual el sentido de pertenencia debe ser alto y explicito para todos los involucrados por igual.
+
+### Product Owner
+
+Es el dueño del producto como su misma traducción lo dice y esta encargado de las siguientes tareas dentro del proyecto.
+
+- Definir la funcionalidad del producto.
+- Decidir las fechas de liberación (release) y el contenido (priorización).
+- Aceptar o rechazar el producto.
+- Responsable del ROI.
+
+### El equipo
+
+Todas aquellas personas que conforman el grupo de trabajo que llevara adelante la realización del proyecto.
+
+- Normalmente entre 5–10 personas.
+- Multidisciplinario.
+- Programadores, testers, diseñadores gráficos …
+- Los miembros deberían ser full-time.
+- Algunas excepciones comunes: DBAs, Admistradores.
+- Los equipos se auto-organizan.
+- Idealmente sin títulos.
+- Es posible que los miembros cambien de equipo al finalizar los sprints.
+
+### Scrum Master
+
+- Responsable del cumplimiento de las prácticas y valores de Scrum.
+- Se encarga que el equipo funcione completamente y sea productivo.
+- Facilita cooperación entre todos los roles.
+- Remueve impedimentos.
+- Sirve de interfase desde y hacia el equipo.
+- Protege al equipo de interferencias externas.
+- Se recomienda que no sea desarrollador en el caso de que este llevando más de 3 o 4 proyectos de forma simultánea.
+
+Para ampliar esta visión a continuación se presenta un gráfico bastante “explicativo” que centra en gran parte todo el concepto que engloba Scrum como metodología:
+
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/0f37ebd9-2ec6-48f5-856c-dde54e1f87be_800x449.jpeg)
+
+
+Como se puede ver la metodología no es complicada, un solo cuadro muestra a grandes rasgos su funcionamiento, solo basta estar claro en como interoperan cada uno de sus componentes y en cumplir sus buenas practicas para sacarle el mayor provecho posible.
+
+Esto lo explicare en el 2do post de esta saga (…) conjuntamente con los siguientes tópicos:
+
+- La dinámica de funcionamiento de Scrum a bajo nivel para entenderla al 100%.
+- Los artefactos que se utilizan en Scrum explicando a detalle cada uno de ellos.
+- Una excelente metodología para crear las historias de usuario.
+- El ciclo de vida de desarrollo de acuerdo a una metodología ágil en sus distintas fases y los entregables que salen de cada una de ellas.
+- Como trabajar eficientemente con los Sprints.
+- Y algo mas por ahí…
+
+Nos leemos en la próxima!
+
+### Interesante?
+
+***Golpea ese 💚 para que otros lo lean!***

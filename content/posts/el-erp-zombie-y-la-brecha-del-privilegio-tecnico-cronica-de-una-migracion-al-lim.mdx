@@ -1,0 +1,113 @@
+---
+title: "El ERP zombie y la brecha del privilegio técnico: crónica de una migración al límite"
+date: "2026-02-03"
+description: "Como maratonista, te digo: el muro de los 30 kilómetros no se negocia, se entrena. El muro es ese momento exacto donde las reservas de glucógeno desaparecen, el cerebro te grita que pares y solo queda"
+source: "linkedin"
+---
+
+***TLDR:***
+- ***El Muro:**** 31 de diciembre de 2027 es el fin de la vida útil de SAP ECC. Si no empezaste hoy, llegás con el oxígeno justo.*
+- ***Falsos Profetas:**** Oracle y Rimini Street ofrecen "alivio" a corto plazo a cambio de tu soberanía técnica a largo plazo.*
+- ***La Trampa:**** Quedarse en ECC implica "autoparchear" el sistema ante cambios legales y quedar expuesto a ciberataques de IA agéntica.*
+- ***El Kit de Guerra:**** SAP Readiness Check, ABAP Cloud y Model Context Protocol (MCP) para conectar IA sin regalar tus datos.*
+- ***El Veredicto:**** Migrar no es una opción de IT; es una estrategia de supervivencia corporativa.*
+
+> Disclaimer: El Newsletter es. largo y netamente técnico orientado a SAP
+
+---
+
+**Hoy es 3 de febrero de 2026.** Si sos de los que todavía está evaluando en un Excel si "conviene" o no estirar la arruga del SAP ECC, lamento decirte que ya no estás haciendo gestión de activos; estás haciendo **cuidados paliativos** sobre un sistema que ya huele a zombie.
+
+Como maratonista, te digo: el muro de los 30 kilómetros no se negocia, se entrena. El muro es ese momento exacto donde las reservas de glucógeno desaparecen, el cerebro te grita que pares y solo queda la arquitectura de tu preparación. 
+
+En el mundo SAP, el muro tiene una fecha de impacto inamovible: **31 de diciembre de 2027.** A partir de ahí, el oxígeno se termina y el ácido láctico de la deuda técnica te va a paralizar las piernas (el negocio).
+
+Acá tenés la radiografía sin anestesia, para que entiendas dónde estás parado y por qué tu "estrategia de prudencia" es, en realidad, una parálisis que te va a salir carísima si, como cliente SAP, no empezaste ya a migrar tu core.
+
+### 1. El Juicio del Experto: ¿Estirar la arruga o saltar al vacío?
+
+Si yo fuera tu socio operativo y me preguntás si patear la pelota un año más es una movida astuta, mi respuesta técnica es: **depende de cuánto estés dispuesto a pagar por tu propia irrelevancia.** Mantener un sistema SAP ECC en 2026 no es un ahorro, es una apuesta suicida en un casino donde la casa (SAP) ya decidió que vas a perder.
+
+**SAP no es tonto:** diseñó el ecosistema para que quedarse sea físicamente doloroso. El mantenimiento extendido te va a costar un **2% extra** sobre tu base actual (un "impuesto al miedo" que sube directo al costo operativo), pero ese es apenas el inicio de la gangrena. 
+
+El verdadero costo es la **entropía sistémica**. Cada día que pasás en un sistema viejo, la brecha de talento y tecnología con tu competencia se vuelve un abismo. Mientras vos luchás por mantener una interfaz de los años 90 con parches de código ABAP de la era pre-internet, tu competencia está automatizando el 80% de sus asientos contables con agentes autónomos que no necesitan vacaciones ni cometen errores de carga.
+
+Un cliente en ECC hoy es un maratonista con botas de lluvia y una mochila de 20 kilos: puede que termine la carrera, pero le va a costar el triple de energía, llegará último y con una probabilidad del 90% de sufrir lesiones estructurales (léase: brechas de seguridad masivas y pérdida total de competitividad) que lo sacarán del circuito profesional por la puerta de atrás.
+
+---
+
+### 2. El "Abrazo del Oso" de la Competencia (Oracle y Rimini Street)
+
+En este sprint final de 22 meses, el mercado se llena de opciones que te prometen "mantener las luces encendidas". Algunas pueden servir otras no tanto. Miremos qué hay realmente detrás de la cortina de estas "soluciones mágicas":
+- **La "Anestesia" de Oracle (OCI):** El archirrival ha olido sangre desde el lanzamiento de SAP HANA. Te dicen: *"Ey, no te vayas a HANA, quedate en ECC sobre mi base de datos, yo la llevo a mi nube (OCI) y te la cuido"*. Te ofrecen analgésicos para que no sientas el dolor del proyecto hoy, pero en 2028 vas a estar atrapado en su infraestructura sin una salida técnica viable. Una vez que tienen tus 50TB de datos de SAP en sus servidores, ya no sos de SAP, sos rehén de Oracle. Cuando SAP finalmente apague la luz, Oracle te dirá: *"Hola, los datos ya los tengo yo. Pasarte a S/4HANA ahora te va a costar una fortuna en costos de salida de datos (egress fees), mejor quedate acá, apretá este botón, pasate a NetSuite y acá tenés tu nueva factura perpetua"*. Es el fin de tu soberanía técnica.
+- **La Resistencia de Rimini Street:** Ofrecen reemplazar el mantenimiento oficial por una fracción del costo. Te ahorrás (en teoría) un 50% y te "aseguran" el código Z que SAP ni mira. Pero cuidado: es una solución de resistencia de trincheras, no de crecimiento. Es el equivalente a quedarte con un Falcon deL 80 y rezar para que sigan apareciendo mecánicos y repuestos para este dinosaurio. Si mañana querés integrar agentes de IA reales, usar SAP Joule o aprovechar el Business Technology Platform (BTP), vas a descubrir que esos "juguetes" son exclusivos del stack Cloud de SAP. Al final, el ahorro en mantenimiento lo terminás gastando en arquitecturas "parche" (middleware tras middleware) para intentar innovar sobre un núcleo oxidado. Estás comprando tiempo, pero estás vendiendo tu futuro.
+- **Quedarte con soluciones "IA *in house*"**: La otra forma “viable” de flotarla un poco en ECC es irse por el boom de la IA. Si queres emular lo que viene sacando SAP en sus productos Cloud y tenerlos en el ECC tenés que empezar a buscar soluciones que apunten a conectores, servidores MCP externos y capas de API no nativas. La idea es que tu sistema pueda empezar a ser usado por servicios que juegan con tus datos usando el LLM de turno que estés pagando. Puede andar (y he visto soluciones que andan re-bien) pero el riesgo acá es que podes terminar con un sistema "zombie" que requiere más soporte que una implementación nueva.  Ahí hay que tener cuidado y saber de cabo a rabo la arquitectura subyacente y los datos que se transan en cada operación que ejecutan tus usuarios. Si tu equipo está durmiendo en cuanto a lo que es IA esta historia no termina muy bien que digamos. 
+
+---
+
+### 3. El Sprint Final: Cronograma "Start Tomorrow" (SAP Activate)
+
+Pero si hoy 3 de febrero te da la locura (o conseguiste el presupuesto) y con el café en la mano y la presión alta, decidís apretar el botón de migración hacia **S/4HANA Cloud** (asumiendo que tu sistema no es un Frankenstein irrecuperable de código Z), este es el único cronograma honesto que podés firmar. Donde el margen de error es **CERO **y tenes un equipo de implementadores que jugaron con Jordan en "The last Dance": 
+
+
+![](https://media.licdn.com/dms/image/v2/D4D12AQEytXAJz-1qAQ/article-inline_image-shrink_1500_2232/B4DZwgVimRJsAU-/0/1770069044931?e=1774483200&v=beta&t=KFPyefcU-7RuWeyRpeRBHUdzEQ1vypGDts2VTsnAdHQ)
+
+
+Si logras hacerlo ya llegaste a las las grandes ligas, felicitaciones. Pero si no hiciste nada aca de te dejo unos numeros para cultura general. **El costo de la inercia:** Para una empresa mediana/grande, calculá entre **$1M y $5M USD** solo en consultoría para un [Brownfield](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-brownfield-conversions/ba-p/14314028). Si vas por [Greenfield](https://community.sap.com/t5/crm-and-cx-blog-posts-by-sap/navigating-sap-s-4hana-private-cloud-greenfield-implementations-lessons/ba-p/14167714) (empezar de cero), duplicá el número y los tiempos casi seguro. En RISE, pasás a pagar una suscripción (el "Netflix" corporativo) que, si bien es OpEx, te quita la propiedad de las licencias perpetuas.
+
+---
+
+### 4. ¿Por qué el 50% de las empresas no van a llegar?
+
+Es un fallo multiorgánico provocado por una década de negligencia estratégica:
+1. 
+2. 
+3. 
+4. 
+
+---
+
+### 5. El Escenario Distópico: "Zombies en el Core"
+
+Si no llegás a la meta en 2027, bienvenido al purgatorio digital de 2028:
+- **ERP Frankenstein:** Estarás operando sin parches legales. Cuando el fisco de tu país cambie una normativa impositiva (y lo hará, porque es su deporte favorito), vas a tener que "picar código Z" de emergencia para no quedar fuera de la ley, rompiendo toda la trazabilidad y la integridad del sistema. Los ABAPers que sepan navegar este caos cobrarán como cirujanos de guerra.
+- **Vulnerabilidad Agéntica:** En 2026, la IA no solo es optimizar procesos, también hackea. Agentes como **Moltbot** escanean sistemas ECC desactualizados buscando secretos en archivos .json mal protegidos o puertos abiertos. Un ECC sin soporte es una invitación con alfombra roja al ransomware. Un ataque exitoso hoy no te encripta los archivos; te roba la lógica del negocio y te apaga la operación.
+- **Soberanía Perdida:** Mientras tu competencia usa agentes autónomos para predecir la demanda y optimizar el inventario con precisión quirúrgica, vos estarás pagando un respirador artificial (Rimini o soporte extendido) solo para que la contabilidad no explote a fin de mes.
+
+---
+
+### 6. La Brecha del Privilegio: ¿En qué trinchera estás?
+
+Se está creando un gueto técnico irreversible. De un lado, los consultores que juegan con IA y BTP porque sus clientes migraron (o son partners y tienen que aprender algo de lo que venden); del otro, los que se adaptan a la obsolescencia para sobrevivir y de vez en cuando ven un video en Youtube de las cosas nuevas:
+- **Si sos Funcional:** El funcional del presente-futuro no es un "tomador de pedidos" que sabe navegar la SPRO. Es un **entrenador de IA**. Si tu único valor es saber dónde está un check de configuración, sos reemplazable por un prompt de 10 palabras. Tu trabajo hoy es entrenar al agente para que entienda el proceso de negocio y lo ejecute de forma autónoma. Contexto y vieja escuela serán claves. 
+- **Si sos Basis:** Olvidate de la SM21 y de mirar logs de sistema todo el día. Tu rol evolucionó a **BTP Platform Engineer**. Si no sabés configurar una conectividad híbrida segura o gestionar identidades de bots y service principals, habilitar Joule en SAP Work Zone sos un administrador de museo. Tu valor hoy es la orquestación, no la administración de fierros. Poco a poco herramientas como SUM, DMO, SWPM o hasta el mismo putty para levantar servicios de SAP serán cosas del pasado. 
+- **Si sos ABAPer:** El código Z con Dynpros es una deuda que nadie en su sano juicio quiere comprar. Si no estás dominando **ABAP Cloud** y usando IA para refactorizar tu código basura hacia el *Clean Core*, estás cavando tu propia fosa profesional. Ok capaz eso sonó dramático pero es la realidad y si no lo estas haciendo es por que estas apostando por simplemente sobrevivir. El mercado te va a escupir en dos años.
+
+### 7. El Kit de Resiliencia Above Average (Arsenal de Guerra)
+
+Para sobrevivir a la carnicería de 2027, necesitás herramientas de precisión que tenes que saber hoy 2026 si o si y no solo ganas o voluntad:
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+
+### Conclusión: Longevidad Funcional
+
+Migrar no es un tema de software, es un tema de **Soberanía y Longevidad tecnológica**. Como en un maratón, la medalla no se gana cruzando la meta con los brazos en alto; se gana en los meses de entrenamiento bajo la lluvia, en el silencio de la madrugada, donde nadie te ve pero estás construyendo la resistencia necesaria.
+
+Si tu cliente te pide "migrar todo el código Z tal cual está hoy", tenés la obligación ética de decirle que **NO**. No seas el consultor que ayuda a construir un Frankenstein por comodidad a fuerza de "lift and shift". Sé el arquitecto que construye una empresa autónoma, limpia y preparada para la era de la IA. El privilegio técnico se gana con dolor y sistemas, no con motivación barata de vendedores de servicios o alguna frase motivacional en alguna Daily.
+
+Me acuerdo cuando unos hace años introduje SAP Activate y algunos consultores se reian por que querian seguir haciendo Blueprints del año 2000. Eran esos mismos que les decían a los usuarios finales "no usen Fiori que es lento". No seas ese anti-consultor, busca ser el modelo a seguir de tus usuarios, el/la que resuelve, ese alguien que deja huella en lo que hace. Hacelo al menos mientras los agentes de IA todavía no nos quiten el trabajo.  
+
+La pregunta no es si el sistema va a fallar. La pregunta es si vos vas a estar a la altura cuando el cronómetro llegue a cero y las luces de ECC se apaguen para siempre. Que vas a hacer. 
+
+**¿Arrancamos o vas a esperar a que se apague la luz?**
+
+**Te leo en los comentarios!**
+
+**Pablo *** / Above Average*

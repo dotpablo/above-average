@@ -1,0 +1,88 @@
+---
+title: "Dunning-Kruger as a Service (DKaaS): La trampa del Vibe Coder y el \"Bruto Digital\""
+date: "2026-03-03"
+description: "En las novelas de Gabriel García Márquez, Macondo era un lugar donde el realismo mágico te hacía dudar de tus propios ojos. Las reglas de la física y el sentido común se suspendían, y lo absurdo se vo"
+source: "linkedin"
+---
+
+En las novelas de Gabriel García Márquez, Macondo era un lugar donde el realismo mágico te hacía dudar de tus propios ojos. Las reglas de la física y el sentido común se suspendían, y lo absurdo se volvía cotidiano. 
+
+Hoy, no hace falta leer a Gabo para experimentar eso; basta con entrar a cualquier oficina corporativa o abrir un repositorio de GitHub. 
+
+Vi un meme esta semana que es la radiografía clínica de la industria tech actual. Decía: "La persona más estúpida que conocés está recibiendo un '¡Tenés toda la razón!' de una Inteligencia Artificial".
+
+
+![](https://media.licdn.com/dms/image/v2/D4D12AQGm24ntXHHFlA/article-inline_image-shrink_1500_2232/B4DZyqtQz7H4AU-/0/1772390519331?e=1773878400&v=beta&t=0Hng5AAScUa3ePw09SAAyT1S6N77BPZflik5FJciJII)
+
+
+Y sí. Pensá en ese mismo o esa misma estúpida que se te acaba de cruzar por la cabeza. 
+
+Estamos viviendo el efecto contrario a Sócrates. El filósofo, siendo la mente más brillante de su época, decía: "*Solo sé que no sé nada*". Hoy, gracias a la IA gratuita y complaciente, el **Bruto Digital (una mutación del nativo digital)** no sabe absolutamente nada de arquitectura, de redes ni de memoria, pero la pantalla le responde: *"Sabés todo, sos un genio, acá tenés tu código".*
+
+Para los que no lo tienen en el radar, ***el Efecto Dunning-Kruger es ese sesgo psicológico donde el incompetente sobreestima sus habilidades precisamente porque es demasiado ignorante para saber lo que ignora***. 
+
+Antes, este sesgo tenía un límite natural: la realidad. El mal profesional eventualmente chocaba contra un servidor caído y aprendía a los golpes.Hoy, esa fricción desapareció. La industria tecnológica empaquetó este sesgo, lo subió a la nube y lo distribuye a escala. 
+
+**A esto lo llamo Dunning-Kruger as a Service (DKaaS):** un modelo de negocio basado en tercerizar la autovalidación, donde un algoritmo está diseñado para darte la razón rápido, sin cuestionar tu mediocridad. La receta para ver la estupidez crecer exponencialmente. 
+
+Y este fenómeno está inflando una de las burbujas más peligrosas de la última década: **El espejismo del programador 100x con esteroides de IA. **
+
+Por un lado, tenés C-Levels y Managers totalmente desconectados de la trinchera, que creen que por pagar un par de licencias de Copilot sus equipos mediocres van a tocar las estrellas y entregar proyectos en la mitad o menos de tiempo. 
+
+Por el otro, tenés gente no supervisada usando Claude o Cursor para escupir toneladas de "Code Slop" (código basura, espagueti, inescalable). Ponen a un pibe a hacer un prototipo rápido que (gracias a la IA) mágicamente compila, se lo muestran a un Manager desesperado por justificar su supervivencia en el trimestre, y sin darse cuenta, acaban de meter una bomba atómica en el entorno de producción. 
+
+**Dejame darte un ejemplo real de las trincheras de SAP: **Un Project Manager le pide a su IA gratuita: "Escribime un script en Python para actualizar 15.000 precios en SAP S/4HANA desde un CSV". La IA, que no está programada para educar sino para complacer, le escupe un hermoso *FOR loop* sincrónico. El tipo lo copia, lo pega, lo prueba con 3 registros y funciona. Magia pura. Macondo en su máxima expresión. 
+
+Lo que la IA no le dice de frente (lo esconde en la letra chica que nadie lee a manera de disclaimer) es que, en productivo, esas 15.000 llamadas individuales van a saturar los Dialog Work Processes, agotar el pool de conexiones y colapsar el ERP entero. 
+
+> La IA gratis te puede dar la soga para ahorcarte primero, y el manual de advertencias después.
+
+En las redes sociales está de moda autodenominarse "Vibe Coder": programar "por vibras", por instinto, dejando que la IA escriba todo el boilerplate mientras vos ponés musiquita lo-fi y tomás un flat white. Escuchame una cosa: ser un Vibe Coder está bárbaro para armarte una app de tareas el domingo a la tarde. Es divertido. Pero cuando estás construyendo sistemas empresariales que dan soporte a millones de transacciones, que manejan la facturación de un país o la logística de un puerto... el "vibe" te lo metés en el bolsillo. 
+
+En el mundo Enterprise, una "mala vibra" arquitectónica es un lucro cesante de 100K verdes la hora. Ahí no hay instinto, hay Ingeniería. Hay OData Batch, hay IDocs, hay Arquitectura Orientada a Eventos. El filósofo Éric Sadin habla de la "Vegetalización de la Humanidad": delegar nuestra agencia cognitiva y nuestra capacidad de decisión a los sistemas automatizados hasta volvernos plantas. 
+
+El Vibe Coder es la máxima expresión de esta vegetalización. Es un peón de la máquina creyendo que es el rey.
+
+---
+
+### ¿Cómo nos salvamos de esta burbuja?
+
+Acá es donde se separa a los adultos de los niños. La cura no es prohibir la IA, ni comprar más tokens. La cura es volver a las bases del criterio humano. 
+
+Desde hace unos días vengo leyendo: "The Effective Software Engineer" de Addy Osmani. El autor plantea una tesis brutal que encaja perfecto con la crisis de hoy: Hay una diferencia abismal entre ser Eficiente y ser Efectivo. 
+
+La IA te hace Eficiente. Te permite escribir código malo a la velocidad de la luz. El Criterio te hace Efectivo. Te permite saber qué sistema hay que construir, por qué hay que construirlo, y más importante aún, qué código no hay que escribir. 
+
+El libro propone que el verdadero ingeniero hoy no usa la IA para que le escupa scripts ciegamente. La usa como un "abogado del diablo" para discutir ***Architecture Decision Records (ADRs).*** 
+
+El ingeniero de alto nivel le dice a la máquina: "Tengo este problema. Listame 3 patrones de integración, comparame los cuellos de botella de red y decime en qué escenario cada uno va a fallar".
+
+Una de las reglas de oro que plantea para los que están aprendiendo o volviendo a las bases es no usar primero la IA para que escriba el código por ti. En su lugar, recomienda usarla primero para:
+- **Explicar código**: Darle un bloque de código y pedirle que te explique qué hace línea por línea.
+- **Planificar la lógica:** Escribir en lenguaje natural (español) los pasos de lo que quieres lograr, y pedirle a la IA que revise si tu lógica tiene sentido antes de escribir una sola línea de código.
+
+Ya con eso claro, ahí sí empezá a echar código con tu amiga IA de preferencia. 
+
+La IA democratizó el acceso a la sintaxis, pero no democratizó el criterio. 
+
+> El mercado corporativo hoy está inundado de ilusos plantando bombas de tiempo asincrónicas. Tu valor profesional en los próximos 5 años (o mientras SkyNet no tome el control) no va a ser tu capacidad de tirar un prompt rápido.
+
+Tu valor va a ser tu capacidad (y tus cicatrices de producción) para saber desactivar esas bombas, o tener la autoridad intelectual para no dejarlas plantar en primer lugar.
+
+La fricción intelectual desapareció de los teclados del 90% de la industria. Buscala vos. Sé el 10%.
+
+---
+
+### 👇 Acá va tu Prueba de Trabajo (y mi desafío para esta semana):
+
+Mañana, cuando abras el repositorio o el Slack de tu proyecto, mirá el último Pull Request o diseño que tu equipo aprobó rápido "porque la IA dijo que estaba bien". Hacete una sola pregunta: Si mañana a las 3 A.M. ese sistema recibe un pico de 100x de tráfico y el servidor se prende fuego... ¿quién se tiene que despertar a arreglarlo? ¿La IA o vos?
+
+El mercado está lleno de bombas de tiempo plantadas por ilusos, esperando explotar en las guardias pasivas de los ingenieros de verdad.
+
+💬 **Los leo en los comentarios:** ¿Cuál fue el peor desastre arquitectónico, "Code Slop" o código basura generado por IA que tuviste que frenar (o arreglar) en estos últimos meses? Dejá tu cicatriz de producción acá abajo.
+
+Y si tenés a un colega (o un Manager) que sigue creyendo que ChatGPT es magia, etiquetalo o mandale este post. Veamos qué vibras le da.
+
+¿Arrancamos? 
+
+Pablo / Above Average

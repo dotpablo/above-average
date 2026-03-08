@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
+  --color-accent: #1a1a1a;
+}
+
+body {
+  @apply bg-white text-neutral-900 antialiased;
+}
+
+::selection {
+  @apply bg-neutral-200;
+}
+
+/* Hide Google Translate top bar */
+.goog-te-banner-frame,
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}

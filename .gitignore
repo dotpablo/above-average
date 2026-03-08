@@ -1,0 +1,12 @@
+.next/
+out/
+node_modules/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env*.local
+
+# Source article exports (already converted to MDX)
+articles/
+posts_substack/
+scripts/

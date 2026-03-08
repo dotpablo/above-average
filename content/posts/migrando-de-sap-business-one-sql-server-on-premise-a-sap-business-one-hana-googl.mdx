@@ -1,0 +1,126 @@
+---
+title: "Migrando de SAP Business One SQL Server (On-Premise) a SAP Business One HANA (Google Cloud)"
+date: "2020-06-05"
+description: "Este fue un proyecto que realicé hace unos meses atrás de forma experimental y que capaz les puede servir para ilustrar cómo se hacen este tipo implementaciones y que consideraciones tomar en cuenta a"
+source: "linkedin"
+---
+
+Este fue un proyecto que realicé hace unos meses atrás de forma experimental y que capaz les puede servir para ilustrar cómo se hacen este tipo implementaciones y que consideraciones tomar en cuenta a la hora de hacerlo si les toca. 
+
+Cabe acotar que este proceso de migración fue realizado para la versión "vieja" de SAP Business One osea 9.3 (la hice antes que saliera la versión 10) pero es totalmente replicable para la nueva versión, salvo  algunas consideraciones que podría explicar en un próximo artículo. 
+
+La idea es presentarles los aspectos básicos a considerar antes de arrancar en un proyecto de este tipo a efectos de estimación de costos, los recursos necesarios para la migración y las principales actividades a tomar en cuenta.
+
+### Antes de arrancar hay que armar el ambiente Cloud
+
+Lo primero que hice fue en en armar/instalar/configurar rápidamente toda la infraestructura de SAP B1 HANA en la plataforma de la nube de Google (GCP) a través de estas macro-tareas:
+- Dimensionar los requerimientos mínimos actuales que se tenían en SQL Server manejados por el Cliente y ver cómo serían en HANA.
+- Si piensan hacerlo para un ambiente productivo tomar en cuenta los servidores avalados por SAP para las implementaciones de SAP Business One ([Appliance type SAP Business One](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/appliances.html#categories=certified%23SAP%20Business%20One)). 
+- Armar el proyecto en Google Cloud Platform (GCP) para el ambiente HANA, desplegando las instancias de acuerdo a los requerimientos planteados. Más abajo explico lo que utilicé para este paso. 
+- Bajar el software, instalar, configurar en ambos ambientes y dejar todo listo para la migración.  
+
+Después teniendo el ambiente HANA listo, lo demás consistía en realizar el proceso de migración de la sociedad (base de datos) que estaba operativa en SQL SERVER 2008 de SAP Business One (a nivel On-Premise) del cliente a la nueva plataforma de SAP Business One en HANA que ya estaba armada en Google Cloud.
+
+Lo primero que se armó fue una red en google (VPC - Virtual Private Cloud) con básicamente lo siguiente a manera de emular un ambiente test:
+- 1 instancia Linux SUSE 12 SP3 custom (8 vCPU, 66.00 GiB, 375GB SSD) + 500 GB de disco externo 
+- 1 instancia Windows 2016 n1-standard-4 (4 vCPU, 15.00 GiB, 375GB SSD)  
+- 2 IP externas reservadas para el proyecto para ambas instancias.
+- La VPC (red de Google en la nube en una zona determinada).  
+
+**Nota**: Esto fue un proyecto experimental, para proyectos de implementación reales de este mismo tipo hay que tomar toda las consideraciones necesarias a nivel de alta disponibilidad (si el cliente lo require), sistemas de backups, conectividad a la VPC via VPN del cliente y N cantidad de aspectos que están fuera del ejemplo representativo que quiero mostrar acá (pero que no hay que olvidarse en la vida real).  
+
+Luego de armado el ambiente a nivel de GCP lo fundamental es ir habilitando y definir las reglas de Firewall en GCP (fundamental sino los puertos van a dar conflictos y no se va poder hacer mucho), tomando en cuenta el funcionamiento y operación normal del producto.
+
+*También es importante lo siguiente:*
+- La habilitación de APIs (las de prendido y apagado y otras más que pudieran ser necesarias).
+- Crear la VPC en una zona determinada (clave para el tema de la disponibilidad de las API's).
+- La correcta configuración global de las instancias que van a convivir dentro de la VPC.
+- Conectividad resuelta entre el ambiente del cliente y el ambiente cloud. áa
+
+
+![](https://media.licdn.com/dms/image/v2/C4E12AQGPnPPQ8JdgVw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1591362884017?e=1774483200&v=beta&t=EZrLGm-8Y-ndqXh505dswlG07nPyNcVE315GvoqFb84)
+
+
+### Proceso de migración de SQL Server 2008 a HANA.
+
+Este proceso se hizo de forma directa al conectar la IP del servidor HANA (al estar disponible dentro de la VPN) y que el equipo Windows en donde corren los servicios de SAP Business One en HANA tenga instalado los drivers de Microsoft SQL Server (y obviamente los clientes de 32 y 64 bits de HANA). 
+
+Para más dudas sobre este paso en particular es recomendable leer el apartado de migración del la guia de administracion del [producto](https://help.sap.com/viewer/product/SAP_BUSINESS_ONE_VERSION_FOR_SAP_HANA/9.3/en-US) (en este caso fue para 9.3 como ya comente).  
+
+
+![](https://media.licdn.com/dms/image/v2/C4E12AQHI7vhZXsIHzw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1591363098097?e=1774483200&v=beta&t=NwnQ46ejXN6HAlk_YTEUq6EzVK6hFPBaAPE7z_znn8A)
+
+
+### Las correcciones de las malas practicas
+
+En los procesos de migración de SQL a HANA (y hasta en los mismos upgrade de versión de Business One) es común la realización de actividades previas a este procedimiento producto de la aplicación de notas SAP correctivas ante "*malas praxis*" que generalmente se hacen en los procesos de implementación del producto y que SAP considera que no son buenas practicas. 
+
+Al no ser buenas prácticas para SAP, no van a poder ser migrables/"uprgradeadas" los esquemas/bases de datos que presenten estas particularidades, así que es obligatorio siempre corregirlas.  
+
+Algo a tener en cuenta es que probable que puedan saltar N cantidad de issues a la hora de migrar o realizar un upgrade de versión del producto y es muy particular y va atado al proceso de implementación previamente realizado sobre ellas mismas. Por eso lo lógico es siempre hacer el test de migración hasta que la sociedad quede en estado "Lista"para poder ser migrada. 
+
+Lo bueno es que SAP te dice como arreglarlo mediante wikis y notas y en último caso te lo arreglan ellos abriendo un caso. 
+
+En esta ocasión tuve que eliminar y re-construir una tabla de usuario (UDT) vía comandos de SQL,  por qué dio un error que a nivel del test previo al upgrade. Este tipo de errores ocurren cuando se crean tablas sin claves primarias o por fuera de B1 directaamente sobre el manejador de base de datos. 
+
+Estas UDT's si están mal implementadas, saltan al momento de hacer el test de migración como error y hay que corregirse obligatoriamente. 
+
+Esta tabla la habían creado para un addon en particular. Se reconstruyó la tabla con un índice nuevo a nivel de HANA, se respaldaron los datos y luego se restauraron y se logró hacer el Upgrade sin mayores inconvenientes. 
+
+### Fases típicas de un proyecto de este tipo a nivel de migración
+
+Para hacer una proyecto de migración de estas características lo ideal es manejar al menos estas 9 fases: 
+- Es necesario una Fase 0 en donde se hace el t**est de migración**, previa configuración de todo el ambiente a nivel de interconexión entre SQL Server y HANA (misma red) y demás necesidades de software y/o recursos. Esto nos dará lo necesario a ejecutar en la siguiente fase. 
+- Una **fase de configuración inicial funcional** donde se hacen ajustes a nivel de preparar la antigua base en SQL Server y esta pueda ser “migrable”. También se deben encargar de programar y respaldar las interfaces que interoperan con el producto, los reportes en Crystal y sus respectiva migración a HANA de forma individual y otros aspectos que pudieran suscitar. 
+- **Prueba de migración piloto de una copia** **de la base de datos de producción actual**. En estos casos siempre salen procesos que están trabajando con la BD, hay que eliminarlos hasta que dejen libre a la BD y esta pueda esta ser migrada. Es importante aclarar que este proceso toma su tiempo así que hay que tomar sus previsiones. 
+- Planificación del **proceso de migración** de la base de datos productiva. Esto se debe realizar conjuntamente con el cliente y equipo funcional y técnico a fin de orquestar todo bien para el día "D". 
+- El equipo Funcional B1 debe repetir el paso 2 en la BD productiva para dejarla lista para ser migrada cuando corresponda. 
+- **Proceso de migración de parte del equipo técnico. **Aca obviamente se deben manejar correctamente y de forma armónica con el cliente los tiempos de Downtime.  Por lo general se hacen fuera de horario laboral. 
+- **Prueba funcionales** de los consultores a fin de corroborar que todo esté OK. 
+- **Pruebas operativas** de parte del cliente.  
+- **Liberación del nuevo ambiente en HANA (Go-Live).**
+
+La idea de todo esto es mostrar a grandes rasgos las "macro fases"de un proyecto de migración/upgrade de estas características. 
+
+Hay muchas tareas y sub-tareas que se desprenden de todo este proceso que es importante hacerles seguimiento para que todo termine exitosamente. 
+
+Acá va una foto del El SLD en 9.3 PL08 (última versión al momento posterior de haber hecho el procedimiento):  
+
+
+![](https://media.licdn.com/dms/image/v2/C4E12AQGgPB2mzJU9Jg/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1591364833245?e=1774483200&v=beta&t=bj_U6tcGztJzUAU89bvfNrCb-jcncbPmXLcknIlZZco)
+
+
+ Esta es una imagen del cliente SAP Business One funcionando desde mi escritorio conectado a la sociedad en Google Cloud Platform. La latencia es bastante aceptable (depende mucho de la parte de configuracion técnica):
+
+
+![](https://media.licdn.com/dms/image/v2/C4E12AQERT1kVC6yB6Q/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1591364927368?e=1774483200&v=beta&t=kKAI0Z9Ps-C6BsCfMyp9cyNAdblvnsE2atDtUvD0k5k)
+
+
+### Los costos que pudiera generar este tipo de soluciones
+
+Algo a considerar para este tipo de proyectos Cloud, es referente al tema de los costos que implicaría el mantener esta solución al ser usada por el cliente. 
+
+Sacando los cálculos de manera muy preliminar estaría por este orden según la calculadora de [Google Cloud](https://cloud.google.com/products/calculator/#id=5773a51a-5d82-43f6-9cd3-21819c34ff5a) 
+
+** **En ese link se puede ver que se está tomando en cuenta que la solución estaría usándose 5 días a la semana 7 horas por día. Algo totalmente a manera de ejemplo, cada necesidad es particular. 
+
+En este caso daría un estimado de 255$ por mes + 3$ promedio por día que la solución esté apagada (2x4=8 días libres + 24$ más) por lo que serían para redondear 300$. 
+
+Como comente es un cálculo muy rápido y faltan sacar los gastos de mantenimiento, soporte, etc pero dan una idea al menos de lo que tendría que ir pensando el cliente en terminos de costos. 
+
+Otros puntos a tomar en cuenta que pude rescatar de esas pruebas son los siguientes: 
+- Aparte de ese monto mencionado también tomar en cuenta que los costos de apagado que son 4.84$ (asumiendo 8 días no laborables redondeamos en 40$)
+- El costo de día más utilizado fue 35.50$ (instancias siempre prendidas, asumiendo unos 22 días redondeamos en 781$) 
+- Eso daría un aproximado estimado de 820$ por mes para toda la solución (dejandola disponible 24h) algo quizás necesario para algunos pero a otros no.  
+- Podría ahorrarse más en caso de reservarse las instancias por periodos mayores al año y obviamente apagándose y prendiéndose con la habilitación del API respectiva en determinados rangos de horas. 
+
+Valdría la pena hacer lo mismo en AWS y otras soluciones Cloud y así ver una comparativa entre prestaciones, costos, rendimiento, latencia, etc. 
+
+*Espero te haya gustado el artículo y te sea de utilidad. *
+
+*Gracias por tu lectura y cualquier comentario es bienvenido!*
+
+[Pablo Marichal](https://www.linkedin.com/in/pablomarichal/)
+
+
+** **

@@ -1,0 +1,60 @@
+---
+title: "Mejoras de SAP Business One HANA 10 PL01 y algunos tips de instalación!"
+date: "2020-04-08"
+description: "Saliendo del mundo de S/4HANA  por un rato, hace unos días terminé un proyecto de instalación de SAP Business One HANA 10 PL01 y la verdad que te das cuenta que hay muchas mejoras a nivel del ERP en e"
+source: "linkedin"
+---
+
+Saliendo del mundo de S/4HANA  por un rato, hace unos días terminé un proyecto de instalación de SAP Business One HANA 10 PL01 y la verdad que te das cuenta que hay muchas mejoras a nivel del ERP en el salto de versión. Fue un salto casi cuántico. 
+
+
+![](https://media.licdn.com/dms/image/v2/C4E12AQGXDFmbtmxImQ/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1586355547309?e=1773878400&v=beta&t=kWDjP9D85RwJC2A26lg6WDGP-yno9LQYRfdi7HEzQyM)
+
+
+Quizás una de las más significativas a nivel administrativo es que ahora él ERP usa HANA 2.0 y eso te da una ventaja enorme en términos de performance, administración y escalabilidad. 
+
+El hecho de que sea el ERP más vendido de SAP por número de clientes (+65K, 50 localizaciones, etc…) han hecho que evolucione muy rápidamente y se nota con respecto a las versiones de años anteriores.  
+
+Son muchas mejoras y cambios que han hecho que SAP Business One salte de versión y voy a nombrar solo algunas de las técnicas ya que las funcionales son muchísimas y no voy a profundizar en ese apartado: 
+- El uso de una nueva versión de sistema operativo (SUSE 15).
+- El manejo del nuevo cliente Web (menos dolores de cabeza para los deployments).
+- Las mejoras en el Integration Framework.
+- El uso del motor analítico y transaccional de datos al mismo nivel de disponibilidad y uso que le otorga al usuario un gran poder de cómputo que es difícil de experimentar en otras herramientas similares del mercado. 
+- HANA 2.0
+
+Y me quedo corto en realidad por que son muchas y más a nivel funcional, pero les dejo este link si quieren profundizar un poco más en esto:
+
+Por cierto parecía interminable la versión 9.3 con sus PLxx que hasta hoy va en el número 13 sino me equivoco.  
+
+El hecho de que SAP Business One pueda tener ahora HANA 2.0 le da la posibilidad de poder soportar una arquitectura MDC (Contenedores de Bases de datos Multitenant) le permiten de dar soporte de alta disponibilidad, separar ambientes de manera real no como se hacía en versiones anteriores que era lo de duplicar sociedades en una misma instancia emulando "ambientes".
+
+Ahora con esta funcionalidad se puede lograr tener el mismo nivel de autonomía y arquitectura del ERP grande de SAP (S/4HANA, ECC) y tener claramente ambientes definidos de desarrollo, test, calidad, produccion, etc fácilmente administrables.
+
+En la siguiente figura se puede visualizar mucho mejor lo que estoy comentando y algunas funcionalidades adicionales:  
+
+
+![](https://media.licdn.com/dms/image/v2/C4E12AQE42Iy3IVfXsw/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1586355732360?e=1773878400&v=beta&t=vFMoNMzjOzKcpWdrrT7eT8CWC5DLUaKh7Fkxbrlcxec)
+
+
+También es necesario mencionar las mejoras a nivel analíticos y de presentación gráficas (tipo Fiori, viéndose así la unificación del UX en todos los ERP y sistemas de SAP), una gran plataforma de integración a 3eros (Service Layer) que crece mucho más que lo que era antes y a la par de las tecnologías de vanguardia del momento (viendo así como SAP abraza y se sube a la ola de las tecnologías dominantes del mercado actual).
+
+
+![](https://media.licdn.com/dms/image/v2/C4E12AQFMxHulHrfdRQ/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1586355759853?e=1773878400&v=beta&t=RSOZ7BiicCHCVeI96CxB8tlvhpYZaPLiG0Rh57_tqqY)
+
+
+En fin muchas mejoras y que valen la pena ver y experimentar a profundidad en esta nueva versión de la herramienta. 
+
+La verdad es que vale la pena el proyecto de upgrade de versión y empezar desde ya a utilizar el gran potencial de mejoras disponibles para hacer un poco más inteligente los negocios de la empresa con todo lo que ofrece SAP Business One on HANA. 
+
+**Y antes de terminar este artículo les dejo algunos tips que a la hora de una instalación de esta versión les pudieran venir bien conocerlos:  **
+- Siempre en toda instalación de B1 hay que instalar las librerías adicionales a nivel del sistema operativo (dependiendo de la versión de SUSE que usemos, en este caso es un MUST la 15) rpm-build, bc, python-crypto, python-openssl .
+- Tuve que agregar manualmente una librería desde OpenSuse, por que al parecer no encontre por ningun lado esta [librería](https://software.opensuse.org/download/package?package=glibc-i18ndata&project=openSUSE%3ALeap%3A15.1%3AUpdate)  que me pedía HANA ( fue porque se utilizó 15.1 y al parecer no estaba disponible todavia, seguramente lo solventen pronto) .
+- Como fue SUSE 15 SP1 hay que leer la nota [2892338](https://launchpad.support.sap.com/#/notes/0002892338) y lanzar esta instalación desde el terminal *zypper install insserv *
+- Siempre deshabilitar los firewalls entre el Linux y Windows, activar samba si es Windows 2016 o superior. Esto como siempre nada nuevo.  
+- Tener cuidado a la hora de instalar HANA, ya es distinto y no como antes cuando era 1.0 y solo bastaba conocer el nombre de la instancia, puerto estándar y listo, ahora necesitamos registrar el tenant al cual iremos hacer la instalación y tenerlo en cuenta también para la administración vía el HANA Studio. 
+- Siempre crear un usuario de instalación con los privilegios correspondientes y evitar que se bloquee mediante la aplicación de políticas respectivas. El usuario siempre hacerlo en 2 tiempos, ya que luego de la instalación hay que darle otros permisos  adicionales. En la nueva guía de administración sale bien claro este tema. 
+- Una vez que se importe algún esquema/sociedad desde el SLD (previa carga de licencias de HANA) ir a la consola analítica y activar las funciones de este tipo para tenerlas disponibles en el cliente y empezar a usar la magia de HANA (acá hay que esperar unos minutos a que se active, no es automatico, hay un proceso de indexación de datos y disponibilización de servicios que toma unos minutos). 
+
+No me acuerdo de algún otro tip más en este momento, pero si lo recuerdo lo actualizo. 
+
+Gracias por tu lectura y cualquier pregunta o comentario bienvenido!
