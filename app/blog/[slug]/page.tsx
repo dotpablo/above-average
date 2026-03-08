@@ -40,19 +40,19 @@ export default async function PostPage({ params }: Props) {
   return (
     <article>
       <header className="mb-10">
-        <time className="text-sm text-neutral-500">
+        <time className="text-sm text-neutral-600">
           {post.date
             ? format(parseISO(post.date), "d 'de' MMMM, yyyy", { locale: es })
             : ""}
         </time>
-        <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight sm:text-4xl">
+        <h1 className="mt-2 font-serif text-3xl text-white sm:text-4xl">
           {post.title}
         </h1>
         {post.description && (
-          <p className="mt-4 text-lg text-neutral-600">{post.description}</p>
+          <p className="mt-4 text-lg text-neutral-500">{post.description}</p>
         )}
       </header>
-      <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-a:underline-offset-4">
+      <div className="prose prose-invert max-w-none prose-headings:font-serif prose-headings:text-white prose-p:text-neutral-400 prose-a:text-white prose-a:underline-offset-4 prose-strong:text-neutral-200 prose-blockquote:border-neutral-700 prose-blockquote:text-neutral-400 prose-li:text-neutral-400 prose-hr:border-neutral-800">
         <MDXRemote source={post.content} />
       </div>
     </article>

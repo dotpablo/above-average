@@ -7,6 +7,9 @@ export const SITE = {
   author: "Pablo Marichal",
   social: {
     linkedin: "https://www.linkedin.com/in/pablomarichal",
-    twitter: "https://x.com/pablomarichal",
+    youtube: "https://youtube.com/@pablomarichal",
+    instagram: "https://instagram.com/pablomarichal",
+    threads: "https://threads.net/@pablomarichal",
+    x: "https://x.com/pablomarichal",
   },
 };

@@ -5,16 +5,20 @@ import type { Post } from "@/lib/posts";
 
 export function PostCard({ post }: { post: Post }) {
   return (
-    <article>
-      <Link href={`/blog/${post.slug}`} className="group block">
-        <time className="text-sm text-neutral-500">
-          {post.date ? format(parseISO(post.date), "d MMM yyyy", { locale: es }) : ""}
-        </time>
-        <h3 className="mt-1 font-serif text-xl font-semibold tracking-tight group-hover:underline">
-          {post.title}
-        </h3>
+    <article className="group">
+      <Link href={`/blog/${post.slug}`} className="block">
+        <div className="flex items-baseline justify-between gap-4">
+          <h3 className="font-serif text-lg text-white group-hover:underline underline-offset-4 decoration-neutral-600">
+            {post.title}
+          </h3>
+          <time className="shrink-0 text-xs text-neutral-600 tabular-nums">
+            {post.date
+              ? format(parseISO(post.date), "MMM yyyy", { locale: es })
+              : ""}
+          </time>
+        </div>
         {post.description && (
-          <p className="mt-2 text-neutral-600 leading-relaxed">
+          <p className="mt-1.5 text-sm leading-relaxed text-neutral-500 line-clamp-2">
             {post.description}
           </p>
         )}

@@ -16,20 +16,22 @@ export default function BlogPage() {
   const currentPosts = posts.slice(0, POSTS_PER_PAGE);
 
   return (
-    <div className="space-y-10">
-      <h1 className="font-serif text-3xl font-bold tracking-tight">Blog</h1>
+    <div className="space-y-8">
+      <h1 className="font-serif text-3xl text-white">Blog</h1>
       {currentPosts.length === 0 ? (
         <p className="text-neutral-500">Proximamente...</p>
       ) : (
-        <div className="space-y-10">
+        <div className="divide-y divide-neutral-800/50">
           {currentPosts.map((post) => (
-            <PostCard key={post.slug} post={post} />
+            <div key={post.slug} className="py-4 first:pt-0 last:pb-0">
+              <PostCard post={post} />
+            </div>
           ))}
         </div>
       )}
       {totalPages > 1 && (
-        <nav className="flex items-center justify-center gap-2 pt-4">
-          <span className="rounded-md bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white">
+        <nav className="flex items-center justify-center gap-1.5 pt-4">
+          <span className="rounded-md bg-white px-3 py-1.5 text-xs font-medium text-neutral-900">
             1
           </span>
           {Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map(
@@ -37,7 +39,7 @@ export default function BlogPage() {
               <Link
                 key={page}
                 href={`/blog/page/${page}`}
-                className="rounded-md border border-neutral-300 px-3 py-1.5 text-sm transition-colors hover:bg-neutral-100"
+                className="rounded-md px-3 py-1.5 text-xs text-neutral-600 transition-colors hover:bg-neutral-800 hover:text-white"
               >
                 {page}
               </Link>

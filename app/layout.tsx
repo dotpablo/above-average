@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const lora = Lora({ subsets: ["latin"], variable: "--font-serif" });
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-serif",
+});
 
 export const metadata: Metadata = {
   title: { default: SITE.title, template: `%s — ${SITE.name}` },
@@ -33,10 +37,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${lora.variable}`}>
-      <body className="mx-auto max-w-2xl px-6 font-sans">
+    <html
+      lang="es"
+      className={`${inter.variable} ${instrumentSerif.variable}`}
+    >
+      <body className="mx-auto max-w-2xl px-5 font-sans">
         <Nav />
-        <main className="min-h-[70vh] py-8">{children}</main>
+        <main className="min-h-[70vh] py-10">{children}</main>
         <Footer />
       </body>
     </html>

@@ -36,20 +36,20 @@ export function NewsletterForm() {
         placeholder="tu@email.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 rounded-md border border-neutral-300 px-4 py-2.5 text-sm placeholder:text-neutral-400 focus:border-neutral-900 focus:outline-none"
+        className="flex-1 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-sm text-white placeholder:text-neutral-600 focus:border-neutral-500 focus:outline-none"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="rounded-md bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-700 disabled:opacity-50"
+        className="rounded-lg bg-white px-6 py-2.5 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-200 disabled:opacity-50"
       >
         {status === "loading" ? "..." : "Suscribirme"}
       </button>
       {status === "success" && (
-        <p className="self-center text-sm text-green-600">Listo, bienvenido.</p>
+        <p className="self-center text-sm text-green-400">Listo, bienvenido.</p>
       )}
       {status === "error" && (
-        <p className="self-center text-sm text-red-600">Algo salio mal. Intenta de nuevo.</p>
+        <p className="self-center text-sm text-red-400">Algo salio mal. Intenta de nuevo.</p>
       )}
     </form>
   );
