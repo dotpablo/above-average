@@ -40,6 +40,7 @@ export default function RootLayout({
     <html
       lang="es"
       className={`${inter.variable} ${instrumentSerif.variable}`}
+      suppressHydrationWarning
     >
       <body className="mx-auto max-w-2xl px-5 font-sans">
         <Nav />

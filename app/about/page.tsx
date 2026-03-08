@@ -25,14 +25,10 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h1 className="font-serif text-3xl text-white">Pablo Marichal</h1>
           <p className="text-base leading-relaxed text-neutral-400">
-            Naci en Uruguay, vivi muchos anos en Venezuela. Esas experiencias
-            formaron una perspectiva unica sobre lo que significa crecer — como
-            persona y como profesional.
+            Nací en Uruguay y viví muchos años en Venezuela. Soy <strong>Senior SAP Tech Lead</strong>, 19x Marathoner, y padre de Max y Mía.
           </p>
           <p className="text-base leading-relaxed text-neutral-400">
-            Pase anos en el mundo de SAP, liderando equipos y proyectos
-            tecnologicos. Pero lo que realmente me define no es un titulo — es
-            la disciplina de buscar siempre algo mas.
+            Opero en la intersección entre la robustez corporativa y la velocidad de la IA. Por más de una década, me he dedicado a liderar migraciones cloud y asegurar que los "ERP Zombies" no hagan colapsar operaciones globales. Mi valor es simple: uso IA de frontera para acelerar, pero aplico años de cicatrices en ingeniería para garantizar seguridad.
           </p>
         </div>
       </section>
@@ -48,16 +44,12 @@ export default function AboutPage() {
           />
         </div>
         <div className="space-y-4">
-          <h2 className="font-serif text-2xl text-white">19 maratones</h2>
+          <h2 className="font-serif text-2xl text-white">Biological Clean Core</h2>
           <p className="text-base leading-relaxed text-neutral-400">
-            Cada maraton me enseno algo diferente sobre resistencia, dolor, y
-            el poder de no parar cuando tu cuerpo te dice que pares. Correr no
-            es un hobby — es un sistema operativo.
+            He cruzado la meta de 19 maratones alrededor del mundo (incluyendo Berlín, Chicago y Nueva York). Para mí, el running no es un pasatiempo; es la aplicación estricta del concepto <strong>Clean Core</strong> a mi propio sistema biológico.
           </p>
           <p className="text-base leading-relaxed text-neutral-400">
-            No se trata de ser el mas rapido. Se trata de presentarte todos los
-            dias, incluso cuando no tenes ganas. De entender que el promedio no
-            es un lugar — es una decision.
+            Para liderar equipos de alto rendimiento en situaciones críticas, necesitas una fisiología que soporte la presión. Entender los límites de la máquina humana es el primer paso para construir software resiliente.
           </p>
         </div>
       </section>
@@ -65,16 +57,13 @@ export default function AboutPage() {
       {/* Above Average */}
       <section className="space-y-4">
         <h2 className="font-serif text-2xl text-white">
-          Por que Above Average
+          El "Full Stack Human"
         </h2>
         <p className="text-base leading-relaxed text-neutral-400">
-          Above Average no es sobre ser excepcional. Es sobre la decision
-          diaria de no conformarte con lo promedio. Es sobre hacer el trabajo
-          que otros no quieren hacer, pensar lo que otros no se animan a
-          pensar, y vivir con intencion.
+          En la era de la IA, el código es barato. La sintaxis es gratis. Lo que no es barato es el <strong>Contexto, la Arquitectura y el Juicio Clínico</strong> para saber qué líneas de código destruirán un negocio en seis meses.
         </p>
         <p className="text-base leading-relaxed text-neutral-400">
-          Este espacio es donde comparto lo que aprendo en ese camino.
+          Inicié <strong>Above Average</strong> como una respuesta contra la mediocridad automatizada y la "vegetalización" de la fuerza laboral. Este es mi laboratorio para explorar agentes de IA y, sobre todo, es un diario y legado digital escrito para mis hijos.
         </p>
       </section>
 

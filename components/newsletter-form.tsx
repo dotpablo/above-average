@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export function NewsletterForm() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "already" | "error">("idle");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -18,7 +18,12 @@ export function NewsletterForm() {
       });
 
       if (res.ok) {
-        setStatus("success");
+        const data = await res.json();
+        if (data.already) {
+          setStatus("already");
+        } else {
+          setStatus("success");
+        }
         setEmail("");
       } else {
         setStatus("error");
@@ -36,17 +41,20 @@ export function NewsletterForm() {
         placeholder="tu@email.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-sm text-white placeholder:text-neutral-600 focus:border-neutral-500 focus:outline-none"
+        className="flex-1 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-base text-white placeholder:text-neutral-600 focus:border-neutral-500 focus:outline-none"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="rounded-lg bg-white px-6 py-2.5 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-200 disabled:opacity-50"
+        className="rounded-lg bg-white px-6 py-2.5 text-base font-medium text-neutral-900 transition-colors hover:bg-neutral-200 disabled:opacity-50"
       >
         {status === "loading" ? "..." : "Suscribirme"}
       </button>
       {status === "success" && (
         <p className="self-center text-sm text-green-400">Listo, bienvenido.</p>
+      )}
+      {status === "already" && (
+        <p className="self-center text-sm text-yellow-400">Ya estas suscrito. Gracias!</p>
       )}
       {status === "error" && (
         <p className="self-center text-sm text-red-400">Algo salio mal. Intenta de nuevo.</p>

@@ -33,9 +33,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: true });
     }
 
-    // 409 = already subscribed (still a success for the user)
+    // 409 = already subscribed
     if (res.status === 409) {
-      return NextResponse.json({ ok: true });
+      return NextResponse.json({ ok: true, already: true });
+    }
+
+    // Buttondown may return 400 with details for existing subscribers
+    if (res.status === 400) {
+      const data = await res.json().catch(() => null);
+      const msg = JSON.stringify(data || "");
+      if (msg.toLowerCase().includes("already") || msg.toLowerCase().includes("subscriber")) {
+        return NextResponse.json({ ok: true, already: true });
+      }
     }
 
     return NextResponse.json(

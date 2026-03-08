@@ -24,7 +24,7 @@ export function Nav() {
           Above Average
         </span>
       </Link>
-      <ul className="flex items-center gap-5 text-sm">
+      <ul className="flex items-center gap-5 text-base">
         {links.map((link) => (
           <li key={link.href}>
             <Link

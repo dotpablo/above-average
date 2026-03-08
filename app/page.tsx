@@ -10,19 +10,21 @@ export default function Home() {
   return (
     <div className="space-y-20">
       {/* Hero */}
-      <section className="flex flex-col-reverse items-center gap-10 sm:flex-row sm:items-start sm:gap-12">
+      <section className="flex flex-col-reverse items-center gap-10 sm:flex-row sm:items-start sm:gap-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="flex-1 space-y-5">
-          <h1 className="font-serif text-4xl text-white sm:text-5xl">
-            Sistemas, no motivacion.
+          <h1 className="font-serif text-4xl text-white sm:text-5xl tracking-tight leading-tight">
+            Code is cheap<br />in the AI era.<br />
+            <span className="text-neutral-500">Context is not.</span>
           </h1>
-          <p className="text-base leading-relaxed text-neutral-400">
-            Soy Pablo Marichal. Escribo sobre crecimiento personal, liderazgo
-            y rendimiento. 19 maratones, una carrera en tech, y la conviccion
-            de que ser above average es una decision diaria.
+          <p className="text-lg leading-relaxed text-neutral-400">
+            Soy Pablo Marichal: Senior SAP Tech Lead, AI Champion y 19x Marathoner.
+            Escribo sobre la intersección entre la robustez corporativa, la agilidad de la Inteligencia Artificial y los sistemas biológicos de alto rendimiento.
+            Hablo fluido en <i>Legacy</i> y fluido en <i>Futuro</i>.
           </p>
           <div className="pt-2">
-            <p className="mb-2.5 text-xs font-medium uppercase tracking-wider text-neutral-600">
-              Newsletter
+            <p className="mb-2.5 text-sm font-medium text-neutral-400">
+              Unete a +100 profesionales construyendo sistemas a prueba de IA. <br />
+              <span className="text-neutral-500 text-xs">Un newsletter técnico, directo y sin humo.</span>
             </p>
             <NewsletterForm />
           </div>
@@ -38,6 +40,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Topics */}
+      <section className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both">
+        <h2 className="font-serif text-2xl text-white">Tópicos principales</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            {
+              title: "Enterprise & AI Survival",
+              desc: "SAP, Copilot, Joule, migraciones cloud y cómo operar en la intersección de Legacy y Future.",
+            },
+            {
+              title: "The Builder Mindset",
+              desc: "Experimentos creando agentes IA, programando y entendiendo dónde se rompe la IA de frontera.",
+            },
+            {
+              title: "Biological Clean Core",
+              desc: "Lecciones de 19 maratones aplicadas a mantener la máquina lista para aguantar el estrés corporativo.",
+            },
+            {
+              title: "The Full Stack Human",
+              desc: "Cultura, evitar la 'vegetalización' automatizada y reflexiones aleatorias sobre la vida misma.",
+            },
+          ].map((topic) => (
+            <div
+              key={topic.title}
+              className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-5"
+            >
+              <h3 className="font-serif text-lg text-white">{topic.title}</h3>
+              <p className="mt-2 text-sm text-neutral-500">{topic.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Recent posts */}
       {recentPosts.length > 0 && (
         <section className="space-y-6">
@@ -45,9 +80,9 @@ export default function Home() {
             <h2 className="font-serif text-2xl text-white">Ultimos posts</h2>
             <Link
               href="/blog"
-              className="text-xs font-medium uppercase tracking-wider text-neutral-600 transition-colors hover:text-white"
+              className="text-sm font-medium text-neutral-500 transition-colors hover:text-white"
             >
-              Ver todos
+              Ver todos &rarr;
             </Link>
           </div>
           <div className="divide-y divide-neutral-800/50">
@@ -59,6 +94,20 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Bottom CTA */}
+      <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 text-center">
+        <h2 className="font-serif text-2xl text-white">
+          Unite a la comunidad
+        </h2>
+        <p className="mx-auto mt-3 max-w-md text-base text-neutral-400">
+          Cada semana comparto ideas sobre sistemas, liderazgo y crecimiento.
+          Sin spam, solo contenido que vale la pena.
+        </p>
+        <div className="mx-auto mt-6 max-w-md">
+          <NewsletterForm />
+        </div>
+      </section>
     </div>
   );
 }

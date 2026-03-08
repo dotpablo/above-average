@@ -7,6 +7,7 @@ const socials = [
   { label: "Instagram", href: SITE.social.instagram },
   { label: "Threads", href: SITE.social.threads },
   { label: "X", href: SITE.social.x },
+  { label: "Email", href: SITE.social.email },
 ];
 
 export function Footer() {
@@ -20,7 +21,7 @@ export function Footer() {
           height={32}
           className="h-8 w-8 invert opacity-40"
         />
-        <div className="flex flex-wrap justify-center gap-4 text-xs text-neutral-600">
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-600">
           {socials.map((s) => (
             <a
               key={s.label}

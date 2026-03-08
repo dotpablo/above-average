@@ -40,11 +40,19 @@ export default async function PostPage({ params }: Props) {
   return (
     <article>
       <header className="mb-10">
-        <time className="text-sm text-neutral-600">
-          {post.date
-            ? format(parseISO(post.date), "d 'de' MMMM, yyyy", { locale: es })
-            : ""}
-        </time>
+        <div className="flex items-center gap-2 text-sm text-neutral-600">
+          <time>
+            {post.date
+              ? format(parseISO(post.date), "d 'de' MMMM, yyyy", { locale: es })
+              : ""}
+          </time>
+          {post.readTime && (
+            <>
+              <span>&middot;</span>
+              <span className="capitalize">{post.readTime.replace('min read', 'min de lectura').replace('read', 'lectura')}</span>
+            </>
+          )}
+        </div>
         <h1 className="mt-2 font-serif text-3xl text-white sm:text-4xl">
           {post.title}
         </h1>

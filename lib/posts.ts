@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import readingTime from "reading-time";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -11,6 +12,7 @@ export interface Post {
   description: string;
   tags: string[];
   content: string;
+  readTime: string;
 }
 
 export function getAllPosts(): Post[] {
@@ -23,6 +25,7 @@ export function getAllPosts(): Post[] {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(fileContents);
+    const stats = readingTime(content);
 
     return {
       slug,
@@ -31,6 +34,7 @@ export function getAllPosts(): Post[] {
       description: data.description ?? "",
       tags: data.tags ?? [],
       content,
+      readTime: stats.text,
     };
   });
 
@@ -45,6 +49,7 @@ export function getPostBySlug(slug: string): Post | undefined {
 
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
+  const stats = readingTime(content);
 
   return {
     slug,
@@ -53,5 +58,6 @@ export function getPostBySlug(slug: string): Post | undefined {
     description: data.description ?? "",
     tags: data.tags ?? [],
     content,
+    readTime: stats.text,
   };
 }

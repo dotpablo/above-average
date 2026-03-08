@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(node:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(for f in el-balance-vida-trabajo-es-una-mentira mi-impresion-sobre-la-venezuela-premium mi-primer-decepcion-amorosa sap-fiori-the-85-15-shift-a-technical siempre-he-estado-acostumbrado-a the-dumber-we-get-the-smarter-ai)",
+      "Bash(do)",
+      "Bash(echo \"=== $f ===\")",
+      "Read(//Users/pablomarichal/ClaudeApps/webpablo/content/posts/**)",
+      "Bash(done)",
+      "Bash(curl:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(gh auth:*)",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(sips:*)"
+    ]
+  }
+}
