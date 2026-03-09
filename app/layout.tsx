@@ -42,6 +42,10 @@ export default function RootLayout({
       className={`${inter.variable} ${instrumentSerif.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        {/* Clear any leftover Google Translate cookie */}
+        <script dangerouslySetInnerHTML={{ __html: `document.cookie='googtrans=;expires=Thu,01 Jan 1970 00:00:00 UTC;path=/';document.cookie='googtrans=;expires=Thu,01 Jan 1970 00:00:00 UTC;path=/;domain=.'+location.hostname;` }} />
+      </head>
       <body className="mx-auto max-w-2xl px-5 font-sans">
         <Nav />
         <main className="min-h-[70vh] py-10">{children}</main>

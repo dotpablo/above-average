@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { TranslateButton } from "./translate-button";
 
 const links = [
   { href: "/", label: "Home" },
@@ -35,9 +34,6 @@ export function Nav() {
             </Link>
           </li>
         ))}
-        <li>
-          <TranslateButton />
-        </li>
       </ul>
     </nav>
   );

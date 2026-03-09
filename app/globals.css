@@ -15,12 +15,3 @@ body {
   @apply bg-neutral-700 text-white;
 }
 
-/* Hide Google Translate top bar */
-.goog-te-banner-frame,
-.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0 !important;
-}
