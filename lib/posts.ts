@@ -13,30 +13,34 @@ export interface Post {
   tags: string[];
   content: string;
   readTime: string;
+  archived: boolean;
 }
 
-export function getAllPosts(): Post[] {
+export function getAllPosts({ includeArchived = false } = {}): Post[] {
   if (!fs.existsSync(postsDirectory)) return [];
 
   const files = fs.readdirSync(postsDirectory).filter((f) => f.endsWith(".mdx"));
 
-  const posts = files.map((filename) => {
-    const slug = filename.replace(/\.mdx$/, "");
-    const filePath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    const { data, content } = matter(fileContents);
-    const stats = readingTime(content);
+  const posts = files
+    .map((filename) => {
+      const slug = filename.replace(/\.mdx$/, "");
+      const filePath = path.join(postsDirectory, filename);
+      const fileContents = fs.readFileSync(filePath, "utf8");
+      const { data, content } = matter(fileContents);
+      const stats = readingTime(content);
 
-    return {
-      slug,
-      title: data.title ?? slug,
-      date: data.date ?? "",
-      description: data.description ?? "",
-      tags: data.tags ?? [],
-      content,
-      readTime: stats.text,
-    };
-  });
+      return {
+        slug,
+        title: data.title ?? slug,
+        date: data.date ?? "",
+        description: data.description ?? "",
+        tags: data.tags ?? [],
+        content,
+        readTime: stats.text,
+        archived: data.archived ?? false,
+      };
+    })
+    .filter((post) => includeArchived || !post.archived);
 
   return posts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -59,5 +63,6 @@ export function getPostBySlug(slug: string): Post | undefined {
     tags: data.tags ?? [],
     content,
     readTime: stats.text,
+    archived: data.archived ?? false,
   };
 }

@@ -35,12 +35,12 @@ export default function AboutPage() {
 
       {/* The bike story */}
       <section className="space-y-4 border-l-2 border-neutral-800 pl-6">
-        <h2 className="font-serif text-2xl text-white">La bicicleta que cambió todo</h2>
+        <h2 className="font-serif text-2xl text-white">La bicicleta</h2>
         <p className="text-base leading-relaxed text-neutral-400">
-          En Venezuela, cuando quise entrar al mundo SAP, no tenía cómo pagarlo. La academia costaba plata que no tenía. Vendí mi bicicleta de triatlón — con la que entrenaba — y usé esa plata para pagar el curso.
+          En Venezuela estaba entrenando para triatlón. Tenía una bicicleta de competencia en la que había invertido tiempo y esfuerzo. Vi que SAP era la puerta al siguiente nivel profesional, evalué el costo de la certificación, y tomé la decisión: vendí la bici para pagarla.
         </p>
         <p className="text-base leading-relaxed text-neutral-400">
-          Esa decisión, aparentemente pequeña, abrió la puerta que me trajo hasta acá. No fue motivación. Fue una apuesta calculada con lo único que tenía. Eso es lo que entiendo por sistema: sacrificar lo correcto en el momento correcto para llegar donde el promedio no llega.
+          No fue un sacrificio dramático — fue una apuesta calculada. Eso es lo que entiendo por sistema: identificar el recurso correcto, moverlo al lugar correcto, en el momento correcto. Esa decisión abrió la puerta que me trajo hasta acá. El triatlón esperó. La ventana no.
         </p>
       </section>
 

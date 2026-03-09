@@ -25,7 +25,7 @@ export default function Home() {
           </p>
           <div className="pt-2">
             <p className="mb-2.5 text-sm font-medium text-neutral-400">
-              Únete a los profesionales que están construyendo sistemas (y carreras) a prueba de IA. <br />
+              Únete a los que usan la IA antes de que la IA los use a ellos. <br />
               <span className="text-neutral-500 text-xs">Un newsletter técnico, directo y sin humo.</span>
             </p>
             <NewsletterForm />
@@ -40,6 +40,21 @@ export default function Home() {
             priority
           />
         </div>
+      </section>
+
+      {/* Stats bar */}
+      <section className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        {[
+          { value: "9+", label: "años en SAP" },
+          { value: "57", label: "artículos publicados" },
+          { value: "19", label: "maratones corridos" },
+          { value: "2016", label: "escribiendo desde" },
+        ].map((stat) => (
+          <div key={stat.label} className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-4 text-center">
+            <p className="font-serif text-3xl text-white">{stat.value}</p>
+            <p className="mt-1 text-xs text-neutral-600">{stat.label}</p>
+          </div>
+        ))}
       </section>
 
       {/* Topics */}
