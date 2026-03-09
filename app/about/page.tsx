@@ -5,7 +5,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "La historia de Pablo Marichal: Uruguay, Venezuela, SAP, 19 maratones y Above Average.",
+    "La historia de Pablo Marichal: Uruguay, Venezuela, SAP, 19 maratones y el concepto Full Stack Human.",
 };
 
 export default function AboutPage() {
@@ -25,12 +25,23 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h1 className="font-serif text-3xl text-white">Pablo Marichal</h1>
           <p className="text-base leading-relaxed text-neutral-400">
-            Nací en Uruguay, me forjé en Venezuela y hoy construyo desde la nube. Soy <strong>Senior SAP Tech Lead</strong>, 19x Marathoner, y por encima de todo, padre de Max y Mía.
+            Nací en Uruguay en 1980. A los 10 años me mudé a Venezuela, donde crecí, estudié Ingeniería en Informática y empecé a trabajar. En 2018, con una crisis encima y casi sin equipaje, volví a Uruguay a empezar de cero.
           </p>
           <p className="text-base leading-relaxed text-neutral-400">
-            Opero en la línea de fuego entre la pesada infraestructura corporativa y la velocidad esquizofrénica de la Inteligencia Artificial. Por más de una década, me he dedicado a liderar migraciones complejas y asegurar que los "ERP Zombies" no hagan colapsar operaciones globales. Mi propuesta de valor es simple: uso IA de frontera para acelerar, pero aplico años de cicatrices en producción para garantizar que el sistema no explote.
+            Hoy soy <strong className="text-neutral-200">Senior SAP Tech Lead</strong> en BASF, reconocido Outstanding dos años consecutivos, AI Champion de una familia de más de 8 equipos, y el tipo que da charlas en inglés ante directivos alemanes sobre lo que se viene. Todo eso construido ladrillo por ladrillo, sin herencia, sin contactos, sin red de seguridad.
           </p>
         </div>
+      </section>
+
+      {/* The bike story */}
+      <section className="space-y-4 border-l-2 border-neutral-800 pl-6">
+        <h2 className="font-serif text-2xl text-white">La bicicleta que cambió todo</h2>
+        <p className="text-base leading-relaxed text-neutral-400">
+          En Venezuela, cuando quise entrar al mundo SAP, no tenía cómo pagarlo. La academia costaba plata que no tenía. Vendí mi bicicleta de triatlón — con la que entrenaba — y usé esa plata para pagar el curso.
+        </p>
+        <p className="text-base leading-relaxed text-neutral-400">
+          Esa decisión, aparentemente pequeña, abrió la puerta que me trajo hasta acá. No fue motivación. Fue una apuesta calculada con lo único que tenía. Eso es lo que entiendo por sistema: sacrificar lo correcto en el momento correcto para llegar donde el promedio no llega.
+        </p>
       </section>
 
       {/* Marathon section */}
@@ -46,31 +57,35 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h2 className="font-serif text-2xl text-white">Biological Clean Core</h2>
           <p className="text-base leading-relaxed text-neutral-400">
-            He cruzado la meta de 19 maratones alrededor del mundo (incluyendo Berlín, Chicago y Nueva York, en camino a las 6 Majors). Para mí, el asfalto no es un pasatiempo; es la aplicación estricta del concepto <strong>Clean Core (Núcleo Limpio)</strong> de SAP a mi propio sistema biológico.
+            Empecé a correr en 2011 porque había ganado peso y me estaba yendo por un mal camino. Ese año corrí una media, una maratón completa, y en septiembre mi primer Major: Berlín. Hoy van 19 maratones — Berlín, Chicago, New York, Tokyo, Buenos Aires — en camino a las 6 World Majors y con el sueño de bajar las 3 horas.
           </p>
           <p className="text-base leading-relaxed text-neutral-400">
-            Para liderar equipos en situaciones críticas, necesitás una fisiología que soporte la presión. Entender los límites de la máquina humana a través del dolor infalsificable es el primer paso para construir software resiliente.
+            Aplico la misma lógica <strong className="text-neutral-200">Clean Core</strong> de SAP a mi biología: núcleo estándar (sueño, comida, movimiento), sin personalizaciones tóxicas. Para liderar equipos en situaciones críticas necesitás un sistema físico que aguante. Sin eso, sos un ERP zombie esperando caerse.
           </p>
         </div>
       </section>
 
-      {/* Above Average */}
+      {/* Full Stack Human */}
       <section className="space-y-4">
-        <h2 className="font-serif text-2xl text-white">
-          El "Full Stack Human"
-        </h2>
+        <h2 className="font-serif text-2xl text-white">El Full Stack Human</h2>
         <p className="text-base leading-relaxed text-neutral-400">
-          En la era de la IA, el código es un commodity. La sintaxis es gratis. Lo que vale oro es el <strong>Criterio, la Arquitectura y el Juicio Clínico</strong> para saber qué líneas de código te van a destruir el negocio en seis meses.
+          El filósofo Éric Sadin habla de la <em>vegetalización de la humanidad</em>: delegar tanta agencia cognitiva a los algoritmos que terminamos siendo nodos pasivos del sistema, no agentes. Lo veo todos los días en el mundo corporativo: gente que copia prompts sin entender lo que ejecuta, managers que creen que Copilot reemplaza el criterio, juniors que no saben debuggear porque nunca aprendieron el error de raíz.
         </p>
         <p className="text-base leading-relaxed text-neutral-400">
-          Inicié <strong>Above Average</strong> como un acto de rebelión contra la mediocridad automatizada y la "vegetalización" de la fuerza laboral. Este espacio es mi laboratorio para auditar agentes de IA en el mundo real y, sobre todo, es un manual de vida digital escrito para que el día de mañana, mis hijos sepan cómo se ve la disciplina.
+          <strong className="text-neutral-200">Above Average</strong> es mi respuesta a eso. No un newsletter de motivación, sino un framework de supervivencia para el profesional tech que no quiere quedar deprecated. Un sistema con tres capas: el Kernel biológico (cuerpo en forma), las extensiones técnicas (SAP, IA, arquitectura) y la soberanía cognitiva (juicio que la IA no puede reemplazar).
+        </p>
+        <p className="text-base leading-relaxed text-neutral-400">
+          Escribo esto también para Max y Mía, mis hijos de 4 y 2 años. Para que un día, cuando tengan 25 o 30 y el mundo vuelva a cambiar de forma que no imagino, encuentren acá un registro de cómo su viejo navegó la incertidumbre sin paralizarse. No porque fuera especial. Porque tenía sistemas.
         </p>
       </section>
 
       {/* Newsletter CTA */}
       <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
-        <p className="mb-4 text-sm font-medium text-neutral-300">
-          Si esta filosofía te resuena, sumate a la trinchera:
+        <p className="mb-1 text-sm font-medium text-neutral-300">
+          Si esto te resuena, sumate:
+        </p>
+        <p className="mb-4 text-xs text-neutral-600">
+          Un newsletter técnico y directo. Sin humo, sin coaches, sin frases vacías.
         </p>
         <div className="max-w-md">
           <NewsletterForm />

@@ -98,15 +98,16 @@ export default function Home() {
       )}
 
       {/* Bottom CTA */}
-      <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 text-center">
-        <h2 className="font-serif text-2xl text-white">
-          Unite a la comunidad
+      <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
+        <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-4">Newsletter</p>
+        <h2 className="font-serif text-2xl text-white leading-snug">
+          Para el profesional tech que no quiere<br className="hidden sm:inline" /> quedar deprecated.
         </h2>
-        <p className="mx-auto mt-3 max-w-md text-base text-neutral-400">
-          Cada semana comparto ideas sobre sistemas, liderazgo y crecimiento.
-          Sin spam, solo contenido que vale la pena.
+        <p className="mt-3 max-w-lg text-base text-neutral-400">
+          Cada semana: una dosis de criterio sobre SAP, IA de frontera y rendimiento humano.
+          Sin motivación barata. Sin "vibe coding". Solo lo que funciona en producción.
         </p>
-        <div className="mx-auto mt-6 max-w-md">
+        <div className="mt-6 max-w-md">
           <NewsletterForm />
         </div>
       </section>
