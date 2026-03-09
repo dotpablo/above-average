@@ -3,11 +3,31 @@ import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { PostCard } from "@/components/post-card";
 import { getAllPosts } from "@/lib/posts";
+import { SITE } from "@/lib/constants";
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Pablo Marichal",
+  url: SITE.url,
+  sameAs: [
+    "https://www.linkedin.com/in/pablomarichal/",
+    "https://x.com/dotpablo",
+    "https://www.instagram.com/pabloaboveaverage",
+  ],
+  jobTitle: "Senior SAP Tech Lead",
+  description: SITE.description,
+};
 
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 5);
 
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+    />
     <div className="space-y-20">
       {/* Hero */}
       <section className="flex flex-col-reverse items-center gap-10 sm:flex-row sm:items-start sm:gap-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -127,5 +147,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }

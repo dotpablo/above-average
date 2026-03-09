@@ -19,15 +19,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
 
+  const url = `${SITE.url}/blog/${slug}`;
   return {
     title: post.title,
     description: post.description,
+    alternates: { canonical: url },
     openGraph: {
       title: post.title,
       description: post.description,
+      url,
       type: "article",
       publishedTime: post.date,
       authors: [SITE.author],
+      siteName: SITE.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
     },
   };
 }
@@ -37,7 +46,32 @@ export default async function PostPage({ params }: Props) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: SITE.author,
+      url: SITE.url,
+    },
+    publisher: {
+      "@type": "Person",
+      name: SITE.author,
+      url: SITE.url,
+    },
+    url: `${SITE.url}/blog/${slug}`,
+    mainEntityOfPage: `${SITE.url}/blog/${slug}`,
+  };
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+    />
     <article>
       <header className="mb-10">
         <div className="flex items-center gap-2 text-sm text-neutral-600">
@@ -64,5 +98,6 @@ export default async function PostPage({ params }: Props) {
         <MDXRemote source={post.content} />
       </div>
     </article>
+    </>
   );
 }
