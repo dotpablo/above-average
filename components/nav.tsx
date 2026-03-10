@@ -6,6 +6,7 @@ const links = [
   { href: "/blog", label: "Blog" },
   { href: "/recursos", label: "Recursos" },
   { href: "/about", label: "About" },
+  { href: "/trabajar-juntos", label: "Trabajar juntos" },
 ];
 
 export function Nav() {

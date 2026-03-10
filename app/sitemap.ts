@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/about`, lastModified: new Date() },
     { url: `${SITE.url}/recursos`, lastModified: new Date() },
     { url: `${SITE.url}/recursos/above-average-os`, lastModified: new Date() },
+    { url: `${SITE.url}/trabajar-juntos`, lastModified: new Date() },
     ...posts,
   ];
 }
