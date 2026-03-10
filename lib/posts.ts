@@ -14,6 +14,7 @@ export interface Post {
   content: string;
   readTime: string;
   archived: boolean;
+  category: string;
 }
 
 export function getAllPosts({ includeArchived = false } = {}): Post[] {
@@ -38,6 +39,7 @@ export function getAllPosts({ includeArchived = false } = {}): Post[] {
         content,
         readTime: stats.text,
         archived: data.archived ?? false,
+        category: data.category ?? "",
       };
     })
     .filter((post) => includeArchived || !post.archived);
@@ -64,5 +66,6 @@ export function getPostBySlug(slug: string): Post | undefined {
     content,
     readTime: stats.text,
     archived: data.archived ?? false,
+    category: data.category ?? "",
   };
 }

@@ -336,7 +336,7 @@ Este sitio fue construido de forma **completamente iterativa** usando IA como pa
 
 7. **Newsletter funcional** — API route serverless que llama a Buttondown, maneja 201/409/400 con mensajes diferenciados para el usuario (suscrito, ya suscrito, error).
 
-8. **Posicionamiento** — Revisión del contenido real de los posts para entender los temas reales (no "crecimiento personal" sino supervivencia tech en la era IA, SAP enterprise, Full Stack Human, vegetalización de Sadin). Reescritura del home y About en consecuencia.
+8. **Posicionamiento** — Revisión del contenido real de los posts para entender los temas reales (Supervivencia tech en la era IA, SAP enterprise, Full Stack Human, vegetalización de Sadin). Reescritura del home y About en consecuencia.
 
 9. **Limpieza editorial** — Agente de IA revisó 57 posts y eliminó todos los CTAs de LinkedIn/newsletter ("respondé este email", "te leo en los comentarios", "¿Arrancamos?", hashtags, emojis en headers). Los posts ahora leen como artículos, no como reposts.
 
@@ -347,7 +347,7 @@ Este sitio fue construido de forma **completamente iterativa** usando IA como pa
 ### Herramientas de IA usadas
 
 - **[Claude Code](https://claude.ai/code) (Anthropic)** — Par de desarrollo principal. Arquitectura, código, scripts de migración, debugging, SEO, edición masiva de contenido con agentes en background.
-- **[Antigravity](https://antigravity.ai) con Gemini 2.5 Pro** — Sesiones complementarias cuando se agotaban los créditos de Claude. Mismo flujo iterativo, diferente modelo.
+- **[Antigravity](https://antigravity.ai) con Gemini 3.1 Pro** — Sesiones complementarias cuando se agotaban los créditos de Claude. Mismo flujo iterativo, diferente modelo.
 
 ### Lo que esto demuestra
 

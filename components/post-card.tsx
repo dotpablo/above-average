@@ -3,10 +3,15 @@ import { format, parseISO } from "date-fns";
 import { es } from "date-fns/locale";
 import type { Post } from "@/lib/posts";
 
-export function PostCard({ post }: { post: Post }) {
+export function PostCard({ post, showCategory = false }: { post: Post; showCategory?: boolean }) {
   return (
     <article className="group">
       <Link href={`/blog/${post.slug}`} className="block">
+        {showCategory && post.category && (
+          <p className="mb-1.5 text-xs font-medium uppercase tracking-widest text-neutral-600">
+            {post.category}
+          </p>
+        )}
         <div className="flex items-baseline justify-between gap-4">
           <h3 className="font-serif text-xl text-white group-hover:underline underline-offset-4 decoration-neutral-600">
             {post.title}
