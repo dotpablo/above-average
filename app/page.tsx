@@ -19,6 +19,32 @@ const personSchema = {
   description: SITE.description,
 };
 
+const stats = [
+  { value: "9+", label: "años SAP" },
+  { value: "57", label: "artículos" },
+  { value: "19", label: "maratones" },
+  { value: "2016", label: "desde" },
+];
+
+const topics = [
+  {
+    title: "Enterprise & AI Survival",
+    desc: "SAP, Copilot, Joule, migraciones cloud y cómo operar en la intersección de Legacy y Future.",
+  },
+  {
+    title: "The Builder Mindset",
+    desc: "Experimentos creando agentes IA, programando y entendiendo dónde se rompe la IA de frontera.",
+  },
+  {
+    title: "Biological Clean Core",
+    desc: "Lecciones de 19 maratones aplicadas a mantener la máquina lista para aguantar el estrés corporativo.",
+  },
+  {
+    title: "The Full Stack Human",
+    desc: "Cultura, evitar la 'vegetalización' automatizada y reflexiones aleatorias sobre la vida misma.",
+  },
+];
+
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 5);
 
@@ -29,76 +55,62 @@ export default function Home() {
       dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
     />
     <div className="space-y-20">
-      {/* Hero */}
-      <section className="flex flex-col-reverse items-center gap-10 sm:flex-row sm:items-start sm:gap-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-        <div className="flex-1 space-y-6">
-          <h1 className="font-serif text-5xl text-white sm:text-6xl md:text-7xl tracking-tighter leading-[1.1]">
-            Code is cheap<br />in the AI era.<br />
-            <span className="text-neutral-500">Context is not.</span>
-          </h1>
-          <p className="text-lg leading-relaxed text-neutral-400 max-w-xl">
-            Soy Pablo Marichal: Senior SAP Tech Lead, AI Champion y 19x Marathoner.
-            <br /><br />
-            Opero en la intersección exacta entre la robustez corporativa, la agilidad de la Inteligencia Artificial y la resistencia biológica.
-            <br /><br />
-            Hablo fluido en <i>Legacy</i> y fluido en <i>Futuro</i>.
-          </p>
-          <div className="pt-2">
-            <p className="mb-2.5 text-sm font-medium text-neutral-400">
-              Únete a los que usan la IA antes de que la IA los use a ellos. <br />
-              <span className="text-neutral-500 text-xs">Un newsletter técnico, directo y sin humo.</span>
-            </p>
-            <NewsletterForm />
-          </div>
-        </div>
-        <div className="relative h-48 w-48 shrink-0 overflow-hidden rounded-2xl ring-1 ring-neutral-800 sm:h-56 sm:w-56">
-          <Image
-            src="/images/pablo-hero.jpg"
-            alt="Pablo Marichal"
-            fill
-            className="object-cover object-top"
-            priority
-          />
-        </div>
-      </section>
 
-      {/* Stats bar */}
-      <section className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {[
-          { value: "9+", label: "años en SAP" },
-          { value: "57", label: "artículos publicados" },
-          { value: "19", label: "maratones corridos" },
-          { value: "2016", label: "escribiendo desde" },
-        ].map((stat) => (
-          <div key={stat.label} className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-4 text-center">
-            <p className="font-serif text-3xl text-white">{stat.value}</p>
-            <p className="mt-1 text-xs text-neutral-600">{stat.label}</p>
+      {/* Hero */}
+      <section className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-12">
+
+          {/* Photo — portrait, more prominent */}
+          <div className="relative h-64 w-52 shrink-0 overflow-hidden rounded-2xl ring-1 ring-neutral-800 sm:h-72 sm:w-56">
+            <Image
+              src="/images/pablo-hero.jpg"
+              alt="Pablo Marichal"
+              fill
+              className="object-cover object-top"
+              priority
+            />
           </div>
-        ))}
+
+          {/* Text */}
+          <div className="flex-1 space-y-6">
+            <h1 className="font-serif text-4xl text-white sm:text-5xl md:text-6xl tracking-tighter leading-[1.1]">
+              Code is cheap<br />in the AI era.<br />
+              <span className="text-neutral-500">Context is not.</span>
+            </h1>
+
+            <p className="text-base leading-relaxed text-neutral-400">
+              Soy Pablo Marichal: Senior SAP Tech Lead, AI Champion y 19x Marathoner.
+              Opero en la intersección de la robustez corporativa, la IA de frontera y la resistencia biológica.
+              Hablo fluido en <em>Legacy</em> y fluido en <em>Futuro</em>.
+            </p>
+
+            {/* Stats inline */}
+            <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-neutral-800 pt-4">
+              {stats.map((s) => (
+                <div key={s.label} className="flex items-baseline gap-1.5">
+                  <span className="font-serif text-xl text-white">{s.value}</span>
+                  <span className="text-xs text-neutral-600">{s.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Newsletter form */}
+            <div>
+              <p className="mb-2.5 text-sm text-neutral-500">
+                Un newsletter técnico, directo y sin humo.
+              </p>
+              <NewsletterForm />
+            </div>
+          </div>
+
+        </div>
       </section>
 
       {/* Topics */}
       <section className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both">
         <h2 className="font-serif text-2xl text-white">Tópicos principales</h2>
         <div className="grid gap-4 sm:grid-cols-2">
-          {[
-            {
-              title: "Enterprise & AI Survival",
-              desc: "SAP, Copilot, Joule, migraciones cloud y cómo operar en la intersección de Legacy y Future.",
-            },
-            {
-              title: "The Builder Mindset",
-              desc: "Experimentos creando agentes IA, programando y entendiendo dónde se rompe la IA de frontera.",
-            },
-            {
-              title: "Biological Clean Core",
-              desc: "Lecciones de 19 maratones aplicadas a mantener la máquina lista para aguantar el estrés corporativo.",
-            },
-            {
-              title: "The Full Stack Human",
-              desc: "Cultura, evitar la 'vegetalización' automatizada y reflexiones aleatorias sobre la vida misma.",
-            },
-          ].map((topic) => (
+          {topics.map((topic) => (
             <div
               key={topic.title}
               className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-5"
@@ -114,7 +126,7 @@ export default function Home() {
       {recentPosts.length > 0 && (
         <section className="space-y-6">
           <div className="flex items-baseline justify-between">
-            <h2 className="font-serif text-2xl text-white">Ultimos posts</h2>
+            <h2 className="font-serif text-2xl text-white">Últimos posts</h2>
             <Link
               href="/blog"
               className="text-sm font-medium text-neutral-500 transition-colors hover:text-white"
@@ -136,7 +148,7 @@ export default function Home() {
       <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
         <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-4">Newsletter</p>
         <h2 className="font-serif text-2xl text-white leading-snug">
-          Para el profesional tech que no quiere<br className="hidden sm:inline" /> quedar deprecated.
+          Para el profesional tech que no quiere quedar deprecated.
         </h2>
         <p className="mt-3 max-w-lg text-base text-neutral-400">
           Cada semana: una dosis de criterio sobre SAP, IA de frontera y rendimiento humano.
@@ -146,6 +158,7 @@ export default function Home() {
           <NewsletterForm />
         </div>
       </section>
+
     </div>
     </>
   );

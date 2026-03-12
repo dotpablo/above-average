@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: { default: SITE.title, template: `%s — ${SITE.name}` },
   description: SITE.description,
   metadataBase: new URL(SITE.url),
+  alternates: {
+    types: {
+      "application/rss+xml": `${SITE.url}/feed.xml`,
+    },
+  },
   openGraph: {
     title: SITE.title,
     description: SITE.description,

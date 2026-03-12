@@ -1,5 +1,13 @@
+import Link from "next/link";
 import Image from "next/image";
 import { SITE } from "@/lib/constants";
+
+const navLinks = [
+  { href: "/blog", label: "Blog" },
+  { href: "/recursos", label: "Recursos" },
+  { href: "/about", label: "About" },
+  { href: "/trabajar-juntos", label: "Trabajar juntos" },
+];
 
 const socials = [
   { label: "LinkedIn", href: SITE.social.linkedin },
@@ -22,6 +30,17 @@ export function Footer() {
           className="h-8 w-8 invert opacity-40"
         />
         <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-600">
+          {navLinks.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="transition-colors hover:text-white"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-700">
           {socials.map((s) => (
             <a
               key={s.label}

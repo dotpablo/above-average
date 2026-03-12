@@ -49,6 +49,15 @@ export function getAllPosts({ includeArchived = false } = {}): Post[] {
   );
 }
 
+export function getAdjacentPosts(slug: string): { prev: Post | null; next: Post | null } {
+  const posts = getAllPosts();
+  const index = posts.findIndex((p) => p.slug === slug);
+  return {
+    prev: index < posts.length - 1 ? posts[index + 1] : null,
+    next: index > 0 ? posts[index - 1] : null,
+  };
+}
+
 export function getPostBySlug(slug: string): Post | undefined {
   const filePath = path.join(postsDirectory, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return undefined;

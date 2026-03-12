@@ -21,8 +21,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { page } = await params;
   return {
-    title: `Blog — Pagina ${page}`,
-    description: "Todos los articulos de Above Average.",
+    title: `Blog — Página ${page}`,
+    description: "Todos los artículos de Above Average.",
   };
 }
 
