@@ -5,7 +5,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "La historia de Pablo Marichal: Uruguay, Venezuela, SAP, 19 maratones y el concepto Full Stack Human.",
+    "La historia de Pablo Marichal: Uruguay, Venezuela, SAP, 19 maratones y el concepto de Humano Full Stack.",
 };
 
 export default function AboutPage() {
@@ -55,7 +55,7 @@ export default function AboutPage() {
           />
         </div>
         <div className="space-y-4">
-          <h2 className="font-serif text-2xl text-white">Biological Clean Core</h2>
+          <h2 className="font-serif text-2xl text-white">Clean Core Biológico</h2>
           <p className="text-base leading-relaxed text-neutral-400">
             Empecé a correr en 2011 porque había ganado peso y me estaba yendo por un mal camino. Ese año corrí una media, una maratón completa, y en septiembre mi primer Major: Berlín. Hoy van 19 maratones — Berlín, Chicago, New York, Tokyo, Buenos Aires — en camino a las 6 World Majors y con el sueño de bajar las 3 horas.
           </p>
@@ -67,12 +67,12 @@ export default function AboutPage() {
 
       {/* Full Stack Human */}
       <section className="space-y-4">
-        <h2 className="font-serif text-2xl text-white">El Full Stack Human</h2>
+        <h2 className="font-serif text-2xl text-white">El Humano Full Stack</h2>
         <p className="text-base leading-relaxed text-neutral-400">
           El filósofo Éric Sadin habla de la <em>vegetalización de la humanidad</em>: delegar tanta agencia cognitiva a los algoritmos que terminamos siendo nodos pasivos del sistema, no agentes. Lo veo todos los días en el mundo corporativo: gente que copia prompts sin entender lo que ejecuta, managers que creen que Copilot reemplaza el criterio, juniors que no saben debuggear porque nunca aprendieron el error de raíz.
         </p>
         <p className="text-base leading-relaxed text-neutral-400">
-          <strong className="text-neutral-200">Above Average</strong> es mi respuesta a eso. No un newsletter de motivación, sino un framework de supervivencia para el profesional tech que no quiere quedar deprecated. Un sistema con tres capas: el Kernel biológico (cuerpo en forma), las extensiones técnicas (SAP, IA, arquitectura) y la soberanía cognitiva (juicio que la IA no puede reemplazar).
+          <strong className="text-neutral-200">Above Average</strong> es mi respuesta a eso. No un newsletter de motivación, sino un framework de supervivencia para el profesional tech que no quiere quedar obsoleto. Un sistema con tres capas: el Kernel biológico (cuerpo en forma), las extensiones técnicas (SAP, IA, arquitectura) y la soberanía cognitiva (juicio que la IA no puede reemplazar).
         </p>
         <p className="text-base leading-relaxed text-neutral-400">
           Escribo esto también para Max y Mía, mis hijos de 4 y 2 años. Para que un día, cuando tengan 25 o 30 y el mundo vuelva a cambiar de forma que no imagino, encuentren acá un registro de cómo su viejo navegó la incertidumbre sin paralizarse. No porque fuera especial. Porque tenía sistemas.

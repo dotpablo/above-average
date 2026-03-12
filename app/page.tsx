@@ -20,27 +20,27 @@ const personSchema = {
 };
 
 const stats = [
-  { value: "9+", label: "años SAP" },
+  { value: "12+", label: "años SAP" },
   { value: "57", label: "artículos" },
   { value: "19", label: "maratones" },
-  { value: "2016", label: "desde" },
+  { value: "10", label: "años escribiendo" },
 ];
 
 const topics = [
   {
-    title: "Enterprise & AI Survival",
-    desc: "SAP, Copilot, Joule, migraciones cloud y cómo operar en la intersección de Legacy y Future.",
+    title: "Supervivencia Corporativa e IA",
+    desc: "SAP, Copilot, Joule, migraciones cloud y cómo operar en la intersección del Legacy y el Futuro.",
   },
   {
-    title: "The Builder Mindset",
+    title: "Mentalidad de Constructor",
     desc: "Experimentos creando agentes IA, programando y entendiendo dónde se rompe la IA de frontera.",
   },
   {
-    title: "Biological Clean Core",
+    title: "Clean Core Biológico",
     desc: "Lecciones de 19 maratones aplicadas a mantener la máquina lista para aguantar el estrés corporativo.",
   },
   {
-    title: "The Full Stack Human",
+    title: "El Humano Full Stack",
     desc: "Cultura, evitar la 'vegetalización' automatizada y reflexiones aleatorias sobre la vida misma.",
   },
 ];
@@ -74,12 +74,12 @@ export default function Home() {
           {/* Text */}
           <div className="flex-1 space-y-6">
             <h1 className="font-serif text-4xl text-white sm:text-5xl md:text-6xl tracking-tighter leading-[1.1]">
-              Code is cheap<br />in the AI era.<br />
-              <span className="text-neutral-500">Context is not.</span>
+              El código sobra<br />en la era de la IA.<br />
+              <span className="text-neutral-500">El contexto no.</span>
             </h1>
 
             <p className="text-base leading-relaxed text-neutral-400">
-              Soy Pablo Marichal: Senior SAP Tech Lead, AI Champion y 19x Marathoner.
+              Soy Pablo Marichal: Senior SAP Tech Lead, AI Champion, Papá de Max y Mia y Maratonista (19X).
               Opero en la intersección de la robustez corporativa, la IA de frontera y la resistencia biológica.
               Hablo fluido en <em>Legacy</em> y fluido en <em>Futuro</em>.
             </p>
@@ -148,7 +148,7 @@ export default function Home() {
       <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
         <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-4">Newsletter</p>
         <h2 className="font-serif text-2xl text-white leading-snug">
-          Para el profesional tech que no quiere quedar deprecated.
+          Para el profesional tech que no quiere quedar obsoleto.
         </h2>
         <p className="mt-3 max-w-lg text-base text-neutral-400">
           Cada semana: una dosis de criterio sobre SAP, IA de frontera y rendimiento humano.
