@@ -79,11 +79,24 @@ export default function Home() {
               <span className="text-neutral-500">El contexto no.</span>
             </h1>
 
-            <p className="text-base leading-relaxed text-neutral-400">
-              Soy Pablo Marichal: Senior SAP Tech Lead, AI Champion, Papá de Max y Mia y Maratonista (19X).
-              Opero en la intersección de la robustez corporativa, la IA de frontera y la resistencia biológica.
-              Hablo fluido en <em>Legacy</em> y fluido en <em>Futuro</em>.
-            </p>
+            <div className="space-y-3 text-base leading-relaxed text-neutral-400">
+              <p className="text-lg text-white font-medium">Soy Pablo Marichal.</p>
+              <p>
+                Arquitecto de sistemas enterprise. Atleta de resistencia. Padre.
+              </p>
+              <p>
+                20+ años haciendo que la tecnología sobreviva al contacto con la realidad.
+                19 maratones cruzando líneas de meta que nadie me obligó a cruzar.
+                Dos hijos que me obligan a construir algo que valga la pena dejar.
+              </p>
+              <p>
+                Opero en la intersección donde la arquitectura técnica, la IA de frontera
+                y la resistencia biológica se vuelven la misma disciplina.
+              </p>
+              <p>
+                Hablo fluido en <em>Legacy</em>. Fluido en <em>Futuro</em>.
+              </p>
+            </div>
 
             {/* Stats inline */}
             <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-neutral-800 pt-4">
