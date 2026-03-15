@@ -20,6 +20,7 @@ const personSchema = {
 };
 
 const stats = [
+  { value: "20+", label: "años en Tech" },
   { value: "12+", label: "años SAP" },
   { value: "57", label: "artículos" },
   { value: "19", label: "maratones" },
@@ -96,6 +97,9 @@ export default function Home() {
 
             {/* Newsletter form */}
             <div>
+              <p className="mb-1 text-sm font-medium text-neutral-300">
+                Suscribite a Above Average
+              </p>
               <p className="mb-2.5 text-sm text-neutral-500">
                 Un newsletter técnico, directo y sin humo.
               </p>
