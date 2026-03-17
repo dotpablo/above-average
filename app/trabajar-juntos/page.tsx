@@ -21,9 +21,9 @@ const services = [
     tags: ["AI Agents", "Copilot / Joule", "Automatización", "Roadmap IA"],
   },
   {
-    title: "Tech Leadership coaching",
-    desc: "Para Tech Leads y managers SAP que quieren operar con más claridad en la era IA — sin perder el criterio técnico que los trajo hasta acá.",
-    tags: ["1:1", "Team strategy", "Career positioning"],
+    title: "Advisory para Tech Leads",
+    desc: "Para líderes técnicos que quieren operar con más claridad en la era IA — tomar mejores decisiones de arquitectura, posicionar a sus equipos y no perder el criterio que los trajo hasta acá.",
+    tags: ["1:1", "Estrategia técnica", "Posicionamiento"],
   },
 ];
 
@@ -39,8 +39,8 @@ export default function WorkTogetherPage() {
           Expertise técnico sin<br />ruido de fondo.
         </h1>
         <p className="text-lg text-neutral-400 leading-relaxed">
-          9+ años en proyectos SAP enterprise. AI Champion activo. 19 maratones como
-          laboratorio de sistemas de alto rendimiento bajo presión real.
+          20+ años en tecnología. 12+ en el ecosistema SAP enterprise.
+          19 maratones como laboratorio de sistemas que aguantan presión real.
         </p>
         <p className="text-base text-neutral-500 leading-relaxed">
           Trabajo con empresas y líderes tech que necesitan criterio en la
@@ -83,12 +83,20 @@ export default function WorkTogetherPage() {
         <p className="text-sm text-neutral-500">
           Respondo personalmente. Sin formularios que van a ningún lado.
         </p>
-        <Link
-          href={SITE.social.email}
-          className="inline-block rounded-lg bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition-opacity hover:opacity-90"
-        >
-          Escribime →
-        </Link>
+        <div className="flex gap-3">
+          <Link
+            href={SITE.social.email}
+            className="inline-block rounded-lg bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition-opacity hover:opacity-90"
+          >
+            Escribime →
+          </Link>
+          <Link
+            href={SITE.social.linkedin}
+            className="inline-block rounded-lg border border-neutral-700 px-6 py-3 text-sm font-medium text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white"
+          >
+            LinkedIn
+          </Link>
+        </div>
       </section>
     </div>
   );
