@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/constants";
+import { FadeIn } from "@/components/motion/fade-in";
+import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 
 export const metadata: Metadata = {
   title: "Trabajar juntos",
@@ -32,72 +34,81 @@ export default function WorkTogetherPage() {
     <div className="space-y-16 max-w-2xl">
       {/* Header */}
       <header className="space-y-4">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">
-          Trabajar juntos
-        </p>
-        <h1 className="font-serif text-4xl text-white leading-tight">
-          Expertise técnico sin<br />ruido de fondo.
-        </h1>
-        <p className="text-lg text-neutral-400 leading-relaxed">
-          20+ años en tecnología. 12+ en el ecosistema SAP enterprise.
-          19 maratones como laboratorio de sistemas que aguantan presión real.
-        </p>
-        <p className="text-base text-neutral-500 leading-relaxed">
-          Trabajo con empresas y líderes tech que necesitan criterio en la
-          intersección entre SAP legacy y la adopción real de IA — no teoría,
-          no hype, solo lo que funciona en producción.
-        </p>
+        <FadeIn duration={0.5}>
+          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">
+            Trabajar juntos
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <h1 className="font-serif text-4xl text-white leading-tight">
+            Expertise técnico sin<br />ruido de fondo.
+          </h1>
+        </FadeIn>
+        <FadeIn delay={0.2}>
+          <p className="text-lg text-neutral-400 leading-relaxed tracking-[-0.01em]">
+            20+ años en tecnología. 12+ en el ecosistema SAP enterprise.
+            19 maratones como laboratorio de sistemas que aguantan presión real.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.3}>
+          <p className="text-base text-neutral-500 leading-relaxed tracking-[-0.01em]">
+            Trabajo con empresas y líderes tech que necesitan criterio en la
+            intersección entre SAP legacy y la adopción real de IA — no teoría,
+            no hype, solo lo que funciona en producción.
+          </p>
+        </FadeIn>
       </header>
 
       {/* Services */}
-      <section className="space-y-4">
+      <StaggerChildren className="space-y-4" staggerDelay={0.1}>
         {services.map((s) => (
-          <div
-            key={s.title}
-            className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 space-y-3"
-          >
-            <h2 className="font-serif text-xl text-white">{s.title}</h2>
-            <p className="text-sm text-neutral-400 leading-relaxed">{s.desc}</p>
-            <div className="flex flex-wrap gap-2 pt-1">
-              {s.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-neutral-700 px-3 py-0.5 text-xs text-neutral-500"
-                >
-                  {tag}
-                </span>
-              ))}
+          <StaggerItem key={s.title}>
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 space-y-3 backdrop-blur-sm transition-colors hover:border-neutral-700">
+              <h2 className="font-serif text-xl text-white">{s.title}</h2>
+              <p className="text-sm text-neutral-400 leading-relaxed tracking-[-0.01em]">{s.desc}</p>
+              <div className="flex flex-wrap gap-2 pt-1">
+                {s.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-neutral-700 px-3 py-0.5 text-xs text-neutral-500"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </StaggerItem>
         ))}
-      </section>
+      </StaggerChildren>
 
       {/* CTA */}
-      <section className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8 space-y-4">
-        <h2 className="font-serif text-2xl text-white">¿Tiene sentido hablar?</h2>
-        <p className="text-base text-neutral-400 leading-relaxed">
-          Si estás evaluando una migración SAP, querés definir una estrategia de IA
-          para tu equipo, o simplemente querés una segunda opinión técnica sin
-          agenda comercial — escribime.
-        </p>
-        <p className="text-sm text-neutral-500">
-          Respondo personalmente. Sin formularios que van a ningún lado.
-        </p>
-        <div className="flex gap-3">
-          <Link
-            href={SITE.social.email}
-            className="inline-block rounded-lg bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition-opacity hover:opacity-90"
-          >
-            Escribime →
-          </Link>
-          <Link
-            href={SITE.social.linkedin}
-            className="inline-block rounded-lg border border-neutral-700 px-6 py-3 text-sm font-medium text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white"
-          >
-            LinkedIn
-          </Link>
-        </div>
-      </section>
+      <FadeIn>
+        <section className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8 space-y-4 backdrop-blur-sm">
+          <h2 className="font-serif text-2xl text-white">¿Tiene sentido hablar?</h2>
+          <p className="text-base text-neutral-400 leading-relaxed tracking-[-0.01em]">
+            Si estás evaluando una migración SAP, querés definir una estrategia de IA
+            para tu equipo, o simplemente querés una segunda opinión técnica sin
+            agenda comercial — escribime.
+          </p>
+          <p className="text-sm text-neutral-500">
+            Respondo personalmente. Sin formularios que van a ningún lado.
+          </p>
+          <div className="flex gap-3">
+            <Link
+              href={SITE.social.email}
+              className="inline-block rounded-lg bg-accent px-6 py-3 text-sm font-medium text-neutral-900 transition-opacity hover:opacity-90"
+            >
+              Escribime →
+            </Link>
+            <Link
+              href={SITE.social.linkedin}
+              className="inline-block rounded-lg border border-neutral-700 px-6 py-3 text-sm font-medium text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white"
+            >
+              LinkedIn
+            </Link>
+          </div>
+        </section>
+      </FadeIn>
     </div>
   );
 }

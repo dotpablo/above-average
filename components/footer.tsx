@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "motion/react";
 import { SITE } from "@/lib/constants";
 
 const navLinks = [
@@ -20,7 +23,13 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-800 py-10">
+    <motion.footer
+      className="border-t border-neutral-800 py-10"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="flex flex-col items-center gap-5">
         <Image
           src="/images/logo.png"
@@ -34,29 +43,33 @@ export function Footer() {
             <Link
               key={l.href}
               href={l.href}
-              className="transition-colors hover:text-white"
+              className="transition-colors hover:text-accent"
             >
               {l.label}
             </Link>
           ))}
         </div>
         <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-700">
-          {socials.map((s) => (
-            <a
+          {socials.map((s, i) => (
+            <motion.a
               key={s.label}
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-white"
+              className="transition-colors hover:text-accent"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
             >
               {s.label}
-            </a>
+            </motion.a>
           ))}
         </div>
         <p className="text-xs text-neutral-700">
           &copy; {new Date().getFullYear()} {SITE.author}
         </p>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

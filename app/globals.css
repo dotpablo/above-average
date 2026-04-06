@@ -4,7 +4,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
-  --color-accent: #e5e5e5;
+  --color-accent: #D4A853;
 }
 
 body {
@@ -13,5 +13,11 @@ body {
 
 ::selection {
   @apply bg-neutral-700 text-white;
+}
+
+@keyframes draw-line {
+  to {
+    height: 100%;
+  }
 }
 
