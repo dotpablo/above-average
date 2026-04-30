@@ -22,14 +22,6 @@ const personSchema = {
   description: SITE.description,
 };
 
-const stats = [
-  { value: "20+", label: "años en Tech" },
-  { value: "12+", label: "años SAP" },
-  { value: "57", label: "artículos" },
-  { value: "19", label: "maratones" },
-  { value: "10", label: "años escribiendo" },
-];
-
 const topics = [
   {
     title: "Supervivencia Corporativa e IA",
@@ -50,7 +42,15 @@ const topics = [
 ];
 
 export default function Home() {
-  const recentPosts = getAllPosts().slice(0, 5);
+  const allPosts = getAllPosts();
+  const recentPosts = allPosts.slice(0, 5);
+  const stats = [
+    { value: "20+", label: "años en Tech" },
+    { value: "12+", label: "años SAP" },
+    { value: `${allPosts.length}`, label: "artículos" },
+    { value: "19", label: "maratones" },
+    { value: "10", label: "años escribiendo" },
+  ];
 
   return (
     <>

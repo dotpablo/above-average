@@ -27,7 +27,10 @@
       "WebSearch",
       "WebFetch(domain:github.com)",
       "Bash(claude mcp:*)",
-      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\(''mcpServers'', {}\\), indent=2\\)\\)\")"
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\(''mcpServers'', {}\\), indent=2\\)\\)\")",
+      "Bash(wc -l /Users/pablomarichal/ClaudeApps/webpablo/content/posts/*.mdx)",
+      "Bash(timeout 10 npx next start -p 3099)",
+      "WebFetch(domain:hablamosdesap.com)"
     ]
   }
 }

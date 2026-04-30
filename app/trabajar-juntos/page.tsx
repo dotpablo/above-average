@@ -13,19 +13,37 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    tag: "Sesión única",
+    title: "Advisory 1:1 — Tech Lead Session",
+    price: "USD 120",
+    duration: "60 minutos",
+    desc: "Una sesión enfocada en tu situación real: cómo posicionarte ante la IA en tu organización, qué hacer con tu stack SAP, cómo tomar la siguiente decisión técnica sin equivocarte. Sin agenda genérica. Sin PowerPoints. Solo criterio.",
+    cta: "Agendá tu sesión",
+    ctaHref: "mailto:pablomarichal@gmail.com?subject=Advisory%201:1%20%E2%80%94%20Tech%20Lead%20Session",
+    tags: ["Tech Leads", "Arquitectos SAP", "AI Survival", "Posicionamiento"],
+    highlight: true,
+  },
+  {
+    tag: "Proyecto",
     title: "SAP Advisory",
-    desc: "Migraciones S/4HANA, arquitectura técnica, clean core strategy y gestión de proyectos SAP. Para empresas que necesitan criterio técnico real, no solo horas de consultoría genérica.",
+    price: "A convenir",
+    duration: "Por proyecto",
+    desc: "Migraciones S/4HANA, arquitectura técnica, clean core strategy y gestión de proyectos SAP. Para empresas que necesitan criterio técnico real, no horas de consultoría genérica.",
+    cta: "Escribime",
+    ctaHref: "mailto:pablomarichal@gmail.com?subject=SAP%20Advisory",
     tags: ["S/4HANA", "SAP BTP", "Clean Core", "Migraciones"],
+    highlight: false,
   },
   {
+    tag: "Equipos",
     title: "AI Adoption para equipos tech",
+    price: "A convenir",
+    duration: "Por proyecto",
     desc: "Evaluación de madurez de IA, definición de casos de uso reales (no demos), implementación de agentes y herramientas. Para líderes que quieren resultados, no presentaciones sobre el futuro.",
+    cta: "Escribime",
+    ctaHref: "mailto:pablomarichal@gmail.com?subject=AI%20Adoption",
     tags: ["AI Agents", "Copilot / Joule", "Automatización", "Roadmap IA"],
-  },
-  {
-    title: "Advisory para Tech Leads",
-    desc: "Para líderes técnicos que quieren operar con más claridad en la era IA — tomar mejores decisiones de arquitectura, posicionar a sus equipos y no perder el criterio que los trajo hasta acá.",
-    tags: ["1:1", "Estrategia técnica", "Posicionamiento"],
+    highlight: false,
   },
 ];
 
@@ -63,50 +81,53 @@ export default function WorkTogetherPage() {
       <StaggerChildren className="space-y-4" staggerDelay={0.1}>
         {services.map((s) => (
           <StaggerItem key={s.title}>
-            <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 space-y-3 backdrop-blur-sm transition-colors hover:border-neutral-700">
-              <h2 className="font-serif text-xl text-white">{s.title}</h2>
+            <div className={`rounded-xl border p-6 space-y-4 backdrop-blur-sm transition-colors ${s.highlight ? "border-neutral-600 bg-neutral-800/60 hover:border-neutral-500" : "border-neutral-800 bg-neutral-900/50 hover:border-neutral-700"}`}>
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-1">
+                  <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">{s.tag}</p>
+                  <h2 className="font-serif text-xl text-white">{s.title}</h2>
+                </div>
+                <div className="text-right shrink-0">
+                  <p className={`font-serif text-xl ${s.highlight ? "text-white" : "text-neutral-400"}`}>{s.price}</p>
+                  <p className="text-xs text-neutral-600">{s.duration}</p>
+                </div>
+              </div>
               <p className="text-sm text-neutral-400 leading-relaxed tracking-[-0.01em]">{s.desc}</p>
-              <div className="flex flex-wrap gap-2 pt-1">
-                {s.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-neutral-700 px-3 py-0.5 text-xs text-neutral-500"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div className="flex items-center justify-between gap-4 pt-1">
+                <div className="flex flex-wrap gap-2">
+                  {s.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-neutral-700 px-3 py-0.5 text-xs text-neutral-500"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  href={s.ctaHref}
+                  className={`shrink-0 rounded-lg px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90 ${s.highlight ? "bg-accent text-neutral-900" : "border border-neutral-700 text-neutral-300 hover:border-neutral-500 hover:text-white"}`}
+                >
+                  {s.cta} →
+                </Link>
               </div>
             </div>
           </StaggerItem>
         ))}
       </StaggerChildren>
 
-      {/* CTA */}
+      {/* Social proof / context */}
       <FadeIn>
-        <section className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8 space-y-4 backdrop-blur-sm">
-          <h2 className="font-serif text-2xl text-white">¿Tiene sentido hablar?</h2>
+        <section className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-6 space-y-3 backdrop-blur-sm">
+          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">Por qué funciona</p>
           <p className="text-base text-neutral-400 leading-relaxed tracking-[-0.01em]">
-            Si estás evaluando una migración SAP, querés definir una estrategia de IA
-            para tu equipo, o simplemente querés una segunda opinión técnica sin
-            agenda comercial — escribime.
+            No soy consultor que salió de una academia. Fui el que migró los sistemas,
+            el que convirtió a su equipo al nuevo paradigma, el que fue seleccionado AI Champion
+            en una corporación de +8 equipos. Y al mismo tiempo corrí 19 maratones mientras lo hacía.
           </p>
           <p className="text-sm text-neutral-500">
-            Respondo personalmente. Sin formularios que van a ningún lado.
+            Respondo personalmente. Sin intermediarios.
           </p>
-          <div className="flex gap-3">
-            <Link
-              href={SITE.social.email}
-              className="inline-block rounded-lg bg-accent px-6 py-3 text-sm font-medium text-neutral-900 transition-opacity hover:opacity-90"
-            >
-              Escribime →
-            </Link>
-            <Link
-              href={SITE.social.linkedin}
-              className="inline-block rounded-lg border border-neutral-700 px-6 py-3 text-sm font-medium text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white"
-            >
-              LinkedIn
-            </Link>
-          </div>
         </section>
       </FadeIn>
     </div>
