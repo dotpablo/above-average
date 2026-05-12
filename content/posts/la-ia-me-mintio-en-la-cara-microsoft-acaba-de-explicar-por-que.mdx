@@ -1,0 +1,189 @@
+---
+title: "La IA me mintió en la cara. Microsoft acaba de explicar por qué."
+date: "2026-05-05"
+description: "Joule me inventó una clase ABAP entera. El paper DELEGATE-52 de Microsoft Research demuestra que no fue un accidente: el 80% de los dominios profesionales quedan corruptos después de 20 interacciones con IA. Esto es lo que eso significa para tu trabajo."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+Era un martes a la mañana. Estaba revisando un proyecto SAP en producción. Le pedí a Joule, el copiloto de inteligencia artificial integrado en SAP, que me explicara qué hacía una clase ABAP específica. Me devolvió una explicación perfecta. Detallada. Estructurada. Lógica. Y completamente falsa. La clase no existía. La inventó. Y me la presentó como si fuera real.
+
+Si yo le creía a la primera, esa explicación se iba a un documento técnico. De ahí a una decisión de arquitectura. De ahí a una migración. Y a las 3 semanas, el error iba a explotar en algún ambiente productivo donde nadie iba a entender qué pasó.
+
+Pero algo me hizo dudar. No fue intuición técnica. Fue algo más raro. La explicación que me dio era demasiado limpia. Demasiado bien estructurada. En 20 años en producción aprendí que el código real nunca es limpio. Siempre tiene parches, decisiones históricas raras, comentarios que un consultor dejó hace 8 años, lógica que parece arbitraria pero responde a algo que pasó en una migración del 2015.
+
+Lo que Joule me mostró parecía un libro de texto. Y el código real no es un libro de texto. Entonces hice algo que un Junior probablemente no hubiera hecho. Le pasé el contexto completo a Gemini y le pedí que me explicara la misma clase.
+
+Gemini me dijo, textual, que la clase no existía en el namespace que yo le mencionaba. Que probablemente había una confusión de nombres. Y me sugirió tres clases parecidas que sí existían.
+
+Una IA me había mentido. Otra me corrigió. El que tomó la decisión final fui yo. No fue ninguna IA. Lo más importante: ese tipo de error es el que está pasando ahora mismo, en miles de empresas, todos los días. Y la mayoría de los profesionales no lo está detectando.
+
+Hace un par de semanas Microsoft Research publicó un estudio que explica exactamente lo que me pasó esa mañana. Y lo que pasa en miles de oficinas mientras lo leés.
+
+## La narrativa que escuchás todos los días
+
+La narrativa pública sobre IA en el trabajo es, hoy por hoy, una sola.
+
+Block despidió a cuatro mil personas el año pasado citando productividad con IA. Microsoft, Meta, Google, todos están haciendo lo mismo. Y no van a parar.
+
+La conclusión que tu jefe, tu CEO, los analistas de Wall Street y los influencers de LinkedIn están sacando es la misma: la IA reemplaza al trabajador del conocimiento. Punto. El que no se adapta queda afuera.
+
+Esa narrativa es real. Las empresas siguen echando gente como si no hubiera mañana. No te miento.
+
+Pero hay otra parte de la historia que casi nadie está compartiendo. Y cambia toda la conversación.
+
+## El paper que cambia el debate
+
+Microsoft Research acaba de publicar el estudio más completo que existe sobre qué pasa cuando delegás trabajo profesional a una IA durante un período sostenido.
+
+Se llama DELEGATE-52. Salió en abril de 2026.
+
+Microsoft tomó 52 dominios profesionales. No solo programación. Contabilidad, recetas, partituras musicales, estructuras moleculares, calendarios, planos arquitectónicos, todo lo que un profesional edita en su día a día.
+
+Después agarró 19 modelos de inteligencia artificial. Los mejores del mundo y los peores. Y simuló qué pasa cuando un usuario delega tareas reales.
+
+Cada tarea es reversible. Le pedís a la IA que cambie algo, después le pedís que lo vuelva al estado original. Si la IA es buena, el documento final tiene que ser idéntico al inicial.
+
+Después de 20 idas y vueltas, ningún modelo del mundo logra mantener el documento intacto.
+
+Los mejores modelos, los frontier, los que están bajo llave, los que tu empresa licencia, corrompen el 25 por ciento del documento. Los modelos peores, el 50 por ciento.
+
+Y acá viene el dato que te tenés que tatuar.
+
+**En 80 por ciento de las profesiones que existen, después de 20 interacciones, la IA introduce errores tan severos que el trabajo queda corrupto.**
+
+¿Sabés cuál es el único dominio donde la mayoría de los modelos funcionan bien?
+
+Python. Programación pura.
+
+La IA es buena programando, eso lo sabemos. Pero es mediocre en casi todo lo demás, o al menos eso es lo que dicen los resultados.
+
+Yo a esto lo llamo **la trampa del benchmark falso**. Las empresas miden la capacidad de la IA en programación, ven que funciona bien, y extrapolan. Asumen que si funciona en código, funciona en contabilidad, en consultoría, en análisis de negocio, en cualquier lado. Microsoft acaba de demostrar que esa extrapolación es falsa.
+
+La IA es una especialista que cree que es generalista. Y las empresas le están delegando trabajo de generalista.
+
+## El error invisible
+
+Pero la parte más importante del paper no son los porcentajes. Es cómo se equivoca la IA. Cuando los investigadores analizaron el patrón de errores, encontraron algo que casi nadie está procesando.
+
+La IA no falla gradualmente. No es que cada interacción introduce un pequeño error y después de muchas iteraciones se acumulan. La IA mantiene casi perfección durante varios turnos. Y después, sin previo aviso, en una sola interacción, destruye 10, 20, 30 puntos del documento de un solo golpe.
+
+El 80 por ciento del daño total viene de fallas únicas catastróficas. Yo a esto lo llamo **el error invisible**.
+
+Es invisible porque vos no lo vas a detectar revisando interacción por interacción. Las primeras parecen perfectas. La segunda parece perfecta. La tercera parece perfecta. Y después, en algún momento al azar, la IA borra una sección completa, inventa datos que no estaban, mezcla información que no debería mezclar.
+
+Y el documento sale a producción con ese error adentro. Pensá en lo que esto significa para tu trabajo. Si vos sos el Tech Lead, el consultor, el analista que aprueba el output que generó la IA, vos sos el último filtro. Pero si revisás las primeras tres versiones y todas estaban bien, vas a confiar. Y la cuarta es la que tiene el error catastrófico.
+
+Esa es la trampa. Los primeros aciertos generan la confianza que después te lleva a soltar el control. Y todavía hay algo peor. Los modelos peores tienden a borrar contenido. Los modelos mejores, los frontier, tienden a corromper contenido.
+
+El contenido borrado se nota. Falta. El contenido corrompido se queda ahí, parece correcto, pero está mal. Y ese error pasa a la siguiente persona que lee el documento. Y a la siguiente. Y a la siguiente. Hasta que alguien con criterio se da cuenta. O hasta que el error explota en producción.
+
+Eso es exactamente lo que casi me pasa esa mañana con Joule. La explicación era plausible, estructurada, profesional. Si la pasaba a un documento, el error iba a quedar enterrado durante semanas. Hasta que alguien intentara compilar el código real y se diera cuenta de que la clase referenciada no existía.
+
+## La promesa agentic que no se cumple
+
+Hay un dato más del paper que necesitás saber. Porque cambia la decisión que tu empresa probablemente está por tomar.
+
+Hace meses que la industria está vendiendo el concepto de agentes autónomos de IA. La promesa es simple: la IA pura es buena pero limitada. Si le das herramientas, le permitís ejecutar código, leer y escribir archivos, hacer múltiples pasos, entonces se vuelve mucho más capaz.
+
+Esa es la promesa central de Claude Code. De OpenAI Codex. De Joule for Developers. De toda la nueva generación de productos enterprise.
+
+Microsoft probó exactamente eso. Tomó los mismos modelos, les dio acceso a herramientas, los puso en modo agentic. Los modelos con herramientas performan peor que sin herramientas. Seis por ciento adicional de degradación. La promesa central de los productos agentic enterprise, comprobada experimentalmente, es falsa. No es que las herramientas no ayudan. Es que empeoran el resultado.
+
+¿Por qué? Porque las herramientas consumen contexto. Generan overhead. Los modelos toman decisiones equivocadas sobre cuándo usar qué herramienta. Inventan archivos que no existen, ejecutan código que no debían, leen información que confunde el output.
+
+Mientras tanto, los vendors enterprise están cerrando sus ecosistemas para que solo sus agentes oficiales puedan ejecutarse sobre tus datos. SAP la semana pasada actualizó su API Policy bloqueando agentes externos. Salesforce, Oracle, todos van por el mismo camino.
+
+Conectá los puntos. Los vendors están bloqueando agentes externos sobre sus plataformas. Los agentes oficiales que ellos mismos venden, según Microsoft Research, no funcionan tan bien como prometen. Y los clientes están migrando masivamente a ese stack porque les dijeron que es el futuro.
+
+Esto es lo que yo llamo **la migración a ciegas**. Estamos construyendo dependencia tecnológica masiva sobre herramientas que la propia investigación demuestra que no están listas para producción en la mayoría de los dominios.
+
+## El bono del veterano
+
+Si los modelos corrompen el 25 por ciento del trabajo, si los agentes empeoran el resultado, si las primeras interacciones generan una falsa sensación de confianza que después te lleva a soltar el control, entonces alguien tiene que estar ahí para detectar todo eso.
+
+Ese alguien sos vos. Si tenés criterio acumulado. Yo a esto lo llamo **el bono del veterano**.
+
+Es la fase del mercado donde el profesional con 15 o 20 años de experiencia real, que entiende cómo se comporta su dominio bajo carga, que sabe qué cosas pueden romperse, que tiene intuición sobre qué output no tiene sentido, vale más que nunca.
+
+No porque sea mejor que la IA en todo. Es mejor que la IA en algunas cosas y peor en otras.
+
+Vale más porque es el único que puede detectar cuándo la IA falla. Y la IA falla más de lo que la gente cree.
+
+El consultor tecnológico que lleva años entendiendo cómo se comporta una integración bajo carga real puede mirar un output que generó Joule y decir "esto no cierra". El analista financiero senior puede mirar un reporte que armó la IA y decir "este número no tiene sentido". El médico con 20 años de experiencia puede mirar un diagnóstico asistido por IA y decir "acá hay algo que no encaja".
+
+Esa capacidad de detectar el error invisible es la que las empresas están despidiendo cuando hacen los layoffs masivos.
+
+Despedir al que detecta el error para confiar en la herramienta que produce el error. Es matemáticamente absurdo. Pero es exactamente lo que está pasando.
+
+Y la consecuencia se va a notar en 12 a 18 meses, cuando los errores compuestos empiecen a aparecer en producción y nadie en la organización tenga el criterio para entender de dónde vinieron. Acá es donde aparece tu oportunidad.
+
+## Las 3 reglas que aplico cada día
+
+Después de esa mañana con Joule, ajusté tres cosas en mi forma de trabajar. Las comparto porque son las únicas que me importan hoy.
+
+**Regla 1: Nunca delegues más de lo que podés revisar.**
+
+Si vas a usar IA para una tarea profesional, dividí mentalmente la tarea en bloques que vos puedas revisar. Si la tarea es generar 10 reportes, no le pidas los 10 de una vez. Pedile uno, revisalo, pedile el segundo, revisalo. Y así.
+
+La razón es estructural. El paper de Microsoft demuestra que la falla aparece en una interacción específica. Si vos no estás presente en esa interacción, el error pasa.
+
+Esa mañana con Joule, lo que me salvó fue exactamente eso. Le pedí una sola explicación. Cuando algo me sonó raro, paré. Si le hubiera pedido cinco explicaciones de cinco clases distintas en un solo prompt, probablemente no hubiera detectado el error.
+
+La revisión humana no es opcional. Es el único filtro real que existe hoy.
+
+**Regla 2: Documentá tu criterio, no solo tus outputs.**
+
+Cada vez que detectás un error de la IA, documentalo. Anotá qué viste, cómo te diste cuenta, qué hubiera pasado si no lo detectabas. Eso es proof of work irrefutable.
+
+Tu organización va a empezar a ver, en 6 a 12 meses, que necesita gente con criterio. Los que documentaron sus saves van a ser los que se quedan. Los que solo entregaron outputs sin contexto, van a ser intercambiables con la IA que los genera.
+
+Yo después de esa mañana abrí un documento privado donde anoto cada vez que una IA me miente. Llevo casi 20 entradas en pocos meses. Esa es mi prueba de que el criterio sigue valiendo.
+
+**Regla 3: Construí independencia de modelo.**
+
+Nunca uses un solo modelo de IA. Usá al menos dos en rotación. Cuando uno falla, el otro te muestra que falló. Cuando uno cambia su política de uso, el otro te salva.
+
+Si esa mañana yo solo hubiera tenido Joule, no hubiera detectado nada. Lo que me salvó fue tener Gemini al lado para contrastar. Esa redundancia es la diferencia entre detectar un error invisible y no detectarlo.
+
+La dependencia de un solo proveedor es el error técnico más caro que podés cometer en tu carrera profesional en los próximos años.
+
+## Tu diagnóstico esta semana
+
+Esa mañana en que Joule me mintió, podría haber sido un mal día. Podría haber sido la primera de muchas veces que un error invisible pasara a producción y yo apareciera, meses después, tratando de explicar de dónde vino.
+
+Pero no fue así. Y no fue suerte. Fue criterio acumulado. Fueron años de mirar código real y saber que el código real nunca es limpio. Fue tener una segunda IA al lado para contrastar. Fue documentar el incidente para no olvidarlo.
+
+El profesional del futuro inmediato no es el que ejecuta más rápido con IA. Es el que detecta cuándo la IA falla. Y esa capacidad no se compra. Se construye con años de hacer el trabajo a mano antes de tener atajos.
+
+Si vos tenés esos años encima, este es el mejor momento de tu carrera. Aunque las noticias digan lo contrario.
+
+---
+
+Tres preguntas para esta semana.
+
+¿Cuándo fue la última vez que detectaste un error de una IA? Si la respuesta es "no me acuerdo" o "nunca", probablemente no estás revisando lo suficiente. Y los errores están pasando.
+
+¿Tu organización tiene una política sobre cómo se revisa el output de IA antes de que pase a producción? Si no la tiene, tenés una oportunidad de proponerla. Y de quedar como el que la propuso.
+
+¿Podés explicarle a alguien cómo decidís cuándo confiar en una IA y cuándo no? Si tardás más de 30 segundos en responder, tu confianza es por defecto. Y la confianza por defecto es el primer paso hacia el error invisible.
+
+---
+
+Las últimas semanas hablé de tres brechas que la IA está abriendo en el trabajo profesional. La brecha externa, quién accede a los modelos premium. La brecha interna, quién esconde cómo trabaja con IA. La brecha de ecosistema, los vendors cerrando el acceso justo cuando los agentes empezarían a funcionar.
+
+Esta semana cierro la trilogía con la cuarta brecha que hace falta nombrar. La brecha del criterio. La que separa al que detecta el error invisible del que lo deja pasar.
+
+Tu rol no es el que ejecuta. Es el que detecta cuándo la ejecución falla.
+
+---
+
+**Fuentes:**
+
+Laban, Schnabel, Neville. "LLMs Corrupt Your Documents When You Delegate." Microsoft Research, abril 2026. arXiv:2604.15597.
+
+SAP API Policy v.4.2026.
+
+Bloomberg, declaraciones de Christian Klein sobre la transición IA, abril 2026.
+
+Claude Mythos Preview System Card, Anthropic, abril 2026.
