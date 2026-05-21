@@ -1,0 +1,143 @@
+---
+title: "SAP prometió el futuro autónomo. La realidad va más lenta."
+date: "2026-05-19"
+description: "Christian Klein prometió la empresa autónoma en Orlando: 224 agentes, finanzas autónomas, supply chain autónoma. Las acciones cayeron 28.67%. Tres preguntas que el mercado está haciendo y que ningún CFO dice en voz alta."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+La semana pasada, Christian Klein se subió al escenario en Orlando y prometió la empresa autónoma. 224 agentes especializados. 51 Joule Assistants. Finanzas autónomas. Supply chain autónoma. HR autónoma. Procurement autónomo. Una visión completa donde el software dirige la empresa y los humanos solo intervienen en excepciones.
+
+Suena al anuncio más ambicioso en la historia reciente de SAP. Mientras Klein hablaba, las acciones de SAP cerraron la semana en 144 EUR. Una caída del 28.67% en lo que va del año. No es coincidencia. Es señal.
+
+Esta semana quiero hablar del gap entre la visión que SAP vendió en Orlando y la realidad que los profesionales de campo están viviendo. Y dentro de ese gap hay tres oportunidades que tu rol cambia si las entendés a tiempo.
+
+## La visión que vendieron
+
+Antes de entrar a hablar de esto, vale reconocer la magnitud de lo anunciado.
+
+SAP Business AI Platform unifica BTP, Business Data Cloud y AI Foundation en una sola arquitectura. Hubo re-branding pero también hay cosas nuevas. El Knowledge Graph mapea más de 7 millones de campos de datos. La nueva capa de Company Memory captura el "conocimiento tribal", documentos de política, cadenas de aprobación por email, y los convierte en lo que SAP llama Process Atoms. Joule Studio 2.0 promete crear agentes en minutos en lugar de semanas. La SAP Autonomous Suite mete agentes en 224 procesos de negocio. El AI Agent Hub centraliza gobierno de agentes propios y de terceros.
+
+Los casos de éxito que mostraron son reales:
+
+- Levi Strauss desplegó más de 1000 agentes y redujo el procesamiento manual de órdenes de wholesale de 2-5 días a 20 minutos.
+- Aeropuertos Argentina construyó el Snow Agent que coordina sensores climáticos y mantenimiento, con MVP entregado en 12 semanas y reducción de costos del 16%.
+- ExxonMobil está extrayendo el "trapped asset" de 150 años de datos legacy hacia una postura cloud-first.
+
+Si todo eso funciona como se anunció, cambia el trabajo enterprise de raíz.
+
+Pero esa es la palabra clave. **Si.**
+
+La visión es excitante, pero visión y realidad son dos cosas distintas. Esa es una observación operativa, no ideológica. La mayoría de los agentes anunciados están en estado de Early Adopter o Preview. Mientras el Deadline de 2027 de Solution Manager sigue ahí. Y el trabajo concreto de Scoping y ejecución de la transición ALM no cambia con un anuncio.
+
+He participado en workshops con los creadores de CALM y hoy por hoy la herramienta dista bastante de lo que CHARM ofrece a nivel de Deployment Management. Pero ya hay un agente que te ayuda a hacer Deployments (?).
+
+Esto no es escepticismo de hater. Es la voz de la gente que tiene que implementar lo anunciado.
+
+## Las 3 preguntas que el mercado está haciendo
+
+Después de Sapphire hay mucha gente con cicatrices en la industria, no vendedores, que se está haciendo algunas preguntas.
+
+### 1. ¿Quién paga por toda esta inteligencia?
+
+Esta semana Melissa Rosenthal publicó un dato que casi nadie está mencionando. Cada empresa de IA que sirve a tu organización está perdiendo dinero contigo ahora mismo. El compute cuesta diez veces lo que están cobrando. Estamos todos construyendo sobre pricing subsidiado.
+
+Claude Pro cuesta 20 dólares al mes. El compute para servir a un power user cuesta entre 200 y 400. Microsoft perdía 80 dólares mensuales en algunos usuarios de Copilot que pagaban 10.
+
+¿Y qué significa esto? Que los proveedores están comprando market share con precios subsidiados. Tus equipos integran IA en todo. La IA se vuelve infraestructura. Y entonces los precios suben y ya no podés salir.
+
+GitHub migró Copilot a billing por uso el mes pasado. OpenAI lanzó tier de 100 dólares mensuales. Anthropic tiene un plan top de 200. Microsoft subió precios de 365 dos veces en cuatro años, apuntando directamente a costos de IA.
+
+SAP está construyendo encima de ese mismo Stack. Y agrega su propia capa de AI Units cuyo pricing real nadie termina de entender. Si una empresa quiere implementar el Autonomous Enterprise, no solo paga RISE. Paga AI Units. Paga BTP. Paga Joule por usuario. Paga consultoría especializada.
+
+La pregunta que ningún CFO está haciendo en voz alta todavía: qué pasa cuando los proveedores empiecen a cobrar el precio real de su compute.
+
+La caída del 28.67% de SAP en lo que va del año sugiere que el mercado ya está empezando a hacer esa cuenta.
+
+### 2. ¿Quién opera todo esto si los sistemas son frágiles?
+
+Cualquiera que sepa algo mínimo de arquitectura sabe que la autonomía no se construye sobre fundaciones frágiles.
+
+No podés tener 224 agentes autónomos operando sobre datos mal modelados, procesos mal documentados y código heredado sin Clean Core. Eso no es transformación. Es deuda técnica con sintaxis nueva que le va a explotar en la cara al que administre esa implementación. Y ninguna IA lo va a salvar de eso.
+
+La propia presentación de SAP lo reconoce implícitamente. La nueva ToolChain de migración promete reducción del 50% en esfuerzo, pero requiere certificación Clean Core. Los siete Joule Assistants especializados en migración existen porque sin ellos la complejidad es inabordable.
+
+Y acá viene el dato incómodo. La mayoría de las grandes empresas que SAP atiende están a mitad de RISE. Algunos sistemas en la nube, otros en On-Premise, integraciones a medio armar, datos en migración. Pretender meter agentes autónomos sobre eso no es ingenuidad. Es invitar al desastre operativo.
+
+El propio anuncio de SAP sobre que clientes On Premise tendrán acceso a AI scenarios solo durante la transición a la nube confirma esto. La autonomía está acoplada a la migración. Y la migración no se acelera por más anuncios que haya.
+
+### 3. ¿Quién detecta cuando los agentes fallan?
+
+Acá vuelvo a algo que escribí hace dos semanas. La frase de Jon Reed que sintetiza el problema técnico de toda esta arquitectura:
+
+**Tu agente probabilístico no puede completar workflows determinísticos.**
+
+SAP corre procesos determinísticos. Cerrar un período contable. Liquidar un sueldo. Mover dinero entre cuentas. Ejecutar una migración. Cosas donde casi correcto es lo mismo que incorrecto.
+
+Cuando ponés 224 agentes IA sobre esos procesos, no podés asumir que van a fallar de forma visible. El paper DELEGATE-52 de Microsoft Research mostró que los modelos frontier corrompen el 25% del trabajo después de 20 interacciones. Y lo hacen sin avisar.
+
+SAP intenta resolver esto con dos jugadas técnicas interesantes. El modelo RPT-1.5 está diseñado para ofrecer explicabilidad: el usuario puede seguir las filas y columnas que llevaron a una predicción. Y la integración con NVIDIA OpenShell crea barreras arquitectónicas para que los agentes no accedan a datos que no deberían ver.
+
+Esas son apuestas serias. Pero explicable no es lo mismo que correcto. Auditable no es lo mismo que confiable. Y un agente que opera dentro de barreras todavía puede tomar decisiones erradas dentro de esas barreras.
+
+La pregunta entonces no es si el agente puede ejecutar la tarea. **La pregunta es quién verifica el output antes de que llegue a producción.**
+
+Esa pregunta tiene una sola respuesta. El Operador con criterio acumulado.
+
+## Las tres reglas que se profundizan post-Sapphire
+
+Hace dos semanas escribí sobre las tres reglas del Operador. Después de Sapphire, esas reglas necesitan una capa adicional.
+
+**Regla 1: Conocé tus modelos. No solo uses uno.**
+
+Post-Sapphire, esto se vuelve más complejo. SAP Business AI Platform integra Claude de Anthropic, modelos de OpenAI, Google, Cohere a través de SAP. Lo cual significa que tu acceso a esos modelos pasa por el peaje de SAP. Mantenete con acceso directo a al menos un modelo fuera de ese ecosistema. El día que SAP cambie su pricing de AI Units, esa independencia te puede salvar.
+
+**Regla 2: Documentá tu criterio. No solo tus outputs.**
+
+Acá hay una jugada de SAP que vale la pena entender bien. La capa de Company Memory está diseñada para capturar el conocimiento tribal de la organización y convertirlo en Process Atoms procesables por agentes.
+
+Leelo dos veces. SAP literalmente quiere absorber el criterio acumulado de los Operadores y convertirlo en algoritmo.
+
+Eso no es malo en sí mismo. Es lógico desde el lado del proveedor. Pero como profesional, lo que va a diferenciarte cuando todos en tu equipo tengan acceso a los mismos 224 agentes a través de la misma capa SAP, va a ser el registro documentado de decisiones bien tomadas que **no están en Company Memory**. Tu portfolio de decisiones es tu nuevo curriculum. Y debe vivir afuera del sistema que quiere absorberlo.
+
+**Regla 3: Construí independencia de plataforma.**
+
+Post-Sapphire, esto se vuelve crítico. SAP está cerrando gradualmente su API ecosystem para mantener el valor dentro de su Stack. Eso es estrategia legítima de SAP. Pero como profesional, si quedás 100% dentro de ese ecosistema, cada decisión que SAP tome se convierte en tu decisión. Mantené al menos un agente, un MCP server, un modelo fuera del Gateway. No por rebeldía. Por opcionalidad.
+
+## La pregunta para esta semana
+
+SAP anunció el futuro autónomo. El mercado le dijo que no, al menos en el corto plazo. Pero la dirección está clara. En 24 meses, lo que se anunció en Orlando va a estar parcialmente desplegado. Y la pregunta operativa es la misma de siempre.
+
+**¿Vas a ser el ejecutor que la IA reemplaza, o el Operador que decide qué se ejecuta?**
+
+Esa decisión se toma todos los días, en cada interacción con cada herramienta de IA. No se toma en el momento dramático del despido. Se toma en el momento aburrido del miércoles a la tarde cuando le decís a Joule "explicame esta clase", y elegís verificar lo que te respondió.
+
+Christian Klein cerró su keynote con una frase:
+
+> El futuro no lo escribe la IA, lo escribimos nosotros.
+
+En eso, el CEO de SAP y yo estamos de acuerdo. Donde diferimos es en quién es ese "nosotros". Para SAP es la empresa que compra la Suite. Para mí es el profesional que opera el sistema. Y la diferencia entre esos dos "nosotros" va a definir las carreras de los próximos cinco años.
+
+El Operador no es un puesto al que llegás. Es una práctica que sostenés.
+
+---
+
+*P.D. Estoy preparando algo concreto para Operadores. No para usuarios pasivos de IA. Para los que tienen criterio acumulado y quieren afilarlo. Si querés enterarte primero, suscribite a la lista personal en [pablomarichal.com](https://pablomarichal.com). Sin spam, sin filler. Solo el aviso cuando esté listo.*
+
+---
+
+**Fuentes:**
+
+SAP Sapphire 2026 keynote, Christian Klein, Orlando, mayo 2026.
+
+The Roadmap to the Autonomous Enterprise: SAP's 5-Year Strategic Vision (Post-Sapphire 2026), análisis de Sapphire Innovation Guide.
+
+SAP SE stock data, ETR: SAP, cierre 15 mayo 2026.
+
+Melissa Rosenthal, "Every AI company serving your org is currently losing money on you", LinkedIn, mayo 2026.
+
+Jon Reed, Diginomica, declaraciones publicadas en LinkedIn, mayo 2026.
+
+Laban, Schnabel, Neville. "LLMs Corrupt Your Documents When You Delegate." Microsoft Research, abril 2026. arXiv:2604.15597.
+
+Newsletters previas referenciadas: El Operador (12 mayo), DELEGATE-52 (5 mayo), las dos castas del ERP (febrero 2026).
