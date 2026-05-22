@@ -1,0 +1,174 @@
+---
+title: "SAP Just Created Two ERP Castes. And Most People Missed It."
+date: "2026-04-28"
+description: "One line in SAP API Policy v.4.2026 legally blocked AI agents on SAP core. Meanwhile, those still on ECC have a freedom that S/4HANA customers already signed away. Three questions your organization needs to answer this week."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta"
+---
+
+*DISCLAIMER: This article talks about SAP because that's the ecosystem I've worked in for many years. But if you work with Salesforce, Oracle, Workday, ServiceNow, or any dominant enterprise platform, what follows applies directly to you. All major vendors are making similar decisions right now. Change the name, the logic doesn't change.*
+
+There's a line in the new SAP API Policy v.4.2026 that went almost unnoticed.
+
+It's not in the headlines. No Gartner analyst mentioned it this week. But if you've spent more than 10 years in the SAP ecosystem, when you read it, you feel that something changed permanently.
+
+The line reads, verbatim:
+
+> "SAP prohibits the use of APIs for interaction or integration with autonomous or generative AI systems that plan, select, or execute sequences of API calls."
+
+In plain English: SAP just legally blocked AI agents on its core.
+
+Precisely when everyone is talking about agentic AI. Precisely when Anthropic, OpenAI, and Google are building the infrastructure for agents to execute complete business processes autonomously. Precisely at that moment, SAP closes the door they would need to walk through.
+
+This is not a technical detail. It's a strategic move. And understanding who benefits and who gets hurt is exactly the work this article is here to do.
+
+## The Week Nobody Read Correctly
+
+In the same week SAP published that API Policy, Christian Klein, SAP's CEO, warned internally that the transition to AI will be as difficult as the transition to cloud.
+
+That's not a minor statement. The cloud transition took SAP nearly a decade (and it's still ongoing), a brutal number of resistant customers, investor pressure, internal restructurings, and the creation of S/4HANA as a replacement product for ECC. It was painful, slow, and costly for everyone involved.
+
+Klein is saying what's coming is equally large — or worse.
+
+And simultaneously, his legal team published a document that defines with surgical precision where artificial intelligence can and cannot enter their platform.
+
+Two coordinated moves. One clear message: SAP is going to control how AI enters its ecosystem. And whoever doesn't read it that way will end up on the wrong side of this transition.
+
+## The Triangle SAP Already Built
+
+To understand why the API Policy has the timing it has, you need to see the full board.
+
+In September 2025, SAP announced the partnership with OpenAI to launch "OpenAI for Germany" — a digital sovereignty project for the German public sector. The stack is clear: SAP as the enterprise layer, OpenAI as the model, Microsoft Azure as cloud infrastructure.
+
+It's the perfect triangle for the hyper-regulated European market. Three companies that need each other, with service level agreements, compliance, data sovereignty, and coordinated roadmaps.
+
+SAP chose its AI partner. Its name is OpenAI. And the infrastructure is Microsoft.
+
+In last week's earnings call, Klein was asked directly whether clients are building agents outside the SAP ecosystem using SAP data, and whether SAP has enough control over that access.
+
+His answer was unambiguous. Customer data belongs to the customer — SAP won't charge for accessing it. But SAP's IP — the semantic models, ontologies, process knowledge — that they will protect and distribute exclusively through their platform.
+
+It's not "no APIs for AI." It's "use our APIs — the ones we publish, govern, monitor, and control."
+
+There's an entire ecosystem of partners, vendors, and integrators who today have solutions built on interfaces that tomorrow may fall outside the official perimeter. For them, this is not a security policy. It's a direct threat to their business model. The questions aren't answered. They're just beginning.
+
+Anthropic is not in that triangle. And that matters more than it seems.
+
+Because while SAP builds its official ecosystem with OpenAI, there are developers, partners, and clients using Claude Code to build solutions on SAP. Consuming APIs. Automating processes. Creating extensions that SAP didn't design, didn't publish, and doesn't control. The best SAP MCPs I've seen to date have Claude making 99% of the commits.
+
+The API Policy doesn't mention Anthropic by name. It doesn't have to. The language is broad enough to cover any AI agent that executes sequences of calls on SAP core. Any of them.
+
+Is it a coincidence that the document appears at exactly the moment when AI agents are becoming technically capable of orchestrating complete SAP processes? I don't believe in those coincidences.
+
+## The Problem Nobody Talks About: Half the SAP World Is Still on ECC
+
+Here's where the biggest paradox of this entire move appears.
+
+SAP has spent years pressuring everyone to migrate to S/4HANA. The ECC support deadline has moved several times, but the direction is clear: at some point support ends and whoever hasn't migrated is exposed. No security patches. No updates. No official ecosystem.
+
+SAP's argument for migration was always the same: S/4HANA is more secure, more modern, more prepared for the future.
+
+But more than half of SAP customers haven't started the migration. Not for lack of desire. Because of cost, complexity, operational risk, and in many cases because the ECC they have works perfectly for what they need. The business doesn't stop because SAP launched a new product.
+
+And now a variable appears that SAP didn't calculate in its business model a few years back.
+
+## The '67 Shelby Cobra With Nitro and Armor
+
+Imagine a 1967 Mustang Shelby Cobra. Original engine, classic body, the roar no modern car can replicate. Years of road testing. Accumulated judgment in every bolt.
+
+Now imagine someone installs millimeter-precision electronic fuel injection, real-time telemetry connected to the cloud, an AI collision-avoidance system processing the environment at 200 frames per second, active cybersecurity shielding that detects and neutralizes vulnerabilities before they can be exploited, and an AI co-pilot that learns how you drive and optimizes performance based on your style.
+
+Is it an old car? No. It's a car with decades of accumulated judgment plus today's technological muscle. It's better than many new cars in what matters: it knows its own guts, has a history of real behavior, and now has the intelligence to anticipate what's coming. And maybe with a not-so-"Clean Core" mindset as its mantra.
+
+That's exactly what's happening with SAP ECC in 2026 — or will happen, if the math holds.
+
+A client with a well-implemented ECC has something no new S/4 installation has: years of structured data from real operations, mature processes, proven integrations, and a team that understands why each configuration exists. That can't be migrated. It's built over years.
+
+The question nobody was asking until now is: what if instead of migrating that ECC to S/4HANA, we plug in an enterprise-grade AI model that gives it next-generation security, agentic capabilities, intelligent consumption of existing data, and the ability to evolve its capabilities independently of SAP's roadmap?
+
+The answer SAP doesn't want you to consider: maybe you don't need to migrate. It sounds crazy, but I know many people are thinking it and even talking about it. It's still some time away from being 100% feasible — but for how long?
+
+## The Two ERP Castes
+
+What's emerging is not a technical decision. It's a strategic bifurcation that will define the SAP ecosystem for the next decade.
+
+**Caste 1: Those who migrated to S/4HANA and married the official ecosystem.**
+
+They have Joule as their native co-pilot. They have access to BTP with published and supported APIs. They have the SAP/OpenAI/Microsoft triangle as their AI stack. They have official support, clear roadmap, guaranteed compliance. They might even know how the AI units on their next month's invoice are calculated.
+
+And they have a restriction they signed in the contract: the intelligence they can use on their core is the intelligence SAP decides they can use.
+
+**Caste 2: The rebels who stayed on ECC.**
+
+They have a platform SAP considers legacy. That at some point will lose official support. That doesn't have S/4's innovation roadmap.
+
+But they also have something the first caste doesn't: the freedom to choose what intelligence they plug into their system.
+
+If an external AI model — enterprise-grade or better — can provide active security that detects and neutralizes vulnerabilities in real time, can consume and structure ECC data with the same depth as any native tool, can orchestrate complex business processes on that ECC without needing SAP's published APIs because it works at a different layer, and can evolve its capabilities autonomously, independent of SAP's product cycle and adapting to each thing the user asks —
+
+Some will say it'll be a Frankenstein pumped with AI steroids. But if in the end that's what the user wants and it carries their business model, there's nothing more to discuss for many.
+
+Then SAP's main argument for migration — security and technological modernity — weakens significantly.
+
+It doesn't disappear. There are cases where S/4HANA is clearly superior and migration makes sense. But it stops being the only possible answer.
+
+And that's what SAP sees coming. That's why the API Policy has the language it has.
+
+## The Tension Klein Can't Easily Resolve
+
+Christian Klein is in a position that looks a lot like the record industry leaders' in 2001, when the iPod appeared.
+
+You can try to close the legal fence around your platform so external intelligence can't enter without your permission. That's what the API Policy does. It has logic from the perspective of control, compliance, and business model.
+
+Or you can open up strategically and become the platform on which the ecosystem's intelligence is built. Where any agent, from any vendor, wants to be certified to run on SAP because that's where the data that matters lives.
+
+The problem is those two options are almost contradictory. And SAP, right now, appears to be choosing the first.
+
+The history of the cloud transition shows what happens when vendors try to control too tightly a technology transition that clients didn't choose. The resistance was massive. The timelines moved several times. And the migration still isn't complete.
+
+If history repeats, SAP's attempt to control how AI enters its ecosystem may generate exactly the opposite effect: accelerating the search for alternatives by clients who don't want to depend on a single stack.
+
+## What This Means for You
+
+Three profiles and three different realities.
+
+**If you're on an active S/4HANA migration project:** The API Policy doesn't change anything for you in the short term. You stay on the official path. But pay close attention to how the agent ecosystem evolves on BTP. What SAP allows or doesn't allow in that layer will define how much real value you can extract from the stack.
+
+**If you're managing an ECC nobody wants to migrate:** This is your window. Not to resist migration indefinitely, but to reframe the conversation with your organization. The question is no longer just "how much does migration cost" but "what alternatives exist to modernize the intelligence layer without touching the core." That conversation is worth more every day.
+
+**If you're a partner or independent consultant:** The most interesting niche in the next 24 months is not standard S/4HANA implementation. It's AI architecture on legacy systems. Someone has to design how an external model consumes, processes, and orchestrates on an ECC. That someone needs to actually understand SAP — not just know how to use Joule.
+
+If you replace "SAP" with the name of the vendor you depend on, the question is the same. And so is the urgency.
+
+## Your Diagnosis This Week
+
+The 3 questions.
+
+1. Do you know exactly which APIs you're using in your integrations, and which of them are published versus non-published according to the new API Policy? If the answer is no, you have a compliance risk your organization probably doesn't know it has.
+
+2. Does your organization have a defined position on the AI stack it will use on SAP? Or are they waiting for SAP to tell them what to use? If they're waiting, they already made a decision without knowing it.
+
+3. Can you articulate in a meeting with your CIO why the ECC vs S/4 debate changed with the emergence of enterprise-grade AI models? If you can't, someone else will have that conversation — probably with less judgment than you.
+
+---
+
+The last three weeks built a trilogy without planning it.
+
+**Week 1:** The external gap. Who has access to the most powerful models and who doesn't. Mythos as a symbol of a two-speed world.
+
+**Week 2:** The internal gap. Who hides how they work with AI and why that's a trap. Shadow AI as poorly calibrated survival logic.
+
+**Week 3 (this edition):** The ecosystem gap. SAP building the fence precisely when external intelligence has for the first time the technical capability to bypass it.
+
+The three gaps feed each other. And all three have the same blind spot in common: the professional who doesn't take an active position gets trapped in the middle.
+
+The '67 Mustang isn't a nostalgic metaphor. It's a strategic question. How much is accumulated judgment worth when intelligence can be plugged in from the outside?
+
+The answer to that question is worth more than any S/4HANA certification you could earn this year.
+
+*Pablo / Above Average*
+
+---
+
+*Sources: SAP API Policy v.4.2026. SAP x OpenAI "OpenAI for Germany" announcement, September 2025. Bloomberg, Christian Klein statements on the AI transition, April 2026. Claude Mythos Preview System Card, Anthropic, April 2026.*

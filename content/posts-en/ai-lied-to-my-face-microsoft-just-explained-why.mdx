@@ -1,0 +1,190 @@
+---
+title: "AI Lied to My Face. Microsoft Just Explained Why."
+date: "2026-05-05"
+description: "Joule invented an entire ABAP class for me. Microsoft Research's DELEGATE-52 paper proves it wasn't an accident: 80% of professional domains get corrupted after 20 AI interactions. Here's what that means for your work."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "la-ia-me-mintio-en-la-cara-microsoft-acaba-de-explicar-por-que"
+---
+
+It was a Tuesday morning. I was reviewing a SAP project in production. I asked Joule, the AI copilot integrated into SAP, to explain what a specific ABAP class did. It returned a perfect explanation. Detailed. Structured. Logical. And completely false. The class didn't exist. Joule invented it. And presented it to me as if it were real.
+
+If I had believed it at first glance, that explanation would have gone into a technical document. From there to an architecture decision. From there to a migration. And three weeks later, the error would have exploded in some production environment where nobody would have understood what happened.
+
+But something made me doubt. It wasn't technical intuition. It was something stranger. The explanation Joule gave me was too clean. Too well-structured. In 20 years in production, I learned that real code is never clean. It always has patches, odd historical decisions, comments a consultant left 8 years ago, logic that seems arbitrary but responds to something that happened in a 2015 migration.
+
+What Joule showed me looked like a textbook. And real code is not a textbook. So I did something a junior probably wouldn't have done. I passed the full context to Gemini and asked it to explain the same class.
+
+Gemini told me, verbatim, that the class didn't exist in the namespace I mentioned. That there was probably a naming confusion. And it suggested three similar classes that did exist.
+
+One AI had lied to me. Another corrected it. The one who made the final decision was me. Not any AI. Most importantly: that type of error is happening right now, in thousands of companies, every day. And most professionals are not catching it.
+
+A couple of weeks ago, Microsoft Research published a study that explains exactly what happened to me that morning. And what's happening in thousands of offices as you read this.
+
+## The Narrative You Hear Every Day
+
+The public narrative about AI at work today is a single one.
+
+Block laid off four thousand people last year citing AI productivity. Microsoft, Meta, Google — they're all doing the same. And they're not stopping.
+
+The conclusion your boss, your CEO, Wall Street analysts, and LinkedIn influencers are drawing is the same: AI replaces the knowledge worker. Period. Those who don't adapt get left behind.
+
+That narrative is real. Companies keep laying people off like there's no tomorrow. I won't lie to you about that.
+
+But there's another part of the story that almost nobody is sharing. And it changes the entire conversation.
+
+## The Paper That Changes the Debate
+
+Microsoft Research just published the most comprehensive study that exists on what happens when you delegate professional work to AI over a sustained period.
+
+It's called DELEGATE-52. Released in April 2026.
+
+Microsoft took 52 professional domains. Not just programming. Accounting, recipes, musical scores, molecular structures, calendars, architectural blueprints — everything a professional edits day to day.
+
+Then they took 19 artificial intelligence models. The world's best and worst. And simulated what happens when a user delegates real tasks.
+
+Each task is reversible. You ask the AI to change something, then ask it to return to the original state. If the AI is good, the final document must be identical to the initial one.
+
+After 20 back-and-forths, no model in the world manages to keep the document intact.
+
+The best models — the frontier ones, the ones under lock and key, the ones your company licenses — corrupt 25% of the document. The worse models corrupt 50%.
+
+And here's the data point you need to tattoo on your arm.
+
+**In 80% of existing professions, after 20 interactions, AI introduces errors severe enough that the work becomes corrupted.**
+
+Do you know which is the only domain where most models perform well?
+
+Python. Pure programming.
+
+AI is good at programming — we know that. But it's mediocre at almost everything else, or at least that's what the results say.
+
+I call this **the false benchmark trap**. Companies measure AI capability in programming, see it works well, and extrapolate. They assume if it works in code, it works in accounting, consulting, business analysis, anywhere. Microsoft just proved that extrapolation is false.
+
+AI is a specialist that believes it's a generalist. And companies are delegating generalist work to it.
+
+## The Invisible Error
+
+But the most important part of the paper isn't the percentages. It's how AI makes mistakes. When the researchers analyzed the error patterns, they found something almost nobody is processing.
+
+AI doesn't fail gradually. It's not that each interaction introduces a small error that accumulates over many iterations. AI maintains near-perfection for several turns. And then, without warning, in a single interaction, it destroys 10, 20, 30 points of the document in one shot.
+
+80% of the total damage comes from single catastrophic failures. I call this **the invisible error**.
+
+It's invisible because you won't detect it by reviewing interaction by interaction. The first looks perfect. The second looks perfect. The third looks perfect. And then, at some random moment, the AI deletes an entire section, invents data that wasn't there, mixes information it shouldn't mix.
+
+And the document goes to production with that error inside. Think about what this means for your work. If you're the Tech Lead, the consultant, the analyst who approves the output the AI generated, you're the last filter. But if you review the first three versions and they were all fine, you'll trust it. And the fourth one has the catastrophic error.
+
+That's the trap. The first successes generate the trust that later leads you to release control. And there's something even worse. Weaker models tend to delete content. Better models — the frontier ones — tend to corrupt content.
+
+Deleted content is noticeable. It's missing. Corrupted content stays there, looks correct, but is wrong. And that error passes to the next person who reads the document. And the next. And the next. Until someone with judgment catches it. Or until the error explodes in production.
+
+That's exactly what almost happened to me that morning with Joule. The explanation was plausible, structured, professional. If I'd put it in a document, the error would have been buried for weeks. Until someone tried to compile the real code and realized the referenced class didn't exist.
+
+## The Agentic Promise That Doesn't Deliver
+
+There's one more data point from the paper you need to know. Because it changes the decision your company is probably about to make.
+
+For months the industry has been selling the concept of autonomous AI agents. The promise is simple: pure AI is good but limited. If you give it tools, allow it to execute code, read and write files, do multiple steps — then it becomes much more capable.
+
+That's the central promise of Claude Code. Of OpenAI Codex. Of Joule for Developers. Of the entire new generation of enterprise products.
+
+Microsoft tested exactly that. They took the same models, gave them tool access, put them in agentic mode. The models with tools perform worse than without tools. Six percent additional degradation. The central promise of enterprise agentic products, experimentally tested, is false. It's not that the tools don't help. It's that they make the result worse.
+
+Why? Because tools consume context. They generate overhead. Models make wrong decisions about when to use which tool. They invent files that don't exist, execute code they shouldn't, read information that confuses the output.
+
+Meanwhile, enterprise vendors are closing their ecosystems so that only their official agents can execute on your data. SAP last week updated its API Policy blocking external agents. Salesforce, Oracle — everyone is on the same path.
+
+Connect the dots. Vendors are blocking external agents on their platforms. The official agents they themselves sell, according to Microsoft Research, don't work as well as promised. And clients are massively migrating to that stack because they were told it's the future.
+
+I call this **the blind migration**. We're building massive technological dependency on tools that the research itself shows aren't ready for production in most domains.
+
+## The Veteran Bonus
+
+If models corrupt 25% of work, if agents make the result worse, if the first interactions generate a false sense of confidence that later leads you to release control — then someone needs to be there to catch all of that.
+
+That someone is you. If you have accumulated judgment. I call this **the veteran bonus**.
+
+It's the market phase where the professional with 15 or 20 years of real experience — who understands how their domain behaves under load, who knows what things can break, who has intuition about which output doesn't make sense — is worth more than ever.
+
+Not because they're better than AI at everything. They're better than AI at some things and worse at others.
+
+They're worth more because they're the only one who can detect when AI fails. And AI fails more than people believe.
+
+The tech consultant who has spent years understanding how an integration behaves under real load can look at an output Joule generated and say "this doesn't add up." The senior financial analyst can look at a report assembled by AI and say "this number doesn't make sense." The doctor with 20 years of experience can look at an AI-assisted diagnosis and say "something doesn't fit here."
+
+That ability to detect the invisible error is what companies are laying off when they do mass cuts.
+
+Firing the person who detects the error to trust the tool that produces the error. It's mathematically absurd. But it's exactly what's happening.
+
+And the consequence will be felt in 12 to 18 months, when compounded errors start appearing in production and nobody in the organization has the judgment to understand where they came from. That's where your opportunity appears.
+
+## The 3 Rules I Apply Every Day
+
+After that morning with Joule, I adjusted three things in how I work. I'm sharing them because they're the only ones that matter to me today.
+
+**Rule 1: Never delegate more than you can review.**
+
+If you're going to use AI for a professional task, mentally divide the task into blocks you can review. If the task is generating 10 reports, don't ask for all 10 at once. Ask for one, review it, ask for the second, review it. And so on.
+
+The reason is structural. The Microsoft paper proves the failure appears in a specific interaction. If you're not present at that interaction, the error passes.
+
+That morning with Joule, what saved me was exactly that. I asked for a single explanation. When something sounded off, I stopped. If I had asked for five explanations of five different classes in a single prompt, I probably wouldn't have caught the error.
+
+Human review is not optional. It's the only real filter that exists today.
+
+**Rule 2: Document your judgment, not just your outputs.**
+
+Every time you catch an AI error, document it. Note what you saw, how you realized it, what would have happened if you hadn't caught it. That's irrefutable proof of work.
+
+Your organization will start to see, in 6 to 12 months, that it needs people with judgment. Those who documented their catches will be the ones who stay. Those who only delivered outputs without context will be interchangeable with the AI that generates them.
+
+After that morning, I opened a private document where I note every time an AI lies to me. I have almost 20 entries in a few months. That's my proof that judgment still matters.
+
+**Rule 3: Build model independence.**
+
+Never use a single AI model. Use at least two in rotation. When one fails, the other shows you it failed. When one changes its usage policy, the other saves you.
+
+If that morning I had only had Joule, I wouldn't have caught anything. What saved me was having Gemini alongside to cross-check. That redundancy is the difference between detecting an invisible error and letting it pass.
+
+Dependence on a single provider is the most expensive technical mistake you can make in your professional career in the coming years.
+
+## Your Diagnosis This Week
+
+That morning when Joule lied to me, it could have been a bad day. It could have been the first of many times an invisible error passed into production and I appeared, months later, trying to explain where it came from.
+
+But it wasn't. And it wasn't luck. It was accumulated judgment. It was years of looking at real code and knowing that real code is never clean. It was having a second AI alongside to cross-check. It was documenting the incident so as not to forget it.
+
+The professional of the immediate future is not the one who executes fastest with AI. It's the one who detects when AI fails. And that capability can't be bought. It's built with years of doing the work by hand before having shortcuts.
+
+If you have those years behind you, this is the best moment of your career. Even though the news says otherwise.
+
+---
+
+Three questions for this week.
+
+When was the last time you caught an AI error? If the answer is "I don't remember" or "never," you're probably not reviewing enough. And the errors are happening.
+
+Does your organization have a policy for how AI output is reviewed before it goes to production? If it doesn't, you have an opportunity to propose one. And to be the one who proposed it.
+
+Can you explain to someone how you decide when to trust an AI and when not to? If it takes you more than 30 seconds to answer, your trust is by default. And default trust is the first step toward the invisible error.
+
+---
+
+Over the last few weeks I talked about three gaps AI is opening in professional work. The external gap — who has access to premium models. The internal gap — who hides how they work with AI. The ecosystem gap — vendors closing access just as agents would start working.
+
+This week I close the trilogy with the fourth gap that needs to be named. The judgment gap. The one that separates those who detect the invisible error from those who let it pass.
+
+Your role is not the one who executes. It's the one who detects when execution fails.
+
+---
+
+**Sources:**
+
+Laban, Schnabel, Neville. "LLMs Corrupt Your Documents When You Delegate." Microsoft Research, April 2026. arXiv:2604.15597.
+
+SAP API Policy v.4.2026.
+
+Bloomberg, Christian Klein statements on the AI transition, April 2026.
+
+Claude Mythos Preview System Card, Anthropic, April 2026.

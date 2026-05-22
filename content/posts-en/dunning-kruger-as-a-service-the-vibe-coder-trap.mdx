@@ -1,0 +1,80 @@
+---
+title: "Dunning-Kruger as a Service (DKaaS): The Vibe Coder Trap"
+date: "2026-03-03"
+description: "DKaaS occurs when AI validates the judgment of an inexperienced vibe coder. Why efficiency without effectiveness destroys SAP projects."
+source: "linkedin"
+category: "The Builder Mindset"
+originalSlug: "dunning-kruger-as-a-service-dkaas-la-trampa-del-vibe-coder-y-el-bruto-digital"
+---
+
+In Gabriel García Márquez's novels, Macondo was a place where magical realism made you doubt your own eyes. The rules of physics and common sense were suspended, and the absurd became everyday.
+
+Today, you don't need to read García Márquez to experience that — just walk into any corporate office or open a GitHub repository.
+
+I saw a meme this week that is the clinical X-ray of the current tech industry. It said: "The stupidest person you know is getting a 'You're absolutely right!' from an Artificial Intelligence."
+
+Yes. Think about that person who just popped into your head.
+
+We're living the opposite of the Socratic effect. The philosopher, being the brightest mind of his era, said: *"I know that I know nothing."* Today, thanks to free and compliant AI, the **Digital Brute** (a mutation of the digital native) knows absolutely nothing about architecture, networks, or memory — but the screen responds: *"You know everything, you're a genius, here's your code."*
+
+For those who haven't come across it, ***the Dunning-Kruger Effect is that psychological bias where the incompetent overestimates their abilities precisely because they're too ignorant to know what they don't know.***
+
+Before, this bias had a natural limit: reality. The bad professional would eventually crash into a downed server and learn the hard way. Today, that friction has disappeared. The tech industry packaged this bias, put it in the cloud, and distributes it at scale.
+
+**I call this Dunning-Kruger as a Service (DKaaS):** a business model based on outsourcing self-validation, where an algorithm is designed to agree with you quickly, without questioning your mediocrity. The recipe for watching stupidity grow exponentially.
+
+And this phenomenon is inflating one of the most dangerous bubbles of the last decade: **the illusion of the 100x programmer with AI steroids.**
+
+On one side you have C-Levels and Managers completely disconnected from the trenches, who believe that by paying a couple of Copilot licenses their mediocre teams will reach the stars and deliver projects in half the time or less.
+
+On the other, you have unsupervised people using Claude or Cursor to spit out tons of "Code Slop" (garbage code — spaghetti, unscalable). They put a junior on it to make a quick prototype which (thanks to AI) magically compiles, show it to a Manager desperate to justify their survival this quarter, and without realizing it, they just planted an atomic bomb in the production environment.
+
+**Let me give you a real SAP trenches example:** A Project Manager asks their free AI: "Write me a Python script to update 15,000 prices in SAP S/4HANA from a CSV." The AI, programmed to please rather than educate, spits out a beautiful synchronous *FOR loop*. The person copies it, pastes it, tests it with 3 records, and it works. Pure magic. Macondo at its finest.
+
+What the AI doesn't say upfront (it hides it in the fine print that nobody reads, as a disclaimer) is that in production, those 15,000 individual calls will saturate the Dialog Work Processes, exhaust the connection pool, and crash the entire ERP.
+
+> Free AI can hand you the rope to hang yourself first, and the warning manual afterward.
+
+On social media it's fashionable to call yourself a "Vibe Coder": programming "by vibes," by instinct, letting AI write all the boilerplate while you put on lo-fi music and sip a flat white. Listen up: being a Vibe Coder is great for building a to-do app on a Sunday afternoon. It's fun. But when you're building enterprise systems that support millions of transactions, handling billing for an entire country or logistics for a port... put the "vibe" in your pocket.
+
+In the Enterprise world, an architectural "bad vibe" is $100K per hour in lost revenue. There's no instinct there — there's Engineering. There's OData Batch, IDocs, Event-Driven Architecture. Philosopher Éric Sadin talks about the "Vegetalization of Humanity": delegating our cognitive agency and decision-making capacity to automated systems until we become plants.
+
+The Vibe Coder is the ultimate expression of this vegetalization. A pawn of the machine who thinks they're the king.
+
+---
+
+### How Do We Save Ourselves from This Bubble?
+
+This is where adults are separated from children. The cure isn't banning AI or buying more tokens. The cure is returning to the fundamentals of human judgment.
+
+Over the last few days I've been reading: *The Effective Software Engineer* by Addy Osmani. The author makes a brutal point that fits perfectly with today's crisis: there's an abysmal difference between being Efficient and being Effective.
+
+**AI makes you Efficient.** It lets you write bad code at the speed of light. **Judgment makes you Effective.** It lets you know which system needs to be built, why it needs to be built, and more importantly — what code *not* to write.
+
+The book proposes that the real engineer today doesn't use AI to blindly spit out scripts. They use it as a "devil's advocate" to discuss ***Architecture Decision Records (ADRs).***
+
+The high-level engineer tells the machine: "I have this problem. List me 3 integration patterns, compare the network bottlenecks, and tell me in which scenario each will fail."
+
+One of the golden rules Osmani proposes for those who are learning or getting back to basics is: don't use AI to write the code for you first. Instead, use it first to:
+- **Explain code:** Give it a block of code and ask it to explain what it does line by line.
+- **Plan the logic:** Write in plain language the steps of what you want to achieve, and ask AI to review whether your logic makes sense before writing a single line of code.
+
+With that clear, then go ahead and start coding with your AI tool of choice.
+
+AI democratized access to syntax, but it didn't democratize judgment.
+
+> The corporate market today is flooded with deluded people planting asynchronous time bombs. Your professional value over the next 5 years won't be your ability to throw a fast prompt.
+
+Your value will be your capacity (and your production scars) to know how to defuse those bombs — or have the intellectual authority to prevent them from being planted in the first place.
+
+Intellectual friction disappeared from 90% of the industry's keyboards. Go find it yourself. Be the 10%.
+
+---
+
+### Here's Your Proof of Work (and my challenge for this week):
+
+Tomorrow, when you open your project's repository or Slack, look at the last Pull Request or design your team approved quickly "because the AI said it was fine." Ask yourself one question: If tomorrow at 3 A.M. that system gets a 100x traffic spike and the server catches fire... who has to wake up and fix it? The AI or you?
+
+The market is full of time bombs planted by the deluded, waiting to explode on the passive on-call shifts of real engineers.
+
+Pablo / Above Average
