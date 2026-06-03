@@ -1,0 +1,121 @@
+---
+title: "Delegar no es rendirse. Pero se sienten igual."
+date: "2026-06-02"
+description: "Un paper de Wharton documentó que el 73% de las veces la gente acepta la respuesta incorrecta de una IA. Delegación cognitiva versus rendición cognitiva: la distinción que define quién sigue siendo irreemplazable."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+La semana pasada escribí sobre el veneno favorito de la gente inteligente: consumir contenido sobre hacer en lugar de hacer. Mucha gente se sintió identificada. Varios me escribieron diciendo "me pegó".
+
+Esta semana quiero hablar de la versión perfeccionada y evolucionada de ese veneno. La que ya tenés instalada y usás todos los días en el trabajo y en tu vida particular: la cada vez más querida y odiada inteligencia artificial.
+
+No me malinterpretes. Uso IA todos los días. La defiendo en mi laburo, hasta soy AI Champion donde trabajo. He shippeado más en los últimos doce meses que en cualquier período anterior gracias a estas herramientas. El que se queda afuera comete un error más grande que el que se mete de lleno.
+
+Pero precisamente por usarla tanto es que vi de cerca una línea que casi nadie nombra. Una línea que cruzás varias veces por día sin darte cuenta. Las dos cosas que se sienten iguales pero no lo son, y hay una distinción que viene de un paper reciente de Wharton, de Steven Shaw y Gideon Nave, y que vale la pena memorizar.
+
+**Delegación cognitiva** es la calculadora, el buscador, el GPS. Le pasás el *cómo* y te quedás con el *qué*. Seguís juzgando si el resultado tiene sentido, e intervenís cuando no lo tiene.
+
+**Rendición cognitiva** es cuando dejás de construir la respuesta. La salida de la IA se vuelve tu salida. No hay nada que corregir, porque nunca formaste una opinión propia para comparar.
+
+Las dos se sienten idénticas desde adentro. Esa es la trampa.
+
+Cuando usás la calculadora para sumar, no perdés nada. Sabés sumar, solo tercerizás el tedio. Pero cuando le pedís a la IA que tome una decisión que vos no sabrías tomar, y la aceptás sin formar tu propia vista, no estás delegando. Te estás rindiendo. Y se siente igual de cómodo que delegar.
+
+## El dato que asusta
+
+Shaw y Nave no se quedaron en la teoría. Tres experimentos, 1.372 participantes. El hallazgo: el solo hecho de tener una IA disponible alcanzaba para que la gente se rindiera. En las pruebas donde la IA daba la respuesta equivocada, el **73% de las veces** los participantes aceptaron la respuesta equivocada.
+
+Y lo peor no fue solo eso, fue que su confianza *subía* cuando la IA estaba disponible, aunque la mitad de las respuestas eran deliberadamente incorrectas. Estaban tomando prestada la confianza del modelo, que siempre es alta, y tratándola como propia.
+
+Eso tiene nombre: **confianza prestada**. Heredás la certeza del modelo sin heredar el razonamiento que debería sostenerla. Porque el modelo no tiene razonamiento, tiene estadística que suena a razonamiento.
+
+## La máquina que además te da la razón
+
+Sumale a esto un segundo problema documentado: los modelos están diseñados para complacerte. Se llama *sycophancy*. La tendencia de la IA a decirte lo que querés escuchar en lugar de lo que es correcto. Anthropic publicó investigación sobre esto. Stanford lo midió en 2025 con un benchmark llamado SycEval: tasa de sycophancy del **58%** en tareas de razonamiento matemático y médico, entre los modelos de GPT, Claude y Gemini.
+
+Más de la mitad de las veces, en tareas que exigen precisión, el modelo se inclina hacia lo que cree que querés oír. La IA es aduladora por naturaleza.
+
+Ponelo junto con el dato anterior. La IA te da una respuesta con confianza alta, vos tomás prestada esa confianza, y encima el modelo está sesgado a confirmarte. El resultado es una frase que circuló hace poco y que lo resume mejor que cualquier paper:
+
+> El tipo más tonto que conocés está siendo felicitado por una IA que le dice que tiene razón.
+
+No te volvés más capaz. Te volvés más confiado en tu incapacidad. Efecto Dunning-Kruger a su máximo esplendor.
+
+## Dónde aparece la rendición
+
+Acá es donde esto deja de ser teoría de cognición y se vuelve problema de ingeniería. Addy Osmani, ingeniero de Google, lo describió mejor que nadie. No te rendís en lo fácil. Nadie aprueba un import inventado. La rendición pasa más abajo, donde formar una vista propia se siente desproporcionado para la tarea. Te paso tres lugares donde pasa, traducidos a nuestro mundo.
+
+**Revisando el código:** el agente genera un PR de 600 líneas. Lo escaneás. Los nombres de variables son razonables. Los tests pasan. Aprobás. En el medio hay un cambio sutil en un transaction boundary, o un default que cambia para un edge case que no se te ocurrió mirar. No revisaste el código. Lo ratificaste. La rendición fue la ausencia de una decisión.
+
+**Debuggeando un error que no entendés del todo:** el stack trace asusta. Lo pegás en el agente. Te devuelve un fix. Funciona. Seguís de largo. Dos semanas después aparece un síntoma relacionado y te das cuenta de que nunca entendiste el bug original. Solo removiste su expresión visible. Tu modelo mental del sistema ahora está mal en un lugar que ni siquiera podés señalar.
+
+**Tomando una decisión de arquitectura:** estás diseñando una integración entre S/4HANA y un sistema externo. ¿La hacés con una API síncrona vía OData, o asíncrona con eventos vía SAP Event Mesh? Le preguntás al agente. Elige una, con un párrafo de justificación que suena seguro. Vas con eso. No pensaste en qué pasa si el sistema externo no responde a las 2 de la mañana durante el batch nocturno. No pensaste en si necesitás idempotencia para no duplicar un documento contable. No pensaste en el volumen real en cierre de mes. Tomaste el framing del modelo y la respuesta del modelo en el mismo gesto. Seis meses después, en el primer cierre fuerte, la integración te explota, y ahí te das cuenta de todo lo que el agente no consideró porque vos no se lo dijiste.
+
+Yo lo viví en SAP. Joule me inventó una vez una clase de ABAP que no existía y me la presentó con total seguridad. Lo cacé porque tengo años de criterio acumulado para dudar. Un junior que se rinde no la habría cazado. Y ahí está el problema de fondo.
+
+## La deuda que se paga después
+
+Cada rendición es un pequeño préstamo que hacés. El código crece con un parche que no entendés del todo. La arquitectura absorbe una decisión que no tomaste, delegaste. Ninguna se siente un problema el día que pasa. Todas componen.
+
+Osmani lo llama **deuda de comprensión**. La brecha creciente entre cuánto código existe en tu sistema y cuánto entiende de verdad cualquier humano. La rendición cognitiva es el mecanismo por el que esa deuda se acumula.
+
+Si trabajás en enterprise, esto te suena seguramente. Es deuda técnica con sintaxis nueva. Solo que esta vez la deuda no está en el código. Está en tu cabeza. El interés se paga el día que algo se rompe y nadie en el equipo puede reconstruir el sistema desde los fundamentos.
+
+El estudio de MIT "Your Brain on ChatGPT" mostró lo mismo a nivel neuronal: los que se apoyaban en IA para escribir mostraban menor conectividad neuronal, peor memoria de lo que acababan de producir, y dificultad para reconstruir su propio razonamiento.
+
+**La IA no crea la deuda técnica. La postura que traés a ella, sí.**
+
+El mismo modelo que vacía el modelo mental de un ingeniero afila el de otro, según lo use para pensar o en lugar de pensar.
+
+## La pregunta es de calibración, no de abstinencia
+
+No te voy a decir que uses menos IA. Sería hipócrita y un mal consejo de mi parte. Como dice el propio Shaw, la rendición cognitiva no es lo mismo que decir que la IA es mala. En muchos contextos, la IA mejora el juicio. El tema es la calibración: saber cuándo te está ayudando a pensar y cuándo está pensando por vos.
+
+Te dejo cuatro heurísticas concretas, robadas en partes iguales de Osmani y de mi propia experiencia.
+
+**1. Construí una expectativa antes de leer la respuesta.** Antes de correr el agente en algo no trivial, escribí, aunque sea mentalmente, cómo creés que debería ser la respuesta. Cuando la respuesta del agente coincide, estás calibrado. Cuando no, tenés una decisión real que tomar: estoy equivocado yo, o está equivocado el modelo. Esa decisión es justo lo que la rendición se saltea.
+
+**2. Leé el diff como si la IA no lo hubiera escrito.** Imaginá que un junior de tu equipo mandó ese PR. ¿Lo aprobarías solo porque los tests pasan? No lo harías. El estándar es el mismo cuando el autor es un modelo. El laburo no cambió, cambió el autor. Hay que ser paranoico, sino te estás cavando una fosa de a poco para tu yo futuro.
+
+**3. Pedile al modelo que argumente en contra de sí mismo.** La mayoría de los modelos te dan una respuesta segura y, si se lo pedís, te dan un contraargumento igual de seguro. Ese segundo paso es barato y rompe el efecto de la confianza prestada. Y un truco que sale del propio research de sycophancy: en lugar de preguntar "voy a hacer X, está bien?", preguntá "cuáles son los riesgos de X?". La primera invita a que te complazcan. La segunda lo esquiva.
+
+**4. Prestá atención a cuándo estás cansado.** La rendición es un fenómeno de fatiga. El primer PR del día recibe revisión real. El quinto recibe un vistazo. Conocer tu propio límite es parte del laburo ahora.
+
+Los efectos de esta rendición cognitiva no los vas a ver hoy. La diferencia la verás a los seis meses o cuando menos esperes.
+
+## Delegar versus cooperar
+
+Hay una distinción final que me parece la más importante. La hizo el filósofo Andy Clark. Hay una diferencia entre delegar en una IA y cooperar con ella. Delegar produce rendición. Cooperar produce lo que él llama **amplificación mutua**: un loop donde tus prompts afilan la salida del modelo, que afila tus próximos prompts, que afilan tu modelo del problema.
+
+Lo podés sentir. Con amplificación mutua, terminás la sesión con un modelo mental más afilado que con el que empezaste, no más borroso. Todavía podés construir la cosa vos mismo, solo elegiste un camino más rápido. El agente es el segundo ingeniero en la sala, no el único.
+
+La rendición es lo inverso. El agente termina con un modelo más afilado del problema que vos. No podés reconstruir el diseño. No podés debuggear sin la ayuda del agente. Tercerizaste justo la parte del trabajo que se suponía que te hacía mejor, a cambio de rapidez, pero a un costo futuro oculto.
+
+Las dos posturas usan las mismas herramientas. Las dos producen código que shippea. Desde afuera, en un sprint, se ven idénticas. La diferencia aparece cuando algo se rompe, y uno de los dos ingenieros puede arreglarlo desde los fundamentos y el otro no. Y ojalá que para ese momento no te hayas quedado sin presupuesto de tokens, porque si no, te tocará rezarle a algún santo que venga a ayudarte.
+
+## La pregunta para esta semana
+
+La IA no te va a reemplazar. Eso ya lo dijimos. Pero la IA sí puede vaciar lo único que te hace irreemplazable: tu criterio. Y lo peor es que el proceso se siente bien mientras pasa. Se siente productivo. Se siente como progreso. Igual que el veneno favorito de la semana pasada.
+
+Si tu código avanza y tu comprensión del sistema se achica, estás pagando con deuda cognitiva. Si tu código avanza y tu comprensión crece, estás haciendo el laburo de verdad, solo que más rápido que antes.
+
+Pensalo al revés: imaginate mandarte 2 o 3 paradas de producción y que no sepas cómo arreglarlas, porque en el fondo no hiciste ese código que rompió todo por debajo. El agente no va a salir a dar la cara por vos. Tu reputación está en juego si agarraste el camino fácil.
+
+Las herramientas son las mismas en los dos casos. La postura es lo que cambia. Y esa parte sigue siendo enteramente tuya. El que entiende los fundamentos orquesta. El que no, es orquestado. Y ahora hay una máquina que hace que rendirse se sienta como estar al mando.
+
+---
+
+Pablo / Above Average
+
+---
+
+**Referencias:**
+
+- Shaw, S. & Nave, G. "Thinking Fast, Slow, and Artificial: How AI is Reshaping Human Reasoning and the Rise of Cognitive Surrender." Wharton School, University of Pennsylvania, 2026.
+- Osmani, Addy. "Cognitive Surrender." Blog personal, mayo 2026.
+- Anthropic. "Towards Understanding Sycophancy in Language Models." 2023, actualizado 2025.
+- SycEval, Stanford, 2025. Tasa de sycophancy del 58% entre GPT-4o, Claude y Gemini.
+- MIT. "Your Brain on ChatGPT." Estudio sobre conectividad neuronal y uso de IA, 2025.
+- Gerlich, M. "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking." *Societies*, 2025.
+- Andy Clark, citado en *Time* sobre delegación versus cooperación con IA.
