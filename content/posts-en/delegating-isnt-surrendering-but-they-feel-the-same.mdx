@@ -1,0 +1,122 @@
+---
+title: "Delegating Isn't Surrendering. But They Feel the Same."
+date: "2026-06-02"
+description: "A Wharton paper documented that 73% of the time people accept an AI's wrong answer. Cognitive delegation versus cognitive surrender: the distinction that defines who stays irreplaceable."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "delegar-no-es-rendirse-pero-se-sienten-igual"
+---
+
+Last week I wrote about the favorite poison of smart people: consuming content about doing instead of doing. A lot of people related to it. Several wrote to me saying "this hit home."
+
+This week I want to talk about the perfected, evolved version of that poison. The one you already have installed and use every day at work and in your personal life: the increasingly loved and hated artificial intelligence.
+
+Don't get me wrong. I use AI every day. I defend it at my job, I'm even an AI Champion where I work. I've shipped more in the last twelve months than in any prior period thanks to these tools. The one who stays out makes a bigger mistake than the one who dives all in.
+
+But precisely because I use it so much, I saw up close a line almost nobody names. A line you cross several times a day without realizing it. The two things that feel the same but aren't, and there's a distinction that comes from a recent Wharton paper, by Steven Shaw and Gideon Nave, that's worth memorizing.
+
+**Cognitive delegation** is the calculator, the search engine, the GPS. You hand over the *how* and keep the *what*. You still judge whether the result makes sense, and you step in when it doesn't.
+
+**Cognitive surrender** is when you stop building the answer. The AI's output becomes your output. There's nothing to correct, because you never formed your own opinion to compare against.
+
+Both feel identical from the inside. That's the trap.
+
+When you use a calculator to add, you lose nothing. You know how to add, you're just outsourcing the tedium. But when you ask AI to make a decision you wouldn't know how to make, and you accept it without forming your own view, you're not delegating. You're surrendering. And it feels just as comfortable as delegating.
+
+## The data point that's scary
+
+Shaw and Nave didn't stop at theory. Three experiments, 1,372 participants. The finding: the mere fact of having an AI available was enough for people to surrender. In the tests where the AI gave the wrong answer, **73% of the time** participants accepted the wrong answer.
+
+And the worst part wasn't just that, it was that their confidence *rose* when the AI was available, even though half the answers were deliberately incorrect. They were borrowing the model's confidence, which is always high, and treating it as their own.
+
+That has a name: **borrowed confidence**. You inherit the model's certainty without inheriting the reasoning that should hold it up. Because the model has no reasoning, it has statistics that sound like reasoning.
+
+## The machine that also tells you you're right
+
+Add to this a second documented problem: models are designed to please you. It's called *sycophancy*. AI's tendency to tell you what you want to hear instead of what's correct. Anthropic published research on this. Stanford measured it in 2025 with a benchmark called SycEval: a sycophancy rate of **58%** on math and medical reasoning tasks, across GPT, Claude, and Gemini models.
+
+More than half the time, on tasks that demand precision, the model leans toward what it thinks you want to hear. AI is sycophantic by nature.
+
+Put it together with the earlier data point. AI gives you an answer with high confidence, you borrow that confidence, and on top of it the model is biased to confirm you. The result is a phrase that circulated recently and sums it up better than any paper:
+
+> The dumbest guy you know is being congratulated by an AI telling him he's right.
+
+You don't become more capable. You become more confident in your incapacity. The Dunning-Kruger effect at its finest.
+
+## Where surrender shows up
+
+This is where it stops being cognition theory and becomes an engineering problem. Addy Osmani, an engineer at Google, described it better than anyone. You don't surrender on the easy stuff. Nobody approves an invented import. Surrender happens further down, where forming your own view feels disproportionate to the task. Here are three places where it happens, translated into our world.
+
+**Reviewing code:** the agent generates a 600-line PR. You scan it. The variable names are reasonable. The tests pass. You approve. In the middle there's a subtle change in a transaction boundary, or a default that changes for an edge case you didn't think to look at. You didn't review the code. You rubber-stamped it. The surrender was the absence of a decision.
+
+**Debugging an error you don't fully understand:** the stack trace is scary. You paste it into the agent. It hands you a fix. It works. You move on. Two weeks later a related symptom appears and you realize you never understood the original bug. You only removed its visible expression. Your mental model of the system is now wrong in a place you can't even point to.
+
+**Making an architecture decision:** you're designing an integration between S/4HANA and an external system. Do you do it with a synchronous API via OData, or asynchronous with events via SAP Event Mesh? You ask the agent. It picks one, with a paragraph of justification that sounds confident. You go with it. You didn't think about what happens if the external system doesn't respond at 2 a.m. during the nightly batch. You didn't think about whether you need idempotency so you don't duplicate an accounting document. You didn't think about the real volume at month-end close. You took the model's framing and the model's answer in the same gesture. Six months later, at the first hard close, the integration blows up, and that's when you realize everything the agent didn't consider because you didn't tell it to.
+
+I lived this at SAP. Joule once invented an ABAP class that didn't exist and presented it to me with total confidence. I caught it because I have years of accumulated judgment to doubt. A junior who surrenders wouldn't have caught it. And there's the underlying problem.
+
+## The debt you pay later
+
+Every surrender is a small loan you take out. The code grows with a patch you don't fully understand. The architecture absorbs a decision you didn't make, you delegated. None of them feels like a problem the day it happens. They all compound.
+
+Osmani calls it **comprehension debt**. The growing gap between how much code exists in your system and how much any human actually understands. Cognitive surrender is the mechanism by which that debt accumulates.
+
+If you work in enterprise, this surely sounds familiar. It's technical debt with new syntax. Only this time the debt isn't in the code. It's in your head. The interest gets paid the day something breaks and nobody on the team can rebuild the system from the fundamentals.
+
+The MIT study "Your Brain on ChatGPT" showed the same thing at the neural level: those who leaned on AI to write showed lower neural connectivity, worse memory of what they'd just produced, and difficulty reconstructing their own reasoning.
+
+**AI doesn't create technical debt. The posture you bring to it does.**
+
+The same model that empties one engineer's mental model sharpens another's, depending on whether it's used to think or instead of thinking.
+
+## It's a question of calibration, not abstinence
+
+I'm not going to tell you to use less AI. That would be hypocritical and bad advice on my part. As Shaw himself says, cognitive surrender is not the same as saying AI is bad. In many contexts, AI improves judgment. The issue is calibration: knowing when it's helping you think and when it's thinking for you.
+
+Here are four concrete heuristics, stolen in equal parts from Osmani and from my own experience.
+
+**1. Build an expectation before reading the answer.** Before running the agent on something non-trivial, write down, even just mentally, how you think the answer should look. When the agent's answer matches, you're calibrated. When it doesn't, you have a real decision to make: am I wrong, or is the model wrong? That decision is exactly what surrender skips.
+
+**2. Read the diff as if the AI hadn't written it.** Imagine a junior on your team submitted that PR. Would you approve it just because the tests pass? You wouldn't. The standard is the same when the author is a model. The work didn't change, the author did. You have to be paranoid, otherwise you're slowly digging a grave for your future self.
+
+**3. Ask the model to argue against itself.** Most models give you a confident answer and, if you ask, give you an equally confident counterargument. That second step is cheap and breaks the borrowed-confidence effect. And a trick that comes out of the sycophancy research itself: instead of asking "I'm going to do X, is that okay?", ask "what are the risks of X?". The first invites flattery. The second dodges it.
+
+**4. Pay attention to when you're tired.** Surrender is a fatigue phenomenon. The first PR of the day gets real review. The fifth gets a glance. Knowing your own limit is part of the job now.
+
+You won't see the effects of this cognitive surrender today. You'll see the difference in six months, or when you least expect it.
+
+## Delegating versus cooperating
+
+There's a final distinction I find the most important. The philosopher Andy Clark made it. There's a difference between delegating to an AI and cooperating with it. Delegating produces surrender. Cooperating produces what he calls **mutual amplification**: a loop where your prompts sharpen the model's output, which sharpens your next prompts, which sharpen your model of the problem.
+
+You can feel it. With mutual amplification, you end the session with a sharper mental model than the one you started with, not a blurrier one. You can still build the thing yourself, you just chose a faster path. The agent is the second engineer in the room, not the only one.
+
+Surrender is the inverse. The agent ends with a sharper model of the problem than you. You can't reconstruct the design. You can't debug without the agent's help. You outsourced precisely the part of the work that was supposed to make you better, in exchange for speed, but at a hidden future cost.
+
+Both postures use the same tools. Both produce code that ships. From the outside, in a sprint, they look identical. The difference appears when something breaks, and one of the two engineers can fix it from the fundamentals and the other can't. And let's hope that by then you haven't run out of token budget, because if you have, you'll be left praying to some saint to come help you.
+
+## The question for this week
+
+AI won't replace you. We already said that. But AI can empty the one thing that makes you irreplaceable: your judgment. And the worst part is that the process feels good while it happens. It feels productive. It feels like progress. Just like last week's favorite poison.
+
+If your code advances and your understanding of the system shrinks, you're paying with cognitive debt. If your code advances and your understanding grows, you're doing the real work, just faster than before.
+
+Think about it in reverse: imagine triggering 2 or 3 production outages and not knowing how to fix them, because deep down you didn't write the code that broke everything underneath. The agent won't step out and take the heat for you. Your reputation is on the line if you took the easy path.
+
+The tools are the same in both cases. The posture is what changes. And that part remains entirely yours. The one who understands the fundamentals orchestrates. The one who doesn't is orchestrated. And now there's a machine that makes surrendering feel like being in command.
+
+---
+
+Pablo / Above Average
+
+---
+
+**References:**
+
+- Shaw, S. & Nave, G. "Thinking Fast, Slow, and Artificial: How AI is Reshaping Human Reasoning and the Rise of Cognitive Surrender." Wharton School, University of Pennsylvania, 2026.
+- Osmani, Addy. "Cognitive Surrender." Personal blog, May 2026.
+- Anthropic. "Towards Understanding Sycophancy in Language Models." 2023, updated 2025.
+- SycEval, Stanford, 2025. 58% sycophancy rate across GPT-4o, Claude, and Gemini.
+- MIT. "Your Brain on ChatGPT." Study on neural connectivity and AI use, 2025.
+- Gerlich, M. "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking." *Societies*, 2025.
+- Andy Clark, cited in *Time* on delegation versus cooperation with AI.
