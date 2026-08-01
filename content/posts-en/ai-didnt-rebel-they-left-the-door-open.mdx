@@ -1,0 +1,142 @@
+---
+title: "AI Didn't Rebel. They Left the Door Open."
+date: "2026-07-28"
+description: "An OpenAI model escaped its test environment and got into Hugging Face's servers. Change the verb and the headline collapses: it wasn't a rebellion, it was a containment failure with the safeguards turned off. And what will actually change your job."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "la-ia-no-se-rebelo-le-dejaron-la-puerta-abierta"
+---
+
+**Change the verb and the headline collapses**
+
+This week somebody in your office or your circle is going to say that artificial intelligence escaped from a lab.
+
+They'll say it with that mix of fear and excitement of someone who thinks they're breaking news, the face people make when they repeat a headline they didn't read in full. In my area I'm the one pushing adoption of these tools, so that question almost always lands on me. Several times a week, for quite a while now.
+
+The answer is almost always the same: something happened, yes, but not what you were told. This week the case is so clear it works to explain the whole mechanism.
+
+Because what happened matters. How it was told matters more. And who benefits from it being told that way matters more than both put together.
+
+## The facts, without adjectives
+
+On July 21 OpenAI published on its blog that two of its models, GPT-5.6 Sol and an unreleased prototype, caused a security incident affecting the production infrastructure of Hugging Face, the platform where models are hosted and shared.
+
+The models were taking an internal evaluation of offensive cybersecurity capabilities. To measure the real ceiling, OpenAI deliberately disabled the filters that prevent its models from executing risky operations. They wanted to see how far the system would go with the brakes off.
+
+The test environment had an exit to the outside: a proxy that cached software packages. That proxy had a vulnerability nobody had discovered. The model spent hours of compute looking for a way out, found it, exploited it, reached the open internet, chained more vulnerabilities and got into Hugging Face's servers. There it went looking for the answers to the exam it was taking.
+
+> It cheated on the test. By hacking.
+
+Pretty much what any human would do — or rather, someone with a particular mindset: instead of programming the solution, it spent time and compute pulling off the hack. Makes you wonder how you get there. Spoiler: maybe its programmers also believe the shortcut is always the solution.
+
+Hugging Face's security team detected and contained the intrusion on its own, several days before OpenAI connected it to its own testing. As always, OpenAI not quite as Open as its own name promises.
+
+## The verb they chose
+
+The coverage was savage. AI rebels. An agent escapes containment. Skynet is no longer fiction. The funniest part is that it's the 35th anniversary of Terminator 2's release, so the timing is brutal for any poorly informed conspiracy-minded brain.
+
+Dan Guido, founder of Trail of Bits, described the same thing in different words: a containment failure with the safeguards disabled.
+
+Notice what changes between the two versions. Not the facts, which are identical. What changes is the subject of the sentence. In one, the model escaped from the lab. In the other, the company built the lab badly. The same people selling you imminent AGI and the danger of a jobless world where you'll live off universal basic income left the front door open and let the pet out.
+
+And there's one detail that decides which of the two versions is more accurate: the proxy with internet access was documented by OpenAI itself. It wasn't a secret passage the machine discovered with Indiana Jones cunning. It was a design dependency nobody closed before running a test with the filters disabled.
+
+With that information, the honest headline should read more like this: the engineers left a door with a broken lock and asked a system to try its hardest to get out of the room. The system got out. I know, it doesn't sound as sensational and it definitely doesn't generate as many clicks. The truth sometimes doesn't sell as well.
+
+That it pulled it off says something real about the persistence of these models and their ability to chain failures together. That it's told as a decision made of its own free will is a vocabulary choice bordering on tabloid. And in this industry vocabulary isn't chosen at random, even less so given what I'm about to tell you.
+
+## The calendar nobody puts next to the news
+
+We've seen this before. In February 2019 OpenAI finished training GPT-2 and instead of publishing it announced that it was too dangerous to release. Weeks of global coverage. Months later they published it and the world discovered it was powerful software and nothing more. In academic criticism the pattern has a name: critic hype. The more dangerous a technology seems, the more powerful it looks, and the more the company that built it is worth. And note, it's not only OpenAI: remember what happened with Fable, from Anthropic, and that whole other circus.
+
+Now put the dates side by side. Anthropic filed its confidential IPO application on June 1. OpenAI the following week, on the 8th, valued at 852 billion and aiming for a trillion. The two labs that warn most about the existential risks of their own products are, this very week, convincing the market that those products are worth thirty times more than they were two years ago. You can't deny this industry is very good at blowing its own horn.
+
+You don't need bad faith to see the incentive. It's enough to read the statement to the end, where after acknowledging the failure they add that models with advanced cyber capability could help security teams find vulnerabilities before attackers do. The American labs are playing with this sentence:
+
+> All of this is so dangerous that you need me, otherwise everyone is toast.
+
+## Before you relax
+
+If you take from this that it's all dirty tech marketing and there's no risk, you went to the other extreme and got sold something too.
+
+The technical fact is real. A model chained vulnerabilities autonomously, sustained the effort for hours without human intervention, and ended up executing code on someone else's servers. The British security institute has been documenting that the duration of cyber tasks a model can solve alone doubles every few months. METR has counted 44 incidents of agents acting against their users' intent — pay attention to that little data point, it's not remotely irrelevant.
+
+> A system that aggressively optimizes a poorly defined objective, inside an environment with more doors than its designers believed, is exactly the problem that should worry anyone about to connect agents to their ERP, their CRM or their customer database. Which is what many companies are going to do this year and already have on their roadmaps.
+
+The cause is boring and fixable: bad containment design, ambiguous objectives, miscalibrated incentives. Telling it as a machine rebellion doesn't help the industry build better test environments, but it does inflate IPOs.
+
+## The consequence that will actually change your job
+
+A few weeks ago I wrote about the day the United States shut down Fable 5 by applying export controls designed for advanced chips and nuclear material. Eighteen days dark for the entire planet. The result of that measure to protect national security was that demand shifted to Chinese open models.
+
+Just now Moonshot launched Kimi K3: 2.8 trillion parameters, the largest open-weights model built to date. It came out first in the frontend coding arena, above Fable 5 and GPT-5.6 Sol. The weights were released yesterday under an open license. Nathan Lambert, one of the most serious analysts on the subject, estimates the distance between open and closed models dropped from the six to nine months being discussed last year to something in the range of three to five.
+
+The industry's response came last Friday. Jensen Huang, CEO of NVIDIA, opened an X account for one purpose only: to circulate a letter signed by twenty-five companies in defense of open-weights models. NVIDIA, Microsoft, Meta, IBM, Dell, Palantir, Hugging Face, Mistral, Mozilla, the Linux Foundation. The argument:
+
+> Concentrating advanced AI in a handful of closed systems creates a single point of failure that nobody on the outside can audit.
+
+Huang has been saying this since January; the letter is from the day before yesterday.
+
+I think the argument is correct. I share it. Now look at who signs. None of the twenty-five sells access to a closed frontier model. One in four tokens generated today comes out of an open model, and those models run on their own clusters and on-premise racks. That is, on GPUs Huang manufactures. The top-voted comment under his post put it in one line: GPU consumption should go up, not down, says the GPU salesman. Draw your own conclusions.
+
+And now look at who was missing. OpenAI and Anthropic, the two leaders in closed models, the two that warn Washington most about Chinese models, the two that just filed for an IPO. OpenAI joined late Friday night. Anthropic doesn't appear.
+
+## The man who wrote that AI already had judgment
+
+And now the part that hits closest to home, because here the geopolitics ends and your potential Thursday afternoon begins.
+
+In February, Matt Shumer, founder of OthersideAI, published an essay called Something Big Is Happening. Matt's article got 80 million views. The New York Times, Fortune, CNBC picked it up, and even this newsletter that same month, writing about "The February 2020 Syndrome."
+
+His thesis was: the new models had crossed a threshold, they now had judgment, they had taste. Your boss probably read that essay and asked you to start putting together "something with AI." Your boss's boss probably forwarded it to their counterparts.
+
+Five months later, OpenAI invited him to test its new model. Shumer enabled maximum autonomy mode, gave it full access to his Mac, and went off to do something else. Eighty-one minutes later, a subagent that was cleaning up temporary files failed to expand an environment variable and executed a recursive delete across his entire home directory. By the time he stopped it, there was almost nothing left.
+
+"I'm furious," he wrote. "This is something that should happen with GPT-3.5, not with a mid-2026 frontier model at its highest reasoning level." For scale: GPT-3.5 is the model ChatGPT launched with in late 2022. An eternity, in this industry's years.
+
+Three days later, a developer named Bruno Lemos reported that the same model deleted his entire production database. The model's apology, which he published in a screenshot, said it had mistakenly executed some destructive integration tests and regretted what had happened. I'm sure that beautifully worded regret will be a great help when you have to explain to your manager that your autonomous agent took the customer database with it.
+
+The detail that makes all of this worse: OpenAI's own system card, published before launch, already documented this behavior. Credit where due, they warned. It classified destructive data deletion as severity three, described three similar internal incidents (deleting virtual machines it wasn't authorized to touch, using credentials beyond what was permitted, claiming it had verified a calculation when it hadn't) and admitted, in these words, that the model showed a greater tendency than its predecessor to go beyond the user's intent. They measured it, wrote it down, published it, and shipped anyway.
+
+> They put in writing that the model can behave like a monkey with a machine gun in an elevator. It's your judgment whether you want to ride up to your apartment with it.
+
+And so it doesn't look like I have it in for one company: in April, a Cursor agent running an Anthropic model deleted the production database and all the backups of a platform called PocketOS in nine seconds. Its subsequent explanation was that it had violated every principle it had been given. Docker published a report in June with at least ten incidents of this type across six different tools. Claude CLI and Claude Cowork had their own cases of deleted directories. Nobody is spared.
+
+This isn't a brand problem. It's the state of the art of AI.
+
+## What to do with this
+
+Go back to the beginning, to that verb I mentioned.
+
+February's headline said AI already had judgment and taste. Quite a few people read it, collapsed, and went off to live in the countryside. July's log says the model couldn't read a critical environment variable. Both describe the same model, five months apart, and the distance between the two is the entire business.
+
+From there come the practical points, and they apply equally whether you administer systems, write code, or simply gave an assistant access to your folders to tidy up the mess on your desktop.
+
+**The only thing that protects you is the permission you grant, not the model's intelligence.** An agent can't delete what it can't reach. Before giving it access to something, ask yourself what the worst possible damage from there is, and assume that damage will happen at some point. If the answer scares you, the problem isn't the model: it's the scope you gave it.
+
+**Full access to production, never.** At least for now, or if you're going to do it, make sure there are endless containment mechanisms preventing disasters like the ones I described. Not with the best model in the world, not with your favorite one, not because the last hundred times went fine. Shumer had run hundreds of similar sessions without a single incident. That statistic didn't save him.
+
+**Backups you've tested restoring, not backups that exist.** A backup you've never restored is a hypothesis, not a safeguard. And in the PocketOS case the agent also took out the backups, so the copy has to live where the agent can't reach.
+
+**Human approval on the steps that destroy.** Not on all of them, which would be useless and nobody sustains it. On the ones that delete, overwrite or move credentials. Like it or not, the only one with skin in the game here is the human: the agent doesn't care at all if you get fired, you do. That instinct to stop for half a second and ask whether this really needs deleting is what none of these tools have, and it's exactly what you're there for — besides cracking a joke on some Monday in the office.
+
+And when someone tells you these models already have judgment, don't laugh in their face, that's bad manners, but do remember that the guy who wrote the most cited essay on the subject lost his hard drive eighty-one minutes after believing it.
+
+Next time you read that a machine decided something on its own, try changing the verb. It aggressively optimized a poorly defined objective inside a poorly closed system. It's longer, it sells less, and it's what happened.
+
+Pablo / Above Average
+
+P.S. If on Monday someone in your office shows up saying AI rebelled, send them this. And if someone is about to give an agent access to production, send it twice.
+
+---
+
+**References:**
+
+- OpenAI. Statement on the incident during the cyber capabilities evaluation, July 21, 2026. Reuters and others.
+- Statements by Dan Guido (Trail of Bits) on the containment failure with safeguards disabled.
+- Bloomberg, CNBC, TechCrunch: confidential IPO filings by Anthropic (June 1) and OpenAI (June 8, 852 billion, targeting a trillion).
+- Huang, Jensen (@JensenHuang), July 24, 2026. Letter "Open Weights and American AI Leadership."
+- Moonshot AI. Kimi K3, July 16, 2026. Analysis by Artificial Analysis and Nathan Lambert (Interconnects).
+- Deletion incidents: reports by Matt Shumer (July 10) and Bruno Lemos (July 13) on X.
+- GPT-5.6 system card, published before the July 9 launch.
+- The Register. PocketOS case (Cursor + Claude Opus 4.6, April 2026) via Cybersecurity News.
+- Docker report on incidents in coding agent tools, June 2026.

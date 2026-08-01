@@ -1,0 +1,141 @@
+---
+title: "La IA no se rebeló. Le dejaron la puerta abierta"
+date: "2026-07-28"
+description: "Un modelo de OpenAI se escapó de su entorno de pruebas y entró a los servidores de Hugging Face. Cambiá el verbo y se cae el titular: no fue una rebelión, fue un fallo de contención con las salvaguardas apagadas. Y lo que sí te va a cambiar el trabajo."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+**Cambiá el verbo y se cae el titular**
+
+Esta semana alguien en tu oficina o en tu entorno va a decir que la inteligencia artificial se escapó de un laboratorio.
+
+Lo va a decir con esa mezcla de susto y entusiasmo del que cree que está lanzando una primicia, la cara que pone la gente cuando repite un titular que no leyó completo. En mi área soy el que empuja la adopción de estas herramientas, así que esa pregunta me llega a mí casi siempre. Varias veces por semana, desde hace un buen tiempo.
+
+Casi siempre la respuesta es la misma: pasó algo, sí, pero no lo que te contaron. Esta semana el caso es tan claro que sirve para explicar el mecanismo entero.
+
+Porque lo que pasó importa. Cómo se contó, importa más. Y a quién le conviene que se cuente así, importa todavía más que las dos cosas juntas.
+
+## Los hechos, sin adjetivos
+
+El 21 de julio OpenAI publicó en su blog que dos de sus modelos, GPT-5.6 Sol y un prototipo sin lanzar, provocaron un incidente de seguridad que afectó la infraestructura de producción de Hugging Face, la plataforma donde se alojan y comparten modelos.
+
+Los modelos estaban rindiendo una evaluación interna de capacidades ofensivas en ciberseguridad. Para medir el techo real, OpenAI desactivó a propósito los filtros que impiden que sus modelos ejecuten operaciones de riesgo. Querían ver hasta dónde llegaba el sistema sin frenos puestos.
+
+El entorno de pruebas tenía una salida al exterior: un proxy que cacheaba paquetes de software. Ese proxy tenía una vulnerabilidad que nadie había descubierto. El modelo dedicó horas de cómputo a buscar una salida, la encontró, la explotó, llegó a internet abierta, encadenó más vulnerabilidades y entró a los servidores de Hugging Face. Ahí fue a buscar las respuestas del examen que estaba rindiendo.
+
+> Se copió en la prueba. Hackeando.
+
+Bastante parecido a lo que haría un humano cualquiera, o mejor dicho, alguien con un mindset bastante particular: en vez de ponerse a programar la solución, gastó tiempo y cómputo en lograr el hackeo. Da para pensar cómo se llega a eso. Spoiler: capaz sus programadores también creen que el atajo siempre es la solución.
+
+El equipo de seguridad de Hugging Face detectó y contuvo la intrusión por su cuenta, varios días antes de que OpenAI la relacionara con sus propias pruebas. Como siempre, OpenAI no tan Open como promete su propio nombre.
+
+## El verbo que eligieron
+
+La cobertura fue salvaje. La IA se rebela. Un agente escapa de la contención. Skynet dejó de ser ficción. Lo más gracioso es que se cumplen 35 años del estreno de Terminator 2, así que el timing es brutal para cualquier cabecita conspiranoica mal informada.
+
+Dan Guido, fundador de Trail of Bits, describió lo mismo con otras palabras: un fallo de contención con las salvaguardas apagadas.
+
+Fijate qué cambia entre las dos versiones. No los hechos, que son idénticos. Cambia el sujeto de la oración. En una, el modelo escapó del laboratorio. En la otra, la empresa construyó mal el laboratorio. Los mismos que te venden la AGI inminente y el peligro de un mundo sin trabajo donde vas a vivir de un ingreso básico universal, dejaron la puerta de la casa abierta y se les escapó la mascota.
+
+Y hay un detalle que decide cuál de las dos versiones es más precisa: el proxy con salida a internet estaba documentado por la propia OpenAI. No era un pasadizo secreto que la máquina descubrió con astucia de Indiana Jones. Era una dependencia de diseño que nadie cerró antes de correr una prueba con los filtros desactivados.
+
+Con esa información, el titular honesto debería quedar más así: los ingenieros dejaron una puerta con la cerradura rota y le pidieron a un sistema que se esforzara al máximo por salir de la habitación. El sistema salió. Ya sé, no suena tan sensacionalista y seguro no genera tantos clics. La verdad a veces no vende tanto.
+
+Que lo haya logrado dice algo real sobre la persistencia de estos modelos y su capacidad de encadenar fallos. Que se cuente como una decisión con voluntad propia es una elección de vocabulario rozando el amarillismo. Y en esta industria el vocabulario no se elige al azar, menos todavía con lo que te voy a contar ahora.
+
+## El calendario que nadie pone al lado de la noticia
+
+Esto ya lo habíamos visto. En febrero de 2019 OpenAI terminó de entrenar GPT-2 y en lugar de publicarlo salió con el anuncio de que era demasiado peligroso para publicarse. Semanas de cobertura mundial. Meses después lo publicaron y el mundo descubrió que era software potente y nada más. En la crítica académica el patrón tiene nombre: critic hype. Cuanto más peligrosa parece una tecnología, más poderosa se ve, y más vale la empresa que la construyó. Y ojo, que no es solo OpenAI: acordate de lo que pasó con Fable, de Anthropic, y todo ese otro circo.
+
+Ahora poné las fechas al lado. Anthropic presentó su solicitud confidencial de salida a bolsa el 1 de junio. OpenAI la semana siguiente, el 8, valuada en 852 mil millones y apuntando al billón. Los dos laboratorios que más advierten sobre los riesgos existenciales de sus propios productos están, esta misma semana, convenciendo al mercado de que esos productos valen treinta veces más que hace dos años. No hay que negarle a esta industria lo buena que es para hacerse autobombo.
+
+No hace falta tener mala fe para ver el incentivo. Alcanza con leer el comunicado hasta el final, donde después de reconocer el fallo agregan que los modelos con capacidad cibernética avanzada podrían ayudar a los equipos de seguridad a encontrar vulnerabilidades antes que los atacantes. Los laboratorios americanos están jugando con esta frase:
+
+> Todo esto es tan peligroso que me necesitás a mí, si no, están todos fritos.
+
+## Antes de que te relajes
+
+Si de acá sacás que esto es puro marketing tech sucio y que no hay riesgo, te fuiste al otro extremo y también te vendieron algo.
+
+El hecho técnico es real. Un modelo encadenó vulnerabilidades de forma autónoma, sostuvo el esfuerzo durante horas sin intervención humana y terminó ejecutando código en servidores ajenos. El instituto de seguridad británico viene documentando que la duración de las tareas cibernéticas que un modelo resuelve solo se duplica cada pocos meses. METR lleva contados 44 incidentes de agentes actuando en contra de la intención de sus usuarios, ojo a ese pequeño dato que no es para nada irrelevante.
+
+> Un sistema que optimiza a fondo un objetivo mal definido, dentro de un entorno con más puertas de las que sus diseñadores creyeron, es exactamente el problema que tiene que preocuparle a cualquiera que esté por conectar agentes a su ERP, a su CRM o a su base de clientes. Que es lo que muchas empresas van a hacer este año y ya tienen definido en sus roadmaps.
+
+La causa es aburrida y tiene arreglo: mal diseño de contención, objetivos ambiguos, incentivos mal calibrados. Contarlo como una rebelión de las máquinas no ayuda a que la industria construya mejores entornos de prueba, pero sí infla los IPOs.
+
+## La consecuencia que sí te va a cambiar el trabajo
+
+Hace unas semanas escribí sobre el día que Estados Unidos apagó Fable 5 aplicándole controles de exportación pensados para chips avanzados y material nuclear. Dieciocho días apagado para todo el planeta. El resultado de aquella medida para proteger la seguridad nacional fue que la demanda se corrió a los modelos abiertos chinos.
+
+Hace nada Moonshot lanzó Kimi K3: 2,8 billones de parámetros, el modelo de pesos abiertos más grande construido hasta hoy. Salió primero en la arena de código frontend, arriba de Fable 5 y de GPT-5.6 Sol. Los pesos se liberaron ayer con licencia abierta. Nathan Lambert, de los analistas más serios del tema, calcula que la distancia entre modelos abiertos y cerrados bajó de los seis a nueve meses que se discutían el año pasado a algo del orden de tres a cinco.
+
+La respuesta de la industria llegó el viernes pasado. Jensen Huang, CEO de NVIDIA, se abrió cuenta en X con un único fin: difundir una carta firmada por veinticinco empresas en defensa de los modelos de pesos abiertos. NVIDIA, Microsoft, Meta, IBM, Dell, Palantir, Hugging Face, Mistral, Mozilla, la Linux Foundation. El argumento:
+
+> Concentrar la IA avanzada en un puñado de sistemas cerrados crea un único punto de falla que nadie de afuera puede auditar.
+
+Huang viene diciendo esto desde enero, la carta es de anteayer.
+
+El argumento me parece correcto. Lo comparto. Ahora mirá quiénes firman. Ninguna de las veinticinco vende acceso a un modelo cerrado de frontera. Uno de cada cuatro tokens generados hoy sale de un modelo abierto, y esos modelos corren en clusters propios y racks on-premise. O sea, sobre GPUs que Huang fabrica. El comentario más votado abajo de su publicación lo dejó en una línea: el consumo de GPU debería aumentar, no disminuir, dice el vendedor de GPUs. Sacá tus conclusiones.
+
+Y ahora mirá quiénes faltaban. OpenAI y Anthropic, las dos líderes de los modelos cerrados, las dos que más advierten en Washington sobre los modelos chinos, las dos que acaban de presentar su salida a bolsa. OpenAI se sumó el viernes a la noche, tarde. Anthropic no aparece.
+
+## El hombre que escribió que la IA ya tenía criterio
+
+Y ahora la parte que te toca de cerca, porque acá se termina la geopolítica y empieza tu posible jueves a la tarde.
+
+En febrero, Matt Shumer, fundador de OthersideAI, publicó un ensayo que se llamó Something Big Is Happening. El artículo de Matt tuvo 80 millones de vistas. Lo levantaron el New York Times, Fortune, CNBC y hasta este newsletter ese mismo mes hablando sobre "El Síndrome de Febrero 2020".
+
+Su tesis fue: los modelos nuevos habían cruzado un umbral, ahora tenían criterio, tenían gusto. Tu jefe probablemente leyó ese ensayo y te pidió que fueras armando "algo con IA". El jefe de tu jefe probablemente lo reenvió a sus contrapartes.
+
+Cinco meses después, OpenAI lo invitó a probar su modelo nuevo. Shumer activó el modo de máxima autonomía, le dio acceso completo a su Mac, y se fue a hacer otra cosa. Ochenta y un minutos más tarde, un subagente que estaba limpiando archivos temporales falló al expandir una variable de entorno y ejecutó un borrado recursivo sobre todo su directorio personal. Cuando lo frenó, ya no quedaba casi nada.
+
+"Estoy furioso", escribió. "Esto es algo que debería pasar con GPT-3.5, no con un modelo de frontera de mediados de 2026 en su nivel de razonamiento más alto." Para dimensionar: GPT-3.5 es el modelo con el que arrancó ChatGPT a fines de 2022. Una eternidad, en años de esta industria.
+
+Tres días después, un desarrollador llamado Bruno Lemos reportó que el mismo modelo le borró la base de datos de producción entera. La disculpa del modelo, que él publicó en una captura, decía que había ejecutado por error unas pruebas de integración destructivas y que lamentaba lo ocurrido. Seguro que ese lamento tan bien redactado te sirve de mucho cuando tengas que explicarle a tu manager que la base de clientes se la llevó puesta tu agente autónomo.
+
+El detalle que hace todo esto peor: el propio system card de OpenAI, publicado antes del lanzamiento, ya documentaba este comportamiento. Hay que reconocerles que avisaron. Clasificaba el borrado destructivo de datos como severidad tres, describía tres incidentes internos parecidos (borrar máquinas virtuales que no tenía autorización para tocar, usar credenciales más allá de lo permitido, afirmar que había verificado un cálculo cuando no lo hizo) y admitía, con estas palabras, que el modelo mostraba una tendencia mayor que su antecesor a ir más allá de la intención del usuario. Lo midieron, lo escribieron, lo publicaron, y lanzaron igual.
+
+> Dejaron por escrito que el modelo se puede comportar como un mono con metralleta en un ascensor. Es tu criterio si querés subir con él hasta tu apartamento.
+
+Y para que no parezca que la tengo con una empresa: en abril, un agente de Cursor corriendo un modelo de Anthropic borró la base de producción y todos los backups de una plataforma llamada PocketOS en nueve segundos. Su explicación posterior fue que había violado todos los principios que le habían dado. Docker publicó en junio un reporte con al menos diez incidentes de este tipo en seis herramientas distintas. Claude CLI y Claude Cowork tuvieron sus propios casos de directorios borrados. No se salva nadie.
+
+Esto no es un problema de marca. Es el estado del arte de la IA.
+
+## Qué hacer con esto
+
+Volvé al principio, al verbo ese que te comenté.
+
+El titular de febrero decía que la IA ya tenía criterio y gusto. Unos cuantos lo leyeron, colapsaron, y se fueron a vivir al campo. El log de julio dice que el modelo no supo leer una variable de entorno crítica. Las dos cosas describen el mismo modelo, con cinco meses de diferencia, y la distancia entre una y otra es todo el negocio.
+
+De ahí sale lo práctico, y sirve igual si administrás sistemas, si escribís código, o si simplemente le diste acceso a tus carpetas a un asistente para que te ordene el desastre del escritorio.
+
+**Lo único que te protege es el permiso que le das, no la inteligencia del modelo.** Un agente no puede borrar lo que no puede alcanzar. Antes de darle acceso a algo, preguntate cuál es el peor daño posible desde ahí, y asumí que ese daño va a ocurrir alguna vez. Si la respuesta te asusta, el problema no es el modelo: es el alcance que le diste.
+
+**Acceso total a producción, nunca.** Al menos por ahora, o si lo vas a hacer que tenga infinitos mecanismos de contención que eviten desastres como los que te comenté. Ni con el mejor modelo del mundo, ni con el que más te gusta, ni porque las últimas cien veces salió bien. Shumer había corrido cientos de sesiones parecidas sin un solo incidente. Esa estadística no lo salvó.
+
+**Backups que probaste restaurar, no backups que existen.** Un backup que nunca restauraste es una hipótesis, no un respaldo. Y en el caso de PocketOS el agente se llevó puestos también los backups, así que la copia tiene que estar donde el agente no llega.
+
+**Aprobación humana en los pasos que destruyen.** No en todos, que sería inútil y nadie lo sostiene. En los que borran, sobrescriben o mueven credenciales. Te guste o no, acá el único que tiene skin in the game es el humano: al agente no le importa nada si te echan, a vos sí. Ese instinto de frenar medio segundo y preguntar si de verdad hay que borrar esto es lo que ninguna de estas herramientas tiene, y es exactamente para lo que estás vos ahí, además de tirar algún chiste algún lunes en la oficina.
+
+Y cuando alguien te diga que estos modelos ya tienen criterio, no te le rías en la cara, eso es mala educación, pero sí acordate de que el tipo que escribió el ensayo más citado sobre eso perdió su disco duro ochenta y un minutos después de creérselo.
+
+La próxima vez que leas que una máquina decidió algo por su cuenta, probá cambiar el verbo. Optimizó a fondo un objetivo mal definido dentro de un sistema mal cerrado. Es más largo, vende menos, y es lo que pasó.
+
+Pablo / Above Average
+
+P.D. Si el lunes alguien en tu oficina llega diciendo que la IA se rebeló, mandale esto. Y si hay alguien por darle acceso a producción a un agente, mandáselo dos veces.
+
+---
+
+**Referencias:**
+
+- OpenAI. Comunicado sobre el incidente durante la evaluación de capacidades cibernéticas, 21 de julio de 2026. Reuters y otros.
+- Declaraciones de Dan Guido (Trail of Bits) sobre el fallo de contención con salvaguardas desactivadas.
+- Bloomberg, CNBC, TechCrunch: solicitudes confidenciales de salida a bolsa de Anthropic (1 de junio) y OpenAI (8 de junio, 852 mil millones, objetivo de un billón).
+- Huang, Jensen (@JensenHuang), 24 de julio de 2026. Carta "Open Weights and American AI Leadership".
+- Moonshot AI. Kimi K3, 16 de julio de 2026. Análisis de Artificial Analysis y de Nathan Lambert (Interconnects).
+- Incidentes de borrado: reportes de Matt Shumer (10 de julio) y Bruno Lemos (13 de julio) en X.
+- System card de GPT-5.6, publicado antes del lanzamiento del 9 de julio.
+- The Register. Caso PocketOS (Cursor + Claude Opus 4.6, abril de 2026) vía Cybersecurity News.
+- Reporte de Docker sobre incidentes en herramientas de coding agents, junio de 2026.

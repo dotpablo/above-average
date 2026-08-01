@@ -1,0 +1,113 @@
+---
+title: "AI Is a Machine for Creating. Nobody Built One for Maintaining."
+date: "2026-07-21"
+description: "cURL shut down its bug bounty over the flood of AI-generated reports. Torvalds opened the door to AI in the Linux kernel. Same tool, opposite result. The difference is who's using it, and who signs."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "la-ia-es-una-maquina-de-crear-nadie-construyo-una-para-mantener"
+---
+
+Right now, as you read this, you're using a program called cURL. You didn't install it. You don't know it exists. But it's in your phone, in your car, in your TV, in the server that delivered this email to you. One of its components is estimated to have been installed more than twenty billion times. It's one of the invisible pieces the entire internet runs on.
+
+And it's maintained, in large part, by one guy. A 55-year-old Swede named Daniel Stenberg, who has worked on this full time for nearly three decades. He started it in 1996 with 100 lines of code. Today it has more than 180,000.
+
+In January of this year, Stenberg had to shut down cURL's security bug bounty program. Not for lack of money. For a new reason that didn't exist a year ago, and that you should understand, because it's the tip of an iceberg that affects you even if you've never written a line of code in your life.
+
+## Death by a thousand slops
+
+The program worked like this: if you found a real security vulnerability, you reported it and got paid. Over its lifetime it paid out more than $100,000 and confirmed 87 real vulnerabilities. It worked because writing a credible report was expensive: it required time and knowledge of the code. That cost acted as a quality filter.
+
+> AI broke the filter.
+
+Suddenly, anyone can ask a chatbot to "find a vulnerability in cURL," copy what comes out, and send it. Most of it is what Stenberg named "AI slop": long reports, confident, written with total assurance, and completely made up. One 400-line report about a supposed critical hole took him an hour of human work to discover it was a lie.
+
+The numbers tell the story. Before, more than 15% of incoming reports were real vulnerabilities. Since 2025, that number collapsed to under 5%. Stenberg described it bluntly: not only does volume go up, quality goes down, so we spend more time than ever to get less than ever. He called it "death by a thousand slops." In July he flat out closed report intake for an entire month just to breathe.
+
+And cURL isn't an isolated case. tldraw, a popular tool, closed all external contributions. Ghostty permanently bans anyone who submits AI code without disclosing it. The logic behind it was summed up by tldraw's creator with a question worth pinning up: if writing the code is the easy part, why would I want someone else to write it for me?
+
+## The social contract that broke
+
+Almost all of the world's software rests on open source pieces maintained by people who don't get paid for it. They call them "the people who hold up the internet." Around 60% do it for free, for a mix of reasons: contributing to something everyone used, earning a reputation, learning, having a line on the CV that said "I contributed to this project half the world uses."
+
+AI hollowed out that contract. Before, a new contributor learned your project little by little, earned trust, and one day became someone who could maintain it. It was an investment. Now, someone points an AI at your project, generates a patch they don't understand, and sends it to you. They learned nothing. They committed to nothing. And they left you the work of reviewing something that took thirty seconds to generate and takes you an hour to dismiss.
+
+> The cost inverted. Generating garbage is free. Cleaning it still costs human work.
+
+## The one who opened the door everyone else was closing
+
+And here's the other side of the coin, because not everyone is closing the door.
+
+Last week, Linus Torvalds, the creator of Linux, the operating system a good chunk of the planet runs on, said exactly the opposite. On the kernel mailing list, faced with people asking to ban AI-generated code, he wrote that Linux is not an anti-AI project, and that anyone with a problem with that can fork it or leave. Verbatim.
+
+At first glance it seems to contradict Stenberg and cURL. In reality, it says the same thing from the other side.
+
+The trigger was Sashiko, an AI code review system that reviews every patch entering the kernel. Sashiko's numbers are the key to everything: it finds 53% of the real bugs a human would later have fixed. But it also generates false positives at a rate of around 20%. It finds gold and produces noise, both at once. The tool's own creator admits it: it's rarely very wrong, but sometimes it generates too much low-value noise.
+
+Torvalds isn't naive. He knows about the noise. His position is pragmatic: AI is a tool, and it's a useful tool, and anyone who doubts it hasn't really used it.
+
+But look at the difference with the cURL case. Torvalds has 34 years of judgment about that code. He, and his maintainers, can look at Sashiko's output and separate gold from noise in seconds, because they understand the system. For them, AI is a powerful assistant they filter with judgment.
+
+The person sending slop to cURL without understanding what they're sending is exactly the opposite: using the same tool without the judgment to filter it. Same AI. Opposite result.
+
+> The difference isn't in the machine, it's in who's using it.
+
+## The signature a machine can't put down
+
+There was a detail in the Linux discussion that's the jewel of all this, and it connects to something I've been writing about for weeks.
+
+A kernel developer complained that Sashiko was adding a tag that in the Linux world reads "Reviewed-by." Because that tag, in that ecosystem, isn't decoration. It's a human declaration of responsibility. It's someone putting their name down and saying "I looked at this and I answer for it."
+
+> An AI can review. It can find the bug. But it can't sign for the responsibility. Because the day that patch breaks something in production, the "Reviewed-by" tag has to point to a human who answers, not to an algorithm that has nothing to lose.
+
+It's the same story as the consultancy that published invented data, and the lawyers who cited fake rulings, and SAP selling you autonomous agents while leaving you the responsibility if they fail. AI does the work. The signature, the accountability, the judgment to say "this ships" or "this doesn't," that's still human. And not because the machine can't write the words. Because it can't take responsibility for the consequences.
+
+## Why this affects you even if you don't code
+
+Here's the bridge to your world, and it isn't theoretical. It's supply chain risk that reaches your company.
+
+Your SAP, your bank, your health system, every corporate application you use, runs on a mountain of these open source pieces. This year's Black Duck security report measured it across 947 commercial codebases, from 17 industries. The result: 93% contained at least one "zombie component." An open source dependency with no maintenance activity whatsoever in two years. No patches. Nobody on the other end.
+
+Open source vulnerabilities per codebase rose 107% in a year. 65% of organizations suffered a supply chain attack in the last twelve months.
+
+Translated: the plumbing your company runs on is becoming more fragile, exactly when AI makes it easier than ever to pollute it. The day one of those pieces that "somebody somewhere maintained for free" breaks, the problem will roll down the chain to your operation. And there may be nobody to call, because the person who maintained it got tired of filtering slop and left.
+
+## The asymmetry nobody wants to look at
+
+There's a sentence that sums all this up, and it's uncomfortable:
+
+> It's easier to destroy than to create, and it's easier to create than to maintain.
+
+Look at the whole generative AI wave. It's sold as a machine for creating. Create images, texts, code, presentations. Every demo is about generating something new in seconds. When was the last time a tech CEO went on stage to announce an AI that "supercharges maintenance"? Never. Because maintaining is careful, slow, glory-free work that can't be shortcut with a prompt.
+
+Creators get the applause and the money. The ones who maintain those apps work in the back, scraping rust, until one day they leave and everything breaks. AI put that asymmetry on steroids. It multiplied the capacity to create by a thousand, but didn't touch the capacity to maintain. On the contrary: it overloaded it, because now the maintainers have to filter the deluge of garbage generated by those who create without understanding.
+
+## The Operator's lesson
+
+I've been writing about the same thing for weeks from different angles: vibe coding that dies on localhost, institutions that delegated judgment, the person who types without understanding. They're all the same story:
+
+> AI made creating so cheap it became free, and in the process made scarce — and very expensive — the only thing that actually holds things up: the judgment to maintain them.
+
+And Torvalds is proof that this isn't an anti-AI rant. He embraces it, and if one of the best programmers in the world does, who am I to contradict him instead of emulating him.
+
+The difference between Torvalds using Sashiko and some guy dumping slop on cURL isn't the tool. It's that one has the judgment to filter what the machine produces, and to sign for what ships. The other just presses a button and sends.
+
+If you're one of the people who builds, the questions I'll leave you with are uncomfortable on purpose. About everything you generate with AI this week, at work or in your own projects:
+
+- Are you creating something someone will later be able to maintain, and are you willing to put your "Reviewed-by" on it and answer for it?
+- Or are you adding one more brick to the mountain of things that work today, look good in the demo, and will rot the moment whoever generated them turns around?
+
+Because the world isn't running out of people who create — there's a surplus of those. It's running out of people who maintain, and who sign, who have ownership. And that, more and more, is the work that can't be faked and at the same time the work that's often invisible.
+
+Pablo / Above Average
+
+P.S. If you work in anything that runs on software (that is, if you work), forward this to the person in your organization who thinks AI "already solves everything on its own." Someone has to pick up the garbage on Monday morning, and put down the signature.
+
+---
+
+**References:**
+
+- Learner, Sam. "Who cleans up after the vibe-coding party?" Financial Times, July 2026.
+- Stenberg, Daniel. "The end of the curl bug-bounty." daniel.haxx.se, January 2026.
+- Orland, Kyle. "Linus Torvalds to critics of AI coding in Linux: Fork it. Or just walk away." Ars Technica, July 16, 2026.
+- Black Duck. "Open Source Security and Risk Analysis (OSSRA) Report 2026."
+- Koren, Miklós et al. "Vibe Coding Kills Open Source." arXiv, 2026.

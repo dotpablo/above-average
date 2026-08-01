@@ -1,0 +1,94 @@
+---
+title: "The European Union Just Proved the Ones Who Didn't Migrate Right"
+date: "2026-07-14"
+description: "The European Commission closed its antitrust investigation into SAP and imposed binding commitments that free up on-premise support. Meanwhile, API Policy v4/2026 shuts the door on third-party AI agents. They open one door and close the other."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "la-union-europea-le-dio-la-razon-a-los-que-no-migraron"
+---
+
+A few months ago I wrote about the two ERP castes.
+
+The idea was simple. In the SAP world a divide is being drawn that isn't technical, it's strategic. On one side, those who married S/4HANA and the cloud roadmap, tied to the pace, the pricing and the rules SAP decides. On the other, the rebels who will stay on ECC, on their stable systems, considered "legacy" by the vendor, but with a freedom the first caste already signed away.
+
+At the time it sounded like an opinion, or a conspiracy theory. Like the position of someone who's fond of "old" systems. This week it stopped being opinion, because the European Commission put part of it in writing, with legal force, for the next ten years.
+
+## What happened on July 9
+
+The European Commission closed an antitrust investigation into SAP and accepted a set of commitments that are now legally binding globally. SAP avoided a fine that could have reached 10% of its worldwide revenue, more than $3.7 billion, but in exchange it had to give up things that for years were its way of retaining customers.
+
+The points that matter, without the fine print:
+
+- Customers can now split their SAP landscape into sub-areas and contract third-party support for each one separately.
+- They can terminate maintenance contracts more easily in cases like discontinued products, failed SAP projects, headcount reductions or the sale of parts of the business.
+- Reinstatement fees are eliminated — those penalties you paid if you left SAP support and later wanted to come back, which in practice erased any savings you'd made with an external provider.
+
+Note that all of this applies only to on-premise. Not to cloud. And that detail is the key to everything that follows. Because what the European Commission just did is, without intending to, hand legal tools to the caste that stayed on ECC. Whoever didn't migrate is no longer a laggard waiting for support to end. They're someone who this week recovered, by a regulator's decision, the freedom to choose how to maintain their system and with whom.
+
+## The rebel caste isn't alone anymore
+
+For years SAP's argument for pushing you to migrate was a mix of two things: security and modernity on one hand, and pressure on the other. ECC support is ending, migrate or stay exposed.
+
+The pressure hasn't disappeared. ECC extended support still has a date, and for most customers the real horizon is 2030. But the EU decision changed the climate of that conversation. Now, if you want to stay on your ECC, you have options SAP used to make prohibitively expensive or outright impossible: third-party support per module, no penalties for coming back, with the ability to mix.
+
+Michael Bloch, from DSAG, the German-speaking SAP user group, said it very clearly because he isn't selling anything. For him the decision is now one of principle: you either follow SAP's strategic direction, or you consciously choose a different path. Whoever isn't convinced that cloud is right for their company can now stay on their landscape with more peace of mind.
+
+But — and this "but" is important — Bloch also flags the cost. Whoever stays, even with an alternative support provider, gives up the innovations SAP is building around the Autonomous Enterprise. In his words, there's no middle ground. Either you have those new capabilities, or you'd have to build them yourself at an enormous cost.
+
+> That's the real tension of the two castes, now with legal backing. Freedom has a price. And the price is being left out of the wave of agents SAP is selling as the future.
+
+## SAP's other hand, the one that closes
+
+And here's where the story gets interesting, because SAP is playing both hands at once.
+
+While the EU forces it to open up on-premise support, SAP has just closed another door on its own. In April it quietly published API Policy v4/2026. The key clause, section 2.2.2, prohibits using SAP APIs for interaction or integration with autonomous or generative AI systems that plan, select or execute sequences of API calls, except through the channels SAP endorses.
+
+In plain language: if you want to put a third-party AI agent to work on your SAP core, it has to go through SAP's layer. Through Joule. Through their paths, governed and metered by them.
+
+Forrester said it: Joule, SAP's assistant, is in production at roughly 3% of customers. Microsoft Copilot, the external agent SAP customers actually use, is in 77% of SAP companies with active AI. SAP cut off the direct path to the tool used by 97% in order to push the one used by 3%.
+
+So add the two pieces of news together. On one hand, a regulator forces SAP to give you freedom in support. On the other, SAP takes it away at the AI layer. They open one door and close the other. And you, whichever caste you belong to, are standing in the middle having to decide.
+
+## The role that appears in the middle of all this
+
+This whole movie — the end of support, regulated freedom, the fence around agents — creates space for a role almost nobody is budgeting for yet. It isn't the one who builds agents. It's the one who decides which ones deserve to live, which ones need to be dismantled, and who answers when one gets it wrong.
+
+Let's call it the Governor. Not in the political sense, but the one who governs the ecosystem. The one who understands the business process and the technical landscape well enough to set limits between agents and the systems that process real transactions.
+
+And it isn't an abstract role. Let's bring it down to something concrete anyone who has touched a transport will understand.
+
+In SAP Cloud ALM there are already Transport Checks, with Downgrade Protection and Cross-Reference Check. They detect version conflicts between transport requests and missing dependencies before importing to production. They're clear, auditable rules. An AI agent could perfectly well help you analyze those checks, suggest what order to resolve them in, prioritize which transport to review first. And there it's a great assistant.
+
+But it's one thing for the agent to help you read the checks, and a very different thing to delegate the full planning of imports for a Technical Go-Live with hundreds of TRs in play. There the risk is enormous and the decision chain is far too complex to let go of. That jump, from the assistant that suggests to the agent that decides alone, is exactly where the human Governor is needed. Someone who knows where help ends and irresponsibility begins.
+
+When SAP was asked directly, at Sapphire, who is responsible if one of its 224 agents gets a financial close or payroll wrong, SAP's COO didn't answer the accountability question. He talked about the dog-on-a-leash metaphor: you start with a short leash, reviewing every decision, and you let out slack as the agent proves it works. Another executive was even more direct: it's always the customer who makes the decision.
+
+> Translated: SAP sells you the autonomy. You keep the responsibility.
+
+## Your diagnostic for this week
+
+No matter which caste you're in, there are three questions you should be able to answer before the end of the month.
+
+**If you're on an ECC nobody wants to migrate:** the EU decision changed your negotiating position. The conversation with your organization is no longer just about how much migrating costs, but about what alternatives you now have to maintain and modernize without handing over the keys. That conversation is worth more this week than it was last week.
+
+**On agents:** does your organization have a position on which AI stack it will use on top of SAP, or is it waiting for SAP to tell it? If it's waiting, it already made a decision without knowing. And with the API Policy on top, that decision has compliance consequences nobody may have evaluated.
+
+**On responsibility:** if your company is about to unleash an agent on a critical process, who is the Governor? Who signs off that this agent can touch the close, payroll, the transport to production? If the answer is nobody, or worse, if the answer is the tool, you have a problem that just hasn't exploded yet.
+
+The EU proved the ones who didn't migrate — or who want to stay on ECC — right, but it reminded them that freedom has a price. SAP gives you autonomous agents, but leaves you the responsibility for whatever they do. In both cases, the conclusion is the same one I've been repeating for months.
+
+Tools change owners, prices and rules from one day to the next. The judgment to decide what to do with them is the only thing that remains yours. And this week, more than ever, it's the only thing they can't regulate or shut off.
+
+Pablo / Above Average
+
+P.S. If you have an ECC everyone considers dead, forward this to the person in your company who wants to migrate it no matter what without having read the EU decision. The conversation changed.
+
+---
+
+**References:**
+
+- European Commission, decision on SAP's binding commitments in on-premise support services, case AT.40823, July 9, 2026. Coverage by Reuters, CIO, ERP Today, PYMNTS.
+- Bremmer, Manfred. "SAP concedes to EU, freeing CIOs from expensive support shackles." CIO / Computerwoche, July 10, 2026. Includes interview with Michael Bloch (DSAG).
+- SAP API Policy v4/2026, section 2.2.2.
+- SAP Sapphire 2026: Autonomous Suite (224 agents, 51 assistants), Joule Studio 2.0.
+- Joule vs. Copilot adoption data: Forrester, via Headless Systems analysis, June 2026.

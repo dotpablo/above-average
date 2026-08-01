@@ -1,0 +1,112 @@
+---
+title: "La IA es una máquina de crear. Nadie construyó una para mantener."
+date: "2026-07-21"
+description: "cURL cerró su programa de recompensas por la avalancha de reportes generados con IA. Torvalds le abrió la puerta a la IA en el kernel de Linux. Misma herramienta, resultado opuesto. La diferencia es quién la usa, y quién firma."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+Ahora mismo, mientras leés esto, estás usando un programa que se llama cURL. No lo instalaste vos. No sabés que existe. Pero está en tu teléfono, en tu auto, en tu televisor, en el servidor que te sirvió este mail. Se calcula que uno de sus componentes se instaló más de veinte mil millones de veces. Es una de las piezas invisibles sobre las que corre internet entero.
+
+Y lo mantiene, en gran parte, un solo tipo. Un sueco de 55 años llamado Daniel Stenberg, que trabaja en esto full time desde hace casi tres décadas. Lo empezó en 1996 con 100 líneas de código. Hoy tiene más de 180.000.
+
+En enero de este año, Stenberg tuvo que cerrar el programa de recompensas de seguridad de cURL. No por falta de plata. Por una razón nueva que hace un año no existía, y que conviene que entiendas, porque es la punta de un iceberg que te toca aunque nunca en tu vida hayas escrito una línea de código.
+
+## La muerte por mil slops
+
+El programa funcionaba así: si encontrabas una vulnerabilidad de seguridad real, la reportabas y te pagaban. En sus años de vida pagó más de 100.000 dólares y confirmó 87 vulnerabilidades reales. Funcionaba porque escribir un reporte creíble era caro: requería tiempo y conocimiento del código. Ese costo actuaba como filtro de calidad.
+
+> La IA rompió el filtro.
+
+De golpe, cualquiera le pide a un chatbot "encontrá una vulnerabilidad en cURL", copia lo que sale, y lo manda. La mayoría es lo que Stenberg bautizó "AI slop": reportes largos, confiados, escritos con total seguridad, y completamente inventados. Uno de 400 líneas sobre un supuesto agujero crítico le tomó una hora de trabajo humano descubrir que era mentira.
+
+Los números cuentan la historia. Antes, más del 15% de los reportes que llegaban eran vulnerabilidades reales. Desde 2025, ese número se desplomó a menos del 5%. Stenberg lo describió sin vueltas: no solo sube el volumen, baja la calidad, así que gastamos más tiempo que nunca para sacar menos que nunca. Lo llamó "muerte por mil slops". En julio directamente cerró la recepción de reportes por un mes entero para poder respirar.
+
+Y cURL no es un caso aislado. tldraw, una herramienta popular, cerró todas las contribuciones externas. Ghostty banea de por vida al que manda código de IA sin avisar. La lógica detrás la resumió el creador de tldraw con una pregunta que conviene dejar clavada: si escribir el código es la parte fácil, ¿para qué quiero que otro me lo escriba?
+
+## El contrato social que se rompió
+
+Casi todo el software del mundo se apoya en piezas open source que mantiene gente que no cobra por eso. Los llaman "la gente que sostiene internet". Alrededor del 60% lo hace gratis, por una mezcla de cosas: aportar a algo que usaban todos, ganarse una reputación, aprender, tener una línea en el CV que decía "contribuí a este proyecto que usa medio mundo".
+
+La IA vació de sentido ese contrato. Antes, un contribuyente nuevo aprendía tu proyecto de a poco, ganaba confianza, y algún día se convertía en alguien que podía mantenerlo. Era una inversión. Ahora, alguien apunta una IA a tu proyecto, genera un parche que no entiende, y te lo manda. No aprendió nada. No se comprometió con nada. Y a vos te dejó el trabajo de revisar algo que le costó treinta segundos generar y a vos te cuesta una hora descartar.
+
+> El costo se invirtió. Generar basura es gratis. Limpiarla sigue costando trabajo humano.
+
+## El que abrió la puerta que los demás cerraban
+
+Y acá aparece la otra cara de la moneda, porque no todos están cerrando la puerta.
+
+La semana pasada, Linus Torvalds, el creador de Linux, el sistema operativo sobre el que corre buena parte del planeta, dijo exactamente lo contrario. En la lista de correo del kernel, ante los que pedían prohibir el código generado por IA, escribió que Linux no es un proyecto anti-IA, y que el que tenga un problema con eso puede hacer un fork o irse. Textual.
+
+A primera vista parece que se contradice con Stenberg y cURL. En realidad, dice lo mismo, pero desde el otro lado.
+
+El detonante fue Sashiko, un sistema de review de código con IA que revisa cada parche que entra al kernel. Los números de Sashiko son la clave de todo: encuentra el 53% de los bugs reales que después un humano iba a arreglar. Pero también genera falsos positivos a una tasa de alrededor del 20%. Encuentra oro y produce ruido, las dos cosas a la vez. El propio creador de la herramienta lo admite: rara vez está muy equivocado, pero a veces genera demasiado ruido de bajo valor.
+
+Torvalds no es ingenuo. Sabe del ruido. Su posición es pragmática: la IA es una herramienta, y es una herramienta útil, y el que lo dude es porque no la usó de verdad.
+
+Pero fijate en la diferencia con el caso de cURL. Torvalds tiene 34 años de criterio sobre ese código. Él, y sus maintainers, pueden mirar la salida de Sashiko y separar el oro del ruido en segundos, porque entienden el sistema. Para ellos, la IA es un asistente potente que filtran con criterio.
+
+El que reporta slop a cURL sin entender lo que manda es exactamente lo opuesto: usa la misma herramienta sin el criterio para filtrarla. Misma IA. Resultado opuesto.
+
+> La diferencia no está en la máquina, está en quién la usa.
+
+## La firma que una máquina no puede poner
+
+Hubo un detalle en la discusión de Linux que es la joya de todo esto, y conecta con algo que vengo escribiendo hace semanas.
+
+Un desarrollador del kernel se quejó de que Sashiko ponía una etiqueta que en el mundo de Linux dice "Reviewed-by", revisado por. Porque esa etiqueta, en ese ecosistema, no es un adorno. Es una declaración humana de responsabilidad. Es alguien poniendo su nombre y diciendo "yo miré esto y respondo por ello".
+
+> Una IA puede revisar. Puede encontrar el bug. Pero no puede firmar la responsabilidad. Porque el día que ese parche rompe algo en producción, la etiqueta "Reviewed-by" tiene que apuntar a un humano que responda, no a un algoritmo que no tiene nada que perder.
+
+Es la misma historia de la consultora que publicó datos inventados y de los abogados que citaron fallos falsos y de SAP que te vende agentes autónomos pero te deja a vos la responsabilidad si fallan. La IA hace el trabajo. La firma, la responsabilidad, el criterio de decir "esto va" o "esto no va", eso sigue siendo humano. Y no porque la máquina no pueda escribir las palabras. Porque no puede hacerse cargo de las consecuencias.
+
+## Por qué esto te toca aunque no programes
+
+Acá está el puente con tu mundo, y no es teórico. Es riesgo de cadena de suministro que llega hasta tu empresa.
+
+Tu SAP, tu banco, tu sistema de salud, cada aplicación corporativa que usás, corre sobre una montaña de estas piezas open source. El reporte de seguridad de Black Duck de este año lo midió sobre 947 bases de código comerciales, de 17 industrias. El resultado: el 93% contenía al menos un "componente zombie". Una dependencia open source sin ninguna actividad de mantenimiento en dos años. Sin parches. Sin nadie del otro lado.
+
+Las vulnerabilidades open source por base de código subieron 107% en un año. El 65% de las organizaciones sufrió un ataque de cadena de suministro en los últimos doce meses.
+
+Traducido: la plomería sobre la que corre tu empresa se está volviendo más frágil, justo cuando la IA hace más fácil que nunca ensuciarla. El día que se rompa una de esas piezas que "alguien en algún lado mantenía gratis", el problema va a bajar por la cadena hasta tu operación. Y capaz no haya nadie a quien llamar, porque el que la mantenía se cansó de filtrar slop y se fue.
+
+## La asimetría que nadie quiere mirar
+
+Hay una frase que resume todo esto, y es incómoda:
+
+> Es más fácil destruir que crear, y es más fácil crear que mantener.
+
+Fijate en toda la ola de IA generativa. Se vende como máquina de crear. Crear imágenes, textos, código, presentaciones. Cada demo es sobre generar algo nuevo en segundos. ¿Cuándo fue la última vez que un CEO de tecnología subió a un escenario a anunciar una IA que "potencia el mantenimiento"? Nunca. Porque mantener es trabajo cuidadoso, lento, sin gloria, que no se puede atajar con un prompt.
+
+Los creadores se llevan el aplauso y la plata. Los que mantienen esas apps laburan en el fondo, raspando óxido, hasta que un día se van y todo se rompe. La IA le dio esteroides a esa asimetría. Multiplicó por mil la capacidad de crear, pero no tocó la de mantener. Al contrario: la sobrecargó, porque ahora los que mantienen tienen que filtrar el diluvio de porquería generada por los que crean sin entender.
+
+## La lección del Operador
+
+Vengo escribiendo hace semanas sobre lo mismo desde ángulos distintos: el vibe coding que muere en localhost, las instituciones que delegaron el criterio, el que teclea sin entender. Todos son la misma historia:
+
+> La IA abarató crear hasta volverlo gratis, y en el proceso hizo escaso, y carísimo, lo único que de verdad sostiene las cosas: el criterio para mantenerlas.
+
+Y Torvalds es la prueba de que esto no es una arenga anti-IA. Él la abraza y si uno de los mejores programadores del mundo lo hace, yo quién soy para contradecirlo y no emularlo.
+
+La diferencia entre Torvalds usando Sashiko y un tipo tirándole slop a cURL no es la herramienta. Es que uno tiene el criterio para filtrar lo que la máquina produce, y firmar lo que sale. El otro solo aprieta un botón y manda.
+
+Si sos de los que construye, las preguntas que te dejo son incómodas a propósito. En todo lo que generás con IA esta semana, en el trabajo o en tus proyectos:
+
+- ¿Estás creando algo que después alguien va a poder mantener, y estás dispuesto a poner tu "Reviewed-by" y responder por ello?
+- ¿O estás sumando un ladrillo más a la montaña de cosas que funcionan hoy, lucen bien en la demo, y se van a pudrir en cuanto el que las generó se dé vuelta?
+
+Porque el mundo no se está quedando sin gente que cree, esos sobran. Se está quedando sin gente que mantenga, y que firme, que tenga ownership. Y ese, cada vez más, es el trabajo que no se puede falsificar y al mismo tiempo el que muchas veces es invisible.
+
+Pablo / Above Average
+
+P.D. Si trabajás en algo que corre sobre software (o sea, si trabajás), reenviale esto al que en tu organización cree que la IA "ya resuelve todo sola". Alguien tiene que juntar la basura el lunes a la mañana, y poner la firma.
+
+---
+
+**Referencias:**
+
+- Learner, Sam. "Who cleans up after the vibe-coding party?" Financial Times, julio de 2026.
+- Stenberg, Daniel. "The end of the curl bug-bounty." daniel.haxx.se, enero de 2026.
+- Orland, Kyle. "Linus Torvalds to critics of AI coding in Linux: Fork it. Or just walk away." Ars Technica, 16 de julio de 2026.
+- Black Duck. "Open Source Security and Risk Analysis (OSSRA) Report 2026."
+- Koren, Miklós et al. "Vibe Coding Kills Open Source." arXiv, 2026.
