@@ -1,19 +1,33 @@
 import type { Metadata } from "next";
 import { BlogFilter } from "@/components/blog-filter";
 import { getAllPosts } from "@/lib/posts";
+import { NEWSLETTER } from "@/lib/constants";
+import { NewsletterForm } from "@/components/newsletter-form";
+import { FadeIn } from "@/components/motion/fade-in";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Todos los articulos de Above Average.",
+  title: NEWSLETTER.name,
+  description: NEWSLETTER.tagline,
 };
 
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="space-y-8">
-      <h1 className="font-serif text-3xl text-white">Blog</h1>
-      <BlogFilter posts={posts} />
+    <div className="space-y-10">
+      <header className="space-y-4">
+        <h1 className="font-serif text-3xl text-white">{NEWSLETTER.name}</h1>
+        <p className="max-w-xl text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
+          {NEWSLETTER.tagline}
+        </p>
+        <div className="max-w-md pt-1">
+          <NewsletterForm />
+        </div>
+      </header>
+
+      <FadeIn>
+        <BlogFilter posts={posts} />
+      </FadeIn>
     </div>
   );
 }

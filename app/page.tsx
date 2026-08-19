@@ -3,7 +3,7 @@ import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { PostCard } from "@/components/post-card";
 import { getAllPosts } from "@/lib/posts";
-import { SITE } from "@/lib/constants";
+import { SITE, NEWSLETTER } from "@/lib/constants";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 import { AnimatedStats } from "@/components/motion/animated-stats";
@@ -14,30 +14,35 @@ const personSchema = {
   name: "Pablo Marichal",
   url: SITE.url,
   sameAs: [
-    "https://www.linkedin.com/in/pablomarichal/",
-    "https://x.com/dotpablo",
-    "https://www.instagram.com/pabloaboveaverage",
+    SITE.social.linkedin,
+    SITE.social.x,
+    SITE.social.instagram,
   ],
-  jobTitle: "Senior SAP Tech Lead",
+  jobTitle: "Tech Lead",
   description: SITE.description,
 };
 
-const topics = [
+const entryPoints = [
   {
-    title: "Supervivencia Corporativa e IA",
-    desc: "SAP, Copilot, Joule, migraciones cloud y cómo operar en la intersección del Legacy y el Futuro.",
+    title: NEWSLETTER.name,
+    desc: "El newsletter semanal sobre enterprise e IA. Sale los martes, desde adentro de la máquina.",
+    cta: "Leer el archivo",
+    href: "/blog",
+    external: false,
   },
   {
-    title: "Mentalidad de Constructor",
-    desc: "Experimentos creando agentes IA, programando y entendiendo dónde se rompe la IA de frontera.",
+    title: "Videos",
+    desc: "Piezas cortas sobre trabajo, tecnología y cómo se sostiene el rendimiento después de los 40.",
+    cta: "Ver en Instagram",
+    href: SITE.social.instagram,
+    external: true,
   },
   {
-    title: "Clean Core Biológico",
-    desc: "Lecciones de 19 maratones aplicadas a mantener la máquina lista para aguantar el estrés corporativo.",
-  },
-  {
-    title: "El Humano Full Stack",
-    desc: "Cultura, evitar la 'vegetalización' automatizada y reflexiones aleatorias sobre la vida misma.",
+    title: "Trabajar juntos",
+    desc: "Advisory 1:1, proyectos SAP y adopción real de IA en equipos que mueven procesos críticos.",
+    cta: "Ver opciones",
+    href: "/trabajar-juntos",
+    external: false,
   },
 ];
 
@@ -49,7 +54,7 @@ export default function Home() {
     { value: "12+", label: "años SAP" },
     { value: `${allPosts.length}`, label: "artículos" },
     { value: "19", label: "maratones" },
-    { value: "10", label: "años escribiendo" },
+    { value: "10+", label: "años escribiendo" },
   ];
 
   return (
@@ -90,20 +95,12 @@ export default function Home() {
               <div className="space-y-3 text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
                 <p className="text-lg text-white font-medium">Soy Pablo Marichal.</p>
                 <p>
-                  Arquitecto de sistemas enterprise. Atleta de resistencia. Padre.
+                  Nací en Uruguay, me crié en Venezuela, volví a los 37 a un país
+                  donde no conocía a nadie. Tengo dos hijos chicos, 19 maratones
+                  encima y 20 años adentro de corporaciones viendo de cerca cómo
+                  la tecnología le cambia la vida a la gente que trabaja.
                 </p>
-                <p>
-                  20+ años haciendo que la tecnología sobreviva al contacto con la realidad.
-                  19 maratones cruzando líneas de meta que nadie me obligó a cruzar.
-                  Dos hijos que me obligan a construir algo que valga la pena dejar.
-                </p>
-                <p>
-                  Opero en la intersección donde la arquitectura técnica, la IA de frontera
-                  y la resistencia biológica se vuelven la misma disciplina.
-                </p>
-                <p>
-                  Hablo fluido en <em>Legacy</em>. Fluido en <em>Futuro</em>.
-                </p>
+                <p>No pertenezco del todo a ningún lado. Desde ahí escribo.</p>
               </div>
             </FadeIn>
 
@@ -114,10 +111,10 @@ export default function Home() {
             <FadeIn delay={0.5} duration={0.6}>
               <div>
                 <p className="mb-1 text-sm font-medium text-neutral-300">
-                  Suscribite a Above Average
+                  {NEWSLETTER.name}
                 </p>
                 <p className="mb-2.5 text-sm text-neutral-500">
-                  Un newsletter técnico, directo y sin humo.
+                  {NEWSLETTER.tagline}
                 </p>
                 <NewsletterForm />
               </div>
@@ -125,23 +122,6 @@ export default function Home() {
           </div>
 
         </div>
-      </section>
-
-      {/* Topics */}
-      <section className="space-y-6">
-        <FadeIn>
-          <h2 className="font-serif text-2xl text-white">Tópicos principales</h2>
-        </FadeIn>
-        <StaggerChildren className="grid gap-4 sm:grid-cols-2" staggerDelay={0.1}>
-          {topics.map((topic) => (
-            <StaggerItem key={topic.title}>
-              <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 backdrop-blur-sm transition-colors hover:border-neutral-700">
-                <h3 className="font-serif text-lg text-white">{topic.title}</h3>
-                <p className="mt-2 text-sm text-neutral-500">{topic.desc}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerChildren>
       </section>
 
       {/* Recent posts */}
@@ -170,22 +150,33 @@ export default function Home() {
         </section>
       )}
 
-      {/* Bottom CTA */}
-      <FadeIn>
-        <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
-          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-4">Newsletter</p>
-          <h2 className="font-serif text-2xl text-white leading-snug">
-            Para el profesional tech que no quiere quedar obsoleto.
-          </h2>
-          <p className="mt-3 max-w-lg text-base text-neutral-400 tracking-[-0.01em]">
-            Cada semana: una dosis de criterio sobre SAP, IA de frontera y rendimiento humano.
-            Sin motivación barata. Sin &quot;vibe coding&quot;. Solo lo que funciona en producción.
-          </p>
-          <div className="mt-6 max-w-md">
-            <NewsletterForm />
-          </div>
-        </section>
-      </FadeIn>
+      {/* Tres accesos */}
+      <section className="space-y-6">
+        <FadeIn>
+          <h2 className="font-serif text-2xl text-white">Por acá se sigue</h2>
+        </FadeIn>
+        <StaggerChildren className="grid gap-4 sm:grid-cols-3" staggerDelay={0.08}>
+          {entryPoints.map((entry) => (
+            <StaggerItem key={entry.title}>
+              <Link
+                href={entry.href}
+                {...(entry.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className="flex h-full flex-col rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 backdrop-blur-sm transition-colors hover:border-accent/50"
+              >
+                <h3 className="font-serif text-lg text-white">{entry.title}</h3>
+                <p className="mt-2 text-sm text-neutral-500 tracking-[-0.01em]">
+                  {entry.desc}
+                </p>
+                <span className="mt-4 text-sm font-medium text-accent">
+                  {entry.cta} &rarr;
+                </span>
+              </Link>
+            </StaggerItem>
+          ))}
+        </StaggerChildren>
+      </section>
 
     </div>
     </>

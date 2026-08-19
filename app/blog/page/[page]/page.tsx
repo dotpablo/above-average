@@ -21,8 +21,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { page } = await params;
   return {
-    title: `Blog — Página ${page}`,
-    description: "Todos los artículos de Above Average.",
+    title: `Desde Adentro — Página ${page}`,
+    description: "El archivo completo de Desde Adentro, el newsletter de Pablo Marichal sobre IA y trabajo en empresas grandes.",
   };
 }
 

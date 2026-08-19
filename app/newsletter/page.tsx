@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
-import { SITE } from "@/lib/constants";
+import { SITE, NEWSLETTER } from "@/lib/constants";
 import { FadeIn } from "@/components/motion/fade-in";
 import { NewsletterForm } from "@/components/newsletter-form";
 
 export const metadata: Metadata = {
-  title: "Newsletter — Above Average",
-  description:
-    "Un newsletter semanal para el profesional tech que no quiere quedar obsoleto. SAP, IA de frontera y rendimiento humano. Sin motivación barata.",
+  title: "Desde Adentro",
+  description: NEWSLETTER.tagline,
   alternates: { canonical: `${SITE.url}/newsletter` },
 };
 
@@ -22,7 +21,7 @@ export default function NewsletterPage() {
       <header className="space-y-4">
         <FadeIn duration={0.5}>
           <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">
-            Above Average
+            {NEWSLETTER.name}
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -32,9 +31,7 @@ export default function NewsletterPage() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="text-lg text-neutral-400 leading-relaxed tracking-[-0.01em]">
-            Sale los martes. Para el profesional tech que no quiere quedar obsoleto.
-            SAP, IA de frontera y rendimiento humano. Sin motivación barata. Sin vibe coding.
-            Solo lo que funciona en producción.
+            {NEWSLETTER.tagline}
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>

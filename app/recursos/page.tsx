@@ -7,7 +7,7 @@ import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-childr
 export const metadata: Metadata = {
   title: "Recursos",
   description:
-    "Recursos gratuitos de Above Average: prompts de IA, sistemas y frameworks para el profesional tech que no quiere quedar deprecated.",
+    "Recursos gratuitos de Pablo Marichal: prompts de IA, sistemas y frameworks para el profesional tech que no quiere quedar deprecated.",
 };
 
 const resources = [

@@ -16,30 +16,30 @@ export default async function OgImage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          padding: "64px",
+          padding: "80px",
           fontFamily: "serif",
         }}
       >
         <p
           style={{
-            fontSize: "72px",
+            fontSize: "88px",
             color: "#ffffff",
             fontWeight: 400,
-            lineHeight: 1.15,
+            lineHeight: 1.1,
             margin: 0,
             textAlign: "center",
           }}
         >
-          Above Average
+          Pablo Marichal
         </p>
         <p
           style={{
-            fontSize: "24px",
-            color: "#525252",
-            margin: "24px 0 0 0",
+            fontSize: "26px",
+            color: "#a3a3a3",
+            margin: "28px 0 0 0",
             textAlign: "center",
             fontFamily: "sans-serif",
-            maxWidth: "700px",
+            maxWidth: "820px",
             lineHeight: 1.5,
           }}
         >
@@ -48,9 +48,10 @@ export default async function OgImage() {
         <p
           style={{
             fontSize: "16px",
-            color: "#404040",
-            margin: "40px 0 0 0",
+            color: "#525252",
+            margin: "44px 0 0 0",
             fontFamily: "sans-serif",
+            letterSpacing: "0.08em",
           }}
         >
           pablomarichal.com

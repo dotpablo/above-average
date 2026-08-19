@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
 import { SITE } from "@/lib/constants";
 
 const navLinks = [
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: "Desde Adentro" },
   { href: "/recursos", label: "Recursos" },
+  { href: "/charlas", label: "Charlas" },
   { href: "/about", label: "About" },
   { href: "/trabajar-juntos", label: "Trabajar juntos" },
 ];
@@ -31,13 +31,12 @@ export function Footer() {
       transition={{ duration: 0.6 }}
     >
       <div className="flex flex-col items-center gap-5">
-        <Image
-          src="/images/logo.png"
-          alt="Above Average"
-          width={32}
-          height={32}
-          className="h-8 w-8 invert opacity-40"
-        />
+        <Link
+          href="/"
+          className="font-serif text-lg text-neutral-500 transition-colors hover:text-accent"
+        >
+          Pablo Marichal
+        </Link>
         <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-600">
           {navLinks.map((l) => (
             <Link
