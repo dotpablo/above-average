@@ -37,7 +37,7 @@ export default async function OgImage({ params }: Props) {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           <span style={{ color: "#525252", fontSize: "18px", fontFamily: "sans-serif", letterSpacing: "0.1em", textTransform: "uppercase" as const }}>
-            El Newsletter
+            En Producción
           </span>
         </div>
 

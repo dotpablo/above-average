@@ -6,7 +6,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const links = [
-  { href: "/blog", label: "El Newsletter" },
+  { href: "/blog", label: "En Producción" },
   { href: "/recursos", label: "Recursos" },
   { href: "/charlas", label: "Charlas" },
   { href: "/about", label: "About" },

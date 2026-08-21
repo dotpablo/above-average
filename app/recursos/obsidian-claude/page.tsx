@@ -285,7 +285,7 @@ export default function ObsidianClaudePage() {
 
       {/* CTA */}
       <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-3">El Newsletter</p>
+        <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-3">En Producción</p>
         <h2 className="font-serif text-2xl text-white">Cada martes: sistemas, IA y cómo no quedar obsoleto.</h2>
         <p className="mt-2 text-sm text-neutral-500 max-w-md">
           Los suscriptores reciben los recursos nuevos antes de que se publiquen acá.

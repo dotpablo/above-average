@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { SITE } from "@/lib/constants";
 
 const navLinks = [
-  { href: "/blog", label: "El Newsletter" },
+  { href: "/blog", label: "En Producción" },
   { href: "/recursos", label: "Recursos" },
   { href: "/charlas", label: "Charlas" },
   { href: "/about", label: "About" },

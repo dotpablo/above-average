@@ -181,7 +181,7 @@ export async function GET() {
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>El Newsletter (EN) — Pablo Marichal</title>
+    <title>En Producción (EN) — Pablo Marichal</title>
     <link>${SITE.url}</link>
     <description>Tech Lead, AI Champion, 19x Marathoner. The intersection of corporate robustness, AI agility, and high-performance biological systems.</description>
     <language>en</language>
