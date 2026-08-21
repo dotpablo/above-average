@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SITE } from "@/lib/constants";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
@@ -104,12 +103,13 @@ export default function WorkTogetherPage() {
                     </span>
                   ))}
                 </div>
-                <Link
+                {/* <a> nativo, no next/link: un mailto: no es una ruta de la app. */}
+                <a
                   href={s.ctaHref}
                   className={`shrink-0 rounded-lg px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90 ${s.highlight ? "bg-accent text-neutral-900" : "border border-neutral-700 text-neutral-300 hover:border-neutral-500 hover:text-white"}`}
                 >
                   {s.cta} →
-                </Link>
+                </a>
               </div>
             </div>
           </StaggerItem>
@@ -122,11 +122,20 @@ export default function WorkTogetherPage() {
           <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">Por qué funciona</p>
           <p className="text-base text-neutral-400 leading-relaxed tracking-[-0.01em]">
             No soy consultor que salió de una academia. Fui el que migró los sistemas,
-            el que convirtió a su equipo al nuevo paradigma, el que fue seleccionado AI Champion
-            en una corporación de +8 equipos. Y al mismo tiempo corrí 19 maratones mientras lo hacía.
+            el que convirtió a su equipo al nuevo paradigma, el que lidera la adopción de IA
+            en equipos que mueven procesos críticos. Y al mismo tiempo corrí 19 maratones
+            mientras lo hacía.
           </p>
           <p className="text-sm text-neutral-500">
-            Respondo personalmente. Sin intermediarios.
+            Respondo personalmente. Sin intermediarios. Si el botón no te abre el mail,
+            escribime a{" "}
+            <a
+              href={SITE.social.email}
+              className="text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors"
+            >
+              pablomarichal@gmail.com
+            </a>
+            .
           </p>
         </section>
       </FadeIn>

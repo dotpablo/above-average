@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { NewsletterForm } from "@/components/newsletter-form";
 
 export const metadata: Metadata = {
-  title: "Desde Adentro",
+  title: "El Newsletter",
   description: NEWSLETTER.tagline,
   alternates: { canonical: `${SITE.url}/newsletter` },
 };

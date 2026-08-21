@@ -1,6 +1,6 @@
 export const SITE = {
-  // El sitio es la persona. "Above Average" pasa a ser el nombre del producto
-  // (el OS) y del libro; "Desde Adentro" es el newsletter. Ver NEWSLETTER abajo.
+  // El sitio es la persona. "Above Average" quedo como nombre del producto
+  // (el OS) y del libro. El newsletter se llama "El Newsletter" (ver abajo).
   name: "Pablo Marichal",
   url: "https://pablomarichal.com",
   title: "Pablo Marichal",
@@ -20,7 +20,7 @@ export const SITE = {
 
 /** El newsletter y blog de analisis enterprise. Vive adentro del sitio. */
 export const NEWSLETTER = {
-  name: "Desde Adentro",
+  name: "El Newsletter",
   tagline:
     "Cada martes: qué está pasando de verdad con la IA en las empresas grandes, escrito por alguien que está adentro implementándola. Sin humo, sin hype, sin vender nada.",
 };
