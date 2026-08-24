@@ -1,6 +1,6 @@
 # Índice de ediciones — Above Average
 
-Newsletter de Pablo Marichal. 39 ediciones publicadas, de la más reciente a la más antigua.
+Newsletter de Pablo Marichal. 42 ediciones publicadas, de la más reciente a la más antigua.
 
 **Fuente:** `content/posts/*.mdx`
 **Criterio de inclusión:** posts en español desde el lanzamiento del newsletter (2025-10-26). Se excluyen las 3 traducciones al inglés que viven en `content/posts/`, todo `content/posts-en/` y el archivo histórico de LinkedIn/Substack anterior a esa fecha.
@@ -8,6 +8,9 @@ Newsletter de Pablo Marichal. 39 ediciones publicadas, de la más reciente a la 
 
 | Ed. | Fecha | Título | Pilar | Tesis | Slug |
 |---:|---|---|---|---|---|
+| 42 | 2026-08-18 | El que sabe por qué está ese campo ahí en la tabla se está por jubilar | Enterprise & AI Survival | La carrera no es humanos contra máquinas: es escribir el contexto antes de que se jubile quien lo tiene. | `el-que-sabe-por-que-esta-ese-campo-se-jubila` |
+| 41 | 2026-08-11 | El que anuncia el paraíso y el que anuncia el fin venden lo mismo | Full Stack Human | La burocracia no cae por conquista: se abre por autorización, y toda autorización tiene una firma abajo. | `el-paraiso-y-el-apocalipsis-venden-lo-mismo` |
+| 40 | 2026-08-04 | El BASIS mutante que se niega a desaparecer | Enterprise & AI Survival | El oficio BASIS no desapareció: se corrió de capa, de ejecutar el sistema a gobernar lo que lo opera. | `el-basis-mutante-que-se-niega-a-desaparecer` |
 | 39 | 2026-07-28 | La IA no se rebeló. Le dejaron la puerta abierta | Enterprise & AI Survival | Cambiá el verbo y se cae el titular: no hubo rebelión, hubo contención mal diseñada. | `la-ia-no-se-rebelo-le-dejaron-la-puerta-abierta` |
 | 38 | 2026-07-21 | La IA es una máquina de crear. Nadie construyó una para mantener. | Enterprise & AI Survival | La IA multiplicó la capacidad de crear y volvió escaso lo único que sostiene: mantener y firmar. | `la-ia-es-una-maquina-de-crear-nadie-construyo-una-para-mantener` |
 | 37 | 2026-07-14 | La Unión Europea le acaba de dar la razón a los que no migraron | Enterprise & AI Survival | Las herramientas cambian de dueño, precio y reglas; el criterio para decidir sigue siendo tuyo. | `la-union-europea-le-dio-la-razon-a-los-que-no-migraron` |
@@ -54,12 +57,14 @@ Newsletter de Pablo Marichal. 39 ediciones publicadas, de la más reciente a la 
 
 | Pilar | Ediciones | % |
 |---|---:|---:|
-| Enterprise & AI Survival | 24 | 62% |
-| Full Stack Human | 12 | 31% |
-| Builder Mindset | 3 | 8% |
-| Biological Clean Core | 1 | 3% |
+| Enterprise & AI Survival | 25 | 60% |
+| Full Stack Human | 13 | 31% |
+| Builder Mindset | 3 | 7% |
+| Biological Clean Core | 1 | 2% |
 
-El pilar biológico está prácticamente sin cubrir: una sola edición en 39 (la 7). La 36 podría contarse como segunda si se reclasifica.
+El pilar biológico está prácticamente sin cubrir: una sola edición en 42 (la 7). La 36 podría contarse como segunda si se reclasifica.
+
+Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real sobre `indice-completo.json` era 23. Corregido acá.
 
 ---
 
@@ -67,8 +72,8 @@ El pilar biológico está prácticamente sin cubrir: una sola edición en 39 (la
 
 | Grupo | Ediciones | Nivel |
 |---|---|---|
-| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34 | Muy alto — es el eje del newsletter |
-| Vender criterio, no tiempo | 16, 17, 20 | Muy alto — párrafo repetido casi textual entre la 16 y la 17 |
+| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34, 41, 42 | Muy alto — es el eje del newsletter |
+| Vender criterio, no tiempo | 16, 17, 20, 40 | Muy alto — párrafo repetido casi textual entre la 16 y la 17 |
 | Las 3 reglas del Operador | 27, 28, 29 | Muy alto — misma lista tres semanas seguidas |
 | Sistemas vs. motivación / metas | 3, 6, 9 | Alto — la 3 y la 9 usan el mismo dato de Strava |
 | Consumir contenido no es hacer | 3, 30 | Alto — misma tesis con 29 semanas de distancia |
@@ -76,6 +81,8 @@ El pilar biológico está prácticamente sin cubrir: una sola edición en 39 (la
 | Las dos castas del ERP | 15, 26, 32, 33, 37 | Medio-alto — arco mayormente intencional |
 | El vibe coding produce demos que mueren | 16, 19, 35 | Medio |
 | «El que entiende los fundamentos orquesta…» | 22, 28, 31, 32 | Estilístico — frase-firma en 4 cierres |
+| Sección «Antes de que me des la razón» con autodeclaración de no-neutralidad | 41, 42 | **Muy alto — párrafo casi textual en dos ediciones consecutivas** |
+| Quién firma / quién responde por lo que ejecuta el agente | 38, 40, 41 | Alto — eje en consolidación |
 
 Detalle completo en `indice-completo.json`.
 

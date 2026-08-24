@@ -5,10 +5,63 @@
     "generado": "2026-08-03",
     "fuente": "content/posts/*.mdx",
     "criterio_de_inclusion": "Posts en español publicados desde el lanzamiento del newsletter (2025-10-26, 'Por Qué Above Average') en adelante. Se excluyen los 3 archivos en inglés de content/posts/ que son traducciones de ediciones ya listadas (i-sold-my-bike-to-buy-a-career, the-death-of-the-man-hour, the-zombie-erp-and-the-technical-privilege-gap), todo content/posts-en/ y el archivo histórico de LinkedIn/Substack anterior a 2025-10-26.",
+    "excluidos_conocidos": [
+      "i-sold-my-bike-to-buy-a-career-a-venezuela-story",
+      "the-zombie-erp-and-the-technical-privilege-gap-chronicling-a-race-against-the-20",
+      "the-death-of-the-man-hour-are-you-paid-for-your-time-or-your-token-budget"
+    ],
     "nota_numeracion": "Ningún archivo trae el número de edición en el frontmatter. La numeración es secuencial por fecha desde 2025-10-26 = 1. Se corrobora con la edición del 2026-01-06, que dice 'If you have been reading me for the past 11 weeks' y cae exactamente en la posición 11.",
-    "total_ediciones": 39
+    "total_ediciones": 42
   },
   "ediciones": [
+    {
+      "edicion": 42,
+      "fecha": "2026-08-18",
+      "titulo": "El que sabe por qué está ese campo ahí en la tabla se está por jubilar",
+      "slug": "el-que-sabe-por-que-esta-ese-campo-se-jubila",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La carrera no es humanos contra máquinas: es escribir el contexto antes de que se jubile quien lo tiene.",
+      "temas": "pwc, mit nanda, abap, developer insights survey, contexto de negocio, deuda de conocimiento, s&p global, jelena perfiljeva",
+      "fuentes_clave": [
+        "PwC — 29ª Encuesta Global de CEOs (4.454 CEOs de 95 países), presentada en Davos, enero de 2026",
+        "MIT, proyecto NANDA — 95% de los pilotos de IA generativa sin impacto medible en el balance",
+        "DevPro Journal — datos demográficos de la base de desarrolladores ABAP (72% mayores de 40, promedio 47 años), mayo de 2026",
+        "SAP — The 2026 Developer Insights Survey: The Report (589 respuestas de 44 países)"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 41,
+      "fecha": "2026-08-11",
+      "titulo": "El que anuncia el paraíso y el que anuncia el fin venden lo mismo",
+      "slug": "el-paraiso-y-el-apocalipsis-venden-lo-mismo",
+      "pilar": "Full Stack Human",
+      "tesis": "La burocracia no cae por conquista: se abre por autorización, y toda autorización tiene una firma abajo.",
+      "temas": "harari, mo gawdat, super bowl, openai, anthropic, sociedad automatizada, eric sadin, burocracia",
+      "fuentes_clave": [
+        "Yuval Noah Harari — advertencia pública sobre la figura de Sociedad Automatizada del proyecto argentino de Ley General de Sociedades",
+        "Mo Gawdat (ex ejecutivo de Google) — declaración sobre los doce meses para superar la inteligencia humana",
+        "Daniel Vítolo — aclaración jurídica: las sociedades automatizadas siguen necesitando administradores que sean personas",
+        "Proyecto de nueva Ley General de Sociedades, Argentina, mayo de 2026 (en comisiones del Senado)"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 40,
+      "fecha": "2026-08-04",
+      "titulo": "El BASIS mutante que se niega a desaparecer",
+      "slug": "el-basis-mutante-que-se-niega-a-desaparecer",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El oficio BASIS no desapareció: se corrió de capa, de ejecutar el sistema a gobernar lo que lo opera.",
+      "temas": "basis, sap gui 8.10, joule work, mcp gateway, btp, baip, clean core, philipp herzig",
+      "fuentes_clave": [
+        "SAP Community — 'SAP GUI for Windows 8.10 is coming: General Availability as of 16th of July 2026'",
+        "Philipp Herzig (CTO de SAP) — presentación de la app de escritorio de Joule Work en LinkedIn, julio de 2026",
+        "SAP Community — 'MCP Gateway in SAP Integration Suite: Your APIs, Ready for the Age of Agents', julio de 2026",
+        "SAP Sapphire 2026 Innovation News Guide: Joule Work"
+      ],
+      "enlaza_a": []
+    },
     {
       "edicion": 39,
       "fecha": "2026-07-28",
@@ -62,7 +115,9 @@
         "SAP API Policy v4/2026, sección 2.2.2",
         "Forrester — datos de adopción Joule (3%) vs. Copilot (77%), vía Headless Systems, junio de 2026"
       ],
-      "enlaza_a": ["sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta"]
+      "enlaza_a": [
+        "sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta"
+      ]
     },
     {
       "edicion": 36,
@@ -104,7 +159,9 @@
         "Sanctions order, US District Court, Northern District of Mississippi — jueza Sherrion Aycock, caso ciudad de Aberdeen",
         "Pew Research — dato sobre clics en fuentes de AI Overviews (1%)"
       ],
-      "enlaza_a": ["delegar-no-es-rendirse-pero-se-sienten-igual"]
+      "enlaza_a": [
+        "delegar-no-es-rendirse-pero-se-sienten-igual"
+      ]
     },
     {
       "edicion": 33,
@@ -155,7 +212,9 @@
         "SycEval, Stanford, 2025 — tasa de sycophancy del 58% entre GPT-4o, Claude y Gemini",
         "MIT. 'Your Brain on ChatGPT.' Estudio sobre conectividad neuronal y uso de IA, 2025"
       ],
-      "enlaza_a": ["el-veneno-favorito-de-la-gente-inteligente"]
+      "enlaza_a": [
+        "el-veneno-favorito-de-la-gente-inteligente"
+      ]
     },
     {
       "edicion": 30,
@@ -267,7 +326,9 @@
         "Claude Mythos Preview System Card, Anthropic, abril 2026",
         "Indeed Workforce Insights Report 2025"
       ],
-      "enlaza_a": ["la-ia-divide-a-la-humanidad-en-dos"]
+      "enlaza_a": [
+        "la-ia-divide-a-la-humanidad-en-dos"
+      ]
     },
     {
       "edicion": 24,
@@ -312,7 +373,9 @@
         "Microsoft — anuncio del primer AI for Good Lab de Sudamérica en el LATU, Montevideo; declaraciones de Juan M. Lavista Ferres",
         "Shen, Judy Hanwen & Tamkin, Alex (Anthropic y Stanford) — paper experimental sobre aprendizaje con IA, enero de 2026"
       ],
-      "enlaza_a": ["eric-sadin-palantir-y-el-desierto-cognitivo-del-consultor-sap"]
+      "enlaza_a": [
+        "eric-sadin-palantir-y-el-desierto-cognitivo-del-consultor-sap"
+      ]
     },
     {
       "edicion": 21,
@@ -328,7 +391,9 @@
         "Palantir — earnings call Q4, declaraciones del CTO sobre migraciones SAP ECC a S/4HANA con AIP; casos publicados en su web",
         "Alianza estratégica SAP–Palantir, mayo de 2025"
       ],
-      "enlaza_a": ["la-lista-de-decapitados-de-anthropic-el-fin-del-body-shopping"]
+      "enlaza_a": [
+        "la-lista-de-decapitados-de-anthropic-el-fin-del-body-shopping"
+      ]
     },
     {
       "edicion": 20,
@@ -444,7 +509,9 @@
       "tesis": "Volverte prescindible en la operativa es lo único que te vuelve imprescindible en la estrategia.",
       "temas": "mwd, minimum work done, caja negra, single point of failure, extreme ownership, documentación, siempre listo para renunciar, automatización",
       "fuentes_clave": null,
-      "enlaza_a": ["mi-costo-de-entrada-al-mundo-sap-por-que-vendi-la-bici"]
+      "enlaza_a": [
+        "mi-costo-de-entrada-al-mundo-sap-por-que-vendi-la-bici"
+      ]
     },
     {
       "edicion": 12,
@@ -458,7 +525,9 @@
         "Ravikant, Naval — cita sobre recuperar la riqueza a partir del skillset propio",
         "Comparación de PIB Polonia vs. Venezuela desde los años 90 (gráfico incluido en el post, sin fuente citada)"
       ],
-      "enlaza_a": ["above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you"]
+      "enlaza_a": [
+        "above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you"
+      ]
     },
     {
       "edicion": 11,
@@ -512,7 +581,9 @@
       "fuentes_clave": [
         "Hoque, Faisal. Transcend (analogía de la piedra filosofal y el marco 'Detach and Devote')"
       ],
-      "enlaza_a": ["despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km"]
+      "enlaza_a": [
+        "despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km"
+      ]
     },
     {
       "edicion": 7,
@@ -558,7 +629,9 @@
       "fuentes_clave": [
         "Dato citado sin fuente en el texto: 72% de los padres trabajadores reporta que el trabajo interfiere con la vida familiar"
       ],
-      "enlaza_a": ["el-average-espera-motivacion-14-dias-el-above-average-construye-momentum-toda-la"]
+      "enlaza_a": [
+        "el-average-espera-motivacion-14-dias-el-above-average-construye-momentum-toda-la"
+      ]
     },
     {
       "edicion": 3,
@@ -604,21 +677,67 @@
   ],
   "revisar_manualmente": {
     "sin_fuentes_identificables": [
-      { "edicion": 1, "slug": "por-que-above-average-y-por-que-esto-es-para-vos", "detalle": "Cita estadísticas (70% sobrepeso, 0.5% corrió una maratón, 43% no lee un libro al año) sin atribuir ninguna fuente." },
-      { "edicion": 5, "slug": "tu-vida-es-un-sistema-frankenstein-y-va-a-colapsar", "detalle": "Afirma que el 90% de los problemas en producción son parches viejos, sin fuente. No cita autores ni estudios." },
-      { "edicion": 6, "slug": "tu-fuerza-de-voluntad-tiene-un-bug-la-ia-es-el-parche", "detalle": "Usa 'fatiga de decisión' como concepto central sin citar la investigación de origen." },
-      { "edicion": 7, "slug": "despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km", "detalle": "Abre con 'el 80% de los padres profesionales que intentan correr una maratón se rompen o abandonan' sin fuente. Solo menciona herramientas (Gemini, Garmin)." },
-      { "edicion": 10, "slug": "tu-vida-es-un-sistema-legacy-manual-de-migracion-2026", "detalle": "Solo usa la metáfora SAP Clean Core; no cita fuentes externas." },
-      { "edicion": 13, "slug": "la-trampa-del-mwd-y-por-que-el-ownership-es-la-unica-salida", "detalle": "El acrónimo MWD es acuñado por el autor; no hay fuentes externas citadas." },
-      { "edicion": 36, "slug": "corro-hace-16-anos-todavia-no-llegue", "detalle": "Edición íntegramente autobiográfica, sin fuentes externas." }
+      {
+        "edicion": 1,
+        "slug": "por-que-above-average-y-por-que-esto-es-para-vos",
+        "detalle": "Cita estadísticas (70% sobrepeso, 0.5% corrió una maratón, 43% no lee un libro al año) sin atribuir ninguna fuente."
+      },
+      {
+        "edicion": 5,
+        "slug": "tu-vida-es-un-sistema-frankenstein-y-va-a-colapsar",
+        "detalle": "Afirma que el 90% de los problemas en producción son parches viejos, sin fuente. No cita autores ni estudios."
+      },
+      {
+        "edicion": 6,
+        "slug": "tu-fuerza-de-voluntad-tiene-un-bug-la-ia-es-el-parche",
+        "detalle": "Usa 'fatiga de decisión' como concepto central sin citar la investigación de origen."
+      },
+      {
+        "edicion": 7,
+        "slug": "despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km",
+        "detalle": "Abre con 'el 80% de los padres profesionales que intentan correr una maratón se rompen o abandonan' sin fuente. Solo menciona herramientas (Gemini, Garmin)."
+      },
+      {
+        "edicion": 10,
+        "slug": "tu-vida-es-un-sistema-legacy-manual-de-migracion-2026",
+        "detalle": "Solo usa la metáfora SAP Clean Core; no cita fuentes externas."
+      },
+      {
+        "edicion": 13,
+        "slug": "la-trampa-del-mwd-y-por-que-el-ownership-es-la-unica-salida",
+        "detalle": "El acrónimo MWD es acuñado por el autor; no hay fuentes externas citadas."
+      },
+      {
+        "edicion": 36,
+        "slug": "corro-hace-16-anos-todavia-no-llegue",
+        "detalle": "Edición íntegramente autobiográfica, sin fuentes externas."
+      }
     ],
     "fuentes_incompletas": [
-      { "edicion": 4, "detalle": "El 72% de padres trabajadores se cita sin fuente." },
-      { "edicion": 12, "detalle": "El gráfico PIB Polonia vs. Venezuela no tiene fuente atribuida." },
-      { "edicion": 17, "detalle": "Solo una fuente identificable (el podcast Vega/Rauch). Dos listas de 'confirmación de los que saben' quedaron vacías en el archivo." },
-      { "edicion": 20, "detalle": "El reporte de Anthropic sobre exposición laboral se cita sin título, fecha ni enlace." },
-      { "edicion": 23, "detalle": "El gráfico de adopción de IA (2.500 puntos) se atribuye solo a 'lo vi en LinkedIn'." },
-      { "edicion": 24, "detalle": "Sin sección de referencias; las fuentes se reconstruyeron del cuerpo del texto." }
+      {
+        "edicion": 4,
+        "detalle": "El 72% de padres trabajadores se cita sin fuente."
+      },
+      {
+        "edicion": 12,
+        "detalle": "El gráfico PIB Polonia vs. Venezuela no tiene fuente atribuida."
+      },
+      {
+        "edicion": 17,
+        "detalle": "Solo una fuente identificable (el podcast Vega/Rauch). Dos listas de 'confirmación de los que saben' quedaron vacías en el archivo."
+      },
+      {
+        "edicion": 20,
+        "detalle": "El reporte de Anthropic sobre exposición laboral se cita sin título, fecha ni enlace."
+      },
+      {
+        "edicion": 23,
+        "detalle": "El gráfico de adopción de IA (2.500 puntos) se atribuye solo a 'lo vi en LinkedIn'."
+      },
+      {
+        "edicion": 24,
+        "detalle": "Sin sección de referencias; las fuentes se reconstruyeron del cuerpo del texto."
+      }
     ],
     "numeracion_incierta": {
       "detalle": "Ningún archivo trae campo 'edicion'. La numeración se infirió por orden de fecha. Corrobora la edición 11 ('the past 11 weeks'), pero hay un hueco de calendario sin post entre 2026-03-31 y 2026-04-14 (falta el 2026-04-07) y dos entregas en nueve días (2026-03-23 lunes y 2026-03-31 martes). Si en ese hueco hubo una edición que no está en el repo, todos los números desde el 24 en adelante se corren en uno."
@@ -646,65 +765,140 @@
       ]
     },
     "clasificacion_dudosa": [
-      { "edicion": 36, "slug": "corro-hace-16-anos-todavia-no-llegue", "detalle": "Frontmatter dice 'The Full Stack Human', pero el contenido es maratón, lesión y cuerpo: encaja mejor en Biological Clean Core. Se respetó el frontmatter." },
-      { "edicion": 30, "slug": "el-veneno-favorito-de-la-gente-inteligente", "detalle": "Frontmatter usa 'Full Stack Human' mientras el resto del corpus usa 'The Full Stack Human'. Inconsistencia de string en el CMS." },
-      { "edicion": 11, "slug": "above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you", "detalle": "Única edición publicada en inglés. La ed. 12 explica que el experimento se revirtió ('mis cicatrices están en español')." }
+      {
+        "edicion": 36,
+        "slug": "corro-hace-16-anos-todavia-no-llegue",
+        "detalle": "Frontmatter dice 'The Full Stack Human', pero el contenido es maratón, lesión y cuerpo: encaja mejor en Biological Clean Core. Se respetó el frontmatter."
+      },
+      {
+        "edicion": 30,
+        "slug": "el-veneno-favorito-de-la-gente-inteligente",
+        "detalle": "Frontmatter usa 'Full Stack Human' mientras el resto del corpus usa 'The Full Stack Human'. Inconsistencia de string en el CMS."
+      },
+      {
+        "edicion": 11,
+        "slug": "above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you",
+        "detalle": "Única edición publicada en inglés. La ed. 12 explica que el experimento se revirtió ('mis cicatrices están en español')."
+      }
     ]
   },
   "solapamiento_tematico": [
     {
       "grupo": "Sistemas vs. motivación / metas",
-      "ediciones": [3, 6, 9],
+      "ediciones": [
+        3,
+        6,
+        9
+      ],
       "nivel": "alto",
       "detalle": "Las tres defienden lo mismo: la motivación es una emoción con fecha de vencimiento y el sistema es lo que permanece. La ed. 3 y la ed. 9 usan el mismo dato (Quitter's Day de Strava) como prueba."
     },
     {
       "grupo": "Consumir contenido no es hacer",
-      "ediciones": [3, 30],
+      "ediciones": [
+        3,
+        30
+      ],
       "nivel": "alto",
       "detalle": "La 'masturbación cerebral' de la ed. 3 y el 'veneno favorito' de la ed. 30 son la misma tesis con 29 semanas de distancia. La ed. 30 la desarrolla con marco teórico (survivorship bias, Tetlock); la ed. 3 en modo confesional."
     },
     {
       "grupo": "Tu vida como sistema con deuda técnica",
-      "ediciones": [5, 10],
+      "ediciones": [
+        5,
+        10
+      ],
       "nivel": "alto",
       "detalle": "Frankenstein (ed. 5) y Legacy/Clean Core (ed. 10) son la misma metáfora aplicada dos veces con cinco semanas de diferencia: bases podridas, parches, refactorizar antes de agregar features."
     },
     {
       "grupo": "Delegar el criterio a la IA te atrofia",
-      "ediciones": [8, 19, 21, 22, 24, 31, 34],
+      "ediciones": [
+        8,
+        19,
+        21,
+        22,
+        24,
+        31,
+        34,
+        41,
+        42
+      ],
       "nivel": "muy alto — es el eje central del newsletter",
-      "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31."
+      "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31. La 41 lo trae por Sadin y el reflejo de apretar aceptar sin leer; la 42 por el caso Brett, que deja la IA tras 18 meses porque dejó de entender su propio sistema."
     },
     {
       "grupo": "Vender criterio, no tiempo",
-      "ediciones": [16, 17, 20],
+      "ediciones": [
+        16,
+        17,
+        20,
+        40
+      ],
       "nivel": "muy alto — hay párrafo repetido casi textual",
-      "detalle": "Las ed. 16 y 17 comparten un párrafo prácticamente idéntico: 'Estamos pasando de vender nuestro tiempo a vender nuestro criterio. La IA puede darte 100 soluciones, pero solo vos tenés la experiencia para saber cuál de esas 100 no va a explotar en seis meses.' La ed. 20 remata con la misma tesis vía el fin del body shopping."
+      "detalle": "Las ed. 16 y 17 comparten un párrafo prácticamente idéntico: 'Estamos pasando de vender nuestro tiempo a vender nuestro criterio. La IA puede darte 100 soluciones, pero solo vos tenés la experiencia para saber cuál de esas 100 no va a explotar en seis meses.' La ed. 20 remata con la misma tesis vía el fin del body shopping. La 40 lo aplica al rol BASIS: se va la ejecución, queda la decisión — 'trabajo de más criterio y menos manos'."
     },
     {
       "grupo": "Las 3 reglas del Operador",
-      "ediciones": [27, 28, 29],
+      "ediciones": [
+        27,
+        28,
+        29
+      ],
       "nivel": "muy alto — lista repetida tres semanas seguidas",
       "detalle": "Tres ediciones consecutivas cierran con la misma lista: conocé tus modelos / documentá tu criterio, no tus outputs / construí independencia de plataforma. La ed. 29 la presenta explícitamente como 'capa adicional' de la ed. 28, pero la ed. 27 ya la había enunciado casi igual."
     },
     {
       "grupo": "Las dos castas del ERP",
-      "ediciones": [15, 26, 32, 33, 37],
+      "ediciones": [
+        15,
+        26,
+        32,
+        33,
+        37
+      ],
       "nivel": "medio-alto",
       "detalle": "Arco largo y en su mayoría intencional (la ed. 37 y la 33 citan a la 26 explícitamente). El riesgo es la ed. 15 y la 32, que repiten el diagnóstico de fondo (migrar duele más que quedarse, más de la mitad sigue en ECC) sin referenciarse entre sí."
     },
     {
       "grupo": "El vibe coding produce demos que mueren",
-      "ediciones": [16, 19, 35],
+      "ediciones": [
+        16,
+        19,
+        35
+      ],
       "nivel": "medio",
       "detalle": "La app que solo corre en localhost aparece como argumento en la ed. 16 ('el Frankenstein se desmorona'), en la ed. 19 (code slop del vibe coder) y como tesis completa en la ed. 35."
     },
     {
       "grupo": "Frase-firma repetida",
-      "ediciones": [22, 28, 31, 32],
+      "ediciones": [
+        22,
+        28,
+        31,
+        32
+      ],
       "nivel": "estilístico, no temático",
       "detalle": "'El que entiende los fundamentos orquesta. El que no, es orquestado.' se usa como cierre en cuatro ediciones. Funciona como firma de marca, pero conviene decidir si es deliberado o inercia."
+    },
+    {
+      "grupo": "Sección 'Antes de que me des la razón' con autodeclaración de no-neutralidad",
+      "ediciones": [
+        41,
+        42
+      ],
+      "nivel": "muy alto — párrafo casi textual en dos ediciones consecutivas",
+      "detalle": "Las dos cierran con un bloque de contraargumentos donde Pablo declara que no es neutral. La formulación es casi idéntica: 'Trabajo en tecnología, vivo de esto, y empujo la adopción de IA [adentro de mi área / en mi área]. Cuando digo que [...] estoy describiendo un mundo donde mi propio oficio sigue [valiendo / teniendo sentido]. Tenelo en cuenta al leerme.' Como recurso de honestidad intelectual funciona; repetido semana a semana se vuelve fórmula."
+    },
+    {
+      "grupo": "Quién firma / quién responde por lo que ejecuta el agente",
+      "ediciones": [
+        38,
+        40,
+        41
+      ],
+      "nivel": "alto",
+      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias."
     }
   ]
 }
