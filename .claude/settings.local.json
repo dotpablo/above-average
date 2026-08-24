@@ -30,7 +30,27 @@
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\(''mcpServers'', {}\\), indent=2\\)\\)\")",
       "Bash(wc -l /Users/pablomarichal/ClaudeApps/webpablo/content/posts/*.mdx)",
       "Bash(timeout 10 npx next start -p 3099)",
-      "WebFetch(domain:hablamosdesap.com)"
+      "WebFetch(domain:hablamosdesap.com)",
+      "WebFetch(domain:support.substack.com)",
+      "WebFetch(domain:substack.com)",
+      "WebFetch(domain:ghost.org)",
+      "WebFetch(domain:docs.ghost.org)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:wordpress.com)",
+      "WebFetch(domain:substackcourse.com)",
+      "WebFetch(domain:ask.metafilter.com)",
+      "Bash(npx tsc *)",
+      "Bash(xargs -I{} sh -c 'echo \"=== {} ===\" && head -10 /Users/pablomarichal/ClaudeApps/webpablo/content/posts/{}')",
+      "Bash(gh run *)",
+      "Bash(vercel ls *)",
+      "WebFetch(domain:www.pablomarichal.com)",
+      "Bash(python3 -m json.tool)",
+      "Bash(cd /private/tmp/claude-501/-Users-pablomarichal-ClaudeApps-webpablo/7655721b-101c-43ef-bdde-156fff4037d3/tool-results)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "Bash(python3 -c \"import json; json.load\\(open\\('ghost-export.json'\\)\\)\")",
+      "Bash(npx next *)",
+      "Bash(python3 *)"
     ]
   }
 }

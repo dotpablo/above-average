@@ -1,0 +1,710 @@
+{
+  "meta": {
+    "newsletter": "Above Average",
+    "autor": "Pablo Marichal",
+    "generado": "2026-08-03",
+    "fuente": "content/posts/*.mdx",
+    "criterio_de_inclusion": "Posts en español publicados desde el lanzamiento del newsletter (2025-10-26, 'Por Qué Above Average') en adelante. Se excluyen los 3 archivos en inglés de content/posts/ que son traducciones de ediciones ya listadas (i-sold-my-bike-to-buy-a-career, the-death-of-the-man-hour, the-zombie-erp-and-the-technical-privilege-gap), todo content/posts-en/ y el archivo histórico de LinkedIn/Substack anterior a 2025-10-26.",
+    "nota_numeracion": "Ningún archivo trae el número de edición en el frontmatter. La numeración es secuencial por fecha desde 2025-10-26 = 1. Se corrobora con la edición del 2026-01-06, que dice 'If you have been reading me for the past 11 weeks' y cae exactamente en la posición 11.",
+    "total_ediciones": 39
+  },
+  "ediciones": [
+    {
+      "edicion": 39,
+      "fecha": "2026-07-28",
+      "titulo": "La IA no se rebeló. Le dejaron la puerta abierta",
+      "slug": "la-ia-no-se-rebelo-le-dejaron-la-puerta-abierta",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Cambiá el verbo y se cae el titular: no hubo rebelión, hubo contención mal diseñada.",
+      "temas": "openai, hugging face, gpt-5.6 sol, critic hype, modelos abiertos, kimi k3, jensen huang, permisos de agentes",
+      "fuentes_clave": [
+        "OpenAI — comunicado sobre el incidente en la evaluación de capacidades cibernéticas, 21 de julio de 2026 (vía Reuters)",
+        "Dan Guido (Trail of Bits) — declaraciones sobre el fallo de contención con salvaguardas desactivadas",
+        "Jensen Huang (@JensenHuang) — carta 'Open Weights and American AI Leadership', 24 de julio de 2026",
+        "System card de GPT-5.6, OpenAI, publicado antes del lanzamiento del 9 de julio de 2026"
+      ],
+      "enlaza_a": [
+        "la-inteligencia-tiene-un-interruptor-no-esta-en-tu-casa",
+        "febrero-2020-otra-vez-y-el-silencio-de-los-ingenieros"
+      ]
+    },
+    {
+      "edicion": 38,
+      "fecha": "2026-07-21",
+      "titulo": "La IA es una máquina de crear. Nadie construyó una para mantener.",
+      "slug": "la-ia-es-una-maquina-de-crear-nadie-construyo-una-para-mantener",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La IA multiplicó la capacidad de crear y volvió escaso lo único que sostiene: mantener y firmar.",
+      "temas": "curl, daniel stenberg, ai slop, linus torvalds, sashiko, open source, reviewed-by, cadena de suministro",
+      "fuentes_clave": [
+        "Stenberg, Daniel. 'The end of the curl bug-bounty.' daniel.haxx.se, enero de 2026",
+        "Orland, Kyle. 'Linus Torvalds to critics of AI coding in Linux: Fork it. Or just walk away.' Ars Technica, 16 de julio de 2026",
+        "Black Duck. 'Open Source Security and Risk Analysis (OSSRA) Report 2026'",
+        "Learner, Sam. 'Who cleans up after the vibe-coding party?' Financial Times, julio de 2026"
+      ],
+      "enlaza_a": [
+        "te-cobran-por-pensar-y-delegaron-el-pensamiento",
+        "el-99-por-ciento-muere-en-localhost",
+        "la-union-europea-le-dio-la-razon-a-los-que-no-migraron"
+      ]
+    },
+    {
+      "edicion": 37,
+      "fecha": "2026-07-14",
+      "titulo": "La Unión Europea le acaba de dar la razón a los que no migraron",
+      "slug": "la-union-europea-le-dio-la-razon-a-los-que-no-migraron",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Las herramientas cambian de dueño, precio y reglas; el criterio para decidir sigue siendo tuyo.",
+      "temas": "comisión europea, sap, ecc, soporte de terceros, api policy v4/2026, joule, dsag, el gobernador",
+      "fuentes_clave": [
+        "Comisión Europea — decisión sobre compromisos vinculantes de SAP en soporte on-premise, caso AT.40823, 9 de julio de 2026",
+        "Bremmer, Manfred. 'SAP concedes to EU, freeing CIOs from expensive support shackles.' CIO / Computerwoche, 10 de julio de 2026 (entrevista a Michael Bloch, DSAG)",
+        "SAP API Policy v4/2026, sección 2.2.2",
+        "Forrester — datos de adopción Joule (3%) vs. Copilot (77%), vía Headless Systems, junio de 2026"
+      ],
+      "enlaza_a": ["sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta"]
+    },
+    {
+      "edicion": 36,
+      "fecha": "2026-07-07",
+      "titulo": "Corro hace 16 años. Todavía no llegué.",
+      "slug": "corro-hace-16-anos-todavia-no-llegue",
+      "pilar": "Full Stack Human",
+      "tesis": "El trabajo invisible que nadie aplaude es el único que te deja siendo alguien no reemplazable.",
+      "temas": "maratón, berlín, lesión, kilómetro invisible, deporte de resistencia, ia como entrenamiento, flotar, buenos aires",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    },
+    {
+      "edicion": 35,
+      "fecha": "2026-06-30",
+      "titulo": "El 99% muere en localhost",
+      "slug": "el-99-por-ciento-muere-en-localhost",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Escribir código no es desarrollar software: lo escaso no es vibecodear, es entender el negocio.",
+      "temas": "christian klein, vibe coding, economía del screenshot, localhost, boris cherny, sweeper, maintainer, abap",
+      "fuentes_clave": [
+        "Smith, Paul. 'SAP chief predicts AI will replace its human coders within four years.' Australian Financial Review, 21 de junio de 2026 (entrevista a Christian Klein)",
+        "Cherny, Boris (@bcherny) — los cinco arquetipos de roles (Prototyper, Builder, Sweeper, Grower, Maintainer). X, junio de 2026",
+        "Concepto de 'localhost economy' / 'screenshot economy' y la tasa de mortalidad del vibe coding — discusión en la comunidad de desarrollo, junio de 2026"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 34,
+      "fecha": "2026-06-23",
+      "titulo": "Te cobran por pensar. Y delegaron el pensamiento.",
+      "slug": "te-cobran-por-pensar-y-delegaron-el-pensamiento",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Te pagan por pensar; el día que delegás el pensamiento no queda nada que cobrar.",
+      "temas": "kpmg, ey, sullivan & cromwell, google ai overviews, tribunal de múnich, gptzero, sello de goma, rendición institucional",
+      "fuentes_clave": [
+        "Bratton, E. & Foley, S. 'KPMG report contained AI hallucinations on benefits of AI.' Financial Times, 12 de junio de 2026",
+        "Landgericht München I, Endurteil 28.05.2026, caso 26 O 869/26 — Verlagshaus24 contra Google",
+        "Sanctions order, US District Court, Northern District of Mississippi — jueza Sherrion Aycock, caso ciudad de Aberdeen",
+        "Pew Research — dato sobre clics en fuentes de AI Overviews (1%)"
+      ],
+      "enlaza_a": ["delegar-no-es-rendirse-pero-se-sienten-igual"]
+    },
+    {
+      "edicion": 33,
+      "fecha": "2026-06-16",
+      "titulo": "La inteligencia tiene un interruptor. No está en tu casa.",
+      "slug": "la-inteligencia-tiene-un-interruptor-no-esta-en-tu-casa",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La inteligencia de frontera es prestada y se puede apagar: diseñá una arquitectura agnóstica al modelo.",
+      "temas": "anthropic, fable 5, departamento de comercio, andy jassy, elysium, latam-gpt, cenia, modelos locales",
+      "fuentes_clave": [
+        "Ramkumar, A. & McMillan, R. 'Amazon CEO's Talks With U.S. Officials Triggered Crackdown on Anthropic Models.' The Wall Street Journal, 13 de junio de 2026",
+        "Anthropic. 'Statement on the US government directive to suspend access to Fable 5 and Mythos 5.' 12 de junio de 2026",
+        "SAP News Center. 'SAP and Anthropic to bring Claude to SAP Business AI Platform.' Sapphire 2026, 12 de mayo de 2026",
+        "CENIA. 'Latam-GPT: la primera IA regional abierta creada con datos latinoamericanos.' Febrero de 2026"
+      ],
+      "enlaza_a": [
+        "sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta",
+        "sap-prometio-el-futuro-autonomo-la-realidad-va-mas-lenta"
+      ]
+    },
+    {
+      "edicion": 32,
+      "fecha": "2026-06-09",
+      "titulo": "El mundo corre sobre tecnología que deberíamos haber jubilado, pero la mayoría te vende agentes",
+      "slug": "el-mundo-corre-sobre-tecnologia-que-deberiamos-haber-jubilado",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El PowerPoint soporta cualquier cosa; tu sistema en producción, no: separá la señal del keynote.",
+      "temas": "mainframes, gartner, ecc, s/4hana, dsag, asug, autonomous enterprise, costo de tokens",
+      "fuentes_clave": [
+        "Hong, Euny. 'The world still runs on mainframes.' 2026 (datos de IBM)",
+        "ASUG Research Report, 2026 (encuesta a 142 miembros con Microsoft e Intel)",
+        "Gartner, vía CIO.com. 'Nearly half of SAP ECC customers may stick with legacy ERP beyond 2027.' 2025",
+        "Basis Technologies. 'The True State of S/4HANA 2025.' Noviembre 2025"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 31,
+      "fecha": "2026-06-02",
+      "titulo": "Delegar no es rendirse. Pero se sienten igual.",
+      "slug": "delegar-no-es-rendirse-pero-se-sienten-igual",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Delegar y rendirse se sienten idénticos; la diferencia recién aparece cuando algo se rompe.",
+      "temas": "wharton, shaw y nave, rendición cognitiva, sycophancy, syceval, addy osmani, deuda de comprensión, andy clark",
+      "fuentes_clave": [
+        "Shaw, S. & Nave, G. 'Thinking Fast, Slow, and Artificial: How AI is Reshaping Human Reasoning and the Rise of Cognitive Surrender.' Wharton School, University of Pennsylvania, 2026",
+        "Osmani, Addy. 'Cognitive Surrender.' Blog personal, mayo 2026",
+        "SycEval, Stanford, 2025 — tasa de sycophancy del 58% entre GPT-4o, Claude y Gemini",
+        "MIT. 'Your Brain on ChatGPT.' Estudio sobre conectividad neuronal y uso de IA, 2025"
+      ],
+      "enlaza_a": ["el-veneno-favorito-de-la-gente-inteligente"]
+    },
+    {
+      "edicion": 30,
+      "fecha": "2026-05-26",
+      "titulo": "El veneno favorito de la gente inteligente",
+      "slug": "el-veneno-favorito-de-la-gente-inteligente",
+      "pilar": "Full Stack Human",
+      "tesis": "Aprender más es la procrastinación favorita de la gente inteligente: hacer no se reemplaza consumiendo.",
+      "temas": "mark manson, survivorship bias, abraham wald, duncan watts, isaiah berlin, philip tetlock, george mack, high agency",
+      "fuentes_clave": [
+        "Mack, George. 'The high agency triangle.' Substack, mayo 2026",
+        "Tetlock, Philip. Expert Political Judgment: How Good Is It? How Can We Know? Princeton University Press, 2005",
+        "Watts, Duncan. 'Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market.' Science, 2006",
+        "Berlin, Isaiah. The Hedgehog and the Fox, 1953"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 29,
+      "fecha": "2026-05-19",
+      "titulo": "SAP prometió el futuro autónomo. La realidad va más lenta.",
+      "slug": "sap-prometio-el-futuro-autonomo-la-realidad-va-mas-lenta",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "SAP vendió autonomía; la pregunta sin responder es quién verifica el output antes de producción.",
+      "temas": "sapphire 2026, christian klein, 224 agentes, company memory, ai units, pricing subsidiado, jon reed, delegate-52",
+      "fuentes_clave": [
+        "SAP Sapphire 2026 keynote, Christian Klein, Orlando, mayo 2026",
+        "Rosenthal, Melissa. 'Every AI company serving your org is currently losing money on you.' LinkedIn, mayo 2026",
+        "Laban, Schnabel, Neville. 'LLMs Corrupt Your Documents When You Delegate.' Microsoft Research, abril 2026. arXiv:2604.15597",
+        "SAP SE stock data (ETR: SAP), cierre 15 de mayo de 2026"
+      ],
+      "enlaza_a": [
+        "mientras-todos-hablan-de-despidos-por-ia-accenture-habla-de-ascensos",
+        "la-ia-me-mintio-en-la-cara-microsoft-acaba-de-explicar-por-que",
+        "sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta"
+      ]
+    },
+    {
+      "edicion": 28,
+      "fecha": "2026-05-12",
+      "titulo": "Mientras todos hablan de despidos por IA, Accenture habla de ascensos",
+      "slug": "mientras-todos-hablan-de-despidos-por-ia-accenture-habla-de-ascensos",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Cuando todos tengan las mismas herramientas, la diferencia será quién sabe combinarlas con criterio.",
+      "temas": "accenture, julie sweet, sap ai foundation, el operador, tank, matrix, jon reed, fluencia en ia",
+      "fuentes_clave": [
+        "Julie Sweet, CEO de Accenture — entrevista con Fortune, Great Place to Work For All Summit, Las Vegas, 10 de mayo de 2026",
+        "Jon Reed, Diginomica — declaraciones publicadas en LinkedIn, mayo 2026",
+        "Hofmann, Tobias. 'It's about control.' itsfullofstars.de, mayo 2026",
+        "Christian Klein, SAP Q1 2026 earnings call"
+      ],
+      "enlaza_a": [
+        "la-ia-me-mintio-en-la-cara-microsoft-acaba-de-explicar-por-que",
+        "sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta",
+        "shadow-ai-usar-ia-a-escondidas-no-es-paranoia",
+        "la-ia-divide-a-la-humanidad-en-dos"
+      ]
+    },
+    {
+      "edicion": 27,
+      "fecha": "2026-05-05",
+      "titulo": "La IA me mintió en la cara. Microsoft acaba de explicar por qué.",
+      "slug": "la-ia-me-mintio-en-la-cara-microsoft-acaba-de-explicar-por-que",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El valor del veterano ya no es ejecutar, sino detectar el error invisible que la IA introduce.",
+      "temas": "joule, delegate-52, microsoft research, error invisible, bono del veterano, benchmark falso, migración a ciegas, gemini",
+      "fuentes_clave": [
+        "Laban, Schnabel, Neville. 'LLMs Corrupt Your Documents When You Delegate.' Microsoft Research, abril 2026. arXiv:2604.15597",
+        "SAP API Policy v.4.2026",
+        "Bloomberg — declaraciones de Christian Klein sobre la transición IA, abril 2026",
+        "Claude Mythos Preview System Card, Anthropic, abril 2026"
+      ],
+      "enlaza_a": [
+        "la-ia-divide-a-la-humanidad-en-dos",
+        "shadow-ai-usar-ia-a-escondidas-no-es-paranoia",
+        "sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta"
+      ]
+    },
+    {
+      "edicion": 26,
+      "fecha": "2026-04-28",
+      "titulo": "SAP acaba de crear dos castas de ERP. Y la mayoría no se dio cuenta.",
+      "slug": "sap-dos-castas-de-erp-y-la-mayoria-no-se-dio-cuenta",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "SAP cerró la puerta a los agentes externos y así partió su ecosistema en dos castas.",
+      "temas": "sap api policy v4.2026, agentic ai, openai for germany, christian klein, ecc, s/4hana, mustang del 67, anthropic",
+      "fuentes_clave": [
+        "SAP API Policy v.4.2026",
+        "Anuncio SAP x OpenAI 'OpenAI for Germany', septiembre 2025",
+        "Bloomberg — declaraciones de Christian Klein sobre la transición IA, abril 2026",
+        "Claude Mythos Preview System Card, Anthropic, abril 2026"
+      ],
+      "enlaza_a": [
+        "la-ia-divide-a-la-humanidad-en-dos",
+        "shadow-ai-usar-ia-a-escondidas-no-es-paranoia"
+      ]
+    },
+    {
+      "edicion": 25,
+      "fecha": "2026-04-21",
+      "titulo": "Usar IA a escondidas no es paranoia. Es lógica.",
+      "slug": "shadow-ai-usar-ia-a-escondidas-no-es-paranoia",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Esconder cuánto usás IA es frágil; el antifrágil la usa en público y documenta su proceso.",
+      "temas": "shadow ai, harvard business review, augmentation vs automation, jack dorsey, block, nassim taleb, antifragilidad, fiverr",
+      "fuentes_clave": [
+        "De Neve, Hancock y Niederhoffer. 'Why Companies That Choose AI Augmentation Over Automation May Win in the Long Run.' Harvard Business Review, abril 2026",
+        "Taleb, Nassim Nicholas. Antifragile, 2012",
+        "Claude Mythos Preview System Card, Anthropic, abril 2026",
+        "Indeed Workforce Insights Report 2025"
+      ],
+      "enlaza_a": ["la-ia-divide-a-la-humanidad-en-dos"]
+    },
+    {
+      "edicion": 24,
+      "fecha": "2026-04-14",
+      "titulo": "La IA acaba de dividir a la humanidad en dos. ¿Ya sabés de qué lado estás?",
+      "slug": "la-ia-divide-a-la-humanidad-en-dos",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La IA multiplica tu criterio; aplicada a cero criterio el resultado sigue siendo cero.",
+      "temas": "mythos, anthropic, jensen huang, mo gawdat, scary smart, face o rip, augmented iq, ingreso básico universal",
+      "fuentes_clave": [
+        "Mo Gawdat, Scary Smart — y sus declaraciones sobre la ventana de 12 a 15 años y el 'mínimo de energía'",
+        "Jensen Huang — podcast de Lex Fridman, declaraciones sobre AGI, abril 2026",
+        "Anthropic — modelo Mythos no publicado, abril 2026"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 23,
+      "fecha": "2026-03-31",
+      "titulo": "El especialista está condenado. Leonardo tenía razón hace 500 años.",
+      "slug": "el-especialista-esta-condenado-leonardo-tenia-razon",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El especialista es hoy el más vulnerable: lo insustituible es integrar dominios que nadie conecta.",
+      "temas": "michael gelb, leonardo da vinci, inteligencia genial, curiosità, sfumato, the-interviewer, adopción global de ia, polímata",
+      "fuentes_clave": [
+        "Gelb, Michael. Inteligencia Genial — Leonardo da Vinci (los 7 principios)",
+        "Método 'the-interviewer' usado internamente por ingenieros de Anthropic",
+        "Gráfico de adopción de IA en la humanidad (2.500 puntos, 3,2 millones de personas cada uno), datos de febrero 2026, visto en LinkedIn — sin autoría identificada en el texto"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 22,
+      "fecha": "2026-03-23",
+      "titulo": "1.10x",
+      "slug": "1-10x",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Adoptar IA rápido no sirve de nada si se adopta sin fricción cognitiva ni criterio propio.",
+      "temas": "uruguay, anthropic economic index, microsoft ai for good lab, latu, juan m. lavista ferres, éric sadin, silla de ruedas o exoesqueleto, redes neuronales",
+      "fuentes_clave": [
+        "Anthropic — índice de uso de Claude por país (Uruguay 1.10x, Israel 4.90x, EE.UU. 3.69x)",
+        "Microsoft — anuncio del primer AI for Good Lab de Sudamérica en el LATU, Montevideo; declaraciones de Juan M. Lavista Ferres",
+        "Shen, Judy Hanwen & Tamkin, Alex (Anthropic y Stanford) — paper experimental sobre aprendizaje con IA, enero de 2026"
+      ],
+      "enlaza_a": ["eric-sadin-palantir-y-el-desierto-cognitivo-del-consultor-sap"]
+    },
+    {
+      "edicion": 21,
+      "fecha": "2026-03-17",
+      "titulo": "Éric Sadin, Palantir y el desierto cognitivo del consultor SAP",
+      "slug": "eric-sadin-palantir-y-el-desierto-cognitivo-del-consultor-sap",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Delegar sin fricción cognitiva te da el output y te roba la competencia que lo sostenía.",
+      "temas": "éric sadin, vegetalización cognitiva, judy hanwen shen, alex tamkin, palantir aip, migración ecc a s/4hana, joule for consultants, exoesqueleto",
+      "fuentes_clave": [
+        "Shen, Judy Hanwen & Tamkin, Alex (Anthropic / Stanford) — paper experimental sobre delegación a IA y aprendizaje, enero de 2026",
+        "Sadin, Éric — La vida espectral y análisis sobre la 'vegetalización' de la humanidad",
+        "Palantir — earnings call Q4, declaraciones del CTO sobre migraciones SAP ECC a S/4HANA con AIP; casos publicados en su web",
+        "Alianza estratégica SAP–Palantir, mayo de 2025"
+      ],
+      "enlaza_a": ["la-lista-de-decapitados-de-anthropic-el-fin-del-body-shopping"]
+    },
+    {
+      "edicion": 20,
+      "fecha": "2026-03-10",
+      "titulo": "La lista de decapitados de Anthropic, el fin del body shopping y mi sistema de orquestación",
+      "slug": "la-lista-de-decapitados-de-anthropic-el-fin-del-body-shopping",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El body shopping murió: la señal de competencia pasó de las credenciales a lo que despachás.",
+      "temas": "anthropic, body shopping, india, filipinas, claude code, antigravity, naval ravikant, apalancamiento",
+      "fuentes_clave": [
+        "Anthropic — reporte sobre exposición de roles a la automatización (75% de las tareas de un programador, caída del 14% en contratación junior)",
+        "Ravikant, Naval. The Almanack of Naval Ravikant"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 19,
+      "fecha": "2026-03-03",
+      "titulo": "Dunning-Kruger as a Service (DKaaS): La trampa del Vibe Coder y el \"Bruto Digital\"",
+      "slug": "dunning-kruger-as-a-service-dkaas-la-trampa-del-vibe-coder-y-el-bruto-digital",
+      "pilar": "Builder Mindset",
+      "tesis": "La IA democratizó la sintaxis pero no el criterio: por eso termina validando al incompetente.",
+      "temas": "dunning-kruger, vibe coder, bruto digital, code slop, addy osmani, éric sadin, adrs, s/4hana",
+      "fuentes_clave": [
+        "Osmani, Addy. The Effective Software Engineer (eficiencia vs. efectividad, uso de IA como abogado del diablo en ADRs)",
+        "Dunning, David & Kruger, Justin. 'Unskilled and Unaware of It', 1999",
+        "Sadin, Éric — concepto de 'vegetalización de la humanidad'"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 18,
+      "fecha": "2026-02-24",
+      "titulo": "Febrero 2020 (Otra vez) y el silencio de los ingenieros",
+      "slug": "febrero-2020-otra-vez-y-el-silencio-de-los-ingenieros",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La parálisis general ante el cambio exponencial es una ventaja competitiva para el que despierta hoy.",
+      "temas": "alvin toffler, future shock, matt shumer, something big is happening, boris cherny, claude code, gpt-5.3 codex, opus 4.6",
+      "fuentes_clave": [
+        "Toffler, Alvin. Future Shock, 1970",
+        "Shumer, Matt. 'Something Big Is Happening.' X, febrero de 2026",
+        "Boris Cherny (Anthropic, líder de Claude Code) — entrevista, febrero de 2026"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 17,
+      "fecha": "2026-02-17",
+      "titulo": "Por qué tu tía te pregunta si tenés trabajo (Manual para estar listo para renunciar 2026)",
+      "slug": "por-que-tu-tia-te-pregunta-si-tenes-trabajo-manual-para-estar-listo-para-renunci",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El puesto es un alquiler temporal: invertí en tu propio criterio antes de que el mercado avise.",
+      "temas": "layoffs, triciclo corporativo, modelos de frontera, orquestador de agentes, guillermo rauch, freddy vega, polímata, agency",
+      "fuentes_clave": [
+        "Podcast de Freddy Vega con Guillermo Rauch — sobre abstracción, polímatas y el futuro de la programación"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 16,
+      "fecha": "2026-02-10",
+      "titulo": "El fin de la Hora-Hombre: ¿Te pagan por tu tiempo o por tu presupuesto de tokens?",
+      "slug": "el-fin-de-la-hora-hombre-te-pagan-por-tu-tiempo-o-por-tu-presupuesto-de-tokens",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La hora-hombre murió: ahora se cobra por gestionar el riesgo del token, no por el tiempo.",
+      "temas": "claude opus 4.6, compilador de c, remote labor index, riesgo del token, gilfoyle, son of anton, vibe coder, soberanía técnica",
+      "fuentes_clave": [
+        "Anthropic Engineering — 'Building a C compiler' (16 agentes de Claude Opus 4.6, 100.000 líneas de Rust, 20.000 USD, 14 días)",
+        "Remote Labor Index (RLI) — la IA falla el 97% de las tareas freelance reales, vía ZDNet"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 15,
+      "fecha": "2026-02-03",
+      "titulo": "El ERP zombie y la brecha del privilegio técnico: crónica de una migración al límite",
+      "slug": "el-erp-zombie-y-la-brecha-del-privilegio-tecnico-cronica-de-una-migracion-al-lim",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Quedarse en ECC no es prudencia: son cuidados paliativos que se pagan con soberanía técnica.",
+      "temas": "sap ecc, 2027, oracle oci, rimini street, rise with sap, abap cloud, mcp, moltbot",
+      "fuentes_clave": [
+        "SAP — fin de mantenimiento mainstream de ECC el 31 de diciembre de 2027 y mantenimiento extendido con 2% extra",
+        "SAP Community — documentación sobre conversiones Brownfield y Greenfield a S/4HANA",
+        "Ofertas de soporte de terceros de Oracle (OCI) y Rimini Street"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 14,
+      "fecha": "2026-01-27",
+      "titulo": "La ventaja competitiva de volver a ser un \"Rookie\" (y mi Plan Z)",
+      "slug": "la-ventaja-competitiva-de-volver-a-ser-un-rookie-y-mi-plan-z",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La humildad de volver a sentirse novato es hoy el único plan de contingencia real.",
+      "temas": "rookie mindset, reid hoffman, the start-up of you, plan z, alphafold, demis hassabis, éric sadin, platzi",
+      "fuentes_clave": [
+        "Hoffman, Reid. The Start-up of You (Plan A / Plan B / Plan Z)",
+        "Google DeepMind — documental sobre AlphaFold y el problema del plegamiento de proteínas",
+        "Sadin, Éric — 'vegetalización de la humanidad'",
+        "AI-2027 (ai-2027.com) — predicciones de AGI"
+      ],
+      "enlaza_a": [
+        "mi-costo-de-entrada-al-mundo-sap-por-que-vendi-la-bici",
+        "la-trampa-del-mwd-y-por-que-el-ownership-es-la-unica-salida"
+      ]
+    },
+    {
+      "edicion": 13,
+      "fecha": "2026-01-20",
+      "titulo": "La Trampa del MWD (y por qué el Ownership es la única salida)",
+      "slug": "la-trampa-del-mwd-y-por-que-el-ownership-es-la-unica-salida",
+      "pilar": "Full Stack Human",
+      "tesis": "Volverte prescindible en la operativa es lo único que te vuelve imprescindible en la estrategia.",
+      "temas": "mwd, minimum work done, caja negra, single point of failure, extreme ownership, documentación, siempre listo para renunciar, automatización",
+      "fuentes_clave": null,
+      "enlaza_a": ["mi-costo-de-entrada-al-mundo-sap-por-que-vendi-la-bici"]
+    },
+    {
+      "edicion": 12,
+      "fecha": "2026-01-13",
+      "titulo": "Mi costo de entrada al mundo SAP: Por qué vendí la bici",
+      "slug": "mi-costo-de-entrada-al-mundo-sap-por-que-vendi-la-bici",
+      "pilar": "Full Stack Human",
+      "tesis": "Lo material se pierde; la única riqueza portátil es saber cómo volver a generarla.",
+      "temas": "venezuela, diáspora, certificación sap, naval ravikant, código fuente, uruguay, antifragilidad, emigración",
+      "fuentes_clave": [
+        "Ravikant, Naval — cita sobre recuperar la riqueza a partir del skillset propio",
+        "Comparación de PIB Polonia vs. Venezuela desde los años 90 (gráfico incluido en el post, sin fuente citada)"
+      ],
+      "enlaza_a": ["above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you"]
+    },
+    {
+      "edicion": 11,
+      "fecha": "2026-01-06",
+      "titulo": "Above Average OS v1.0: Why brute force is failing (DeepSeek vs. You)",
+      "slug": "above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you",
+      "pilar": "Full Stack Human",
+      "tesis": "La arquitectura le gana a la fuerza bruta: dejá de forzar y empezá a diseñar tu sistema.",
+      "temas": "deepseek, mhc, manifold-constrained hyper-connections, éric sadin, ai slooper, full stack human os, burnout, agency",
+      "fuentes_clave": [
+        "DeepSeek — paper del framework 'Manifold-Constrained Hyper-Connections' (mHC), 1 de enero de 2026",
+        "Sadin, Éric — 'L'Intelligence artificielle ou l'enjeu du siècle' y ensayos posteriores"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 10,
+      "fecha": "2025-12-28",
+      "titulo": "Tu vida es un sistema Legacy (Manual de Migración 2026)",
+      "slug": "tu-vida-es-un-sistema-legacy-manual-de-migracion-2026",
+      "pilar": "Full Stack Human",
+      "tesis": "Sin un núcleo biológico limpio, cualquier alto rendimiento que apiles encima termina en dump.",
+      "temas": "clean core, código z, sap r/3, kernel biológico, btp, side-by-side, deuda técnica, migración por fases",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    },
+    {
+      "edicion": 9,
+      "fecha": "2025-12-21",
+      "titulo": "Post-Mortem 2025: Por qué tus metas van a fallar",
+      "slug": "post-mortem-2025-por-que-tus-metas-van-a-fallar",
+      "pilar": "Full Stack Human",
+      "tesis": "Las metas te dejan en fracaso constante; hacé el post-mortem y rediseñá el sistema.",
+      "temas": "scott adams, sistemas vs metas, nassim taleb, antifragile, quitter's day, strava, 5 whys, root cause analysis",
+      "fuentes_clave": [
+        "Adams, Scott. How to Fail at Almost Everything and Still Win Big",
+        "Taleb, Nassim Nicholas. Antifragile",
+        "Strava — 'Quitter's Day', el segundo viernes de enero",
+        "AWS Well-Architected — técnica de los 5 Whys"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 8,
+      "fecha": "2025-12-14",
+      "titulo": "La IA es la nueva Piedra Filosofal (y eso es un problema)",
+      "slug": "la-ia-es-la-nueva-piedra-filosofal-y-eso-es-un-problema",
+      "pilar": "Builder Mindset",
+      "tesis": "La IA promete oro sin esfuerzo y por eso delegarle el criterio te termina atrofiando.",
+      "temas": "faisal hoque, transcend, piedra filosofal, alquimia, detach and devote, super niñera, ayuno de comodidad, callo mental",
+      "fuentes_clave": [
+        "Hoque, Faisal. Transcend (analogía de la piedra filosofal y el marco 'Detach and Devote')"
+      ],
+      "enlaza_a": ["despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km"]
+    },
+    {
+      "edicion": 7,
+      "fecha": "2025-12-07",
+      "titulo": "Despedí a mi entrenador. Contraté a una IA. (El experimento de 42km)",
+      "slug": "despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km",
+      "pilar": "Biological Clean Core",
+      "tesis": "La rigidez no es fortaleza sino fragilidad: el plan que sirve se recalcula con tu vida real.",
+      "temas": "maratón de buenos aires, 3h14, gemini, entrenamiento adaptativo, feedback loop, vfc, garmin, cero burnout",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    },
+    {
+      "edicion": 6,
+      "fecha": "2025-11-30",
+      "titulo": "Tu fuerza de voluntad tiene un bug (La IA es el parche)",
+      "slug": "tu-fuerza-de-voluntad-tiene-un-bug-la-ia-es-el-parche",
+      "pilar": "Builder Mindset",
+      "tesis": "La fuerza de voluntad se agota: delegá la estructura a la IA y ejecutá sin decidir.",
+      "temas": "fatiga de decisión, corteza prefrontal, deep work, sistemas, 19 maratones, ia como arquitecto, confiabilidad, legado",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    },
+    {
+      "edicion": 5,
+      "fecha": "2025-11-23",
+      "titulo": "Tu vida es un sistema Frankenstein (y va a colapsar)",
+      "slug": "tu-vida-es-un-sistema-frankenstein-y-va-a-colapsar",
+      "pilar": "Full Stack Human",
+      "tesis": "Los parches que sostienen tu vida son deuda técnica que colapsa en el peor momento.",
+      "temas": "deuda técnica, spaghetti code, refactorización, hack vs sistema, pantallas, camino feliz, auditoría, prompt de auditoría",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    },
+    {
+      "edicion": 4,
+      "fecha": "2025-11-16",
+      "titulo": "El balance vida-trabajo es una mentira. Y te está destruyendo.",
+      "slug": "el-balance-vida-trabajo-es-una-mentira-y-te-esta-destruyendo",
+      "pilar": "Full Stack Human",
+      "tesis": "El balance no existe: se apilan dominios por energía y se sacrifica conscientemente lo irrelevante.",
+      "temas": "work-life balance, stack de dominios, ancla, energy management, working parents, temporadas, lista de no hacer, presencia",
+      "fuentes_clave": [
+        "Dato citado sin fuente en el texto: 72% de los padres trabajadores reporta que el trabajo interfiere con la vida familiar"
+      ],
+      "enlaza_a": ["el-average-espera-motivacion-14-dias-el-above-average-construye-momentum-toda-la"]
+    },
+    {
+      "edicion": 3,
+      "fecha": "2025-11-09",
+      "titulo": "El Average espera motivación (14 Días). El Above Average construye momentum (toda la vida).",
+      "slug": "el-average-espera-motivacion-14-dias-el-above-average-construye-momentum-toda-la",
+      "pilar": "Full Stack Human",
+      "tesis": "La motivación dura catorce días; el momentum se sostiene porque nunca ponés un cero.",
+      "temas": "quitter's day, strava, david goggins, can't hurt me, regla del 40%, primera ley de newton, interés compuesto, no rompas la cadena",
+      "fuentes_clave": [
+        "Strava — 'Quitter's Day', el segundo viernes de enero (vía nationaltoday.com)",
+        "Goggins, David. Can't Hurt Me (callousing the mind, la regla del 40%, el 'Gobernador')",
+        "Primera Ley de Newton / concepto de momentum"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 2,
+      "fecha": "2025-11-02",
+      "titulo": "El Average Dice 'No Tengo Tiempo' (Pero Tiene 5+ Horas de Scroll Diario)",
+      "slug": "el-average-dice-no-tengo-tiempo-pero-tiene-5-horas-de-scroll-diario",
+      "pilar": "Full Stack Human",
+      "tesis": "«No tengo tiempo» no es un problema de tiempo sino de decisiones que nunca eliminaste.",
+      "temas": "decision fatigue, datareportal, gwi, mike tyson, context switching, apa, batching, estaciones",
+      "fuentes_clave": [
+        "DataReportal — Digital 2024 Global Overview Report (2h 23m diarios en redes sociales)",
+        "GWI — reportes sobre tiempo de pantalla (3h 17m en TV/streaming)",
+        "American Psychological Association — investigación sobre el costo del context switching (hasta 40% del tiempo productivo)"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 1,
+      "fecha": "2025-10-26",
+      "titulo": "Por Qué Above Average (Y por qué esto es para vos)",
+      "slug": "por-que-above-average-y-por-que-esto-es-para-vos",
+      "pilar": "Full Stack Human",
+      "tesis": "El average es la ruta por defecto de quien no elige activamente otra cosa: sistemas.",
+      "temas": "manifiesto, above average sundays, 19 maratones, max y mía, sistemas, estadística del average, legado, sin motivación barata",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    }
+  ],
+  "revisar_manualmente": {
+    "sin_fuentes_identificables": [
+      { "edicion": 1, "slug": "por-que-above-average-y-por-que-esto-es-para-vos", "detalle": "Cita estadísticas (70% sobrepeso, 0.5% corrió una maratón, 43% no lee un libro al año) sin atribuir ninguna fuente." },
+      { "edicion": 5, "slug": "tu-vida-es-un-sistema-frankenstein-y-va-a-colapsar", "detalle": "Afirma que el 90% de los problemas en producción son parches viejos, sin fuente. No cita autores ni estudios." },
+      { "edicion": 6, "slug": "tu-fuerza-de-voluntad-tiene-un-bug-la-ia-es-el-parche", "detalle": "Usa 'fatiga de decisión' como concepto central sin citar la investigación de origen." },
+      { "edicion": 7, "slug": "despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km", "detalle": "Abre con 'el 80% de los padres profesionales que intentan correr una maratón se rompen o abandonan' sin fuente. Solo menciona herramientas (Gemini, Garmin)." },
+      { "edicion": 10, "slug": "tu-vida-es-un-sistema-legacy-manual-de-migracion-2026", "detalle": "Solo usa la metáfora SAP Clean Core; no cita fuentes externas." },
+      { "edicion": 13, "slug": "la-trampa-del-mwd-y-por-que-el-ownership-es-la-unica-salida", "detalle": "El acrónimo MWD es acuñado por el autor; no hay fuentes externas citadas." },
+      { "edicion": 36, "slug": "corro-hace-16-anos-todavia-no-llegue", "detalle": "Edición íntegramente autobiográfica, sin fuentes externas." }
+    ],
+    "fuentes_incompletas": [
+      { "edicion": 4, "detalle": "El 72% de padres trabajadores se cita sin fuente." },
+      { "edicion": 12, "detalle": "El gráfico PIB Polonia vs. Venezuela no tiene fuente atribuida." },
+      { "edicion": 17, "detalle": "Solo una fuente identificable (el podcast Vega/Rauch). Dos listas de 'confirmación de los que saben' quedaron vacías en el archivo." },
+      { "edicion": 20, "detalle": "El reporte de Anthropic sobre exposición laboral se cita sin título, fecha ni enlace." },
+      { "edicion": 23, "detalle": "El gráfico de adopción de IA (2.500 puntos) se atribuye solo a 'lo vi en LinkedIn'." },
+      { "edicion": 24, "detalle": "Sin sección de referencias; las fuentes se reconstruyeron del cuerpo del texto." }
+    ],
+    "numeracion_incierta": {
+      "detalle": "Ningún archivo trae campo 'edicion'. La numeración se infirió por orden de fecha. Corrobora la edición 11 ('the past 11 weeks'), pero hay un hueco de calendario sin post entre 2026-03-31 y 2026-04-14 (falta el 2026-04-07) y dos entregas en nueve días (2026-03-23 lunes y 2026-03-31 martes). Si en ese hueco hubo una edición que no está en el repo, todos los números desde el 24 en adelante se corren en uno."
+    },
+    "contenido_perdido_en_la_migracion": {
+      "detalle": "17 ediciones tienen listas numeradas vacías ('1.' '2.' '3.' sin texto) o bloques de código vacíos, aparentemente perdidos al convertir desde LinkedIn. Afecta contenido sustantivo: el 'Plan de Supervivencia' de la ed. 18, el 'Kit de Resiliencia' y las 4 causas de fallo de la ed. 15, el stack de dominios de la ed. 4, el prompt completo de la ed. 5 y el de la ed. 2.",
+      "slugs_afectados": [
+        "el-average-dice-no-tengo-tiempo-pero-tiene-5-horas-de-scroll-diario",
+        "el-average-espera-motivacion-14-dias-el-above-average-construye-momentum-toda-la",
+        "el-balance-vida-trabajo-es-una-mentira-y-te-esta-destruyendo",
+        "tu-vida-es-un-sistema-frankenstein-y-va-a-colapsar",
+        "tu-fuerza-de-voluntad-tiene-un-bug-la-ia-es-el-parche",
+        "despedi-a-mi-entrenador-contrate-a-una-ia-el-experimento-de-42km",
+        "la-ia-es-la-nueva-piedra-filosofal-y-eso-es-un-problema",
+        "post-mortem-2025-por-que-tus-metas-van-a-fallar",
+        "tu-vida-es-un-sistema-legacy-manual-de-migracion-2026",
+        "above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you",
+        "mi-costo-de-entrada-al-mundo-sap-por-que-vendi-la-bici",
+        "la-trampa-del-mwd-y-por-que-el-ownership-es-la-unica-salida",
+        "la-ventaja-competitiva-de-volver-a-ser-un-rookie-y-mi-plan-z",
+        "el-erp-zombie-y-la-brecha-del-privilegio-tecnico-cronica-de-una-migracion-al-lim",
+        "el-fin-de-la-hora-hombre-te-pagan-por-tu-tiempo-o-por-tu-presupuesto-de-tokens",
+        "por-que-tu-tia-te-pregunta-si-tenes-trabajo-manual-para-estar-listo-para-renunci",
+        "febrero-2020-otra-vez-y-el-silencio-de-los-ingenieros"
+      ]
+    },
+    "clasificacion_dudosa": [
+      { "edicion": 36, "slug": "corro-hace-16-anos-todavia-no-llegue", "detalle": "Frontmatter dice 'The Full Stack Human', pero el contenido es maratón, lesión y cuerpo: encaja mejor en Biological Clean Core. Se respetó el frontmatter." },
+      { "edicion": 30, "slug": "el-veneno-favorito-de-la-gente-inteligente", "detalle": "Frontmatter usa 'Full Stack Human' mientras el resto del corpus usa 'The Full Stack Human'. Inconsistencia de string en el CMS." },
+      { "edicion": 11, "slug": "above-average-os-v1-0-why-brute-force-is-failing-deepseek-vs-you", "detalle": "Única edición publicada en inglés. La ed. 12 explica que el experimento se revirtió ('mis cicatrices están en español')." }
+    ]
+  },
+  "solapamiento_tematico": [
+    {
+      "grupo": "Sistemas vs. motivación / metas",
+      "ediciones": [3, 6, 9],
+      "nivel": "alto",
+      "detalle": "Las tres defienden lo mismo: la motivación es una emoción con fecha de vencimiento y el sistema es lo que permanece. La ed. 3 y la ed. 9 usan el mismo dato (Quitter's Day de Strava) como prueba."
+    },
+    {
+      "grupo": "Consumir contenido no es hacer",
+      "ediciones": [3, 30],
+      "nivel": "alto",
+      "detalle": "La 'masturbación cerebral' de la ed. 3 y el 'veneno favorito' de la ed. 30 son la misma tesis con 29 semanas de distancia. La ed. 30 la desarrolla con marco teórico (survivorship bias, Tetlock); la ed. 3 en modo confesional."
+    },
+    {
+      "grupo": "Tu vida como sistema con deuda técnica",
+      "ediciones": [5, 10],
+      "nivel": "alto",
+      "detalle": "Frankenstein (ed. 5) y Legacy/Clean Core (ed. 10) son la misma metáfora aplicada dos veces con cinco semanas de diferencia: bases podridas, parches, refactorizar antes de agregar features."
+    },
+    {
+      "grupo": "Delegar el criterio a la IA te atrofia",
+      "ediciones": [8, 19, 21, 22, 24, 31, 34],
+      "nivel": "muy alto — es el eje central del newsletter",
+      "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31."
+    },
+    {
+      "grupo": "Vender criterio, no tiempo",
+      "ediciones": [16, 17, 20],
+      "nivel": "muy alto — hay párrafo repetido casi textual",
+      "detalle": "Las ed. 16 y 17 comparten un párrafo prácticamente idéntico: 'Estamos pasando de vender nuestro tiempo a vender nuestro criterio. La IA puede darte 100 soluciones, pero solo vos tenés la experiencia para saber cuál de esas 100 no va a explotar en seis meses.' La ed. 20 remata con la misma tesis vía el fin del body shopping."
+    },
+    {
+      "grupo": "Las 3 reglas del Operador",
+      "ediciones": [27, 28, 29],
+      "nivel": "muy alto — lista repetida tres semanas seguidas",
+      "detalle": "Tres ediciones consecutivas cierran con la misma lista: conocé tus modelos / documentá tu criterio, no tus outputs / construí independencia de plataforma. La ed. 29 la presenta explícitamente como 'capa adicional' de la ed. 28, pero la ed. 27 ya la había enunciado casi igual."
+    },
+    {
+      "grupo": "Las dos castas del ERP",
+      "ediciones": [15, 26, 32, 33, 37],
+      "nivel": "medio-alto",
+      "detalle": "Arco largo y en su mayoría intencional (la ed. 37 y la 33 citan a la 26 explícitamente). El riesgo es la ed. 15 y la 32, que repiten el diagnóstico de fondo (migrar duele más que quedarse, más de la mitad sigue en ECC) sin referenciarse entre sí."
+    },
+    {
+      "grupo": "El vibe coding produce demos que mueren",
+      "ediciones": [16, 19, 35],
+      "nivel": "medio",
+      "detalle": "La app que solo corre en localhost aparece como argumento en la ed. 16 ('el Frankenstein se desmorona'), en la ed. 19 (code slop del vibe coder) y como tesis completa en la ed. 35."
+    },
+    {
+      "grupo": "Frase-firma repetida",
+      "ediciones": [22, 28, 31, 32],
+      "nivel": "estilístico, no temático",
+      "detalle": "'El que entiende los fundamentos orquesta. El que no, es orquestado.' se usa como cierre en cuatro ediciones. Funciona como firma de marca, pero conviene decidir si es deliberado o inercia."
+    }
+  ]
+}
