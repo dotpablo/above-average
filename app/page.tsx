@@ -73,7 +73,10 @@ export default function Home() {
           <FadeIn delay={0.1} duration={0.8}>
             <div className="relative h-64 w-52 shrink-0 overflow-hidden rounded-2xl ring-1 ring-neutral-800 sm:h-72 sm:w-56">
               <Image
-                src="/images/pablo-hero.jpg"
+                // Nombre versionado a proposito: el optimizador de imagenes de
+                // Vercel cachea por URL de origen, asi que reusar el nombre
+                // viejo servia la foto anterior desde el CDN.
+                src="/images/pablo-hero-2026.jpg"
                 alt="Pablo Marichal"
                 fill
                 className="object-cover object-top"
