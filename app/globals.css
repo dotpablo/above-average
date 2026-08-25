@@ -21,3 +21,28 @@ body {
   }
 }
 
+/* Subrayado de hover que sobrevive a los titulos de mas de una linea.
+   Un <span> absoluto se ancla solo al ultimo fragmento del inline, asi que
+   en un titulo de dos lineas subrayaba nada mas la de abajo. Un background
+   con box-decoration-break: clone se pinta en cada fragmento. */
+.hover-underline {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 2px;
+  transition: background-size 300ms ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.group:hover .hover-underline {
+  background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-underline {
+    transition: none;
+  }
+}
+

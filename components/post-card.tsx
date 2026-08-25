@@ -28,10 +28,7 @@ export function PostCard({ post, showCategory = false }: { post: Post; showCateg
             }}
             transition={{ duration: 0.2 }}
           >
-            <span className="relative">
-              {post.title}
-              <span className="absolute left-0 -bottom-0.5 h-[1px] w-0 bg-accent transition-all duration-300 group-hover:w-full" />
-            </span>
+            <span className="hover-underline">{post.title}</span>
           </motion.h3>
           <time className="shrink-0 text-sm text-neutral-600 tabular-nums">
             {post.date

@@ -96,14 +96,14 @@ export default function Home() {
 
             <FadeIn delay={0.35} duration={0.7}>
               <div className="space-y-3 text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
+                {/* Sin biografía ni números: los contadores de abajo ya dan las
+                    cifras y el About cuenta la historia. Acá solo posicionamiento. */}
                 <p className="text-lg text-white font-medium">Soy Pablo Marichal.</p>
                 <p>
-                  Nací en Uruguay, me crié en Venezuela, volví a los 37 a un país
-                  donde no conocía a nadie. Tengo dos hijos chicos, 19 maratones
-                  encima y 20 años adentro de corporaciones viendo de cerca cómo
-                  la tecnología le cambia la vida a la gente que trabaja.
+                  Lidero adopción de IA adentro de corporaciones grandes. Escribo
+                  sobre lo que eso le está haciendo al trabajo y a la gente, desde
+                  adentro y no desde las noticias.
                 </p>
-                <p>No pertenezco del todo a ningún lado. Desde ahí escribo.</p>
               </div>
             </FadeIn>
 
