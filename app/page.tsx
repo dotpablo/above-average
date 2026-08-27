@@ -89,7 +89,7 @@ export default function Home() {
           <div className="flex-1 space-y-6">
             <FadeIn delay={0.2} duration={0.7}>
               <h1 className="font-serif text-4xl text-white sm:text-5xl md:text-6xl tracking-tighter leading-[1.1]">
-                El código sobra<br />en la era de la IA.<br />
+                La ejecución sobra<br />en la era de la IA.<br />
                 <span className="text-neutral-500">El contexto no.</span>
               </h1>
             </FadeIn>
@@ -100,9 +100,9 @@ export default function Home() {
                     cifras y el About cuenta la historia. Acá solo posicionamiento. */}
                 <p className="text-lg text-white font-medium">Soy Pablo Marichal.</p>
                 <p>
-                  Lidero adopción de IA adentro de corporaciones grandes. Escribo
-                  sobre lo que eso le está haciendo al trabajo y a la gente, desde
-                  adentro y no desde las noticias.
+                  Lidero técnicamente equipos de SAP y adopción de IA adentro de
+                  corporaciones grandes. Escribo sobre lo que eso le está haciendo
+                  al trabajo y a la gente, desde adentro y no desde las noticias.
                 </p>
               </div>
             </FadeIn>
