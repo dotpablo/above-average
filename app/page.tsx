@@ -38,10 +38,10 @@ const entryPoints = [
     external: true,
   },
   {
-    title: "Trabajar juntos",
-    desc: "Advisory 1:1, proyectos SAP y adopción real de IA en equipos que mueven procesos críticos.",
-    cta: "Ver opciones",
-    href: "/trabajar-juntos",
+    title: "Charlas y podcasts",
+    desc: "Conferencias donde hablé y conversaciones donde me invitaron. Y cómo invitarme a la tuya.",
+    cta: "Ver y escuchar",
+    href: "/charlas",
     external: false,
   },
 ];

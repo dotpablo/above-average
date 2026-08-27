@@ -50,20 +50,6 @@ export function Nav() {
             </li>
           );
         })}
-        <li>
-          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-            <Link
-              href="/trabajar-juntos"
-              className={`ml-1.5 inline-block rounded-md border px-2.5 py-1.5 text-sm font-medium transition-colors ${
-                pathname === "/trabajar-juntos"
-                  ? "border-accent text-accent"
-                  : "border-neutral-700 text-neutral-400 hover:border-neutral-500 hover:text-white"
-              }`}
-            >
-              Trabajar juntos
-            </Link>
-          </motion.div>
-        </li>
       </ul>
 
       {/* Mobile hamburger */}
@@ -101,7 +87,7 @@ export function Nav() {
             className="fixed inset-0 top-[69px] z-50 bg-neutral-950/98 backdrop-blur-md md:hidden"
           >
             <div className="flex flex-col gap-2 p-6">
-              {[...links, { href: "/trabajar-juntos", label: "Trabajar juntos" }].map(
+              {links.map(
                 (link, i) => {
                   const active =
                     pathname === link.href ||

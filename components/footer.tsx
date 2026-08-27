@@ -9,7 +9,6 @@ const navLinks = [
   { href: "/recursos", label: "Recursos" },
   { href: "/charlas", label: "Charlas" },
   { href: "/about", label: "About" },
-  { href: "/trabajar-juntos", label: "Trabajar juntos" },
 ];
 
 const socials = [

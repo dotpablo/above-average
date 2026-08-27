@@ -3,131 +3,90 @@ import { SITE } from "@/lib/constants";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 
+/**
+ * Pagina deliberadamente fuera de vista: no esta en el nav, ni en el footer,
+ * ni en el sitemap, y se sirve con noindex. Existe para pasarle el link a
+ * alguien puntual, no como vidriera. Ver el comentario de robots abajo.
+ */
 export const metadata: Metadata = {
-  title: "Trabajar juntos",
+  title: "Conversemos",
   description:
-    "Consultoría SAP, adopción de IA en equipos técnicos y advisory para líderes tech que operan en la intersección entre Legacy y Futuro.",
+    "Charlas, paneles, podcasts y colaboraciones de escritura con Pablo Marichal.",
+  robots: { index: false, follow: false },
   alternates: { canonical: `${SITE.url}/trabajar-juntos` },
 };
 
-const services = [
+const formatos = [
   {
-    tag: "Sesión única",
-    title: "Advisory 1:1 — Tech Lead Session",
-    price: "USD 120",
-    duration: "60 minutos",
-    desc: "Una sesión enfocada en tu situación real: cómo posicionarte ante la IA en tu organización, qué hacer con tu stack SAP, cómo tomar la siguiente decisión técnica sin equivocarte. Sin agenda genérica. Sin PowerPoints. Solo criterio.",
-    cta: "Agendá tu sesión",
-    ctaHref: "mailto:pablomarichal@gmail.com?subject=Advisory%201:1%20%E2%80%94%20Tech%20Lead%20Session",
-    tags: ["Tech Leads", "Arquitectos SAP", "AI Survival", "Posicionamiento"],
-    highlight: true,
+    tag: "Escenario",
+    title: "Charlas y paneles",
+    desc: "En español o en inglés, presencial o remoto, para equipos técnicos, comités ejecutivos y eventos de industria. Los temas: qué está pasando de verdad con la IA adentro de las empresas grandes, adopción real contra adopción anunciada, y rendimiento profesional después de los 40.",
+    asunto: "Charla%20o%20panel",
   },
   {
-    tag: "Proyecto",
-    title: "SAP Advisory",
-    price: "A convenir",
-    duration: "Por proyecto",
-    desc: "Migraciones S/4HANA, arquitectura técnica, clean core strategy y gestión de proyectos SAP. Para empresas que necesitan criterio técnico real, no horas de consultoría genérica.",
-    cta: "Escribime",
-    ctaHref: "mailto:pablomarichal@gmail.com?subject=SAP%20Advisory",
-    tags: ["S/4HANA", "SAP BTP", "Clean Core", "Migraciones"],
-    highlight: false,
+    tag: "Micrófono",
+    title: "Podcasts y entrevistas",
+    desc: "Conversaciones largas, sin guion de marketing. Si tenés un programa donde se puede pensar en voz alta y contradecirse a mitad de camino, escribime.",
+    asunto: "Podcast%20o%20entrevista",
   },
   {
-    tag: "Equipos",
-    title: "AI Adoption para equipos tech",
-    price: "A convenir",
-    duration: "Por proyecto",
-    desc: "Evaluación de madurez de IA, definición de casos de uso reales (no demos), implementación de agentes y herramientas. Para líderes que quieren resultados, no presentaciones sobre el futuro.",
-    cta: "Escribime",
-    ctaHref: "mailto:pablomarichal@gmail.com?subject=AI%20Adoption",
-    tags: ["AI Agents", "Copilot / Joule", "Automatización", "Roadmap IA"],
-    highlight: false,
+    tag: "Texto",
+    title: "Colaboraciones de escritura",
+    desc: "Columnas, ensayos y piezas de análisis para medios o publicaciones que quieran algo escrito por alguien que está adentro del problema y no leyendo sobre él.",
+    asunto: "Colaboraci%C3%B3n%20de%20escritura",
   },
 ];
 
-export default function WorkTogetherPage() {
+export default function ConversemosPage() {
   return (
-    <div className="space-y-16 max-w-2xl">
-      {/* Header */}
+    <div className="space-y-14 max-w-2xl">
       <header className="space-y-4">
         <FadeIn duration={0.5}>
           <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">
-            Trabajar juntos
+            Contacto
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
           <h1 className="font-serif text-4xl text-white leading-tight">
-            Expertise técnico sin<br />ruido de fondo.
+            Conversemos.
           </h1>
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="text-lg text-neutral-400 leading-relaxed tracking-[-0.01em]">
-            20+ años en tecnología. 12+ en el ecosistema SAP enterprise.
-            19 maratones como laboratorio de sistemas que aguantan presión real.
-          </p>
-        </FadeIn>
-        <FadeIn delay={0.3}>
-          <p className="text-base text-neutral-500 leading-relaxed tracking-[-0.01em]">
-            Trabajo con empresas y líderes tech que necesitan criterio en la
-            intersección entre SAP legacy y la adopción real de IA — no teoría,
-            no hype, solo lo que funciona en producción.
+            Escribo todas las semanas sobre lo que la IA le está haciendo al trabajo
+            adentro de las corporaciones. A veces eso da pie a hablarlo en otro lado:
+            un escenario, un micrófono, una página.
           </p>
         </FadeIn>
       </header>
 
-      {/* Services */}
       <StaggerChildren className="space-y-4" staggerDelay={0.1}>
-        {services.map((s) => (
-          <StaggerItem key={s.title}>
-            <div className={`rounded-xl border p-6 space-y-4 backdrop-blur-sm transition-colors ${s.highlight ? "border-neutral-600 bg-neutral-800/60 hover:border-neutral-500" : "border-neutral-800 bg-neutral-900/50 hover:border-neutral-700"}`}>
-              <div className="flex items-start justify-between gap-4">
-                <div className="space-y-1">
-                  <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">{s.tag}</p>
-                  <h2 className="font-serif text-xl text-white">{s.title}</h2>
-                </div>
-                <div className="text-right shrink-0">
-                  <p className={`font-serif text-xl ${s.highlight ? "text-white" : "text-neutral-400"}`}>{s.price}</p>
-                  <p className="text-xs text-neutral-600">{s.duration}</p>
-                </div>
-              </div>
-              <p className="text-sm text-neutral-400 leading-relaxed tracking-[-0.01em]">{s.desc}</p>
-              <div className="flex items-center justify-between gap-4 pt-1">
-                <div className="flex flex-wrap gap-2">
-                  {s.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-neutral-700 px-3 py-0.5 text-xs text-neutral-500"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                {/* <a> nativo, no next/link: un mailto: no es una ruta de la app. */}
-                <a
-                  href={s.ctaHref}
-                  className={`shrink-0 rounded-lg px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90 ${s.highlight ? "bg-accent text-neutral-900" : "border border-neutral-700 text-neutral-300 hover:border-neutral-500 hover:text-white"}`}
-                >
-                  {s.cta} →
-                </a>
-              </div>
+        {formatos.map((f) => (
+          <StaggerItem key={f.title}>
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 space-y-3 backdrop-blur-sm transition-colors hover:border-neutral-700">
+              <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">
+                {f.tag}
+              </p>
+              <h2 className="font-serif text-xl text-white">{f.title}</h2>
+              <p className="text-sm text-neutral-400 leading-relaxed tracking-[-0.01em]">
+                {f.desc}
+              </p>
+              {/* <a> nativo: un mailto: no es una ruta de la app. */}
+              <a
+                href={`${SITE.social.email}?subject=${f.asunto}`}
+                className="inline-block pt-1 text-sm font-medium text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors"
+              >
+                Escribime &rarr;
+              </a>
             </div>
           </StaggerItem>
         ))}
       </StaggerChildren>
 
-      {/* Social proof / context */}
       <FadeIn>
         <section className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-6 space-y-3 backdrop-blur-sm">
-          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">Por qué funciona</p>
           <p className="text-base text-neutral-400 leading-relaxed tracking-[-0.01em]">
-            No soy consultor que salió de una academia. Fui el que migró los sistemas,
-            el que convirtió a su equipo al nuevo paradigma, el que lidera la adopción de IA
-            en equipos que mueven procesos críticos. Y al mismo tiempo corrí 19 maratones
-            mientras lo hacía.
-          </p>
-          <p className="text-sm text-neutral-500">
-            Respondo personalmente. Sin intermediarios. Si el botón no te abre el mail,
+            Respondo personalmente. Sin intermediarios. Si el link no te abre el mail,
             escribime a{" "}
             <a
               href={SITE.social.email}

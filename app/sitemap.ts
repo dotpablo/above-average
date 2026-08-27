@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/recursos/above-average-os`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE.url}/recursos/obsidian-claude`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE.url}/charlas`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${SITE.url}/trabajar-juntos`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     ...posts,
   ];
 }
