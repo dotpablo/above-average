@@ -10,9 +10,8 @@ export const SITE = {
   social: {
     linkedin: "https://www.linkedin.com/in/pablomarichal/",
     youtube: "https://www.youtube.com/channel/UCdN9d7T7HZ6Pqmf0nGn8Ngg",
-    // TODO: actualizar al handle nuevo cuando la cuenta este migrada.
-    instagram: "https://www.instagram.com/pabloaboveaverage",
-    threads: "https://www.threads.net/@pabloaboveaverage",
+    instagram: "https://www.instagram.com/pablomarichal_",
+    threads: "https://www.threads.net/@pablomarichal_",
     x: "https://x.com/dotpablo",
     email: "mailto:pablomarichal@gmail.com",
   },
