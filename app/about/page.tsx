@@ -25,10 +25,6 @@ export default function AboutPage() {
         </section>
       </FadeIn>
 
-      {/*
-        BORRADOR — Pablo: este bloque es el unico que no puede escribir nadie mas.
-        Reemplazalo por tu version, sobre todo el detalle fisico concreto de la salida.
-      */}
       <FadeIn>
         <section className="relative space-y-4 pl-6">
           <div className="absolute left-0 top-0 h-0 w-[2px] bg-neutral-800 animate-[draw-line_0.8s_ease-out_0.3s_forwards]" />
@@ -37,10 +33,19 @@ export default function AboutPage() {
             Nací en Uruguay en 1980 y me mudé tres veces antes de tener edad para opinar: a los 2 años a Venezuela, a los 4 de vuelta a Uruguay, a los 10 a Venezuela otra vez. Ahí me quedé. Ahí crecí, estudié Ingeniería en Informática y Gerencia de Proyectos, y ahí armé una vida entera.
           </p>
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
-            A los 37 la desarmé. En 2018 dejé Venezuela y volví a Uruguay: un país donde había nacido, donde tenía pasaporte y apellido, y donde no conocía a nadie. Volver al lugar de origen y ser extranjero es una experiencia rara de explicar. Tenés los papeles en regla y ninguna referencia. Nadie te debe nada y vos tampoco.
+            Salir de Venezuela en enero de 2018 no fue una emigración más. Era escapar del desastre: el país era un caos.
           </p>
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
-            Es la parte de mi historia que más me define y la que menos se nota en un CV. No pertenezco del todo a ningún lado — ni al país donde nací ni al país donde me hice. Desde ahí escribo. Es lo que me deja mirar una corporación, un equipo o una tecnología sin comprarme del todo el relato de adentro.
+            Quien me despidió fue mi esposa. Nos volvimos a encontrar dos o tres meses después, cuando ya me había instalado acá. Llegué a casa de mi hermana, viví ahí un mes y después me fui a alquilar algo cerca de mi trabajo, que arranqué casi ganando como un junior. Lo agarré porque era lo mío, SAP, y ahí pude empezar a proyectarme nuevamente.
+          </p>
+          <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
+            Trámites, no muchos: al ser uruguayo se me hizo muy fácil todo. Pero era borrón y cuenta nueva. Haberme despedido de una vida, regalado casi todas las cosas porque venderlas era casi ridículo. Casa, auto, mis libros.
+          </p>
+          <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
+            Con los libros sentí como la escena de esa película donde los queman. Yo no los quemé: los publiqué, y la gente se los llevaba por un precio que daba risa. Algo así como diez libros por el precio de un café acá en Uruguay.
+          </p>
+          <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
+            Lo más complicado es rehacerse y salir adelante. Algo que siempre tuve en mente fue el dicho de Naval: que si te sueltan en una sociedad con nada más que tus conocimientos, en cinco años o menos podés volver a estar como estabas, o incluso mejor. Eso me pasó. Este reboot costó, pero se logró.
           </p>
         </section>
       </FadeIn>
