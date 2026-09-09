@@ -11,9 +11,56 @@
       "the-death-of-the-man-hour-are-you-paid-for-your-time-or-your-token-budget"
     ],
     "nota_numeracion": "Ningún archivo trae el número de edición en el frontmatter. La numeración es secuencial por fecha desde 2025-10-26 = 1. Se corrobora con la edición del 2026-01-06, que dice 'If you have been reading me for the past 11 weeks' y cae exactamente en la posición 11.",
-    "total_ediciones": 42
+    "total_ediciones": 45
   },
   "ediciones": [
+    {
+      "edicion": 45,
+      "fecha": "2026-09-08",
+      "titulo": "El empleado perfecto que SAP describe no nace. Se fabrica.",
+      "slug": "el-empleado-perfecto-que-sap-describe-no-nace-se-fabrica",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Se automatiza el trabajo de bajo nivel donde se fabricaba el criterio senior que el mismo mercado idealiza.",
+      "temas": "sap btp, agentic ai, christian klein, prior labs, mckinsey, seniority, juniors, enrique dans",
+      "fuentes_clave": [
+        "SAP BTP AI Best Practices, sección de Agentic AI",
+        "SAP — adquisición de Prior Labs, mayo de 2026, cerrada en julio",
+        "LinkedIn Economic Graph 2026 — 25% de las búsquedas de puestos de entrada exige fluidez en IA",
+        "Forrester — 'AI in Professional Services', 2025"
+      ],
+      "enlaza_a": [
+        "el-especialista-esta-condenado-leonardo-tenia-razon"
+      ]
+    },
+    {
+      "edicion": 44,
+      "fecha": "2026-09-01",
+      "titulo": "Los agentes de IA son los nuevos programas Z",
+      "slug": "los-agentes-de-ia-son-los-nuevos-programas-z",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El agente sin registro ni dueño es el programa Z de esta década: deuda técnica creada más rápido.",
+      "temas": "oxford economics, sap, gobernanza de agentes, programas z, clean core, terminator 2, agi, registro de agentes",
+      "fuentes_clave": [
+        "SAP y Oxford Economics — 'The Value of AI', segundo informe anual, 2026 (2.600 empresas en 13 países)",
+        "James Cameron — declaraciones por los 35 años de Terminator 2, agosto de 2026"
+      ],
+      "enlaza_a": [
+        "el-paraiso-y-el-apocalipsis-venden-lo-mismo"
+      ]
+    },
+    {
+      "edicion": 43,
+      "fecha": "2026-08-25",
+      "titulo": "Mi Web le dijo a las máquinas que yo tenía cero años de experiencia",
+      "slug": "mi-web-le-dijo-a-las-maquinas-que-yo-tenia-cero-anos-de-experiencia",
+      "pilar": "Builder Mindset",
+      "tesis": "Lo que se ve en el navegador no es lo que leen los modelos: nadie revisa lo que ya funciona.",
+      "temas": "seo, ssr, hidratacion, indexacion por modelos, chatgpt, perplexity, rebrand, en produccion",
+      "fuentes_clave": null,
+      "enlaza_a": [
+        "el-99-por-ciento-muere-en-localhost"
+      ]
+    },
     {
       "edicion": 42,
       "fecha": "2026-08-18",
@@ -711,6 +758,11 @@
         "edicion": 36,
         "slug": "corro-hace-16-anos-todavia-no-llegue",
         "detalle": "Edición íntegramente autobiográfica, sin fuentes externas."
+      },
+      {
+        "edicion": 43,
+        "slug": "mi-web-le-dijo-a-las-maquinas-que-yo-tenia-cero-anos-de-experiencia",
+        "detalle": "No cita fuentes externas: es una autopsia del propio sitio y el dato duro (el HTML servido) es verificable en el repo. En el cierre había dos enlaces a capturas de ChatGPT que quedaron sin URL al importar desde LinkedIn; se retiró la referencia a esos enlaces hasta tenerlos."
       }
     ],
     "fuentes_incompletas": [
@@ -833,10 +885,11 @@
         16,
         17,
         20,
-        40
+        40,
+        45
       ],
       "nivel": "muy alto — hay párrafo repetido casi textual",
-      "detalle": "Las ed. 16 y 17 comparten un párrafo prácticamente idéntico: 'Estamos pasando de vender nuestro tiempo a vender nuestro criterio. La IA puede darte 100 soluciones, pero solo vos tenés la experiencia para saber cuál de esas 100 no va a explotar en seis meses.' La ed. 20 remata con la misma tesis vía el fin del body shopping. La 40 lo aplica al rol BASIS: se va la ejecución, queda la decisión — 'trabajo de más criterio y menos manos'."
+      "detalle": "Las ed. 16 y 17 comparten un párrafo prácticamente idéntico: 'Estamos pasando de vender nuestro tiempo a vender nuestro criterio. La IA puede darte 100 soluciones, pero solo vos tenés la experiencia para saber cuál de esas 100 no va a explotar en seis meses.' La ed. 20 remata con la misma tesis vía el fin del body shopping. La 40 lo aplica al rol BASIS: se va la ejecución, queda la decisión — 'trabajo de más criterio y menos manos'. La 45 lo lleva al extremo: parte la categoría senior en dos (velocidad acumulada vs. custodia de contexto) y solo la segunda sobrevive."
     },
     {
       "grupo": "Las 3 reglas del Operador",
@@ -895,10 +948,31 @@
       "ediciones": [
         38,
         40,
-        41
+        41,
+        44,
+        45
       ],
       "nivel": "alto",
-      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias."
+      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias. La 44 lo aterriza en el registro de agentes; la 45 advierte que dejarle al humano solo la firma es 'teatro de gobernanza'."
+    },
+    {
+      "grupo": "El que sabe por qué está ese campo en la tabla",
+      "ediciones": [
+        42,
+        45
+      ],
+      "nivel": "alto — la imagen se repite casi textual con tres semanas de distancia",
+      "detalle": "La 42 construye toda la edición sobre el campo que una sola persona sabe explicar. La 45 reusa la imagen ('el que sabe por qué está ese campo ahí, por qué ese proceso tiene un paso que parece de más') para definir al senior que sí sobrevive. Es continuidad deliberada, pero la formulación es casi idéntica."
+    },
+    {
+      "grupo": "Lo que funciona en la demo miente en producción",
+      "ediciones": [
+        32,
+        35,
+        43
+      ],
+      "nivel": "medio-alto",
+      "detalle": "La 32 lo plantea con el PowerPoint contra el sistema real, la 35 con el 99% que muere en localhost, y la 43 lo aplica al propio sitio de Pablo. La 43 es la más fuerte de las tres porque el caso es propio y el costo, admitido."
     }
   ]
 }
