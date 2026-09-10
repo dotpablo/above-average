@@ -49,6 +49,7 @@ manuscrito/        el libro
   00-estructura.md       mapa: tesis, lector, capítulos
   NN-slug.md             un archivo por capítulo
 notas/             investigación, entrevistas, descartes
+  bitacora.md            log automático de las sesiones (lo escribe el hook Stop)
 bin/               herramientas
 ```
 
@@ -59,6 +60,15 @@ python3 bin/progreso.py              # avance, ritmo necesario, racha
 python3 bin/progreso.py --historial  # últimos 30 días
 bin/sync-corpus.sh                   # traer ediciones nuevas del sitio
 ```
+
+## Bitácora
+
+Un hook `Stop` (`.claude/settings.json` → `bin/bitacora.py`) registra cada intercambio en
+`notas/bitacora.md`: lo que preguntó Pablo y lo que respondió Claude, sin tool calls ni
+razonamiento interno. No hay que hacer nada para que funcione.
+
+No filtra por tema y no hace falta: todo lo que se habla en este repo es sobre el libro.
+Si una conversación no debería quedar registrada, borrá esa entrada del archivo a mano.
 
 ## Rutina de sesión
 

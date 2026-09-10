@@ -34,11 +34,32 @@ else
 fi
 cp "$SITIO/libro-setup/sync-corpus.sh" bin/
 cp "$SITIO/libro-setup/progreso.py" bin/
+cp "$SITIO/libro-setup/bitacora.py" bin/
 chmod +x bin/sync-corpus.sh
+
+mkdir -p .claude
+cat > .claude/settings.json <<'EOF'
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/bin/bitacora.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
+EOF
 
 cat > .gitignore <<'EOF'
 .DS_Store
 notas/borradores-descartados/
+.bitacora-state.json
 EOF
 
 cat > manuscrito/00-estructura.md <<'EOF'
