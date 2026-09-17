@@ -6,6 +6,7 @@ import { SITE } from "@/lib/constants";
 
 const navLinks = [
   { href: "/blog", label: "En Producción" },
+  { href: "/videos", label: "Videos" },
   { href: "/recursos", label: "Recursos" },
   { href: "/charlas", label: "Charlas" },
   { href: "/about", label: "About" },
@@ -14,7 +15,9 @@ const navLinks = [
 const socials = [
   { label: "LinkedIn", href: SITE.social.linkedin },
   { label: "YouTube", href: SITE.social.youtube },
-  { label: "Instagram", href: SITE.social.instagram },
+  { label: "Instagram personal", href: SITE.social.instagram },
+  { label: "Pablo cocinando", href: SITE.social.instagramCooking },
+  { label: "TikTok", href: SITE.social.tiktok },
   { label: "Threads", href: SITE.social.threads },
   { label: "X", href: SITE.social.x },
   { label: "Email", href: SITE.social.email },
@@ -47,7 +50,7 @@ export function Footer() {
             </Link>
           ))}
         </div>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-700">
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-400">
           {socials.map((s, i) => (
             <motion.a
               key={s.label}

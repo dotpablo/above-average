@@ -11,6 +11,8 @@ export const SITE = {
     linkedin: "https://www.linkedin.com/in/pablomarichal/",
     youtube: "https://www.youtube.com/channel/UCdN9d7T7HZ6Pqmf0nGn8Ngg",
     instagram: "https://www.instagram.com/pablomarichal_",
+    instagramCooking: "https://www.instagram.com/pablo_cocinando/",
+    tiktok: "https://www.tiktok.com/@pablomarichal_",
     threads: "https://www.threads.net/@pablomarichal_",
     x: "https://x.com/dotpablo",
     email: "mailto:pablomarichal@gmail.com",
