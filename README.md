@@ -1,5 +1,8 @@
 # Above Average — pablomarichal.com
 
+Registro de cambios y decisiones recientes: [bitácora del sitio](docs/bitacora.md).
+Integración de videos y redes: [decisión y mantenimiento](docs/adr/002-videos-y-redes.md).
+
 > Personal brand site, blog y newsletter de Pablo Marichal.
 > Senior SAP Tech Lead · AI Champion · 19x Marathoner · Full Stack Human.
 

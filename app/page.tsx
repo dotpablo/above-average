@@ -94,7 +94,7 @@ export default function Home() {
             <FadeIn delay={0.2} duration={0.7}>
               <h1 className="font-serif text-4xl text-white sm:text-5xl md:text-6xl tracking-tighter leading-[1.1]">
                 La ejecución sobra<br />en la era de la IA.<br />
-                <span className="text-neutral-500">El contexto no.</span>
+                <span className="text-neutral-500">El criterio y el contexto no.</span>
               </h1>
             </FadeIn>
 
