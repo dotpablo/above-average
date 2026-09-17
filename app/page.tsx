@@ -1,3 +1,5 @@
+import { VIDEOS } from "@/lib/videos";
+import { VideoCard } from "@/components/video-card";
 import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
@@ -17,6 +19,8 @@ const personSchema = {
     SITE.social.linkedin,
     SITE.social.x,
     SITE.social.instagram,
+    SITE.social.tiktok,
+    SITE.social.youtube,
   ],
   jobTitle: "Tech Lead",
   description: SITE.description,
@@ -31,10 +35,10 @@ const entryPoints = [
     external: false,
   },
   {
-    title: "Videos",
-    desc: "Piezas cortas sobre trabajo, tecnología y cómo se sostiene el rendimiento después de los 40.",
-    cta: "Ver en Instagram",
-    href: SITE.social.instagram,
+    title: "Pablo cocinando",
+    desc: "Asados, pizzas, fuego y fermentaciones. Lo que pasa cuando me pongo a cocinar.",
+    cta: "Ver la cuenta de cocina",
+    href: SITE.social.instagramCooking,
     external: true,
   },
   {
@@ -104,6 +108,13 @@ export default function Home() {
                   corporaciones grandes. Escribo sobre lo que eso le está haciendo
                   al trabajo y a la gente, desde adentro y no desde las noticias.
                 </p>
+                <p>
+                  También cuento lo que pasa fuera del trabajo: correr, emigrar,
+                  ser padre y cocinar. En los videos aparece esa parte de mí.
+                </p>
+                <Link href="/videos" className="inline-block text-sm text-accent underline underline-offset-4">
+                  Mirá los videos &rarr;
+                </Link>
               </div>
             </FadeIn>
 
@@ -124,6 +135,17 @@ export default function Home() {
             </FadeIn>
           </div>
 
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="flex flex-wrap items-baseline justify-between gap-3">
+          <h2 className="font-serif text-2xl text-white">También lo cuento en video</h2>
+          <Link href="/videos" className="text-sm text-accent hover:underline underline-offset-4">Ver la selección &rarr;</Link>
+        </div>
+        <p className="text-neutral-400">Correr, empezar de nuevo y seguir pensando por cuenta propia.</p>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {VIDEOS.filter((video) => video.featured).map((video) => <VideoCard key={video.id} video={video} />)}
         </div>
       </section>
 
