@@ -1,5 +1,18 @@
 # Bitácora del sitio
 
+## 2026-09-17 — Propuesta visual pendiente de revisión
+
+- Rama: `codex/home-visual-review`. No publicar ni integrar a main antes de la
+  revisión de Pablo.
+- Apertura más ancha en escritorio, retrato a la derecha y texto con mayor
+  contraste; «criterio» usa el acento dorado.
+- Newsletter en un bloque propio después de las lecturas; tres artículos
+  recientes en formato compacto. Las páginas del blog conservan sus extractos.
+- Guía para material pendiente: `docs/fotos-home.md`. Faltan fotos reales de
+  cocina/running y fotogramas de los tres videos para completar la propuesta.
+- La foto de running existente se revisó: su recorte sin fondo no aporta el
+  entorno buscado; se mantiene fuera de la nueva composición.
+
 ## 2026-09-17 — Videos, redes y presentación personal
 
 ### Implementado

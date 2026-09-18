@@ -6,7 +6,7 @@ import { es } from "date-fns/locale";
 import { motion } from "motion/react";
 import type { Post } from "@/lib/posts";
 
-export function PostCard({ post, showCategory = false }: { post: Post; showCategory?: boolean }) {
+export function PostCard({ post, showCategory = false, compact = false }: { post: Post; showCategory?: boolean; compact?: boolean }) {
   return (
     <motion.article
       className="group"
@@ -19,7 +19,7 @@ export function PostCard({ post, showCategory = false }: { post: Post; showCateg
             {post.category}
           </p>
         )}
-        <div className="flex items-baseline justify-between gap-4">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
           <motion.h3
             className="font-serif text-xl text-white"
             variants={{
@@ -38,7 +38,7 @@ export function PostCard({ post, showCategory = false }: { post: Post; showCateg
             <span className="capitalize">{post.readTime.replace('min read', 'min de lectura').replace('read', 'lectura')}</span>
           </time>
         </div>
-        {post.description && (
+        {post.description && !compact && (
           <p className="mt-1.5 text-base leading-relaxed text-neutral-500 line-clamp-2 tracking-[-0.01em]">
             {post.description}
           </p>

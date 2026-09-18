@@ -45,7 +45,7 @@ export function NewsletterForm() {
           placeholder="tu@email.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-base text-white placeholder:text-neutral-600 focus:border-accent/50 focus:outline-none transition-colors"
+          className="min-w-0 flex-1 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-base text-white placeholder:text-neutral-600 focus:border-accent/50 focus:outline-none transition-colors"
         />
         <motion.button
           type="submit"

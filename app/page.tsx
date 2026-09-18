@@ -52,7 +52,7 @@ const entryPoints = [
 
 export default function Home() {
   const allPosts = getAllPosts();
-  const recentPosts = allPosts.slice(0, 5);
+  const recentPosts = allPosts.slice(0, 3);
   const stats = [
     { value: "20+", label: "años en Tech" },
     { value: "12+", label: "años SAP" },
@@ -67,75 +67,36 @@ export default function Home() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
     />
-    <div className="space-y-20">
+    <div className="space-y-16 lg:relative lg:left-1/2 lg:w-[960px] lg:-translate-x-1/2">
 
-      {/* Hero */}
-      <section>
-        <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-12">
-
-          {/* Photo */}
-          <FadeIn delay={0.1} duration={0.8}>
-            <div className="relative h-64 w-52 shrink-0 overflow-hidden rounded-2xl ring-1 ring-neutral-800 sm:h-72 sm:w-56">
-              <Image
-                // Nombre versionado a proposito: el optimizador de imagenes de
-                // Vercel cachea por URL de origen, asi que reusar el nombre
-                // viejo servia la foto anterior desde el CDN.
-                src="/images/pablo-hero-2026.jpg"
-                alt="Pablo Marichal"
-                fill
-                className="object-cover object-top"
-                priority
-              />
+      {/* Apertura: el retrato acompaña; la presentación conserva su ancho. */}
+      <section className="space-y-8">
+        <div className="grid items-start gap-8 sm:grid-cols-[1fr_200px] lg:grid-cols-[1fr_260px] lg:gap-12">
+          <div className="space-y-6">
+            <p className="text-sm text-neutral-400">Pablo Marichal · Trabajo, ideas y vida cotidiana</p>
+            <h1 className="font-serif text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              La ejecución sobra en la era de la IA.
+              <span className="mt-3 block text-neutral-200">El <span className="text-accent">criterio</span> y el contexto no.</span>
+            </h1>
+            <p className="max-w-xl text-base leading-relaxed text-neutral-300">
+              Lidero técnicamente equipos de SAP y adopción de IA adentro de
+              corporaciones grandes. Escribo sobre lo que eso le está haciendo
+              al trabajo y a la gente, desde adentro y no desde las noticias.
+            </p>
+            <p className="max-w-xl text-base leading-relaxed text-neutral-400">
+              También cuento lo que pasa fuera del trabajo: correr, emigrar,
+              ser padre y cocinar. En los videos aparece esa parte de mí.
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+              <Link href="/videos" className="text-accent underline underline-offset-4">Mirá los videos &rarr;</Link>
+              <Link href="/about" className="text-neutral-300 underline underline-offset-4">Mi historia &rarr;</Link>
             </div>
-          </FadeIn>
-
-          {/* Text */}
-          <div className="flex-1 space-y-6">
-            <FadeIn delay={0.2} duration={0.7}>
-              <h1 className="font-serif text-4xl text-white sm:text-5xl md:text-6xl tracking-tighter leading-[1.1]">
-                La ejecución sobra<br />en la era de la IA.<br />
-                <span className="text-neutral-500">El criterio y el contexto no.</span>
-              </h1>
-            </FadeIn>
-
-            <FadeIn delay={0.35} duration={0.7}>
-              <div className="space-y-3 text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
-                {/* Sin biografía ni números: los contadores de abajo ya dan las
-                    cifras y el About cuenta la historia. Acá solo posicionamiento. */}
-                <p className="text-lg text-white font-medium">Soy Pablo Marichal.</p>
-                <p>
-                  Lidero técnicamente equipos de SAP y adopción de IA adentro de
-                  corporaciones grandes. Escribo sobre lo que eso le está haciendo
-                  al trabajo y a la gente, desde adentro y no desde las noticias.
-                </p>
-                <p>
-                  También cuento lo que pasa fuera del trabajo: correr, emigrar,
-                  ser padre y cocinar. En los videos aparece esa parte de mí.
-                </p>
-                <Link href="/videos" className="inline-block text-sm text-accent underline underline-offset-4">
-                  Mirá los videos &rarr;
-                </Link>
-              </div>
-            </FadeIn>
-
-            {/* Stats inline */}
-            <AnimatedStats stats={stats} />
-
-            {/* Newsletter form */}
-            <FadeIn delay={0.5} duration={0.6}>
-              <div>
-                <p className="mb-1 text-sm font-medium text-neutral-300">
-                  {NEWSLETTER.name}
-                </p>
-                <p className="mb-2.5 text-sm text-neutral-500">
-                  {NEWSLETTER.tagline}
-                </p>
-                <NewsletterForm />
-              </div>
-            </FadeIn>
           </div>
-
+          <div className="relative aspect-[4/5] w-40 overflow-hidden rounded-2xl ring-1 ring-neutral-800 sm:w-full">
+            <Image src="/images/pablo-hero-2026.jpg" alt="Pablo Marichal" fill sizes="(min-width: 1024px) 260px, (min-width: 640px) 200px, 160px" className="object-cover object-top" priority />
+          </div>
         </div>
+        <AnimatedStats stats={stats} />
       </section>
 
       <section className="space-y-6">
@@ -167,13 +128,22 @@ export default function Home() {
             {recentPosts.map((post) => (
               <StaggerItem key={post.slug}>
                 <div className="border-b border-neutral-800/50 pb-8 last:border-0 last:pb-0">
-                  <PostCard post={post} />
+                  <PostCard post={post} compact />
                 </div>
               </StaggerItem>
             ))}
           </StaggerChildren>
         </section>
       )}
+
+      <section className="grid gap-6 rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 sm:grid-cols-2 sm:p-8">
+        <div className="space-y-3">
+          <p className="text-xs uppercase tracking-widest text-neutral-400">El newsletter</p>
+          <h2 className="font-serif text-3xl text-white">{NEWSLETTER.name}</h2>
+          <p className="text-sm leading-relaxed text-neutral-300">{NEWSLETTER.tagline}</p>
+        </div>
+        <div className="self-center"><NewsletterForm /></div>
+      </section>
 
       {/* Tres accesos */}
       <section className="space-y-6">
