@@ -1,0 +1,154 @@
+---
+title: "Le dijeron que use Joule. No le dijeron cómo saber si está bien."
+date: "2026-09-22"
+description: "Una persona de Finanzas a la que le bajan línea para usar el agente, y que no sabe cómo validar lo que le sale. La herramienta se democratizó; el criterio para juzgarla, no. El 79% de las empresas ya tiene resultados de baja calidad y la preparación de datos cayó de 64% a 62%."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+Hace poco estuve hablando con alguien que trabaja en Finanzas en una gran empresa.
+
+No es de sistemas. Negocio puro. Años cerrando meses, armando reportes, discutiendo desvíos y explicándole números a gente que no acepta "me dio así" como respuesta.
+
+Y me contó que le vienen bajando línea para que use más Joule. Sí, el agente estrella de SAP. No es una orden formal, nunca lo es. Pero se entiende igual: hay que empezar a usarlo, hay que mostrar casos, hay que estar en la ola. Nadie te lo pone por escrito, pero todos sabemos qué pasa si en el review sos el único que no tiene un caso para mostrar (spoiler: queda feo).
+
+Le pregunté cómo le estaba yendo. Me dijo 2 cosas que valen la pena mencionar:
+
+1. Que no termina de confiar en los datos. Ojo, no en el modelo. En los datos. Que el número que le sale no siempre cuadra con lo que ella sabe que es cierto, y que no tiene forma de saber de dónde salió.
+2. Que además de usarlo, le están pidiendo que arme soluciones. Y que no tiene idea de cómo evaluar si lo que arma está bien, porque no es su oficio. Nunca lo fue. Tampoco se lo ofrecieron como cambio de carrera, apareció.
+
+Ahí está, en dos frases, un problema que ya damos por resuelto y no lo está y que se ve más de lo habitual en el ambiente empresarial pero que no sale mucho en Linkedin como post estrella.
+
+> La herramienta se democratizó. El criterio para juzgarla, no.
+
+Toda la promesa de esta ola es la misma: el usuario de negocio ya no depende de IT. "Autonomía" debe ser la palabra más usada en los PowerPoints de cualquier manager que quiere agentes cueste lo que cueste. "Describís lo que necesitás y el sistema te lo arma", esa frase vende y vende. Se terminó el ticket, la espera, la cola de prioridades donde tu pedido entraba en posición catorce detrás de cosas que nadie recuerda haber pedido.
+
+Y fuera de chiste suena bien, porque en parte es cierto. Pero fijate lo que pasa del otro lado del mostrador. Cuando un desarrollador recibía código generado, al menos podía leerlo (para eso se estudiaba en mis tiempos). Podía ver la lógica, entender qué hacía, putear un rato y discutir si estaba bien (o había que rehacer el 80%). Tenía una base para evaluar el resultado, aunque no lo hubiera escrito él.
+
+La persona de Controlling no tiene eso. Ve un número. Y tiene que decidir si le cree. Es como apostarle al negro en la ruleta. Su única herramienta de validación es su propio criterio de negocio, que es real y vale muchísimo, pero que funciona cuando el resultado está claramente mal. Si el sistema te dice que el margen del trimestre fue del 340%, no hace falta un comité: te reís y seguís.
+
+El problema son los otros. Los resultados plausibles. Los que quedan cómodos dentro del rango esperado pero están construidos sobre un dato viejo, una relación mal armada o una excepción que el modelo no conocía. Esos no se ríen. Esos se presentan y te pueden costar la cabeza si no son así.
+
+Eso no se detecta mirando. Se detecta pudiendo preguntar de dónde salió. Y esa pregunta, hoy, no tiene una buena respuesta.
+
+## Ojo, no es una impresión mía. Está en el informe de SAP
+
+Hace unas semanas escribí sobre el informe que SAP le encargó a Oxford Economics, con 2.600 empresas en trece países. Volví a abrirlo después de esta conversación y encontré cosas que la primera vez pasé por arriba. Cosa que, siendo honesto, es exactamente lo que critico en este artículo.
+
+Le preguntaron a las empresas cuáles son sus principales preocupaciones sobre el impacto de la IA en su gente. El ranking fue este:
+
+1. La alfabetización desigual en IA.
+2. El debilitamiento del juicio crítico y de la toma de decisiones.
+3. La distribución desigual de habilidades.
+4. La pérdida del aprendizaje en el trabajo.
+
+O sea que la preocupación número uno de esas empresas es exactamente lo que escuché en esa conversación. Y la número dos es su consecuencia directa.
+
+Y se pone peor así que andá por el café. El 79% de las empresas experimenta resultados de baja calidad al menos ocasionalmente, con retrabajo, demoras y atrasos. El 82% tuvo que adaptar el trabajo del día a día por esos resultados. Traducido al criollo: ocho de cada diez empresas están laburando alrededor de la herramienta que compraron para trabajar menos.
+
+Y el dato que me parece el más crítico de todos:
+
+> El 62% dice estar preparada en materia de datos para la IA. El año pasado era el 64%.
+
+Bajó. Mientras la adopción sube, la preparación de datos cae (si esto sigue así, adiós al viejo y querido contexto).
+
+Al final del día, esa persona de Finanzas no está siendo desconfiada. Está leyendo la situación mejor que varios comités juntos que fantasean mientras van en el auto escuchando cómo según la IA nos va a matar a todos en un orden probabilístico del 10%.
+
+## El plano existe. El piso todavía no.
+
+Acá conviene ser justo con SAP, porque la parte difícil ya la pensaron y la están trabajando.
+
+Si mirás la arquitectura que publicaron, la AI-native North Star, hay una capa entera dedicada a esto. Se llama Foundation Layer y es donde viven el Knowledge Graph, los data products, HANA Cloud, los modelos. Es, literalmente, el lugar donde debería poder contestarse la pregunta de dónde salió el número. No es que nadie lo pensó: está dibujado, tiene nombre, tiene dueño y tiene su propia sesión de una hora con preguntas al final.
+
+Y el Knowledge Graph no es marketing. Hace explícitas las entidades y las relaciones sobre el modelo semántico de SAP: unas 452.000 tablas ABAP y 7,3 millones de campos que un modelo de lenguaje, librado a su suerte, no tiene forma de entender. Eso baja la alucinación de manera real.
+
+El problema es otro, y es más incómodo.
+
+Una cosa es fundamentar y otra es verificar. Fundamentar significa que el modelo responde sobre tu mundo y no sobre lo que leyó en internet un martes de 2023. Verificar significa que el número aguanta un cierre, un control o una auditoría. Son dos cosas distintas, y la segunda no viene incluida en la licencia. Ahí es donde está parada esa persona: con una respuesta bien fundamentada que igual no puede firmar.
+
+Y hay un detalle más, que es el que casi nadie presupuesta. El grafo mapea el mundo de SAP automáticamente. Tu mundo no. Tus documentos, tus políticas, tus excepciones, la regla que solo conoce el que cierra el mes hace diez años y que no está escrita en ningún lado porque "todos la saben": nada de eso viene mapeado. Eso se carga, se cura y se mantiene. Es un proyecto, no una suscripción.
+
+Ahora volvé al dato de antes: la adopción sube y la preparación de datos bajó de 64% a 62%. Sumale también lo que hablamos del "El empleado perfecto que SAP" y lo lejos que estamos de ese ideal de autónomo, orientado a objetivos, capaz de adaptarse solo y cómo encajaría en todo este entramado.
+
+Eso no es una contradicción en sí misma. Es la foto exacta de lo que pasa cuando la capa de arriba, la que se ve linda en una demo, avanza más rápido que la capa de abajo, por la que nadie te felicita nunca. El plano está bien. Lo que está desfasado es el orden en que lo estamos construyendo.
+
+Quiero que te lleves una cosa de este bloque, porque vuelve al final: si el origen del dato tiene un lugar definido en la arquitectura, entonces preguntar por el origen sí tiene respuesta posible hoy. No la tiene preguntar por el razonamiento. Esa distinción es todo lo que te queda como herramienta.
+
+## Y esto es solo la parte visible
+
+Todo lo anterior pasa dentro de una herramienta oficial, con un proveedor detrás y alguien a quien reclamarle. Ahora mirá lo que pasa afuera.
+
+En una empresa, SAP no es todo el software. Y cuando el usuario de negocio descubre que puede armar cosas solo, no siempre espera a que alguien le habilite una plataforma corporativa. Arma una aplicación en una tarde, con lo que tenga a mano, y esa aplicación empieza a usarse. Primero la usa él. Después el equipo. Después aparece en un reporte que mira un director.
+
+El problema aparece más tarde. Cuando revienta, o cuando hay que modificarla. Nadie quiere leer ese código, y mucho menos refactorizarlo. Por algo se llenaron los feeds de memes sobre el nuevo oficio del que viene a limpiar el desastre ajeno: una especie de Winston Wolf de Pulp Fiction, pero para código generado. Solucionador de problemas, viene de traje, no pregunta quién lo hizo.
+
+El mismo informe de SAP mide esto y los números no son de adorno. Más de la mitad de las organizaciones reporta resultados inconsistentes o inexactos por uso de herramientas de IA no autorizadas. Casi la mitad tuvo fuga de datos o exposición de propiedad intelectual. Y más de un tercio sufrió vulnerabilidades de seguridad y violaciones de compliance por la misma causa.
+
+No es gente actuando de mala fe. Es gente resolviendo su problema con lo que tiene, porque le pidieron resultados y no le dieron ni la herramienta ni el criterio. Si le pedís a alguien que cruce a nado y no le das bote, va a nadar. Y después no te hagas el sorprendido.
+
+## Lo que viene no la ayuda
+
+Hasta acá hablamos del dato: de dónde salió, quién lo mantiene, si está fresco (y no es basura). Ese problema es feo pero es humano, se resuelve con trabajo.
+
+Ahora viene el otro, que es de otra naturaleza.
+
+La pregunta que ella necesita hacer, y que no puede, es por qué. Por qué el sistema llegó a ese número y no a otro. No qué datos miró, sino cómo los combinó.
+
+Esa pregunta hoy no tiene una buena respuesta técnica, y no por desidia de nadie. Los modelos de lenguaje son opacos por construcción (caja negra). Se puede mostrar qué información entró, se pueden citar fuentes, se puede dar un rastro de lo que se consultó. Pero explicar el razonamiento que llevó del insumo al resultado es un problema abierto de la disciplina. No es que SAP no lo implementó todavía: no existe.
+
+Hay investigación en curso, y buena. Salió este año un trabajo que consigue dejar activas apenas el 0,4% de las conexiones internas de atención de un modelo, sin perder rendimiento, y con circuitos hasta cien veces más simples de rastrear. Es exactamente la dirección que haría falta: si querés auditar el porqué, primero necesitás que haya menos cables que seguir.
+
+Y conviene ser honesto con el alcance: son modelos de hasta siete mil millones de parámetros. Nada de lo que corre debajo de un asistente empresarial está en esa escala. Es una línea de investigación prometedora, no algo a lo que puedas suscribirte el mes que viene pagando 20 dólares.
+
+O sea que la explicabilidad real, la que te deja auditar el porqué, no llega este año ni el que viene. Linda tarea para los equipos de compliance. Y no en el futuro: ahora, cuando los agentes empiecen a actuar solos y haya que explicar cada traza.
+
+Mientras tanto, a la gente de negocio le estamos pidiendo que confíe. Y sí, en todo cambio de paradigma hay algo de salto de fe. El tema es cuánto salto y sobre qué red.
+
+## Antes de que me des la razón
+
+Tres cosas en contra de todo lo que acabo de decir.
+
+1. **Nunca tuvimos explicabilidad total y acá estamos.** Nadie que usa una planilla heredada con cuarenta fórmulas anidadas, tres pestañas ocultas y un rango que apunta a un archivo que ya no existe puede explicar de dónde sale cada número. Y sin embargo se cierran balances con eso hace décadas. Pedirle a la IA un estándar de transparencia que nunca le pedimos al resto del stack puede ser injusto. La diferencia, creo, es que la planilla no inventa: atrás hay un modelo matemático, mal documentado pero determinista. Aun así, el punto es válido y me lo banco.
+2. **Esto va a mejorar, y probablemente rápido.** Aunque no esta semana. El rastro de fuentes, los registros de decisión, las capas de contexto van en la dirección correcta. Escribir hoy sobre las limitaciones de una tecnología que se mueve así tiene fecha de vencimiento corta, y justamente por eso conviene decirlo ahora y no cuando ya no sirva.
+3. **En mi área, el que empuja la adopción soy yo.** O sea que también soy el que baja la línea que estoy criticando acá. No escribo esto desde afuera del problema. Escribo desde adentro, que es bastante menos cómodo pero bastante más honesto.
+
+## Qué hacer con todo esto
+
+Acá está la parte útil, y es corta (otra paradoja). Tres preguntas, según de qué lado estés.
+
+**Si estás del lado de negocio y te están pidiendo que uses esto:**
+
+Probá contra algo cuya respuesta ya sabés. Pedile al asistente algo de un período cerrado, que conocés de memoria. Si el número coincide, aprendiste dónde acierta. Si no coincide, aprendiste bastante más. Nunca estrenes una herramienta en algo que no podés verificar, porque en esa reunión el que queda expuesto no es la herramienta: sos vos.
+
+Y más incómodo de pedir, pero rinde más: preguntá sobre qué te está respondiendo. Qué origen, de cuándo, quién lo mantiene. Acordate de la distinción de más arriba: no estás pidiendo que te expliquen el razonamiento del modelo, eso hoy no existe para nadie. Estás pidiendo el equivalente a lo que el desarrollador tenía cuando podía leer el código: saber con qué materia prima se armó el resultado. Eso sí tiene un lugar en la arquitectura y sí se puede contestar. Y si nadie te lo sabe contestar, no te fuiste con las manos vacías: te fuiste con un hallazgo.
+
+**Si estás del lado técnico, empujando la adopción:**
+
+La pregunta que les tenés que hacer a los usuarios no es si les gustó. Van a decir que sí, porque sos vos el que pregunta y porque nadie quiere quedar como el que se resiste al cambio.
+
+La pregunta es cómo hicieron para verificarlo. Si no saben contestar eso, no tenés adopción. Tenés obediencia. Y la obediencia rinde bárbaro hasta el día que alguien mira los números de verdad.
+
+> Porque la alfabetización en IA no es aprender a escribir prompts. Eso fue 2023, se aprende en una tarde y ya hay gente vendiendo cursos de algo que resolvés leyendo diez minutos.
+
+Es saber cuándo desconfiar.
+
+Y ojo, desconfiar no es ponerse el gorro de papel aluminio y salir a avisar que unos reptiles quieren que nuestras empresas funcionen solas con agentes. Es poder distinguir, con lo que ya sabés de tu oficio, en qué casos esto te ayuda y en cuáles te entierra tres metros bajo tierra con la pala que vos mismo pediste por Service Now.
+
+A eso todavía nadie está enseñando.
+
+Y para que no se lea como que vine a repartir palos y me fui: la dirección no está mal.
+
+La arquitectura que publicó SAP es probablemente lo más serio que se escribió sobre cómo se sostiene todo esto en una empresa de verdad, y que el Foundation Layer exista como capa propia, con la gobernanza y el contexto adentro, dice que entendieron el problema antes que la mayoría del mercado. Lo que falta no es visión. Es tiempo, y sobre todo es orden: construir de abajo hacia arriba cuando la presión viene de arriba hacia abajo.
+
+Mientras tanto, el que queda en el medio es el que tiene que firmar el número.
+
+Pablo / En Producción
+
+P.D. Si en tu empresa están empujando estas herramientas hacia la gente de negocio, preguntales cómo validan lo que les sale. Si la respuesta es "se ve bien", ahí tenés tu tarea de la semana. Si la respuesta es "confío en el sistema", tenés la del mes.
+
+**Referencias:**
+
+- SAP y Oxford Economics, "The Value of AI", 2026.
+- SAP, "AI-native North Star Architecture", Q2 2026.
+- SAP Learning, "Exploring SAP Knowledge Graph".
+- Draye, F., Lei, A., Pan, H., Posner, I. y Schölkopf, B. "Intrinsically Interpretable Attention via Sparse Post-Training". arXiv:2512.05865, 2026.

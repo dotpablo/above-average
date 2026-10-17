@@ -1,6 +1,6 @@
 # Índice de ediciones — Above Average
 
-Newsletter de Pablo Marichal. 45 ediciones publicadas, de la más reciente a la más antigua.
+Newsletter de Pablo Marichal. 49 ediciones publicadas, de la más reciente a la más antigua.
 
 **Fuente:** `content/posts/*.mdx`
 **Criterio de inclusión:** posts en español desde el lanzamiento del newsletter (2025-10-26). Se excluyen las 3 traducciones al inglés que viven en `content/posts/`, todo `content/posts-en/` y el archivo histórico de LinkedIn/Substack anterior a esa fecha.
@@ -8,6 +8,10 @@ Newsletter de Pablo Marichal. 45 ediciones publicadas, de la más reciente a la 
 
 | Ed. | Fecha | Título | Pilar | Tesis | Slug |
 |---:|---|---|---|---|---|
+| 49 | 2026-10-13 | La empresa autónoma no te va a reemplazar. Te va a ascender a corrector. | Enterprise & AI Survival | El riesgo no es la extinción sino la degradación: quedar adentro del proceso, del lado de corregir. | `la-empresa-autonoma-te-va-a-ascender-a-corrector` |
+| 48 | 2026-09-29 | El mejor test de tu arquitectura es irte dos semanas | Full Stack Human | Si tu única forma de ser importante es que nadie más pueda hacer lo tuyo, sos rehén de tu puesto. | `el-mejor-test-de-tu-arquitectura-es-irte-dos-semanas` |
+| 47 | 2026-09-22 | Le dijeron que use Joule. No le dijeron cómo saber si está bien. | Enterprise & AI Survival | La herramienta se democratizó y el criterio para juzgarla no: alfabetizarse en IA es saber cuándo desconfiar. | `le-dijeron-que-use-joule-no-como-saber-si-esta-bien` |
+| 46 | 2026-09-15 | Lo que todos le critican a SAP es lo que lo está protegiendo | Enterprise & AI Survival | En un mundo donde generar código es gratis, la fricción dejó de ser un costo y es un filtro. | `lo-que-le-critican-a-sap-es-lo-que-lo-esta-protegiendo` |
 | 45 | 2026-09-08 | El empleado perfecto que SAP describe no nace. Se fabrica. | Enterprise & AI Survival | Se automatiza el trabajo de bajo nivel donde se fabricaba el criterio senior que el mismo mercado idealiza. | `el-empleado-perfecto-que-sap-describe-no-nace-se-fabrica` |
 | 44 | 2026-09-01 | Los agentes de IA son los nuevos programas Z | Enterprise & AI Survival | El agente sin registro ni dueño es el programa Z de esta década: deuda técnica creada más rápido. | `los-agentes-de-ia-son-los-nuevos-programas-z` |
 | 43 | 2026-08-25 | Mi Web le dijo a las máquinas que yo tenía cero años de experiencia | Builder Mindset | Lo que se ve en el navegador no es lo que leen los modelos: nadie revisa lo que ya funciona. | `mi-web-le-dijo-a-las-maquinas-que-yo-tenia-cero-anos-de-experiencia` |
@@ -60,12 +64,12 @@ Newsletter de Pablo Marichal. 45 ediciones publicadas, de la más reciente a la 
 
 | Pilar | Ediciones | % |
 |---|---:|---:|
-| Enterprise & AI Survival | 27 | 60% |
-| Full Stack Human | 13 | 29% |
-| Builder Mindset | 4 | 9% |
+| Enterprise & AI Survival | 30 | 61% |
+| Full Stack Human | 14 | 29% |
+| Builder Mindset | 4 | 8% |
 | Biological Clean Core | 1 | 2% |
 
-El pilar biológico está prácticamente sin cubrir: una sola edición en 45 (la 7). La 36 podría contarse como segunda si se reclasifica.
+El pilar biológico está prácticamente sin cubrir: una sola edición en 49 (la 7). La 36 podría contarse como segunda si se reclasifica.
 
 Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real sobre `indice-completo.json` era 23. Corregido acá.
 
@@ -85,8 +89,9 @@ Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real s
 | El vibe coding produce demos que mueren | 16, 19, 35 | Medio |
 | «El que entiende los fundamentos orquesta…» | 22, 28, 31, 32 | Estilístico — frase-firma en 4 cierres |
 | Sección «Antes de que me des la razón» con autodeclaración de no-neutralidad | 41, 42 | **Muy alto — párrafo casi textual en dos ediciones consecutivas** |
-| Quién firma / quién responde por lo que ejecuta el agente | 38, 40, 41, 44, 45 | Alto — eje en consolidación |
-| El que sabe por qué está ese campo en la tabla | 42, 45 | Alto — imagen casi textual con 3 semanas de distancia |
+| Quién firma / quién responde por lo que ejecuta el agente | 38, 40, 41, 44, 45, 47, 49 | Alto — eje en consolidación |
+| El que sabe por qué está ese campo en la tabla | 42, 45, 48 | Alto — la 48 le da vuelta el argumento |
+| La fricción como filtro, no como burocracia | 44, 46, 47 | Alto — las tres citan la licencia de veinte dólares |
 | Lo que funciona en la demo miente en producción | 32, 35, 43 | Medio-alto — la 43 es el caso propio |
 
 Detalle completo en `indice-completo.json`.

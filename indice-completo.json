@@ -11,9 +11,77 @@
       "the-death-of-the-man-hour-are-you-paid-for-your-time-or-your-token-budget"
     ],
     "nota_numeracion": "Ningún archivo trae el número de edición en el frontmatter. La numeración es secuencial por fecha desde 2025-10-26 = 1. Se corrobora con la edición del 2026-01-06, que dice 'If you have been reading me for the past 11 weeks' y cae exactamente en la posición 11.",
-    "total_ediciones": 45
+    "total_ediciones": 49
   },
   "ediciones": [
+    {
+      "edicion": 49,
+      "fecha": "2026-10-13",
+      "titulo": "La empresa autónoma no te va a reemplazar. Te va a ascender a corrector.",
+      "slug": "la-empresa-autonoma-te-va-a-ascender-a-corrector",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "El riesgo no es la extinción sino la degradación: quedar adentro del proceso, del lado de corregir.",
+      "temas": "daron acemoglu, autonomous enterprise, decision layer, microsoft ai, electricidad, migracion s/4, explicabilidad, precision del modelo",
+      "fuentes_clave": [
+        "SAP Community — 'Jev vs. RPT: The Decision Layer Is Here', 2026",
+        "Daron Acemoglu — 'Will AI Replace Workers? Not If We Build It Right', Humanist Review, 2026",
+        "Typed-decisions — huggingface.co/datasets/LocalLLaMA/typed-decisions"
+      ],
+      "enlaza_a": [
+        "el-mejor-test-de-tu-arquitectura-es-irte-dos-semanas"
+      ]
+    },
+    {
+      "edicion": 48,
+      "fecha": "2026-09-29",
+      "titulo": "El mejor test de tu arquitectura es irte dos semanas",
+      "slug": "el-mejor-test-de-tu-arquitectura-es-irte-dos-semanas",
+      "pilar": "Full Stack Human",
+      "tesis": "Si tu única forma de ser importante es que nadie más pueda hacer lo tuyo, sos rehén de tu puesto.",
+      "temas": "indispensabilidad, documentacion, runbook, punto unico de falla, programas z, movilidad laboral, vacaciones, automatizacion",
+      "fuentes_clave": null,
+      "enlaza_a": [
+        "el-que-sabe-por-que-esta-ese-campo-se-jubila",
+        "los-agentes-de-ia-son-los-nuevos-programas-z"
+      ]
+    },
+    {
+      "edicion": 47,
+      "fecha": "2026-09-22",
+      "titulo": "Le dijeron que use Joule. No le dijeron cómo saber si está bien.",
+      "slug": "le-dijeron-que-use-joule-no-como-saber-si-esta-bien",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La herramienta se democratizó y el criterio para juzgarla no: alfabetizarse en IA es saber cuándo desconfiar.",
+      "temas": "joule, oxford economics, knowledge graph, north star architecture, shadow ai, explicabilidad, foundation layer, usuarios de negocio",
+      "fuentes_clave": [
+        "SAP y Oxford Economics — 'The Value of AI', 2026",
+        "SAP — 'AI-native North Star Architecture', Q2 2026",
+        "SAP Learning — 'Exploring SAP Knowledge Graph'",
+        "Draye, Lei, Pan, Posner y Schölkopf — 'Intrinsically Interpretable Attention via Sparse Post-Training', arXiv:2512.05865, 2026"
+      ],
+      "enlaza_a": [
+        "los-agentes-de-ia-son-los-nuevos-programas-z",
+        "el-empleado-perfecto-que-sap-describe-no-nace-se-fabrica"
+      ]
+    },
+    {
+      "edicion": 46,
+      "fecha": "2026-09-15",
+      "titulo": "Lo que todos le critican a SAP es lo que lo está protegiendo",
+      "slug": "lo-que-le-critican-a-sap-es-lo-que-lo-esta-protegiendo",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "En un mundo donde generar código es gratis, la fricción dejó de ser un costo y es un filtro.",
+      "temas": "checkmarx, gitclear, vibe coding, charm, deuda tecnica, joule for developers, codigo generado, gobierno de cambios",
+      "fuentes_clave": [
+        "Checkmarx — 'Future of Application Security 2026' (2.350 respuestas en 14 países)",
+        "GitClear — análisis sobre 211 millones de líneas modificadas",
+        "SAP — Joule for Developers"
+      ],
+      "enlaza_a": [
+        "el-99-por-ciento-muere-en-localhost",
+        "el-paraiso-y-el-apocalipsis-venden-lo-mismo"
+      ]
+    },
     {
       "edicion": 45,
       "fecha": "2026-09-08",
@@ -763,6 +831,11 @@
         "edicion": 43,
         "slug": "mi-web-le-dijo-a-las-maquinas-que-yo-tenia-cero-anos-de-experiencia",
         "detalle": "No cita fuentes externas: es una autopsia del propio sitio y el dato duro (el HTML servido) es verificable en el repo. En el cierre había dos enlaces a capturas de ChatGPT que quedaron sin URL al importar desde LinkedIn; se retiró la referencia a esos enlaces hasta tenerlos."
+      },
+      {
+        "edicion": 48,
+        "slug": "el-mejor-test-de-tu-arquitectura-es-irte-dos-semanas",
+        "detalle": "Sin bibliografía a propósito: el propio texto cierra con 'Referencias: hoy no hubo bibliografía'. Es una edición de argumento, no de datos."
       }
     ],
     "fuentes_incompletas": [
@@ -792,7 +865,8 @@
       }
     ],
     "numeracion_incierta": {
-      "detalle": "Ningún archivo trae campo 'edicion'. La numeración se infirió por orden de fecha. Corrobora la edición 11 ('the past 11 weeks'), pero hay un hueco de calendario sin post entre 2026-03-31 y 2026-04-14 (falta el 2026-04-07) y dos entregas en nueve días (2026-03-23 lunes y 2026-03-31 martes). Si en ese hueco hubo una edición que no está en el repo, todos los números desde el 24 en adelante se corren en uno."
+      "detalle": "Ningún archivo trae campo 'edicion'. La numeración se infirió por orden de fecha. Corrobora la edición 11 ('the past 11 weeks'), pero hay un hueco de calendario sin post entre 2026-03-31 y 2026-04-14 (falta el 2026-04-07) y dos entregas en nueve días (2026-03-23 lunes y 2026-03-31 martes). Si en ese hueco hubo una edición que no está en el repo, todos los números desde el 24 en adelante se corren en uno.",
+      "hueco_2026_10_06": "No hay edición el 2026-10-06. No es un hueco de numeración: la 48 anuncia dos semanas de vacaciones y la 49 abre diciendo que volvió. La cadencia semanal se retoma el 13/10."
     },
     "contenido_perdido_en_la_migracion": {
       "detalle": "17 ediciones tienen listas numeradas vacías ('1.' '2.' '3.' sin texto) o bloques de código vacíos, aparentemente perdidos al convertir desde LinkedIn. Afecta contenido sustantivo: el 'Plan de Supervivencia' de la ed. 18, el 'Kit de Resiliencia' y las 4 causas de fallo de la ed. 15, el stack de dominios de la ed. 4, el prompt completo de la ed. 5 y el de la ed. 2.",
@@ -950,19 +1024,22 @@
         40,
         41,
         44,
-        45
+        45,
+        47,
+        49
       ],
       "nivel": "alto",
-      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias. La 44 lo aterriza en el registro de agentes; la 45 advierte que dejarle al humano solo la firma es 'teatro de gobernanza'."
+      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias. La 44 lo aterriza en el registro de agentes; la 45 advierte que dejarle al humano solo la firma es 'teatro de gobernanza'. La 47 lo lleva al usuario de negocio que tiene que firmar un número que no puede auditar; la 49 advierte que dejarle solo la corrección es degradación, no gobernanza."
     },
     {
       "grupo": "El que sabe por qué está ese campo en la tabla",
       "ediciones": [
         42,
-        45
+        45,
+        48
       ],
       "nivel": "alto — la imagen se repite casi textual con tres semanas de distancia",
-      "detalle": "La 42 construye toda la edición sobre el campo que una sola persona sabe explicar. La 45 reusa la imagen ('el que sabe por qué está ese campo ahí, por qué ese proceso tiene un paso que parece de más') para definir al senior que sí sobrevive. Es continuidad deliberada, pero la formulación es casi idéntica."
+      "detalle": "La 42 construye toda la edición sobre el campo que una sola persona sabe explicar. La 45 reusa la imagen ('el que sabe por qué está ese campo ahí, por qué ese proceso tiene un paso que parece de más') para definir al senior que sí sobrevive. Es continuidad deliberada, pero la formulación es casi idéntica. La 48 le da vuelta el argumento: ese conocimiento exclusivo también es una jaula."
     },
     {
       "grupo": "Lo que funciona en la demo miente en producción",
@@ -973,6 +1050,16 @@
       ],
       "nivel": "medio-alto",
       "detalle": "La 32 lo plantea con el PowerPoint contra el sistema real, la 35 con el 99% que muere en localhost, y la 43 lo aplica al propio sitio de Pablo. La 43 es la más fuerte de las tres porque el caso es propio y el costo, admitido."
+    },
+    {
+      "grupo": "La fricción y la gobernanza como filtro, no como burocracia",
+      "ediciones": [
+        44,
+        46,
+        47
+      ],
+      "nivel": "alto",
+      "detalle": "La 44 pide un registro de agentes, la 46 defiende la fricción de SAP como barrera contra el vibe coding y la 47 muestra qué pasa cuando falta la capa de verificación. Las tres se cuidan de no sonar a defensa de la burocracia y las tres citan el ejemplo de la licencia de veinte dólares."
     }
   ]
 }

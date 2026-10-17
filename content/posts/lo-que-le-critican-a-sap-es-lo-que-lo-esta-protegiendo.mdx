@@ -1,0 +1,102 @@
+---
+title: "Lo que todos le critican a SAP es lo que lo está protegiendo"
+date: "2026-09-15"
+description: "El 49% del código que llega a producción ya lo genera una IA, y las organizaciones que más la usan publican código vulnerable 3,4 veces más seguido. La complejidad de SAP que todos criticamos funcionó como barrera de contención. La pregunta ya no es qué tecnología lo va a derribar."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+Todos los que trabajamos con esto conocemos la escena.
+
+Alguien necesita pasar un transporte de última hora. Está apurado, la fecha encima, y el cambio es "chico". ChaRM lo frena: downgrade protection, o un cross reference check que encontró una dependencia. Empieza la negociación. Que es urgente, que el objeto es mío, que en el ambiente de desarrollo funciona perfecto.
+
+A veces gana la insistencia y se libera igual. Y entonces revienta en preproducción. No por el objeto que estaba pasando, sino por otro que dependía de una versión que acababa de pisar.
+
+La primera vez que te pasa, puteás contra la herramienta. Después de unos años entendés que la herramienta era lo único que estaba entre vos y una llamada a las tres de la mañana a los BASIS y al tipo que hizo mal el código.
+
+Me acordé de esto leyendo unos informes sobre lo que está pasando con el código generado por IA afuera del mundo enterprise, aka el resto del mundo. Y me quedé pensando en algo que no había visto planteado en ningún lado, o al menos no lo leí.
+
+## La pregunta que veníamos haciendo estaba mal
+
+Desde que tengo uso de razón la conversación siempre fue la misma en el mundo de los ERP: qué tecnología va a derribar a SAP de una vez por todas.
+
+Primero iba a ser el SaaS, más rápido y más barato. Después el low-code, que iba a dejar que cualquiera armara lo que necesitaba sin esperar seis meses. Ahora es la IA. Y siempre es la misma historia: aparece algo más veloz y más flexible que promete reemplazar a esos sistemas caros, rígidos e imposibles de cambiar.
+
+Y SAP sigue ahí. No porque sea invulnerable, ni porque haya hecho todo bien. Para mí es otra cosa. SAP está blindado por defecto contra el vibe coding gracias a todo aquello por lo que siempre lo criticamos. La complejidad. Las restricciones. El gobierno de cambios. La resistencia a que cualquiera toque cualquier cosa.
+
+Eso que llamamos burocracia funcionó como una barrera de contención.
+
+## Lo que pasa donde no hay barrera
+
+Para que se entienda por qué digo esto, mirá lo que está pasando afuera.
+
+Checkmarx publicó su informe anual sobre el futuro de la seguridad de aplicaciones, con respuestas de 2.350 CISOs, responsables de seguridad y desarrolladores en catorce países.
+
+El 49% del código que llega a producción ya es generado por IA. El 96% de los desarrolladores tiene herramientas de IA en su entorno y casi todos las consideran efectivas. Hasta ahí, la historia del progreso.
+
+Ahora los otros números, que no son tan lindos:
+
+> Solo el 18% aplica seguridad de forma continua mientras escribe. El 70% cree que el código generado por IA tiene más vulnerabilidades que el escrito por humanos, y aun así el 30% lo manda a producción sabiendo que está comprometido. El 75% de las organizaciones despliega código vulnerable a sabiendas en algún momento, empujado por plazos y por la esperanza de que no lo encuentren.
+
+Y el dato estrella: las organizaciones donde entre el 81% y el 100% del código es generado por IA publican código vulnerable 3,4 veces más seguido que aquellas donde la IA escribe entre el 1% y el 20%.
+
+Es una correlación de una encuesta, no una demostración de causalidad, así que cuidado con tomarlo textual y extrapolar. Pero la dirección es difícil de ignorar.
+
+Hay otro análisis, de GitClear, sobre 211 millones de líneas modificadas, que apunta a lo mismo desde otro ángulo: el código copiado creció mientras las líneas movidas o refactorizadas cayeron a menos de la mitad. Traducido al idioma de Cervantes: estamos aumentando la capacidad de producir código mucho más rápido que la capacidad de consolidarlo.
+
+## Lo que la IA abarató no fue escribir código
+
+Para mí lo clave es este punto en especial.
+
+La IA no bajó solamente el costo de escribir. Bajó la fricción que antes te obligaba a preguntarte si hacía falta escribir.
+
+Antes, hacer una variante nueva de algo que ya existía tenía un costo visible. Había que diseñarla, desarrollarla, probarla, transportarla y justificar el esfuerzo ante alguien. Ese costo funcionaba como filtro: si el esfuerzo no valía la pena, buscabas la que ya estaba.
+
+Ahora pedís la alternativa nueva en segundos. Copiar y adaptar se volvió más barato que entender y reutilizar. Y los que reportan el avance del proyecto, que antes entendían poco, ahora entienden menos todavía, pero exigen las cosas para ayer más que nunca.
+
+El resultado funciona hoy, pasa la prueba, llega a producción. El costo aparece después, cuando otra persona tiene que mantener tres versiones apenas distintas de la misma lógica sin saber por qué existe cada una.
+
+> La deuda técnica no desaparece con la IA. Se produce más rápido, llega mejor presentada, y es más difícil de descubrir y de arreglar que antes.
+
+Ahora volvé a la escena del principio. Ese transporte frenado, esa dependencia detectada, esa discusión molesta con el que quería pasar algo igual. Todo eso es fricción. Y la fricción, en un mundo donde generar es gratis, dejó de ser un costo para convertirse en un filtro.
+
+No estoy diciendo que la complejidad de SAP sea buena. Mucha es frustrante, innecesaria y cara, y los que estamos cerca lo sabemos mejor que nadie. Estoy diciendo algo más chico y más específico: buena parte de esa complejidad está impidiendo que pase acá lo que ya está pasando afuera.
+
+## Y sin embargo, la puerta se está abriendo
+
+SAP también está entrando en esta etapa, obviamente.
+
+Joule for Developers ya genera y explica código, crea pruebas unitarias y asiste en ABAP Cloud y en Build. Y hay que decir que el enfoque es bastante más razonable que abrir un chatbot genérico y pedirle que improvise una solución para un proceso crítico: modelos especializados, contexto de desarrollo, restricciones propias del framework.
+
+Pero hay un límite que ninguna de esas capacidades resuelve. Un modelo entrenado para ABAP reconoce el lenguaje, los objetos y los patrones técnicos. Puede explicarte qué hace una implementación. Lo que no puede saber es por qué una empresa tomó una decisión hace diez años, ni qué se rompería si alguien simplificara esa lógica que parece de más.
+
+Puede generar un test correcto para lo que está a la vista. No para la excepción que vive en otro sistema, o en la cabeza de alguien que hace años sostiene ese proceso.
+
+Entender el código no es lo mismo que entender la empresa.
+
+## Tres cosas que juegan en contra de lo que acabo de decir
+
+1. **La barrera puede ser temporal.** Si SAP baja la fricción para competir en velocidad, la protección desaparece. Y hay presión comercial real para bajarla, porque nadie vende diciendo "nuestro producto tarda más". Si dentro de tres años generar y desplegar en SAP es tan fácil como en cualquier stack moderno, todo este argumento se cae y lo que queda es el desorden.
+2. **La fricción también mata cosas buenas.** Ya escribí sobre empresas donde aprobar una licencia de veinte dólares lleva tres meses. Esa misma lentitud que te protege de un cambio mal pensado es la que te deja dos años atrás de un competidor más chico. Defender la fricción como principio general es una tontería. El punto es cuál conservás y cuál sacás, y eso requiere criterio, no una política.
+3. **Y yo vivo de esto.** Cuando digo que la complejidad enterprise tiene valor, estoy describiendo un mundo donde mi oficio sigue haciendo falta.
+
+## Qué hacer con esto
+
+2 cosas concretas.
+
+1. Si en tu organización están evaluando qué controles sacar para ir más rápido con IA, la pregunta correcta no es cuánto tiempo ahorra sacarlo. Es qué encontró ese control la última vez que frenó algo. Si nadie sabe la respuesta, nadie está mirando los registros, y eso es un problema aparte.
+2. Y si estás generando código o configuración con IA: lo que el modelo no puede saber, escribilo vos. No la documentación técnica, que la genera cualquiera. El porqué. Por qué esa validación existe, qué proceso la pidió, qué se rompe si la sacás. Eso es lo único que no está en ninguna ventana de contexto, y es lo que convierte a un objeto en mantenible dentro de tres años.
+
+Durante años, los archirrivales de SAP y cualquiera en el ecosistema preguntamos qué tecnología iba a derribarlo. Quizás esa nunca fue la pregunta correcta.
+
+La pregunta ahora es si SAP va a poder adoptar la velocidad de la IA sin adoptar también su desorden. Porque generar software nunca fue la parte difícil. La parte difícil siempre fue vivir con él después.
+
+Pablo / En Producción
+
+P.D. Si alguna vez insististe para que te liberaran un transporte que el sistema no quería dejar pasar, ya sabés de qué lado de este artículo estás. Mandáselo al que te lo frenó.
+
+**Referencias:**
+
+- Checkmarx, "Future of Application Security 2026".
+- GitClear, análisis sobre 211 millones de líneas modificadas.
+- SAP Joule for Developers, SAP.
