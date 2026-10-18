@@ -4,23 +4,58 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { DICT, type Locale } from "@/lib/i18n";
 
-const links = [
-  { href: "/blog", label: "En Producción" },
-  { href: "/videos", label: "Videos" },
-  { href: "/recursos", label: "Recursos" },
-  { href: "/charlas", label: "Charlas" },
-  { href: "/about", label: "About" },
+/**
+ * Equivalente de cada sección en el otro idioma. Los artículos los resuelve la
+ * propia página, que es la que tiene el mapa de traducciones; acá van las
+ * secciones fijas. Sin equivalencia, el selector cae a la home del otro idioma.
+ */
+const PARES: [string, string][] = [
+  ["/", "/en"],
+  ["/blog", "/en/blog"],
+  ["/about", "/en/about"],
+  ["/videos", "/en/videos"],
+  ["/charlas", "/en/talks"],
+  ["/recursos", "/en/resources"],
+  ["/trabajar-juntos", "/en/contact"],
 ];
 
-export function Nav() {
+function otroIdioma(pathname: string, locale: Locale): string {
+  for (const [es, en] of PARES) {
+    if (locale === "es" && pathname === es) return en;
+    if (locale === "en" && pathname === en) return es;
+  }
+  return locale === "es" ? "/en" : "/";
+}
+
+export function Nav({ locale = "es" as Locale }: { locale?: Locale }) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const t = DICT[locale];
+  const alterno = otroIdioma(pathname, locale);
+
+  const links =
+    locale === "es"
+      ? [
+          { href: "/blog", label: t.nav.blog },
+          { href: "/videos", label: t.nav.videos },
+          { href: "/recursos", label: t.nav.resources },
+          { href: "/charlas", label: t.nav.talks },
+          { href: "/about", label: t.nav.about },
+        ]
+      : [
+          { href: "/en/blog", label: t.nav.blog },
+          { href: "/en/videos", label: t.nav.videos },
+          { href: "/en/resources", label: t.nav.resources },
+          { href: "/en/talks", label: t.nav.talks },
+          { href: "/en/about", label: t.nav.about },
+        ];
 
   return (
     <nav className="flex items-center justify-between border-b border-neutral-800 py-5">
       <Link
-        href="/"
+        href={locale === "es" ? "/" : "/en"}
         className="font-serif text-lg text-white transition-colors hover:text-accent"
       >
         Pablo Marichal
@@ -51,6 +86,15 @@ export function Nav() {
             </li>
           );
         })}
+        <li className="ml-1.5 border-l border-neutral-800 pl-2.5">
+          <Link
+            href={alterno}
+            hrefLang={locale === "es" ? "en" : "es"}
+            className="rounded-md px-1.5 py-1.5 text-neutral-500 transition-colors hover:text-accent"
+          >
+            {t.switcher.other}
+          </Link>
+        </li>
       </ul>
 
       {/* Mobile hamburger */}
@@ -115,6 +159,21 @@ export function Nav() {
                   );
                 }
               )}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: links.length * 0.05, duration: 0.3 }}
+                className="mt-2 border-t border-neutral-800 pt-4"
+              >
+                <Link
+                  href={alterno}
+                  hrefLang={locale === "es" ? "en" : "es"}
+                  onClick={() => setMobileOpen(false)}
+                  className="block rounded-lg px-4 py-3 font-serif text-lg text-neutral-400 transition-colors hover:bg-neutral-900/50 hover:text-white"
+                >
+                  {t.switcher.other}
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}

@@ -9,7 +9,14 @@ export const metadata: Metadata = {
   title: "Videos",
   description:
     "Videos de Pablo Marichal: correr después de los 40, volver de una lesión, emigrar, criar hijos y lo que la IA le está haciendo al trabajo.",
-  alternates: { canonical: `${SITE.url}/videos` },
+  alternates: {
+    canonical: `${SITE.url}/videos`,
+    languages: {
+      es: `${SITE.url}/videos`,
+      en: `${SITE.url}/en/videos`,
+      "x-default": `${SITE.url}/en/videos`,
+    },
+  },
 };
 
 const canales: [string, string][] = [

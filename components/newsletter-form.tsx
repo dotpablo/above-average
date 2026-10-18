@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { DICT, type Locale } from "@/lib/i18n";
 
-export function NewsletterForm() {
+export function NewsletterForm({ locale = "es" as Locale }: { locale?: Locale }) {
+  const t = DICT[locale].newsletter;
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "already" | "error">("idle");
 
@@ -42,7 +44,7 @@ export function NewsletterForm() {
           id="newsletter-email"
           type="email"
           required
-          placeholder="tu@email.com"
+          placeholder={t.placeholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="min-w-0 flex-1 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-base text-white placeholder:text-neutral-600 focus:border-accent/50 focus:outline-none transition-colors"
@@ -53,7 +55,7 @@ export function NewsletterForm() {
           whileTap={{ scale: 0.97 }}
           className="rounded-lg bg-accent px-6 py-2.5 text-base font-medium text-neutral-900 transition-opacity hover:opacity-90 disabled:opacity-50"
         >
-          {status === "loading" ? "..." : "Suscribirme"}
+          {status === "loading" ? t.loading : t.subscribe}
         </motion.button>
       </form>
       <AnimatePresence mode="wait">
@@ -65,7 +67,7 @@ export function NewsletterForm() {
             exit={{ opacity: 0 }}
             className="mt-2 text-sm text-green-400"
           >
-            Listo, bienvenido.
+            {t.ok}
           </motion.p>
         )}
         {status === "already" && (
@@ -76,7 +78,7 @@ export function NewsletterForm() {
             exit={{ opacity: 0 }}
             className="mt-2 text-sm text-yellow-400"
           >
-            Ya estas suscrito. Gracias!
+            {t.already}
           </motion.p>
         )}
         {status === "error" && (
@@ -87,7 +89,7 @@ export function NewsletterForm() {
             exit={{ opacity: 0 }}
             className="mt-2 text-sm text-red-400"
           >
-            Algo salio mal. Intenta de nuevo.
+            {t.error}
           </motion.p>
         )}
       </AnimatePresence>

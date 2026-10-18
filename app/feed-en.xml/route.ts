@@ -159,7 +159,7 @@ export async function GET() {
 
   const items = posts
     .map((post) => {
-      const url = `${SITE.url}/en/${post.slug}`;
+      const url = `${SITE.url}/en/blog/${post.slug}`;
       const pubDate = post.date ? new Date(post.date).toUTCString() : "";
       const html = mdToHtml(post.content);
       // Escape for CDATA — no escaping needed inside CDATA, but we close/reopen if content has ]]>
@@ -168,7 +168,7 @@ export async function GET() {
     <item>
       <title><![CDATA[${post.title}]]></title>
       <link>${url}</link>
-      <guid isPermaLink="false">${SITE.url}/en/${post.slug}</guid>
+      <guid isPermaLink="false">${SITE.url}/en/blog/${post.slug}</guid>
       <description><![CDATA[${post.description}]]></description>
       <pubDate>${pubDate}</pubDate>
       <content:encoded><![CDATA[${safeHtml}]]></content:encoded>
@@ -182,7 +182,7 @@ export async function GET() {
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>En Producción (EN) — Pablo Marichal</title>
-    <link>${SITE.url}</link>
+    <link>${SITE.url}/en</link>
     <description>Tech Lead, AI Champion, 19x Marathoner. The intersection of corporate robustness, AI agility, and high-performance biological systems.</description>
     <language>en</language>
     <managingEditor>pablomarichal@gmail.com (Pablo Marichal)</managingEditor>

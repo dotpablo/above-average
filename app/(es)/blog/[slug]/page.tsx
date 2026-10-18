@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { format, parseISO } from "date-fns";
 import { es } from "date-fns/locale";
-import { getAllPosts, getPostBySlug, getAdjacentPosts } from "@/lib/posts";
+import { getAllPosts, getPostBySlug, getAdjacentPosts, translatedSlug } from "@/lib/posts";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { SITE } from "@/lib/constants";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
@@ -24,10 +24,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const url = `${SITE.url}/blog/${slug}`;
+  // El canónico apunta a sí mismo; hreflang declara el par en inglés si existe.
+  const en = translatedSlug(slug, "es");
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      ...(en && {
+        languages: {
+          es: url,
+          en: `${SITE.url}/en/blog/${en}`,
+          "x-default": `${SITE.url}/en/blog/${en}`,
+        },
+      }),
+    },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -51,6 +62,7 @@ export default async function PostPage({ params }: Props) {
   if (!post) notFound();
 
   const { prev, next } = getAdjacentPosts(slug);
+  const enSlug = translatedSlug(slug, "es");
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -98,6 +110,18 @@ export default async function PostPage({ params }: Props) {
             )}
             {post.readTime && (
               <span className="capitalize">{post.readTime.replace("min read", "min de lectura").replace("read", "lectura")}</span>
+            )}
+            {enSlug && (
+              <>
+                <span>&middot;</span>
+                <Link
+                  href={`/en/blog/${enSlug}`}
+                  hrefLang="en"
+                  className="text-accent transition-colors hover:text-white"
+                >
+                  Read in English
+                </Link>
+              </>
             )}
           </div>
         </FadeIn>

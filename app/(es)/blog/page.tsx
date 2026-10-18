@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE } from "@/lib/constants";
 import { BlogFilter } from "@/components/blog-filter";
 import { getAllPosts } from "@/lib/posts";
 import { NEWSLETTER } from "@/lib/constants";
@@ -6,6 +7,14 @@ import { NewsletterForm } from "@/components/newsletter-form";
 import { FadeIn } from "@/components/motion/fade-in";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE.url}/blog`,
+    languages: {
+      es: `${SITE.url}/blog`,
+      en: `${SITE.url}/en/blog`,
+      "x-default": `${SITE.url}/en/blog`,
+    },
+  },
   title: NEWSLETTER.name,
   description: NEWSLETTER.tagline,
 };

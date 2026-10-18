@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
+import { SITE } from "@/lib/constants";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE.url}/recursos`,
+    languages: {
+      es: `${SITE.url}/recursos`,
+      en: `${SITE.url}/en/resources`,
+      "x-default": `${SITE.url}/en/resources`,
+    },
+  },
   title: "Recursos",
   description:
     "Recursos gratuitos de Pablo Marichal: prompts de IA, sistemas y frameworks para el profesional tech que no quiere quedar deprecated.",

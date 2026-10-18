@@ -10,6 +10,19 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 import { AnimatedStats } from "@/components/motion/animated-stats";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: SITE.url,
+    languages: {
+      es: SITE.url,
+      en: `${SITE.url}/en`,
+      "x-default": `${SITE.url}/en`,
+    },
+  },
+};
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",

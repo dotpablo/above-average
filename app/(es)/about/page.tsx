@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
+import { SITE } from "@/lib/constants";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { NEWSLETTER } from "@/lib/constants";
 import { FadeIn } from "@/components/motion/fade-in";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `${SITE.url}/about`,
+    languages: {
+      es: `${SITE.url}/about`,
+      en: `${SITE.url}/en/about`,
+      "x-default": `${SITE.url}/en/about`,
+    },
+  },
   title: "About",
   description:
     "Uruguay, Venezuela, Uruguay otra vez. Veinte años adentro de corporaciones, 19 maratones y dos hijos. La historia de Pablo Marichal.",

@@ -3,14 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { SITE } from "@/lib/constants";
-
-const navLinks = [
-  { href: "/blog", label: "En Producción" },
-  { href: "/videos", label: "Videos" },
-  { href: "/recursos", label: "Recursos" },
-  { href: "/charlas", label: "Charlas" },
-  { href: "/about", label: "About" },
-];
+import { DICT, type Locale } from "@/lib/i18n";
 
 const socials = [
   { label: "LinkedIn", href: SITE.social.linkedin },
@@ -23,7 +16,25 @@ const socials = [
   { label: "Email", href: SITE.social.email },
 ];
 
-export function Footer() {
+export function Footer({ locale = "es" as Locale }: { locale?: Locale }) {
+  const t = DICT[locale];
+  const navLinks =
+    locale === "es"
+      ? [
+          { href: "/blog", label: t.footer.blog },
+          { href: "/videos", label: t.footer.videos },
+          { href: "/recursos", label: t.footer.resources },
+          { href: "/charlas", label: t.footer.talks },
+          { href: "/about", label: t.footer.about },
+        ]
+      : [
+          { href: "/en/blog", label: t.footer.blog },
+          { href: "/en/videos", label: t.footer.videos },
+          { href: "/en/resources", label: t.footer.resources },
+          { href: "/en/talks", label: t.footer.talks },
+          { href: "/en/about", label: t.footer.about },
+        ];
+
   return (
     <motion.footer
       className="border-t border-neutral-800 py-10"
@@ -34,7 +45,7 @@ export function Footer() {
     >
       <div className="flex flex-col items-center gap-5">
         <Link
-          href="/"
+          href={locale === "es" ? "/" : "/en"}
           className="font-serif text-lg text-neutral-500 transition-colors hover:text-accent"
         >
           Pablo Marichal
