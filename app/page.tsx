@@ -104,7 +104,7 @@ export default function Home() {
           <h2 className="font-serif text-2xl text-white">También lo cuento en video</h2>
           <Link href="/videos" className="text-sm text-accent hover:underline underline-offset-4">Ver la selección &rarr;</Link>
         </div>
-        <p className="text-neutral-400">Correr, empezar de nuevo y seguir pensando por cuenta propia.</p>
+        <p className="text-neutral-400">Correr después de los cuarenta, criar hijos y seguir pensando por cuenta propia.</p>
         <div className="grid gap-4 sm:grid-cols-3">
           {VIDEOS.filter((video) => video.featured).map((video) => <VideoCard key={video.id} video={video} />)}
         </div>

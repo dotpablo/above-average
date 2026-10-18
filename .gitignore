@@ -9,5 +9,7 @@ next-env.d.ts
 # Source article exports (already converted to MDX)
 articles/
 posts_substack/
-scripts/
+scripts/*
+# Excepcion: parte del flujo de la pagina de videos, conviene versionarlo.
+!scripts/video-thumbs.mjs
 infopablo/
