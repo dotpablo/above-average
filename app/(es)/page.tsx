@@ -1,5 +1,3 @@
-import { VIDEOS } from "@/lib/videos";
-import { VideoCard } from "@/components/video-card";
 import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
@@ -48,11 +46,11 @@ const entryPoints = [
     external: false,
   },
   {
-    title: "Pablo cocinando",
-    desc: "Asados, pizzas, fuego y fermentaciones. Lo que pasa cuando me pongo a cocinar.",
-    cta: "Ver la cuenta de cocina",
-    href: SITE.social.instagramCooking,
-    external: true,
+    title: "Videos",
+    desc: "Correr después de los cuarenta, volver de una lesión, emigrar y criar hijos. Piezas cortas, en mi voz.",
+    cta: "Ver la selección",
+    href: "/videos",
+    external: false,
   },
   {
     title: "Charlas y podcasts",
@@ -110,17 +108,6 @@ export default function Home() {
           </div>
         </div>
         <AnimatedStats stats={stats} />
-      </section>
-
-      <section className="space-y-6">
-        <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <h2 className="font-serif text-2xl text-white">También lo cuento en video</h2>
-          <Link href="/videos" className="text-sm text-accent hover:underline underline-offset-4">Ver la selección &rarr;</Link>
-        </div>
-        <p className="text-neutral-400">Correr después de los cuarenta, criar hijos y seguir pensando por cuenta propia.</p>
-        <div className="grid gap-4 sm:grid-cols-3">
-          {VIDEOS.filter((video) => video.featured).map((video) => <VideoCard key={video.id} video={video} />)}
-        </div>
       </section>
 
       {/* Recent posts */}

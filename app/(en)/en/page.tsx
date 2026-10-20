@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { VideoCard } from "@/components/video-card";
-import { VIDEOS } from "@/lib/videos";
 import { getAllPosts } from "@/lib/posts";
 import { SITE } from "@/lib/constants";
 import { SITE_I18N } from "@/lib/i18n";
@@ -50,11 +48,11 @@ const entryPoints = [
     external: false,
   },
   {
-    title: "Pablo cooking",
-    desc: "Asados, pizza, fire and fermentation. What happens when I get into the kitchen.",
-    cta: "See the cooking account",
-    href: SITE.social.instagramCooking,
-    external: true,
+    title: "Videos",
+    desc: "Running past forty, coming back from injury, emigrating and raising kids. Short pieces, in my own voice.",
+    cta: "See the selection",
+    href: "/en/videos",
+    external: false,
   },
   {
     title: "Talks and podcasts",
@@ -125,23 +123,6 @@ export default function HomeEn() {
             </div>
           </div>
           <AnimatedStats stats={stats} />
-        </section>
-
-        <section className="space-y-6">
-          <div className="flex flex-wrap items-baseline justify-between gap-3">
-            <h2 className="font-serif text-2xl text-white">I also tell it on video</h2>
-            <Link href="/en/videos" className="text-sm text-accent underline-offset-4 hover:underline">
-              See the selection &rarr;
-            </Link>
-          </div>
-          <p className="text-neutral-400">
-            Running past forty, raising kids and still thinking for yourself.
-          </p>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {VIDEOS.filter((video) => video.featured).map((video) => (
-              <VideoCard key={video.id} video={video} />
-            ))}
-          </div>
         </section>
 
         {recentPosts.length > 0 && (
