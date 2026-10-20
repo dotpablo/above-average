@@ -87,16 +87,14 @@ export default function HomeEn() {
               <p className="text-sm text-neutral-400">
                 Pablo Marichal · Work, ideas and everyday life
               </p>
-              <h1 className="font-serif text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Execution is cheap in the age of AI.
-                <span className="mt-3 block text-neutral-200">
-                  <span className="text-accent">Judgment</span> and context are not.
-                </span>
+              <h1 className="text-balance font-serif text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Twenty years inside
+                <span className="block text-neutral-200">the <span className="text-accent">machine</span>.</span>
               </h1>
               <p className="max-w-xl text-base leading-relaxed text-neutral-300">
-                I lead SAP engineering teams and AI adoption inside large
-                corporations. I write about what that is doing to work and to
-                people — from the inside, not from the news.
+                I lead AI adoption on systems that cannot go down, inside large
+                corporations. I write about what happens in there: what works,
+                what breaks, and what never makes it into the announcement.
               </p>
               <p className="max-w-xl text-base leading-relaxed text-neutral-400">
                 I also write about what happens outside work: running, emigrating,

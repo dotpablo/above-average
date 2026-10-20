@@ -85,14 +85,14 @@ export default function Home() {
         <div className="grid items-start gap-8 sm:grid-cols-[1fr_200px] lg:grid-cols-[1fr_260px] lg:gap-12">
           <div className="space-y-6">
             <p className="text-sm text-neutral-400">Pablo Marichal · Trabajo, ideas y vida cotidiana</p>
-            <h1 className="font-serif text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
-              La ejecución sobra en la era de la IA.
-              <span className="mt-3 block text-neutral-200">El <span className="text-accent">criterio</span> y el contexto no.</span>
+            <h1 className="text-balance font-serif text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Veinte años adentro
+              <span className="block text-neutral-200">de la <span className="text-accent">máquina</span>.</span>
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-neutral-300">
-              Lidero técnicamente equipos de SAP y adopción de IA adentro de
-              corporaciones grandes. Escribo sobre lo que eso le está haciendo
-              al trabajo y a la gente, desde adentro y no desde las noticias.
+              Lidero adopción de IA en sistemas que no se pueden caer, en
+              corporaciones grandes. Escribo lo que pasa ahí adentro: lo que
+              funciona, lo que se rompe y lo que nunca entra en el anuncio.
             </p>
             <p className="max-w-xl text-base leading-relaxed text-neutral-400">
               También cuento lo que pasa fuera del trabajo: correr, emigrar,
