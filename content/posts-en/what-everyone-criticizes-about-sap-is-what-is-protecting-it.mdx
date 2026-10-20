@@ -1,0 +1,103 @@
+---
+title: "What Everyone Criticizes About SAP Is What's Protecting It"
+date: "2026-09-15"
+description: "49% of the code reaching production is already AI-generated, and the organizations using it most ship vulnerable code 3.4 times more often. The SAP complexity we all complain about worked as a containment barrier. The question is no longer which technology will bring it down."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "lo-que-le-critican-a-sap-es-lo-que-lo-esta-protegiendo"
+---
+
+Everyone who works with this knows the scene.
+
+Somebody needs to push a last-minute transport. They're in a rush, the deadline is on top of them, and the change is "small". ChaRM stops it: downgrade protection, or a cross reference check that found a dependency. The negotiation begins. It's urgent, the object is mine, it works perfectly in the development environment.
+
+Sometimes insistence wins and it gets released anyway. And then it blows up in pre-production. Not because of the object being pushed, but because of another one that depended on a version it had just overwritten.
+
+The first time it happens to you, you curse the tool. After a few years you understand the tool was the only thing standing between you and a three-in-the-morning call to BASIS and to the guy who wrote the bad code.
+
+I remembered this reading some reports on what's happening with AI-generated code outside the enterprise world, aka the rest of the world. And I was left thinking about something I hadn't seen stated anywhere, or at least I hadn't read it.
+
+## The question we'd been asking was the wrong one
+
+For as long as I can remember the conversation in the ERP world has been the same: which technology is going to bring SAP down once and for all.
+
+First it was going to be SaaS, faster and cheaper. Then low-code, which was going to let anyone build what they needed without waiting six months. Now it's AI. And it's always the same story: something faster and more flexible shows up promising to replace those expensive, rigid, impossible-to-change systems.
+
+And SAP is still there. Not because it's invulnerable, and not because it did everything right. For me it's something else. SAP is blindfolded by default against vibe coding thanks to everything we've always criticized it for. The complexity. The restrictions. Change governance. The resistance to letting anyone touch anything.
+
+What we call bureaucracy worked as a containment barrier.
+
+## What happens where there's no barrier
+
+So you can see why I say this, look at what's happening outside.
+
+Checkmarx published its annual report on the future of application security, with responses from 2,350 CISOs, security leaders and developers across fourteen countries.
+
+49% of the code reaching production is already AI-generated. 96% of developers have AI tools in their environment and nearly all of them consider them effective. So far, the story of progress.
+
+Now the other numbers, which aren't as pretty:
+
+> Only 18% apply security continuously while writing. 70% believe AI-generated code has more vulnerabilities than human-written code, and even so 30% push it to production knowing it's compromised. 75% of organizations knowingly deploy vulnerable code at some point, pushed by deadlines and by the hope that nobody finds it.
+
+And the headline figure: organizations where between 81% and 100% of the code is AI-generated publish vulnerable code 3.4 times more often than those where AI writes between 1% and 20%.
+
+It's a correlation from a survey, not a demonstration of causality, so be careful about taking it literally and extrapolating. But the direction is hard to ignore.
+
+There's another analysis, from GitClear, over 211 million modified lines, pointing the same way from a different angle: copied code grew while moved or refactored lines fell by more than half. Translated into plain language: we're increasing our capacity to produce code much faster than our capacity to consolidate it.
+
+## What AI made cheap wasn't writing code
+
+For me this is the key point in particular.
+
+AI didn't only lower the cost of writing. It lowered the friction that used to force you to ask whether writing was necessary at all.
+
+Before, making a new variant of something that already existed had a visible cost. You had to design it, develop it, test it, transport it and justify the effort to somebody. That cost worked as a filter: if the effort wasn't worth it, you went looking for the one that already existed.
+
+Now you ask for the new alternative in seconds. Copying and adapting became cheaper than understanding and reusing. And the people reporting project progress, who understood little before, now understand even less, but demand things yesterday more than ever.
+
+The result works today, passes the test, reaches production. The cost shows up later, when another person has to maintain three barely different versions of the same logic without knowing why each one exists.
+
+> Technical debt doesn't go away with AI. It gets produced faster, arrives better presented, and is harder to find and to fix than before.
+
+Now go back to the scene at the start. That blocked transport, that detected dependency, that annoying argument with the person who wanted to push it anyway. All of that is friction. And friction, in a world where generating is free, stopped being a cost and became a filter.
+
+I'm not saying SAP's complexity is good. A lot of it is frustrating, unnecessary and expensive, and those of us close to it know that better than anyone. I'm saying something smaller and more specific: a good part of that complexity is preventing what's already happening outside from happening here.
+
+## And yet, the door is opening
+
+SAP is obviously entering this phase too.
+
+Joule for Developers already generates and explains code, creates unit tests and assists in ABAP Cloud and in Build. And it has to be said the approach is a good deal more reasonable than opening a generic chatbot and asking it to improvise a solution for a critical process: specialized models, development context, framework-specific constraints.
+
+But there's a limit none of those capabilities solves. A model trained for ABAP recognizes the language, the objects and the technical patterns. It can explain to you what an implementation does. What it cannot know is why a company made a decision ten years ago, or what would break if somebody simplified that logic that looks unnecessary.
+
+It can generate a correct test for what's in plain sight. Not for the exception that lives in another system, or in the head of someone who has been holding up that process for years.
+
+Understanding the code is not the same as understanding the company.
+
+## Three things that cut against what I just said
+
+1. **The barrier may be temporary.** If SAP lowers the friction to compete on speed, the protection disappears. And there's real commercial pressure to lower it, because nobody sells by saying "our product takes longer". If in three years generating and deploying in SAP is as easy as in any modern stack, this whole argument collapses and what's left is the mess.
+2. **Friction also kills good things.** I've already written about companies where approving a twenty-dollar license takes three months. That same slowness protecting you from a badly thought-out change is the one leaving you two years behind a smaller competitor. Defending friction as a general principle is foolish. The point is which friction you keep and which you remove, and that takes judgment, not a policy.
+3. **And I live off this.** When I say enterprise complexity has value, I'm describing a world where my trade is still needed.
+
+## What to do with this
+
+2 concrete things.
+
+1. If your organization is evaluating which controls to remove to go faster with AI, the right question isn't how much time removing it saves. It's what that control caught the last time it stopped something. If nobody knows the answer, nobody is looking at the logs, and that's a separate problem.
+2. And if you're generating code or configuration with AI: what the model cannot know, you write down. Not the technical documentation, which anyone can generate. The why. Why that validation exists, what process asked for it, what breaks if you remove it. That's the only thing not in any context window, and it's what makes an object maintainable three years from now.
+
+For years, SAP's archrivals and everyone in the ecosystem asked which technology would bring it down. Maybe that was never the right question.
+
+The question now is whether SAP can adopt AI's speed without also adopting its mess. Because generating software was never the hard part. The hard part was always living with it afterward.
+
+Pablo / En Producción
+
+P.S. If you've ever pushed to get a transport released that the system didn't want to let through, you already know which side of this article you're on. Send it to whoever blocked it.
+
+**References:**
+
+- Checkmarx, "Future of Application Security 2026".
+- GitClear, analysis of 211 million modified lines.
+- SAP Joule for Developers, SAP.

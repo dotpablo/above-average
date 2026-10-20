@@ -1,0 +1,155 @@
+---
+title: "They Told Her to Use Joule. They Didn't Tell Her How to Know If It's Right."
+date: "2026-09-22"
+description: "Someone in Finance is being pushed to use the agent, and has no way to validate what comes out. The tool got democratized; the judgment to assess it did not. 79% of companies already get low-quality results and data readiness fell from 64% to 62%."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "le-dijeron-que-use-joule-no-como-saber-si-esta-bien"
+---
+
+A while back I was talking with someone who works in Finance at a large company.
+
+Not a systems person. Pure business. Years closing months, building reports, arguing about variances and explaining numbers to people who don't accept "that's what it gave me" as an answer.
+
+And she told me they've been pushing her to use Joule more. Yes, SAP's star agent. It's not a formal order, it never is. But it's understood all the same: you have to start using it, you have to show cases, you have to be on the wave. Nobody puts it in writing, but we all know what happens if you're the only one in the review without a case to show (spoiler: it looks bad).
+
+I asked her how it was going. She told me 2 things worth mentioning:
+
+1. That she doesn't quite trust the data. Careful, not the model. The data. That the number she gets doesn't always square with what she knows to be true, and she has no way of finding out where it came from.
+2. That on top of using it, they're asking her to build solutions. And she has no idea how to assess whether what she builds is right, because it isn't her trade. It never was. Nor was it offered to her as a career change; it just appeared.
+
+There it is, in two sentences: a problem we already treat as solved and that isn't, one you see more often than usual in corporate settings but that doesn't show up much as a star LinkedIn post.
+
+> The tool got democratized. The judgment to assess it did not.
+
+The whole promise of this wave is the same: the business user no longer depends on IT. "Autonomy" must be the most used word in the slide decks of any manager who wants agents at any cost. "You describe what you need and the system builds it", that sentence sells and sells. No more tickets, no more waiting, no more priority queue where your request landed in position fourteen behind things nobody remembers asking for.
+
+And joking aside it sounds good, because it's partly true. But look at what happens on the other side of the counter. When a developer received generated code, at least they could read it (that's what we studied for, back in my day). They could see the logic, understand what it did, curse for a while and argue about whether it was right (or whether 80% had to be redone). They had a basis to evaluate the result, even if they hadn't written it.
+
+The person in Controlling doesn't have that. She sees a number. And she has to decide whether to believe it. It's like betting on black at the roulette table. Her only validation tool is her own business judgment, which is real and worth a great deal, but which works when the result is clearly wrong. If the system tells you the quarter's margin was 340%, you don't need a committee: you laugh and move on.
+
+The problem is the others. The plausible results. The ones that land comfortably inside the expected range but are built on stale data, a badly built relationship, or an exception the model didn't know about. Those don't make you laugh. Those get presented and can cost you your head if they aren't right.
+
+That isn't detected by looking. It's detected by being able to ask where it came from. And that question, today, has no good answer.
+
+## This isn't just my impression. It's in SAP's own report.
+
+A few weeks ago I wrote about the report SAP commissioned from Oxford Economics, with 2,600 companies in thirteen countries. I opened it again after this conversation and found things I'd skimmed past the first time. Which, to be honest, is exactly what I'm criticizing in this article.
+
+They asked companies what their main concerns are about AI's impact on their people. The ranking was this:
+
+1. Uneven AI literacy.
+2. The weakening of critical judgment and decision-making.
+3. Uneven distribution of skills.
+4. Loss of on-the-job learning.
+
+So the number one concern of those companies is exactly what I heard in that conversation. And number two is its direct consequence.
+
+And it gets worse, so go get the coffee. 79% of companies experience low-quality results at least occasionally, with rework, delays and slippage. 82% had to adapt day-to-day work because of those results. Translated into plain language: eight out of ten companies are working around the tool they bought to work less.
+
+And the figure I find the most critical of all:
+
+> 62% say they're data-ready for AI. Last year it was 64%.
+
+It went down. While adoption rises, data readiness falls (if this keeps up, goodbye to our dear old context).
+
+At the end of the day, that person in Finance isn't being distrustful. She's reading the situation better than several committees combined, the ones fantasizing in the car while listening to how AI is going to kill us all at a probabilistic rate of 10%.
+
+## The blueprint exists. The floor doesn't yet.
+
+Here it's worth being fair to SAP, because they've already thought through the hard part and they're working on it.
+
+If you look at the architecture they published, the AI-native North Star, there's an entire layer dedicated to this. It's called the Foundation Layer and it's where the Knowledge Graph, the data products, HANA Cloud and the models live. It is, literally, the place where the question of where the number came from should be answerable. It isn't that nobody thought of it: it's drawn, it has a name, it has an owner and it has its own hour-long session with Q&A at the end.
+
+And the Knowledge Graph isn't marketing. It makes explicit the entities and relationships over SAP's semantic model: some 452,000 ABAP tables and 7.3 million fields that a language model, left to its own devices, has no way of understanding. That genuinely reduces hallucination.
+
+The problem is elsewhere, and it's more uncomfortable.
+
+Grounding is one thing and verifying is another. Grounding means the model answers about your world and not about what it read on the internet one Tuesday in 2023. Verifying means the number survives a close, a control or an audit. They're two different things, and the second one doesn't come included in the license. That's where she's standing: with a well-grounded answer she still can't sign off on.
+
+And there's one more detail, the one almost nobody budgets for. The graph maps SAP's world automatically. Your world, no. Your documents, your policies, your exceptions, the rule only the person who's been closing the month for ten years knows and that isn't written anywhere because "everyone knows it": none of that comes mapped. That gets loaded, curated and maintained. It's a project, not a subscription.
+
+Now go back to the earlier figure: adoption rises and data readiness fell from 64% to 62%. Add what we discussed in "The perfect employee SAP describes" and how far we are from that ideal of autonomous, goal-oriented, able to adapt alone, and how it would fit into all this.
+
+That isn't a contradiction in itself. It's the exact picture of what happens when the top layer, the one that looks lovely in a demo, moves faster than the bottom layer, the one nobody ever congratulates you for. The blueprint is fine. What's out of sync is the order in which we're building it.
+
+I want you to take one thing from this section, because it comes back at the end: if the origin of the data has a defined place in the architecture, then asking about origin does have a possible answer today. Asking about the reasoning does not. That distinction is all you have as a tool.
+
+## And this is only the visible part
+
+Everything above happens inside an official tool, with a vendor behind it and someone to complain to. Now look at what happens outside.
+
+At a company, SAP is not all the software. And when the business user discovers they can build things on their own, they don't always wait for someone to provision them a corporate platform. They build an application in an afternoon, with whatever's at hand, and that application starts being used. First by them. Then by the team. Then it shows up in a report a director looks at.
+
+The problem shows up later. When it blows up, or when it has to be modified. Nobody wants to read that code, let alone refactor it. There's a reason the feeds filled up with memes about the new trade of the person who comes in to clean up someone else's mess: a kind of Winston Wolf from Pulp Fiction, but for generated code. Problem solver, arrives in a suit, doesn't ask who did it.
+
+That same SAP report measures this and the numbers aren't decorative. More than half of organizations report inconsistent or inaccurate results from unauthorized AI tools. Nearly half had data leakage or intellectual property exposure. And more than a third suffered security vulnerabilities and compliance violations from the same cause.
+
+It isn't people acting in bad faith. It's people solving their problem with what they have, because they were asked for results and given neither the tool nor the judgment. If you ask somebody to swim across and don't give them a boat, they're going to swim. And then don't act surprised.
+
+## What's coming doesn't help her
+
+So far we've talked about the data: where it came from, who maintains it, whether it's fresh (and not garbage). That problem is ugly but it's human, it gets solved with work.
+
+Now comes the other one, which is of a different nature.
+
+The question she needs to ask, and can't, is why. Why the system arrived at that number and not another. Not what data it looked at, but how it combined it.
+
+That question today has no good technical answer, and not through anyone's negligence. Language models are opaque by construction (a black box). You can show what information went in, you can cite sources, you can give a trace of what was consulted. But explaining the reasoning that led from input to result is an open problem in the discipline. It isn't that SAP hasn't implemented it yet: it doesn't exist.
+
+There is research underway, and good research. A paper came out this year that manages to leave only 0.4% of a model's internal attention connections active, without losing performance, with circuits up to a hundred times simpler to trace. That's exactly the direction you'd need: if you want to audit the why, first you need fewer wires to follow.
+
+And it's worth being honest about scope: these are models up to seven billion parameters. Nothing running under an enterprise assistant is at that scale. It's a promising research line, not something you can subscribe to next month for 20 dollars.
+
+Which means real explainability, the kind that lets you audit the why, isn't arriving this year or next. Lovely task for the compliance teams. And not in the future: now, when agents start acting on their own and every trace has to be explained.
+
+Meanwhile, we're asking business people to trust. And yes, in every paradigm shift there's some leap of faith. The question is how big a leap and over what net.
+
+## Before you agree with me
+
+Three things against everything I just said.
+
+1. **We never had total explainability and here we are.** Nobody using an inherited spreadsheet with forty nested formulas, three hidden tabs and a range pointing at a file that no longer exists can explain where every number comes from. And yet balance sheets have been closed with that for decades. Demanding from AI a standard of transparency we never demanded from the rest of the stack may be unfair. The difference, I think, is that the spreadsheet doesn't invent: behind it there's a mathematical model, badly documented but deterministic. Even so, the point is valid and I'll take it.
+2. **This will improve, and probably fast.** Just not this week. Source tracing, decision logs, context layers all go in the right direction. Writing today about the limitations of a technology moving like this has a short shelf life, and precisely for that reason it's worth saying now rather than when it's no longer useful.
+3. **In my area, the person pushing adoption is me.** Which means I'm also the one handing down the line I'm criticizing here. I'm not writing this from outside the problem. I'm writing it from inside, which is considerably less comfortable but considerably more honest.
+
+## What to do with all this
+
+Here's the useful part, and it's short (another paradox). Three questions, depending on which side you're on.
+
+**If you're on the business side and they're asking you to use this:**
+
+Test it against something whose answer you already know. Ask the assistant for something from a closed period, something you know by heart. If the number matches, you learned where it's right. If it doesn't match, you learned quite a bit more. Never debut a tool on something you can't verify, because in that meeting the one who ends up exposed isn't the tool: it's you.
+
+And harder to ask for, but it pays off more: ask what it's answering about. What source, from when, who maintains it. Remember the distinction above: you're not asking them to explain the model's reasoning, that doesn't exist for anyone today. You're asking for the equivalent of what the developer had when they could read the code: knowing what raw material the result was built from. That does have a place in the architecture and it can be answered. And if nobody can answer it, you didn't leave empty-handed: you left with a finding.
+
+**If you're on the technical side, pushing adoption:**
+
+The question to ask users isn't whether they liked it. They'll say yes, because it's you asking and because nobody wants to look like the one resisting change.
+
+The question is how they verified it. If they can't answer that, you don't have adoption. You have obedience. And obedience performs beautifully until the day somebody looks at the numbers for real.
+
+> Because AI literacy isn't learning to write prompts. That was 2023, it's learned in an afternoon and there are already people selling courses on something you solve by reading for ten minutes.
+
+It's knowing when to distrust.
+
+And careful, distrusting isn't putting on the tinfoil hat and going out to warn that some reptiles want our companies to run themselves with agents. It's being able to distinguish, with what you already know of your trade, in which cases this helps you and in which it buries you three meters under with the shovel you requested yourself through ServiceNow.
+
+Nobody is teaching that yet.
+
+And so this doesn't read like I came to throw punches and left: the direction isn't wrong.
+
+The architecture SAP published is probably the most serious thing written about how all this holds up at a real company, and the fact that the Foundation Layer exists as its own layer, with governance and context inside it, says they understood the problem before most of the market. What's missing isn't vision. It's time, and above all it's order: building from the bottom up when the pressure comes from the top down.
+
+Meanwhile, the one left in the middle is the one who has to sign the number.
+
+Pablo / En Producción
+
+P.S. If your company is pushing these tools toward business people, ask them how they validate what comes out. If the answer is "it looks right", there's your task for the week. If the answer is "I trust the system", you've got the task for the month.
+
+**References:**
+
+- SAP and Oxford Economics, "The Value of AI", 2026.
+- SAP, "AI-native North Star Architecture", Q2 2026.
+- SAP Learning, "Exploring SAP Knowledge Graph".
+- Draye, F., Lei, A., Pan, H., Posner, I. and Schölkopf, B. "Intrinsically Interpretable Attention via Sparse Post-Training". arXiv:2512.05865, 2026.

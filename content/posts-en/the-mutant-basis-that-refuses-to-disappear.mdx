@@ -1,0 +1,113 @@
+---
+title: "The Mutant BASIS That Refuses to Disappear"
+date: "2026-08-04"
+description: "SAP GUI 8.10 shipped with Joule wired into it, and SAP's own CTO introduced a desktop app calling it 'the new SAP GUI'. The role that mutated most in the whole ecosystem is the one nobody talks about: BASIS went from operating the system to governing what operates the system."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "el-basis-mutante-que-se-niega-a-desaparecer"
+---
+
+I got into the SAP world through ABAP, but I lasted very little in a formal role doing only one "thing".
+
+Almost from the start I ended up hybrid, with one foot in BASIS. There were stretches of being one hundred percent on the infrastructure side: installing the operating system, tuning the kernel, sizing with a spreadsheet and a mix of formula and gut feel, because the hardware you asked for was the hardware you were going to have for the next five years and getting it wrong cost real money. And in the same week I'd be fixing non-unicode programs, running SPAU after an upgrade, or going into code that had broken because something underneath it had changed.
+
+I'm sure more than one BASIS person, like it or not, has had to write code at some point in their life. And lately more, because with Clean Core the border disappeared entirely: adapting custom code for ABAP Cloud, running readiness checks, passing ATC, remediating objects that don't comply, deciding what gets rewritten and what gets thrown away. That is not an infrastructure task and it is not a development task. It's both.
+
+None of that was ever called innovation. It was called BASIS. And it's all those invisible tasks nobody mentions at go-live, without which the project wouldn't have started.
+
+I was thinking about this yesterday while running, and I realized that in all these years very few people have told the story of what happened to this trade. There's a lot of talk about the ABAPer who's going to disappear, or who now has steroids thanks to AI, about the functional consultant retraining, about the architect moving to the cloud. But about the one holding up the system underneath, nobody says anything. And it's the role that mutated the most of all of them, from where I stand.
+
+## What's still the same, and it's more than the hype admits
+
+Today, any given Tuesday, somebody opens STMS to look at a transport queue and check everything's fine. Somebody reviews logs to understand why a job died at three in the morning. Somebody applies security notes at a cadence that stopped looking like planned maintenance and started looking like a permanent drip. Somebody checks FRUN to see if the landscape is still in one piece.
+
+All of that happens while LinkedIn announces the Autonomous Enterprise. And no, it's not a contradiction: there are two clocks running at different speeds, and the one paying salaries is the slow one.
+
+This week there was a piece of news that laid it bare almost poetically.
+
+## The GUI everyone declared dead just shipped a new version
+
+On July 16, SAP GUI for Windows 8.10 went general availability. Yes, the GUI. The one that according to the last three years of keynotes was already a museum piece, and that plenty of people "hate" for not being "aesthetic" but can't stop using.
+
+The interesting part isn't that it exists, it's why it was late. It was planned for January and they pushed it six months. The head of development explained it with a frankness you don't see often: the first reason was that the quality wasn't acceptable, in those words. The second one is the one that matters. They spent those months working with a customer to replace a complex manual process with a semi-automatic one using Joule, SAP Business Client and the same old GUI. The headline feature of 8.10 is exactly that: it connects applications running in the Windows GUI to Joule.
+
+> The GUI didn't die. They plugged an agent into it.
+
+And to round out the irony, SAP's own CTO, Philipp Herzig, recently introduced the Joule Work desktop app calling it, wink included, "the new SAP GUI". More than six thousand SAP employees had already been testing it internally.
+
+So we have both things at once: the old GUI learning to talk to an agent, and an agent introducing itself as the new GUI. The old thing doesn't vanish the moment the new thing arrives. Something gets wired on top, it keeps running, and somebody has to understand both layers so the whole thing doesn't blow up.
+
+The same parallel we can draw with the BASIS role.
+
+## The laugh that stuck with me
+
+More than six years ago, in a BASIS group, I argued that we had to get serious about cloud knowledge at the ERP level. That this was the road. I even paid out of my own credit card for some AWS resources when I migrated SAP Business One to the cloud as a demo (and it was later used with real customers), the little brother of S/4. If you don't believe me, here's an old link to SAP's official blog.
+
+The funny part of that story was that one of my colleagues laughed in my face.
+
+> Verbatim: that's not our scope, Pablito, stop making things up.
+
+A few months ago I saw that same person proudly posting their SAP RISE sales specialist certificate.
+
+I'm not telling this to mock anyone. I'm telling it because it has happened to me several times. The first was when I introduced SAP Activate as a methodology and several consultants explained to me that it made no sense, that the good stuff was the blueprints we'd always used. Same tone, same confidence, same outcome a few years later.
+
+The lesson here isn't that I was right. It's that "that's not our thing" is a sentence that defines your own ceiling, not the scope of the role. The scope of the role is defined by the market, and the market doesn't ask permission and doesn't care whether you're comfortable in your comfort zone doing what you've always done. Whoever decides where their scope ends before the world tells them, ends up with the old scope and the sales certificate.
+
+## From BTP to BAIP: the new ground
+
+Last week I wrote about this and it's worth bringing here, because it's where the role is relocating.
+
+BAIP doesn't replace BTP, it repositions it. It's the platform that puts under one roof BTP for building and integrating, BDC for business data, AI Foundation with the models and the Knowledge Graph, and a good chunk of agent governance.
+
+What matters for whoever holds up the landscape: your investment in BTP doesn't become legacy. It becomes the runtime where the agents live, not just the place where you put your Clean Core extensions. Data products stop being reporting and become the base those agents reason over. And governance, lifecycle, security, auditing stop being a project topic and become a platform capability.
+
+> What doesn't change: if the clean core is broken or the data is dirty, BAIP doesn't save you. It exposes you faster.
+
+Now, who operates that runtime? Who defines the lifecycle, the security and the auditing of what runs there? That question has a pretty obvious answer, and it isn't the functional team.
+
+## Who's actually standing up the MCP servers
+
+Here's a field observation, which is mine and not an industry statistic.
+
+The people standing up MCP servers in companies, at least at the SAP level and from what I'm seeing (outside is another reality), are not the developers. It's BASIS people with an appetite for experimenting. The same ones who build the connection between ServiceNow and the SAP systems so they know in real time what's breaking in production, and can tell the desperate user how long until their order goes out.
+
+And it makes complete sense. An MCP server is not a business application. It's infrastructure: you have to deploy it, expose it, authenticate it, monitor it, version it, and decide which tools it exposes and which it doesn't. It's exactly the same kind of work as installing an operating system and tuning a kernel, except the unit is no longer a server. It's a capability.
+
+For anyone who doesn't have it fresh: MCP is the standard that defines how an agent discovers and invokes external tools without caring whether there's an OData, a REST or an RFC behind it. SAP already has an MCP Gateway in Integration Suite that turns your APIs into tools agents can consume, with governance on top. And the Joule Work desktop app, reaching general availability in the second half of this year, ships with access to the local files on your machine plus MCP integrations.
+
+Translated: in a few months there will be agents with access to the user's desktop and to tools connected to the SAP landscape. Somebody is going to have to decide what gets exposed.
+
+## The mutation
+
+The BASIS role went from operating the system to governing what operates the system.
+
+Before, you executed: you installed, applied, transported, restarted. With RISE, more and more of those tasks moved inside SAP, and a lot of people read that as the beginning of the end. I was one of them, but my read changed over time.
+
+Today I read it differently. What's leaving is the execution. What stayed is the decision: what gets exposed and what doesn't, who can call what, which credentials each thing runs under, what gets logged, and who answers when an agent does something nobody anticipated.
+
+That isn't less work. It's work with more judgment and fewer hands.
+
+## What I'd do if I were in that role today
+
+Three things, and none of them need your company to buy you anything.
+
+1. **Understand MCP for real, not from a headline.** What a server is, what a gateway is, what a manifest exposes, how it authenticates, how many tools are too many. It's an afternoon of reading and it puts you years ahead of the conversation your organization is going to have next year, or with luck in a few months. And it's infrastructure, which means it's your ground.
+2. **Write the list of what does not get exposed, before somebody writes it for you.** When the first agent shows up wanting to touch the production landscape, somebody is going to have to say what it can do and what it can't. If you arrive with that list, you're the one defining the rule. If you arrive with nothing, they define it for you, then you operate it, and God help you.
+3. **Stop defending the execution.** Installing, applying and transporting will keep getting automated and there's nothing you can do to stop it. The defense isn't clinging to the task. It's understanding the whole system well enough to decide about it. There's no agent that replaces you there, because an agent can't take responsibility for the consequences.
+
+I installed SUSE by hand, fixed non-unicode programs, did SPAU until I was sick of it, and I know by heart transactions nobody probably cares about anymore. None of that helps me today as a task. All of that helps me today as judgment, which is a different thing.
+
+The trade didn't disappear. It moved up a layer. And the one who understands why that server used to boot is the one who can decide today which agent gets in and which doesn't.
+
+Pablo / En Producción
+
+P.S. If you work in BASIS and you feel the AI conversation is passing your role by, send this to whoever in your company thinks this is a developer topic. Servers don't stand themselves up, and neither do MCPs.
+
+**References:**
+
+- SAP Community. "SAP GUI for Windows 8.10 is coming: General Availability as of 16th of July 2026".
+- Herzig, Philipp (SAP CTO). Joule Work desktop app presentation on LinkedIn, July 2026.
+- SAP Sapphire 2026 Innovation News Guide: Joule Work.
+- SAP Community. "Explore SAP's New Joule Early Adopter Care Programs", June 2026.
+- SAP Community. "MCP Gateway in SAP Integration Suite: Your APIs, Ready for the Age of Agents", July 2026.
+- Defelipe, Mario. "SAP has two MCPs. One you can't use, one you shouldn't." Medium, 2026.
