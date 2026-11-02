@@ -25,3 +25,13 @@ export const NEWSLETTER = {
   tagline:
     "Cada martes: qué está pasando de verdad con la IA en las empresas grandes, escrito por alguien que está adentro implementándola. Sin humo, sin hype, sin vender nada.",
 };
+
+/**
+ * Formularios de Kit (ex ConvertKit). Es otra lista, aparte de Buttondown:
+ * la gente que llega desde Instagram por running, no la de En Producción.
+ * El ID sale de la URL del formulario en Kit (app.kit.com/forms/designers/<ID>/edit).
+ * Kit manda el PDF solo, por el "incentive email" del formulario.
+ */
+export const KIT = {
+  garminFormId: "10134124",
+};

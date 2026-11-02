@@ -86,6 +86,32 @@ export default function RecursosPage() {
       </StaggerChildren>
 
       <FadeIn>
+        <section className="space-y-4">
+          <h2 className="font-serif text-2xl text-white">Garmin</h2>
+          <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 backdrop-blur-sm transition-colors hover:border-neutral-700">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <h3 className="font-serif text-lg text-white">Cómo tengo configurado mi Garmin</h3>
+                <p className="mt-2 text-sm text-neutral-500 tracking-[-0.01em]">
+                  Zonas por umbral de lactato paso a paso, la banda, el informe matutino y qué Garmin
+                  comprar según tu presupuesto. Guía en PDF.
+                </p>
+                <Link
+                  href="/recursos/garmin"
+                  className="mt-4 inline-block text-sm font-medium text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors"
+                >
+                  Descargar la guía &rarr;
+                </Link>
+              </div>
+              <span className="shrink-0 rounded-full border border-accent/40 px-2.5 py-0.5 text-xs text-accent">
+                Gratuito
+              </span>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn>
         <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
           <p className="mb-1 text-sm font-medium text-white">
             Los suscriptores reciben los recursos primero:

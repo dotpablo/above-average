@@ -3,6 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // URL corta para Instagram. Temporal (307) para poder apuntarla a otra
+      // guía más adelante sin que el navegador la tenga cacheada.
+      { source: "/garmin", destination: "/recursos/garmin", permanent: false },
       // /media paso a llamarse /charlas. La URL vieja esta indexada.
       { source: "/media", destination: "/charlas", permanent: true },
       // /newsletter y /blog hacian lo mismo: las dos listaban el archivo
