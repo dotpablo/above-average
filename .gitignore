@@ -13,3 +13,7 @@ scripts/*
 # Excepcion: parte del flujo de la pagina de videos, conviene versionarlo.
 !scripts/video-thumbs.mjs
 infopablo/
+
+# Bitácora de las sesiones con Claude: conversación en crudo, no va al repo publico.
+notas/
+.bitacora-state.json

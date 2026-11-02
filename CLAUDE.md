@@ -32,7 +32,20 @@ npm run dev            # desarrollo
 npm run build          # build de producción (falla si un MDX tiene frontmatter roto)
 npm run lint
 python3 .claude/skills/publicar-articulo/validar.py   # consistencia de los índices
+python3 bin/bitacora-backfill.py --resumen            # sesiones registradas en la bitácora
 ```
+
+## Bitácora
+
+Todo lo que se habla en este repo queda en `notas/bitacora.md` (gitignoreado: es conversación en
+crudo, no contenido del sitio). Lo escribe un hook `Stop` definido en `.claude/settings.json` que
+corre `bin/bitacora.py` al final de cada respuesta: lee el transcript de la sesión, saca el
+intercambio nuevo sin tool calls ni razonamiento interno y lo agrega.
+
+El histórico anterior al hook (junio–octubre 2026) se reconstruyó con `bin/bitacora-backfill.py`
+desde los transcripts que Claude Code guarda en `~/.claude/projects/`. Ese script reescribe el
+archivo completo y resiembra `.bitacora-state.json`, así que sirve para regenerar todo si la
+bitácora se corrompe o se borra. Mismo patrón que el proyecto del libro en `../libro`.
 
 ## Contenido
 
