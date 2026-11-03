@@ -1,6 +1,6 @@
 export const SITE = {
   // El sitio es la persona. "Above Average" quedo como nombre del producto
-  // (el OS) y del libro. El newsletter se llama "En Producción" (ver abajo).
+  // (el OS) y del libro. El newsletter se llama "In Production" (ver abajo).
   name: "Pablo Marichal",
   url: "https://pablomarichal.com",
   title: "Pablo Marichal",
@@ -21,14 +21,14 @@ export const SITE = {
 
 /** El newsletter y blog de analisis enterprise. Vive adentro del sitio. */
 export const NEWSLETTER = {
-  name: "En Producción",
+  name: "In Production",
   tagline:
-    "Cada martes: qué está pasando de verdad con la IA en las empresas grandes, escrito por alguien que está adentro implementándola. Sin humo, sin hype, sin vender nada.",
+    "Cada martes, en inglés: qué está pasando de verdad con la IA en las empresas grandes, escrito por alguien que está adentro implementándola. Sin humo, sin hype, sin vender nada.",
 };
 
 /**
  * Formularios de Kit (ex ConvertKit). Es otra lista, aparte de Buttondown:
- * la gente que llega desde Instagram por running, no la de En Producción.
+ * la gente que llega desde Instagram por running, no la de In Production.
  * El ID sale de la URL del formulario en Kit (app.kit.com/forms/designers/<ID>/edit).
  * Kit manda el PDF solo, por el "incentive email" del formulario.
  */

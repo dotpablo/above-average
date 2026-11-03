@@ -8,18 +8,20 @@ Next.js 16 App Router, SSG puro, MDX como fuente de verdad, deploy en Vercel.
 | Qué | Nombre | Dónde vive |
 |---|---|---|
 | El sitio / el paraguas | Pablo Marichal | `SITE` en `lib/constants.ts` |
-| El newsletter y blog enterprise | En Producción | `NEWSLETTER` en `lib/constants.ts`, `/blog` |
+| El newsletter y blog enterprise | In Production | `NEWSLETTER` en `lib/constants.ts`, `/blog` |
 | El producto (OS) y el futuro libro | Above Average | `/recursos/above-average-os` |
 
 Regla de decisión: si un texto solo tiene sentido para alguien que ya trabaja en SAP, va en
-En Producción. Si tiene sentido para cualquier profesional de 40+, va en el sitio.
+In Production. Si tiene sentido para cualquier profesional de 40+, va en el sitio.
 
 Dos cosas que no se deshacen sin que Pablo lo pida:
 
 - El About **no identifica al empleador**. Nada de cargo exacto, empresa, premios internos ni
   nacionalidad de los directivos. La versión vigente dice "tech lead en corporaciones grandes".
-- Las ediciones cierran con la firma **"Pablo / En Producción"** (se renombró en bloque en los 31
-  archivos que la tenían, ES y EN). Los usos de "Above Average" *dentro* de la prosa son otra
+- Desde noviembre 2026 el newsletter se llama **In Production** en los dos idiomas y se escribe
+  primero en inglés (desde la edición 50; la versión en español es traducción). Las ediciones
+  viejas cierran con **"Pablo / En Producción"** y quedan así: es el nombre que tenía cuando
+  salieron. Las nuevas firman solo "Pablo". Los usos de "Above Average" *dentro* de la prosa son otra
   cosa: ahí es el concepto/producto y quedan como están. No tocar la prosa de Pablo.
 
 El `README.md` documenta la arquitectura y el porqué de las decisiones. Este archivo cubre lo que

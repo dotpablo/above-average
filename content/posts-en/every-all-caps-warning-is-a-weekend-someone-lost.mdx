@@ -1,0 +1,91 @@
+---
+title: "Every ALL-CAPS warning is a weekend someone lost"
+date: "2026-10-20"
+description: "An SAP Note repeats the same instruction twice, the second time in capitals. Nobody writes that the first time. Capital letters are institutional knowledge an agent can't hear, and the expensive part is knowing which instructions have a weekend behind them."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "cada-advertencia-en-mayusculas-es-un-fin-de-semana-perdido"
+---
+
+I was in SNOTE last week, clicking through a note implementation on autopilot the way you do when you've done it a few hundred times, and the manual activity screen said this:
+
+> Make sure you have implemented note 3559476 before continuing.
+
+Fine. Noted. Next.
+
+Then the line underneath it:
+
+> If note 3559476 is not yet implemented, YOU MUST STOP THE IMPLEMENTATION OF THIS NOTE COMPLETELY and implement note 3559476 first.
+
+Same instruction. Louder.
+
+I went and checked. It was implemented. I clicked Next anyway with the distinct feeling of being watched.
+
+## Nobody writes that the first time
+
+That's the part I keep thinking about.
+
+The first line is what you write when you're documenting a dependency on a Tuesday. The second line is what you write after somebody skipped the first one, pushed it to production, and then a group of people who had plans on Saturday did not have plans on Saturday.
+
+Those capital letters are not formatting. They're a bruise, and it came from the trenches.
+
+Every system old enough to have survived anything is covered in them. The commented-out block that says DO NOT UNCOMMENT, with initials and a date from 2018. The custom table entry labelled DO NOT DELETE - ASK DAVE, where Dave took early retirement in 2021 and nobody has touched that entry since, out of superstition. The Confluence page with four bold red lines at the top and a last-edited date of March 2019.
+
+Nobody sat down to write documentation that day. Somebody was angry, or tired, or both, and this was the cheapest available way to stop it happening again.
+
+Which, honestly, is what institutional knowledge actually looks like, and it's the only version of it that anyone uses. Not the knowledge base nobody opens after the launch email. A set of warning signs nailed up by the people who stopped an outage in production.
+
+## Meanwhile, at SAP Connect
+
+A couple of weeks ago SAP spent a conference showing the Autonomous Enterprise in action. More Joule Assistants, more agents, ABAP going agentic, the whole thing running itself while you presumably do something more fulfilling. It looks great in the videos.
+
+So within the same month: SAP demonstrated software that runs the business without supervision, and the actual system I work in shouted at me in capital letters because at some point a human being didn't read carefully enough.
+
+Now, somebody is going to tell me that the Autonomous Enterprise has nothing to do with implementing SAP Notes, that this is a technical activity a normal business user has no business being anywhere near. And you'd be completely right. But I don't think the two things cancel each other out. I think the gap between them is the only part of this worth talking about, and everyone is busy talking about something else.
+
+## Capital letters are a human protocol
+
+Look at what those two sentences are actually doing here.
+
+They contain the same information. Note 3559476 comes first. That's it. That's the whole payload. If you fed both lines to a parser it would shrug.
+
+The difference lives entirely in the casing, and you read that casing as "someone got hurt here" because you have spent your entire life reading other people. Shouting means danger. You learned that before you learned to read. When you hit the capitals you turn the volume up inside your own head, and your heart rate probably goes with it.
+
+A model doesn't do that, at least not yet. It sees two instructions, identical semantics, one with a different glyph set. It has never lost a Saturday. It has no reason to slow down on the second line, because to it there is no second line, there's just the same line again with the shift key held down.
+
+So a reasonable chunk of what's keeping your production system alive isn't in the instruction. It's in the way the instruction is shouted. And that's the first thing that evaporates when you hand the work to something that doesn't have a nervous system.
+
+We argue endlessly about whether agents can execute the steps. Almost nobody asks whether they can hear the part of the step that was never written down, only emphasised.
+
+## Right, but
+
+Two problems with my own argument, and the second one is worse.
+
+The first is that none of this is actually unsolvable, and the solution is extremely boring. Preconditions don't need to live in prose at all. A severity flag, a hard dependency, a gate that simply refuses to run until the prerequisite is confirmed. A machine can't infer urgency from typography but it will happily obey a field called `blocking: true`. This is a data modelling problem wearing a philosophy costume, and SAP of all companies knows how to model data. Most of it could be built today. It just isn't there yet, not in the current version running on BTP.
+
+The second one is less comfortable. Humans ignore the capital letters too. I've met plenty of people who don't slow down for any warning, any message, any flashing red thing telling them what their next click is about to do.
+
+Which always sends me back to that Simpsons episode, *King-Size Homer*. Homer puts on weight on purpose so he can qualify to work from home (visionary), and then rigs a drinking bird to press the Y key for him while he goes to the cinema. He comes back to find the bird knocked over and the nuclear plant heading for a meltdown.
+
+We all have drinking birds somewhere in the process. That's not a technology problem and it never was.
+
+But back to what matters. That note is shouting because shouting didn't work. If emphasis were effective the second line would never have needed to exist. So the honest version isn't the flattering one where machines are reckless and we're wise. It's that both of us skim, except one of us skims at three in the morning, at scale, across every system simultaneously, with nobody in the room.
+
+## Anyway
+
+The instruction is the cheap part. Anyone can write it (even with free models), anyone can read it (we're optimistic, I know), it costs nothing.
+
+The expensive part is knowing which instructions have a weekend behind them, and that knowledge is not in the note. It's in whoever was on the bridge call. We're currently very busy handing over the work and not especially curious about handing over that.
+
+So before you let something run that step unattended (autonomously, maybe you heard that term), the only question worth asking is who loses the Saturday when it goes wrong.
+
+If the answer is you, keep a hand on it. Somewhere there's a future version of that note that reads: JOULE, THIS MEANS YOU TOO. And honestly, I have no idea how that story ends.
+
+Pablo
+
+PS: A note for anyone who's been here a while: In Production runs in English from now on. The Spanish archive stays online and isn't going anywhere. Same system, wider rollout.
+
+**Sources:**
+
+- "SAP Connect 2026 — SAP Showcases the Autonomous Enterprise in Action".
+- "SAP Connect 2026 — SAP Puts the Autonomous Enterprise to Work".

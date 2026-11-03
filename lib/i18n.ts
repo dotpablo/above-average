@@ -52,11 +52,11 @@ export interface Dict {
 
 export const DICT: Record<Locale, Dict> = {
   es: {
-    nav: { blog: "En Producción", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
+    nav: { blog: "In Production", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
     switcher: { label: "Idioma", other: "English", otherHref: (p) => p },
-    footer: { blog: "En Producción", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
+    footer: { blog: "In Production", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
     blog: {
-      title: "En Producción",
+      title: "In Production",
       editions: (n) => `${n} ediciones`,
       readMore: "Leer",
       search: "Buscar posts",

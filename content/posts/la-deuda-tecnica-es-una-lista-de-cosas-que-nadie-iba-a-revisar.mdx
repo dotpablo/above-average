@@ -1,0 +1,100 @@
+---
+title: "La deuda técnica es solo una lista de cosas que nadie iba a revisar"
+date: "2026-10-27"
+description: "Una captura de un Word que dice OK, adjunta como evidencia de prueba. La IA vuelve gratis los tests que nadie escribía, y eso es una ganancia real. Lo que preocupa es que la brecha se cierre en el papel y siga abierta en la realidad, ahora con un reporte en verde."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+Abrí documentos de cambio en ChaRM y me encontré, adjunta como evidencia de prueba, una captura de pantalla de un documento de Word con la palabra OK escrita adentro.
+
+No un caso de prueba. No un resultado. Una foto de un documento que dice OK.
+
+Vi versiones de esta "práctica" en varias organizaciones, en distintos países, con distintas herramientas y escenarios. El formato cambia. El espíritu no. Alguien produjo el objeto más chico que podía sobrevivir a una aprobación, lo adjuntó y siguió.
+
+Pasamos quince años hablando del Producto Mínimo Viable. Nadie escribe sobre su gemelo malvado, que se practica muchísimo más:
+
+> **Evidencia Mínima Viable:** el artefacto más chico que pasa la compuerta. Nadie la enseña. Todos la entregan.
+
+Y lo que pasa es que esa captura normalmente funciona. El transporte llega a producción. Ese día no pasa nada. Así que todos los involucrados tenían razón.
+
+## Nadie da la orden
+
+Esta es la parte que se describe mal, incluso la gente que la defiende.
+
+Ningún gerente dijo nunca "no escriban tests unitarios". Esa conversación no existe. Lo que pasa es más silencioso y mucho más difícil de señalar: el sprint está apretado, la fecha es fija, el negocio está esperando, y testear es lo único de la lista que no tiene un testigo externo. Nadie decide saltearlo. Simplemente no sobrevive al contacto con el calendario, semana tras semana, hasta que pasan unos años y hay una masa de código Z que nadie quiere tocar.
+
+> Ninguna decisión, ninguna orden, ninguna reunión. Simplemente dejó de pasar, en silencio, y por eso no hay nadie con quien discutirlo.
+
+Paul Hardy, SAP Mentor y autor de *ABAP to the Future*, le puso números en una entrevista la semana pasada. Los tests unitarios más o menos duplican el tiempo de desarrollo cuando los escribís a mano. También señala por qué el argumento de largo plazo siempre pierde: el beneficio llega en tres años y a la gente que decide la miden cada tres meses. Nada que rinda después de la próxima evaluación tiene a alguien en la sala defendiéndolo.
+
+Es lo bastante honesto como para incluirse. Cuenta de un comentario que dejó hace poco en su propio código, prometiendo partirlo en módulos más chicos una vez que funcionara, seguido inmediatamente de un segundo comentario: *"I bet I won't have the time"* (apuesto a que no voy a tener tiempo). De los comentarios más honestos que vi hasta ahora, la verdad.
+
+Y después una frase que me quedó:
+
+> "No le podés sacar a nadie un trabajo que no se está haciendo."
+
+Que la IA escriba tests unitarios no le saca trabajo a nadie, porque ese trabajo nunca estaba pasando. Le pedís a una herramienta una suite completa y te la produce en segundos. Algunos errores de sintaxis, quizás una hora para limpiarla, contra duplicar tu tiempo de desarrollo a mano.
+
+Esa es una ganancia real y no me voy a hacer el vivo con eso (al menos lo voy a intentar). Es el mejor argumento que leí sobre este tema en todo el año.
+
+## Lo que cambió de verdad
+
+El proceso siempre estuvo escrito. Todas las organizaciones en las que trabajé tienen un estándar de calidad documentado en algún lado, normalmente uno bueno. Nunca se siguió al pie de la letra, todos lo sabían, y la distancia entre el documento y la práctica era la parte que la gente con experiencia aprendía a navegar y, por lo general, a esquivar.
+
+La IA ahora está adentro de todo ese ciclo, y el ideal documentado de repente es alcanzable. Cobertura completa, en segundos, gratis. Maravilloso, ¿no?
+
+Lo que me preocupa no es que no funcione. Es que la brecha se cierre en el papel y siga abierta en la realidad, y que ahora sea mucho más difícil de ver. Una suite generada que nadie leyó, adjunta a un transporte que nadie revisó, aprobada contra una captura que dice OK, pero esta vez con un reporte de cobertura, y el reporte está en verde. El happy path, logrado.
+
+> La deuda no desaparece. Consigue un mejor rastro de papeles.
+
+Y el costo de equivocarse se movió mientras nadie miraba. Los SAP Patch Days siguen sacando notas con CVSS 9.9, el tipo de puntaje en el que el número deja de ser una métrica y pasa a ser una sentencia. El código Z que corre encima de ese landscape es el mismo código Z que nadie tuvo tiempo de testear en 2019.
+
+Una suite generada que nadie lee está perfecta cuando lo peor que puede pasar es un total mal calculado en un reporte. Es otra cosa cuando lo peor que puede pasar es la shell de otro en tu sistema.
+
+## Hacer un Homero
+
+Hay un capítulo en que la planta de Springfield entra en fusión, Homero no tiene idea de qué botón la frena, y elige uno a lo de tin marín. Funciona. Lo declaran héroe, hay desfile, y la expresión "hacer un Homero" entra al diccionario, definida como tener éxito a pesar de la idiotez. Apuesto a que lo viste alguna vez en tu vida laboral.
+
+Ese es el capítulo, pero el chiste de fondo lleva treinta y seis temporadas. El cargo de Homero es Inspector de Seguridad Nuclear. Hay una silla, hay un escritorio, hay un tipo sentado ahí. Y Springfield no puede distinguir entre tener un inspector de seguridad y no tenerlo, porque el único dato disponible es que la planta todavía no explotó.
+
+Así son la mayoría de los procesos de calidad en el software empresarial. No son falsos. No están ausentes. Solo son imposibles de medir desde afuera, lo que con el tiempo suficiente es casi lo mismo.
+
+## Ahora la parte en que discuto conmigo mismo
+
+Todo lo anterior es injusto con la persona que adjuntó esa captura.
+
+No es vaga. Probablemente se pasó una década adentro de procesos de calidad que existían para proteger la posición de alguien frente a una auditoría y no el sistema. Si la mayoría de las compuertas por las que pasaste eran teatro, tratar la siguiente como teatro no es negligencia: es una lectura correcta de la evidencia.
+
+Y a veces tiene razón. Estuve en reuniones de aprobación donde lo único que se verificó fue que la reunión ocurrió. La gente que llama a eso burocracia a veces describe algo cierto.
+
+Así que la respuesta no es más compuertas, y menos que menos un sermón sobre rigor de alguien con un newsletter. Es menos compuertas que atrapen algo real, que es muchísimo más difícil de construir que una suite de tests.
+
+## Qué pasa cuando todo es gratis
+
+Acá va lo que no sé responder.
+
+Todo lo que describí está por volverse casi gratis. Los tests, la documentación, las especificaciones, la cobertura, el rastro de auditoría. Todo generado en segundos, con un estándar que la mayoría de los equipos nunca alcanzó a mano.
+
+No tratamos las cosas gratis como tratamos las caras. Dejamos de mirarlas. Un número que tardó tres días en producirse se interroga. Un número que aparece al instante se captura y va a una slide.
+
+Éric Sadin, el filósofo francés, tiene una palabra para adónde lleva eso: la vegetalización del ser humano. Delegamos tanto juicio en el sistema que dejamos de ser agentes adentro de él y pasamos a ser nodos por los que pasa. Lo escribió antes de que nada de esto estuviera en producción, y leído hoy se siente menos filosofía y más release note.
+
+Lo que me lleva a la comparación que nadie en el software empresarial quiere hacer en voz alta. WALL-E. Las sillas. Las pantallas. La gente que no se levanta hace generaciones, perfectamente cómoda, perfectamente atendida, totalmente incapaz de operar la cosa que la lleva.
+
+Así que acá va de lo que de verdad no estoy seguro, y prefiero dejarlo abierto antes que fingir.
+
+> Si cada artefacto de calidad se vuelve gratis, ¿alguien mantiene la costumbre de mirar? ¿O el verde pasa a ser lo único que leemos?
+
+Y la más difícil. En cinco años va a haber dos tipos de personas en esta industria: los de las sillas, y los que se volvieron más filosos porque las herramientas les sacaron el trabajo pesado del escritorio. Los dos van a tener el mismo dashboard en verde.
+
+¿Cuál sos vos, ahora, esta semana, en el transporte que aprobaste el viernes?
+
+Porque desde el dashboard no se nota. Ese es todo el problema.
+
+Pablo
+
+**Fuentes:**
+
+- SAPinsider, entrevista a Paul Hardy (octubre 2026).
+- Simpsons Fandom, "Homer Defined" (S03E05).

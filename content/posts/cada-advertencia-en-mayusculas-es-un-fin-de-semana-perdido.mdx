@@ -1,0 +1,90 @@
+---
+title: "Cada advertencia en MAYÚSCULAS es un fin de semana que alguien perdió"
+date: "2026-10-20"
+description: "Una nota SAP repite la misma instrucción dos veces, la segunda en mayúsculas. Nadie escribe eso la primera vez. Las mayúsculas son conocimiento institucional que un agente no escucha, y la parte cara es saber qué instrucciones tienen un fin de semana atrás."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+---
+
+La semana pasada estaba en la SNOTE, implementando una nota en piloto automático, como te pasa cuando ya lo hiciste unos cuantos cientos de veces, y la pantalla de actividad manual decía esto:
+
+> Make sure you have implemented note 3559476 before continuing.
+
+Bien. Anotado. Siguiente.
+
+Y después, la línea de abajo:
+
+> If note 3559476 is not yet implemented, YOU MUST STOP THE IMPLEMENTATION OF THIS NOTE COMPLETELY and implement note 3559476 first.
+
+La misma instrucción. Más fuerte.
+
+Fui a chequear. Estaba implementada. Le di a Siguiente igual, con la clara sensación de que alguien me estaba mirando.
+
+## Nadie escribe eso la primera vez
+
+Esa es la parte en la que no paro de pensar.
+
+La primera línea es lo que escribís cuando documentás una dependencia un martes cualquiera. La segunda es lo que escribís después de que alguien se salteó la primera, lo mandó a producción, y un grupo de gente que tenía planes para el sábado se quedó sin planes para el sábado.
+
+Esas mayúsculas no son formato. Son un moretón, y viene de las trincheras.
+
+Todo sistema lo bastante viejo como para haber sobrevivido a algo está lleno de ellas. El bloque comentado que dice DO NOT UNCOMMENT, con iniciales y una fecha de 2018. La entrada de una tabla Z que dice DO NOT DELETE - ASK DAVE, donde Dave se jubiló anticipadamente en 2021 y nadie tocó esa entrada desde entonces, por superstición. La página de Confluence con cuatro líneas en rojo y negrita arriba de todo y una última edición de marzo de 2019.
+
+Nadie se sentó ese día a escribir documentación. Alguien estaba enojado, o cansado, o las dos cosas, y esa era la forma más barata que tenía a mano de que no volviera a pasar.
+
+Que, honestamente, es como se ve el conocimiento institucional de verdad, y es la única versión que alguien usa. No la base de conocimiento que nadie abre después del mail de lanzamiento. Un montón de carteles de advertencia clavados por la gente que frenó una caída en producción.
+
+## Mientras tanto, en SAP Connect
+
+Hace un par de semanas SAP se pasó una conferencia mostrando la Autonomous Enterprise en acción. Más asistentes de Joule, más agentes, ABAP volviéndose agéntico, todo funcionando solo mientras vos, se supone, hacés algo más gratificante. En los videos se ve buenísimo.
+
+Así que en el mismo mes: SAP mostró software que maneja el negocio sin supervisión, y el sistema real en el que trabajo me gritó en mayúsculas porque en algún momento un ser humano no leyó con suficiente atención.
+
+Ahora, alguien me va a decir que la Autonomous Enterprise no tiene nada que ver con implementar notas SAP, que es una actividad técnica de la que un usuario de negocio normal no tiene por qué estar ni cerca. Y tendrías toda la razón. Pero no creo que una cosa anule a la otra. Creo que la distancia entre las dos es lo único de todo esto que vale la pena discutir, y todo el mundo está ocupado hablando de otra cosa.
+
+## Las mayúsculas son un protocolo humano
+
+Mirá lo que están haciendo esas dos oraciones.
+
+Tienen la misma información. Primero va la nota 3559476. Eso es todo. Ese es todo el payload. Si le pasaras las dos líneas a un parser, se encogería de hombros.
+
+La diferencia vive entera en las mayúsculas, y vos las leés como "acá alguien salió lastimado" porque te pasaste la vida entera leyendo a otras personas. Gritar significa peligro. Lo aprendiste antes de aprender a leer. Cuando llegás a las mayúsculas subís el volumen adentro de tu cabeza, y probablemente las pulsaciones suben con él.
+
+Un modelo no hace eso, al menos todavía no. Ve dos instrucciones, misma semántica, una con otro juego de caracteres. Nunca perdió un sábado. No tiene ningún motivo para frenar en la segunda línea, porque para él no hay segunda línea: es la misma línea otra vez con el shift apretado.
+
+Así que una parte importante de lo que mantiene vivo tu sistema productivo no está en la instrucción. Está en cómo está gritada. Y eso es lo primero que se evapora cuando le pasás el trabajo a algo que no tiene sistema nervioso.
+
+Discutimos sin parar si los agentes pueden ejecutar los pasos. Casi nadie pregunta si pueden escuchar la parte del paso que nunca se escribió, que solo se enfatizó.
+
+## Sí, pero
+
+Dos problemas con mi propio argumento, y el segundo es peor.
+
+El primero es que nada de esto es irresoluble, y la solución es aburridísima. Las precondiciones no tienen por qué vivir en prosa. Un flag de severidad, una dependencia dura, una compuerta que directamente se niega a correr hasta que se confirme el prerrequisito. Una máquina no puede inferir urgencia a partir de la tipografía, pero va a obedecer encantada un campo que se llame `blocking: true`. Es un problema de modelado de datos disfrazado de filosofía, y SAP, justamente SAP, sabe modelar datos. Casi todo se podría construir hoy. Simplemente todavía no está, no en la versión que corre hoy en BTP.
+
+El segundo es menos cómodo. Los humanos también ignoramos las mayúsculas. Conocí a un montón de gente que no frena ante ninguna advertencia, ningún mensaje, ninguna cosa roja parpadeando que le avisa lo que va a hacer su próximo clic.
+
+Lo que siempre me lleva a ese capítulo de Los Simpson, *King-Size Homer*. Homero engorda a propósito para poder trabajar desde casa (un visionario), y después pone un pájaro bebedor a apretar la tecla Y por él mientras se va al cine. Vuelve y encuentra el pájaro tirado y la planta nuclear camino a una fusión.
+
+Todos tenemos pájaros bebedores en algún lado del proceso. Eso no es un problema de tecnología y nunca lo fue.
+
+Pero volvamos a lo importante. Esa nota grita porque gritar no funcionó. Si el énfasis fuera efectivo, la segunda línea nunca habría tenido que existir. Así que la versión honesta no es la que nos halaga, en la que las máquinas son imprudentes y nosotros sabios. Es que los dos leemos por arriba, solo que uno lo hace a las tres de la mañana, a escala, en todos los sistemas a la vez, sin nadie en la sala.
+
+## En fin
+
+La instrucción es la parte barata. Cualquiera la puede escribir (incluso con modelos gratis), cualquiera la puede leer (somos optimistas, ya sé), no cuesta nada.
+
+La parte cara es saber qué instrucciones tienen un fin de semana atrás, y ese conocimiento no está en la nota. Está en quien estuvo en la llamada de crisis. Ahora mismo estamos muy ocupados traspasando el trabajo y no especialmente curiosos por traspasar eso.
+
+Así que antes de dejar que algo corra ese paso sin supervisión (de forma autónoma, capaz escuchaste el término), la única pregunta que vale la pena hacerse es quién pierde el sábado cuando sale mal.
+
+Si la respuesta sos vos, no le saques la mano de encima. En algún lado hay una versión futura de esa nota que dice: JOULE, THIS MEANS YOU TOO. Y honestamente, no tengo idea de cómo termina esa historia.
+
+Pablo
+
+P.D.: Una nota para los que están desde hace un tiempo: In Production sale en inglés de ahora en adelante. El archivo en español sigue online y no se va a ningún lado. Mismo sistema, despliegue más amplio.
+
+**Fuentes:**
+
+- "SAP Connect 2026 — SAP Showcases the Autonomous Enterprise in Action".
+- "SAP Connect 2026 — SAP Puts the Autonomous Enterprise to Work".

@@ -21,8 +21,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { page } = await params;
   return {
-    title: `En Producción — Página ${page}`,
-    description: "El archivo completo de En Producción, el newsletter de Pablo Marichal sobre IA y trabajo en empresas grandes.",
+    title: `In Production — Página ${page}`,
+    description: "El archivo completo de In Production, el newsletter de Pablo Marichal sobre IA y trabajo en empresas grandes.",
   };
 }
 

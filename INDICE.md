@@ -1,6 +1,6 @@
 # Índice de ediciones — Above Average
 
-Newsletter de Pablo Marichal. 49 ediciones publicadas, de la más reciente a la más antigua.
+Newsletter de Pablo Marichal. 51 ediciones publicadas, de la más reciente a la más antigua.
 
 **Fuente:** `content/posts/*.mdx`
 **Criterio de inclusión:** posts en español desde el lanzamiento del newsletter (2025-10-26). Se excluyen las 3 traducciones al inglés que viven en `content/posts/`, todo `content/posts-en/` y el archivo histórico de LinkedIn/Substack anterior a esa fecha.
@@ -8,6 +8,8 @@ Newsletter de Pablo Marichal. 49 ediciones publicadas, de la más reciente a la 
 
 | Ed. | Fecha | Título | Pilar | Tesis | Slug |
 |---:|---|---|---|---|---|
+| 51 | 2026-10-27 | La deuda técnica es solo una lista de cosas que nadie iba a revisar | Enterprise & AI Survival | La deuda técnica no desaparece con tests generados por IA: consigue un mejor rastro de papeles. | `la-deuda-tecnica-es-una-lista-de-cosas-que-nadie-iba-a-revisar` |
+| 50 | 2026-10-20 | Cada advertencia en MAYÚSCULAS es un fin de semana que alguien perdió | Enterprise & AI Survival | Lo caro es saber qué instrucciones tienen un fin de semana atrás, y eso no está en la nota. | `cada-advertencia-en-mayusculas-es-un-fin-de-semana-perdido` |
 | 49 | 2026-10-13 | La empresa autónoma no te va a reemplazar. Te va a ascender a corrector. | Enterprise & AI Survival | El riesgo no es la extinción sino la degradación: quedar adentro del proceso, del lado de corregir. | `la-empresa-autonoma-te-va-a-ascender-a-corrector` |
 | 48 | 2026-09-29 | El mejor test de tu arquitectura es irte dos semanas | Full Stack Human | Si tu única forma de ser importante es que nadie más pueda hacer lo tuyo, sos rehén de tu puesto. | `el-mejor-test-de-tu-arquitectura-es-irte-dos-semanas` |
 | 47 | 2026-09-22 | Le dijeron que use Joule. No le dijeron cómo saber si está bien. | Enterprise & AI Survival | La herramienta se democratizó y el criterio para juzgarla no: alfabetizarse en IA es saber cuándo desconfiar. | `le-dijeron-que-use-joule-no-como-saber-si-esta-bien` |
@@ -64,12 +66,12 @@ Newsletter de Pablo Marichal. 49 ediciones publicadas, de la más reciente a la 
 
 | Pilar | Ediciones | % |
 |---|---:|---:|
-| Enterprise & AI Survival | 30 | 61% |
-| Full Stack Human | 14 | 29% |
+| Enterprise & AI Survival | 32 | 63% |
+| Full Stack Human | 14 | 27% |
 | Builder Mindset | 4 | 8% |
 | Biological Clean Core | 1 | 2% |
 
-El pilar biológico está prácticamente sin cubrir: una sola edición en 49 (la 7). La 36 podría contarse como segunda si se reclasifica.
+El pilar biológico está prácticamente sin cubrir: una sola edición en 51 (la 7). La 36 podría contarse como segunda si se reclasifica.
 
 Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real sobre `indice-completo.json` era 23. Corregido acá.
 
@@ -79,7 +81,7 @@ Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real s
 
 | Grupo | Ediciones | Nivel |
 |---|---|---|
-| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34, 41, 42 | Muy alto — es el eje del newsletter |
+| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34, 41, 42, 51 | Muy alto — es el eje del newsletter |
 | Vender criterio, no tiempo | 16, 17, 20, 40, 45 | Muy alto — párrafo repetido casi textual entre la 16 y la 17 |
 | Las 3 reglas del Operador | 27, 28, 29 | Muy alto — misma lista tres semanas seguidas |
 | Sistemas vs. motivación / metas | 3, 6, 9 | Alto — la 3 y la 9 usan el mismo dato de Strava |
@@ -89,10 +91,11 @@ Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real s
 | El vibe coding produce demos que mueren | 16, 19, 35 | Medio |
 | «El que entiende los fundamentos orquesta…» | 22, 28, 31, 32 | Estilístico — frase-firma en 4 cierres |
 | Sección «Antes de que me des la razón» con autodeclaración de no-neutralidad | 41, 42 | **Muy alto — párrafo casi textual en dos ediciones consecutivas** |
-| Quién firma / quién responde por lo que ejecuta el agente | 38, 40, 41, 44, 45, 47, 49 | Alto — eje en consolidación |
+| Quién firma / quién responde por lo que ejecuta el agente | 38, 40, 41, 44, 45, 47, 49, 50 | Alto — eje en consolidación |
 | El que sabe por qué está ese campo en la tabla | 42, 45, 48 | Alto — la 48 le da vuelta el argumento |
-| La fricción como filtro, no como burocracia | 44, 46, 47 | Alto — las tres citan la licencia de veinte dólares |
+| La fricción como filtro, no como burocracia | 44, 46, 47, 51 | Alto — las tres primeras citan la licencia de veinte dólares; la 51 pide «menos compuertas que atrapen algo real» |
 | Lo que funciona en la demo miente en producción | 32, 35, 43 | Medio-alto — la 43 es el caso propio |
+| Homero en la planta nuclear como cierre | 50, 51 | Medio — estilístico, en dos ediciones consecutivas |
 
 Detalle completo en `indice-completo.json`.
 
@@ -127,6 +130,8 @@ Si en ese hueco hubo una edición que no está en el repo, **todos los números 
 - **Ed. 20:** el reporte de Anthropic sobre exposición laboral se cita sin título, fecha ni enlace.
 - **Ed. 23:** el gráfico de adopción de IA se atribuye solo a «lo vi en LinkedIn».
 - **Ed. 24:** sin sección de referencias; las fuentes se reconstruyeron del cuerpo.
+- **Ed. 50:** las dos notas de SAP Connect 2026 se citan solo por título, sin medio ni link.
+- **Ed. 51:** la entrevista a Paul Hardy se cita como «SAPinsider» sin título ni link; el CVSS 9.9 de los Patch Days y la idea de Éric Sadin, sin fuente.
 
 ### 4. Contenido perdido en la migración desde LinkedIn
 **17 de 39 ediciones tienen listas numeradas vacías** (`1.` `2.` `3.` sin texto) o bloques de código vacíos. No es cosmético: se perdió contenido sustantivo.

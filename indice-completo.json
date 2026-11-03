@@ -11,9 +11,37 @@
       "the-death-of-the-man-hour-are-you-paid-for-your-time-or-your-token-budget"
     ],
     "nota_numeracion": "Ningún archivo trae el número de edición en el frontmatter. La numeración es secuencial por fecha desde 2025-10-26 = 1. Se corrobora con la edición del 2026-01-06, que dice 'If you have been reading me for the past 11 weeks' y cae exactamente en la posición 11.",
-    "total_ediciones": 49
+    "total_ediciones": 51
   },
   "ediciones": [
+    {
+      "edicion": 51,
+      "fecha": "2026-10-27",
+      "titulo": "La deuda técnica es solo una lista de cosas que nadie iba a revisar",
+      "slug": "la-deuda-tecnica-es-una-lista-de-cosas-que-nadie-iba-a-revisar",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "La deuda técnica no desaparece con tests generados por IA: consigue un mejor rastro de papeles.",
+      "temas": "evidencia minima viable, unit tests, paul hardy, charm, cvss, eric sadin, wall-e, los simpson",
+      "fuentes_clave": [
+        "SAPinsider — entrevista a Paul Hardy, octubre 2026",
+        "Simpsons Fandom — 'Homer Defined' (S03E05)"
+      ],
+      "enlaza_a": []
+    },
+    {
+      "edicion": 50,
+      "fecha": "2026-10-20",
+      "titulo": "Cada advertencia en MAYÚSCULAS es un fin de semana que alguien perdió",
+      "slug": "cada-advertencia-en-mayusculas-es-un-fin-de-semana-perdido",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Lo caro es saber qué instrucciones tienen un fin de semana atrás, y eso no está en la nota.",
+      "temas": "snote, notas sap, conocimiento institucional, autonomous enterprise, sap connect 2026, joule, los simpson",
+      "fuentes_clave": [
+        "SAP — 'SAP Connect 2026 — SAP Showcases the Autonomous Enterprise in Action', octubre 2026",
+        "SAP — 'SAP Connect 2026 — SAP Puts the Autonomous Enterprise to Work', octubre 2026"
+      ],
+      "enlaza_a": []
+    },
     {
       "edicion": 49,
       "fecha": "2026-10-13",
@@ -840,6 +868,14 @@
     ],
     "fuentes_incompletas": [
       {
+        "edicion": 50,
+        "detalle": "Las dos notas de SAP Connect 2026 se citan solo por título, sin medio ni link."
+      },
+      {
+        "edicion": 51,
+        "detalle": "La entrevista a Paul Hardy se cita como 'SAPinsider' sin título ni link. La cifra de CVSS 9.9 de los Patch Days y la idea de Éric Sadin no tienen fuente."
+      },
+      {
         "edicion": 4,
         "detalle": "El 72% de padres trabajadores se cita sin fuente."
       },
@@ -948,10 +984,11 @@
         31,
         34,
         41,
-        42
+        42,
+        51
       ],
       "nivel": "muy alto — es el eje central del newsletter",
-      "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31. La 41 lo trae por Sadin y el reflejo de apretar aceptar sin leer; la 42 por el caso Brett, que deja la IA tras 18 meses porque dejó de entender su propio sistema."
+      "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31. La 41 lo trae por Sadin y el reflejo de apretar aceptar sin leer; la 42 por el caso Brett, que deja la IA tras 18 meses porque dejó de entender su propio sistema. La 51 lo lleva a la vegetalización de Sadin y las sillas de WALL-E."
     },
     {
       "grupo": "Vender criterio, no tiempo",
@@ -1026,10 +1063,11 @@
         44,
         45,
         47,
-        49
+        49,
+        50
       ],
       "nivel": "alto",
-      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias. La 44 lo aterriza en el registro de agentes; la 45 advierte que dejarle al humano solo la firma es 'teatro de gobernanza'. La 47 lo lleva al usuario de negocio que tiene que firmar un número que no puede auditar; la 49 advierte que dejarle solo la corrección es degradación, no gobernanza."
+      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias. La 44 lo aterriza en el registro de agentes; la 45 advierte que dejarle al humano solo la firma es 'teatro de gobernanza'. La 47 lo lleva al usuario de negocio que tiene que firmar un número que no puede auditar; la 49 advierte que dejarle solo la corrección es degradación, no gobernanza. La 50 lo cierra con 'quién pierde el sábado cuando sale mal'."
     },
     {
       "grupo": "El que sabe por qué está ese campo en la tabla",
@@ -1056,10 +1094,20 @@
       "ediciones": [
         44,
         46,
-        47
+        47,
+        51
       ],
       "nivel": "alto",
-      "detalle": "La 44 pide un registro de agentes, la 46 defiende la fricción de SAP como barrera contra el vibe coding y la 47 muestra qué pasa cuando falta la capa de verificación. Las tres se cuidan de no sonar a defensa de la burocracia y las tres citan el ejemplo de la licencia de veinte dólares."
+      "detalle": "La 44 pide un registro de agentes, la 46 defiende la fricción de SAP como barrera contra el vibe coding y la 47 muestra qué pasa cuando falta la capa de verificación. Las tres se cuidan de no sonar a defensa de la burocracia y las tres citan el ejemplo de la licencia de veinte dólares. La 51: 'menos compuertas que atrapen algo real'."
+    },
+    {
+      "grupo": "Homero en la planta nuclear como cierre",
+      "ediciones": [
+        50,
+        51
+      ],
+      "nivel": "medio",
+      "detalle": "Dos ediciones consecutivas usan a Homero en la planta nuclear (el pájaro bebedor en la 50, 'pulling a Homer' en la 51) para la misma idea: el humano que no mira. Estilístico más que temático, pero se nota leídas seguidas."
     }
   ]
 }

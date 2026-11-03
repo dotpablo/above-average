@@ -1,0 +1,101 @@
+---
+title: "Technical debt is just a list of things nobody was going to check"
+date: "2026-10-27"
+description: "A screenshot of a Word document that says OK, attached as test evidence. AI makes the tests nobody was writing free, and that's a real gain. The worry is that the gap closes on paper and stays open in reality, now with a green report."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "la-deuda-tecnica-es-una-lista-de-cosas-que-nadie-iba-a-revisar"
+---
+
+I have opened change documents in ChaRM and found, attached as the test evidence, a screenshot of a Word document with the word OK typed into it.
+
+Not a test case. Not a result. A picture of a document that says OK.
+
+I've seen versions of this "practice" in several organisations now, in different countries, with different tools and scenarios. The format changes. The spirit doesn't. Somebody produced the smallest object that would survive an approval, attached it, and moved on.
+
+We spent fifteen years talking about the Minimum Viable Product. Nobody writes about its evil twin, which is far more widely practised:
+
+> **Minimum Viable Evidence:** the smallest artefact that will get past the gate. Nobody teaches it. Everybody ships it.
+
+And the thing is, that screenshot usually works. The transport goes to production. Nothing happens that day. So everyone involved was right.
+
+## Nobody actually gives the order
+
+This is the part that gets described wrongly, including by people defending it.
+
+No manager has ever said "don't write unit tests". That conversation doesn't happen. What happens is quieter and much harder to point at: the sprint is tight, the date is fixed, the business is waiting, and testing is the only item on the list with no external witness. Nobody decides to skip it. It just doesn't survive contact with the calendar, week after week, until a few years have passed and there's a body of custom code nobody wants to touch.
+
+> No decision, no order, no meeting. It just quietly stopped happening, and that's why there's nobody to argue with about it.
+
+Paul Hardy, SAP Mentor and the author of *ABAP to the Future*, put numbers on it in an interview last week. Unit tests roughly double development time when you write them by hand. He also points out why the long-term argument always loses: the payoff arrives in three years and the people deciding are measured every three months. Nothing that pays off after the next review has anyone in the room arguing for it.
+
+He's honest enough to include himself. He mentions a comment he left in his own code recently, promising to split it into smaller modules once it worked, followed immediately by a second comment: *"I bet I won't have the time"*. One of the most honest comments I've seen so far, to be honest.
+
+And then a line that stuck with me:
+
+> "You can't take away a job that's not being done."
+
+AI writing unit tests takes work from nobody, because that work was never happening. Ask a tool for a full suite and it produces one in seconds. Some syntax errors, maybe an hour to clean up, against doubling your development time by hand.
+
+That's a real gain and I'm not going to be clever (at least I'll try) about it. It's the best argument I've read on this subject all year.
+
+## What's actually changed
+
+The process was always written down. Every organisation I've worked in has a documented quality standard somewhere, usually a good one. It was never followed to the letter, and everybody knew, and the gap between the document and the practice was the part experienced people learned to navigate and usually skipped.
+
+AI is now inside that whole cycle, and the documented ideal is suddenly achievable. Full coverage, in seconds, for free. Wonderful, right?
+
+What worries me isn't that it won't work. It's that the gap closes on paper and stays open in reality, and now it's much harder to see. A generated suite nobody read, attached to a transport nobody reviewed, approved against a screenshot that says OK, but with a coverage report this time, and the report is green. The happy path achieved.
+
+> The debt doesn't disappear. It gets a better paper trail.
+
+And the cost of being wrong moved while nobody was looking. SAP Patch Days keep shipping notes sitting at CVSS 9.9, the kind of score where the number stops being a metric and starts being a sentence. The custom code running on top of that landscape is the same custom code nobody had time to test in 2019.
+
+A generated test suite nobody reads is a perfectly fine thing to have when the worst case is a wrong total on a report. It's a different thing when the worst case is somebody else's shell on your system.
+
+## Pulling a Homer
+
+There's an episode where the Springfield plant goes into meltdown, Homer has no idea which button stops it, and he picks one with eeny-meeny-miny-moe. It works. He's declared a hero, there's a parade, and the phrase "pulling a Homer" enters the dictionary, defined as succeeding despite idiocy. I bet you saw that once in your work life.
+
+That's the episode, but the joke underneath it runs for thirty-six seasons. Homer's job title is Nuclear Safety Inspector. There is a chair, there is a desk, there is a man sitting in it. And Springfield cannot tell the difference between having a safety inspector and not having one, because the only data available is that the plant hasn't exploded yet.
+
+That's most quality processes in enterprise software. Not fake. Not absent. Just unmeasurable from the outside, which over enough time is close enough to the same thing.
+
+## Now the part where I argue with myself
+
+Everything above is unfair to the person who attached that screenshot.
+
+They're not lazy. They have probably spent a decade inside quality processes that existed to protect someone's audit position rather than the system. If most of the gates you've walked through were theatre, treating the next one as theatre isn't negligence, it's an accurate reading of the evidence.
+
+And they're sometimes right. I have sat in approval meetings where the only thing verified was that the meeting occurred. People who call that bureaucracy are describing something true sometimes.
+
+So the answer isn't more gates, and it certainly isn't a lecture about rigour from someone with a newsletter. It's fewer gates that catch something real, which is a far harder thing to build than a test suite.
+
+## What happens when it's all free
+
+Here's what I don't have an answer for.
+
+Everything I've described is about to become nearly free. The tests, the documentation, the specs, the coverage, the audit trail. All of it generated in seconds, to a standard most teams never reached by hand.
+
+We don't treat free things the way we treat expensive ones. We stop looking at them. A number that took three days to produce gets interrogated. A number that appears instantly gets screenshotted into a slide.
+
+Éric Sadin, the French philosopher, has a word for where that leads: the vegetalisation of the human being. We delegate so much judgement to the system that we stop being agents inside it and become nodes it passes through. He wrote that before any of this was in production, and reading it now it feels less like philosophy and more like a release note.
+
+Which brings me to the comparison nobody in enterprise software wants to make out loud. WALL-E. The chairs. The screens. The people who haven't stood up in generations, perfectly comfortable, perfectly served, entirely unable to operate the thing carrying them.
+
+So here's what I'm genuinely unsure about, and I'd rather leave it open than pretend.
+
+> If every artefact of quality becomes free, does anybody stay in the habit of looking? Or does green become the only thing we read?
+
+And the harder one. In five years there will be two kinds of people left in this industry: the ones in the chairs, and the ones who got sharper because the tools took the grinding work off their desk. Both of them will have the same green dashboard.
+
+Which one are you, right now, this week, on the transport you approved on Friday?
+
+Because you can't tell from the dashboard. That's the whole problem.
+
+Pablo
+
+**Sources:**
+
+- SAPinsider, interview with Paul Hardy (October 2026).
+- Simpsons Fandom, "Homer Defined" (S03E05).
