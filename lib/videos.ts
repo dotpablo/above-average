@@ -19,6 +19,54 @@ export interface Video {
 
 export const VIDEOS: Video[] = [
   {
+    id: "DfKVOvBzmbV",
+    title: "No te compares con los runfluencers.",
+    description:
+      "Para ellos correr es el trabajo. Vos tenés otro trabajo, dos que se despiertan a las 7am y una ventana chiquita antes de que arranque todo. El famoso balance no existe. Existe salir igual.",
+    topic: "Correr",
+  },
+  {
+    id: "DfF90bDTEZV",
+    title: "Zonas, parte 2: tu Garmin sigue usando las zonas viejas.",
+    description:
+      "Garmin tiene dos juegos de zonas: las generales y las de correr. Con las de fábrica, un trote a 140 me daba zona 3. Ahora es zona 2. La configuración completa está en la guía gratuita.",
+    topic: "Correr",
+  },
+  {
+    id: "DfBPwRyTXEQ",
+    title: "El traumatólogo me dijo que dejara de correr.",
+    description:
+      "Hace 15 años otro me dijo que me iba a tener que coser el tendón de Aquiles. 19 maratones después ahí sigue. Pedí otra opinión: fortalecimiento, movilidad, elíptica y correr menos.",
+    topic: "Correr",
+  },
+  {
+    id: "De-rDOgzreZ",
+    title: "Mis hijos no se van a acordar de lo que les dije.",
+    description: "Se van a acordar de lo que me vieron hacer. El ejemplo mata cualquier relato.",
+    topic: "Vida cotidiana",
+  },
+  {
+    id: "De2h5hVz90r",
+    title: "Diecisiete segundos de Boston.",
+    description:
+      "Me faltan Boston y Londres para completar los seis Majors. Para 2027 hizo falta 3:09:43 y mi mejor marca es 3:10. Arranco saliendo de una lesión, y voy a documentar todo: lo que sale y lo que no.",
+    topic: "Correr",
+  },
+  {
+    id: "DezyDrczqFV",
+    title: "Si corrés sin banda, la frecuencia cardíaca no sirve para nada.",
+    description:
+      "En el día a día el sensor de la muñeca anda perfecto. Corriendo, es otra historia: me pasó con todos los Fenix que tuve. Si me olvido la banda, vuelvo a casa a buscarla.",
+    topic: "Correr",
+  },
+  {
+    id: "De7svWjz_G5",
+    title: "Fijate cómo calcula tus zonas tu Garmin.",
+    description:
+      "Por defecto usa porcentaje de frecuencia máxima, sin saber nada de cómo estás entrenado. Trotaba suave y ya me marcaba zona 4. Lo cambié a umbral de lactato: el umbral se mide.",
+    topic: "Correr",
+  },
+  {
     id: "DefXYKuT1De",
     title: "Cada vez que mejorás algo, perdés a alguien.",
     description:
