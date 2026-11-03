@@ -167,3 +167,6 @@ export function videoUrl(video: Video): string {
 export function videoThumb(video: Video): string {
   return `/images/videos/${video.id}.jpg`;
 }
+
+/** Cuántos videos se ven de entrada en /videos; el resto queda detrás de "Ver anteriores". */
+export const VIDEOS_VISIBLES = 6;

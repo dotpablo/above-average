@@ -18,7 +18,7 @@ const contenido = [
   {
     titulo: "Zonas por umbral de lactato (% LTHR)",
     detalle:
-      "Paso a paso con capturas, desde Garmin Connect. Incluye el Reset que casi todos se saltean y la pestaña de Correr, que es la que usa el reloj cuando salís a correr.",
+      "Paso a paso con capturas, en dos partes: desde una actividad en la app y desde la configuración del reloj, que tiene sus propias zonas y si no la revisás sigue con las de fábrica. Incluye el Reset que casi todos se saltean y la pestaña de Correr.",
   },
   {
     titulo: "La banda",
@@ -45,7 +45,7 @@ export default function GarminPage() {
       <FadeIn>
         <header className="space-y-5">
           <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">
-            Guía gratuita · PDF
+            Guía gratuita · PDF · Versión noviembre 2026
           </p>
           <h1 className="font-serif text-4xl text-white sm:text-5xl">Cómo tengo configurado mi Garmin</h1>
           <p className="text-lg text-neutral-300 tracking-[-0.01em]">
@@ -81,6 +81,20 @@ export default function GarminPage() {
               </p>
             </div>
           </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn>
+        <section className="space-y-3">
+          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">
+            Si tenés 30 segundos
+          </p>
+          <ol className="space-y-2 text-base text-neutral-300">
+            <li><span className="text-accent">1.</span> Medí tu umbral de lactato con banda de pecho.</li>
+            <li><span className="text-accent">2.</span> Pasá las zonas generales y las de correr a % of LT.</li>
+            <li><span className="text-accent">3.</span> Cambialo también en la configuración del reloj.</li>
+          </ol>
+          <p className="text-sm text-neutral-500">El cómo, con capturas de cada pantalla, está en la guía.</p>
         </section>
       </FadeIn>
 

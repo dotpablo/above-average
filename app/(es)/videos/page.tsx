@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
-import { VIDEOS } from "@/lib/videos";
+import { VIDEOS, VIDEOS_VISIBLES } from "@/lib/videos";
 import { VideoCard } from "@/components/video-card";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
@@ -52,16 +52,28 @@ export default function VideosPage() {
 
       {/* Feed: orden cronológico inverso, el tema va como etiqueta en la tarjeta.
           Antes esto estaba agrupado por pilar y quedaban secciones de un video. */}
-      <StaggerChildren
-        className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-        staggerDelay={0.05}
-      >
-        {VIDEOS.map((video) => (
+      <StaggerChildren className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.05}>
+        {VIDEOS.slice(0, VIDEOS_VISIBLES).map((video) => (
           <StaggerItem key={video.id}>
             <VideoCard video={video} />
           </StaggerItem>
         ))}
       </StaggerChildren>
+
+      {/* El resto queda en la página (y para buscadores) pero plegado: veinte
+          tarjetas de entrada eran demasiadas. <details> no necesita JS. */}
+      {VIDEOS.length > VIDEOS_VISIBLES && (
+        <details className="group">
+          <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden text-sm font-medium text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent group-open:hidden">
+            Ver los {VIDEOS.length - VIDEOS_VISIBLES} anteriores &darr;
+          </summary>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {VIDEOS.slice(VIDEOS_VISIBLES).map((video) => (
+              <VideoCard key={video.id} video={video} />
+            ))}
+          </div>
+        </details>
+      )}
 
       <FadeIn>
         <aside className="space-y-3 rounded-xl border border-neutral-800 bg-neutral-900/40 p-6">
