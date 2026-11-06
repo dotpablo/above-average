@@ -34,4 +34,5 @@ export const NEWSLETTER = {
  */
 export const KIT = {
   garminFormId: "10134124",
+  maratonesFormId: "10139453",
 };

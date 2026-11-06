@@ -3,9 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-      // URL corta para Instagram. Temporal (307) para poder apuntarla a otra
-      // guía más adelante sin que el navegador la tenga cacheada.
+      // URLs cortas para Instagram; /garmin cae en el hub de las guías. Temporales
+      // (307) para poder apuntarlas a otra página sin que el navegador las cachee.
       { source: "/garmin", destination: "/recursos/garmin", permanent: false },
+      { source: "/garmin/zonas", destination: "/recursos/garmin/zonas", permanent: false },
+      // Link de la bio para la guía de maratones.
+      { source: "/maratones", destination: "/recursos/garmin/maratones", permanent: false },
       // /media paso a llamarse /charlas. La URL vieja esta indexada.
       { source: "/media", destination: "/charlas", permanent: true },
       // /newsletter y /blog hacian lo mismo: las dos listaban el archivo

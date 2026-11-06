@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ];
   });
 
-  const sueltas = ["/recursos/above-average-os", "/recursos/obsidian-claude", "/recursos/garmin"].map((p) => ({
+  const sueltas = ["/recursos/above-average-os", "/recursos/obsidian-claude", "/recursos/garmin", "/recursos/garmin/zonas", "/recursos/garmin/maratones"].map((p) => ({
     url: `${SITE.url}${p}`,
     lastModified: ahora,
     changeFrequency: "monthly" as const,
