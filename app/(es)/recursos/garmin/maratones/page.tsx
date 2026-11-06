@@ -62,7 +62,7 @@ export default function MaratonesPage() {
             como me salió. Esta guía es el paso a paso para que lo hagas con las tuyas.
           </p>
           <div className="max-w-md pt-2">
-            <KitForm formId={KIT.maratonesFormId} cta="Quiero la guía" />
+            <KitForm formId={KIT.maratonesFormId} cta="Quiero la guía" asunto="Confirmá y te mando la guía de tus maratones" />
           </div>
         </header>
       </FadeIn>
@@ -147,7 +147,7 @@ export default function MaratonesPage() {
         <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
           <p className="mb-4 text-sm font-medium text-white">Dejame tu email y te la mando:</p>
           <div className="max-w-md">
-            <KitForm formId={KIT.maratonesFormId} cta="Quiero la guía" />
+            <KitForm formId={KIT.maratonesFormId} cta="Quiero la guía" asunto="Confirmá y te mando la guía de tus maratones" />
           </div>
         </section>
       </FadeIn>

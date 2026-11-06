@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "motion/react";
  * endpoint de formularios es público (es el mismo que usan sus embeds). Sin
  * JS, el `action` hace un POST normal y Kit muestra su propia confirmación.
  */
-export function KitForm({ formId, cta }: { formId: string; cta: string }) {
+export function KitForm({ formId, cta, asunto }: { formId: string; cta: string; asunto?: string }) {
   const inputId = useId();
   const action = `https://app.kit.com/forms/${formId}/subscriptions`;
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -39,10 +39,14 @@ export function KitForm({ formId, cta }: { formId: string; cta: string }) {
         animate={{ opacity: 1, y: 0 }}
         className="rounded-lg border border-accent/40 bg-accent/5 p-4"
       >
-        <p className="text-sm font-medium text-white">Listo. Revisá tu email.</p>
-        <p className="mt-1 text-sm text-neutral-400">
-          Te llega un correo para confirmar y, apenas confirmás, la guía. Si no aparece en unos
-          minutos, mirá en Promociones o Spam.
+        <p className="text-base font-medium text-white">Falta un paso: confirmá en tu email.</p>
+        <p className="mt-2 text-sm text-neutral-300">
+          Te acabo de mandar un correo{asunto && <> con el asunto <span className="text-white">“{asunto}”</span></>}.
+          Tocá el botón que tiene adentro y te llega la guía.{" "}
+          <span className="text-accent">Si no confirmás, no te la puedo mandar.</span>
+        </p>
+        <p className="mt-2 text-sm text-neutral-500">
+          ¿No aparece en un par de minutos? Buscalo en Promociones o en Spam.
         </p>
       </motion.div>
     );
