@@ -89,7 +89,8 @@ Los índices se mantienen a mano con criterio, no se autogeneran: la tesis y el 
 requieren leer el texto. Si tocás un post publicado, revisá si el índice queda desactualizado.
 
 Deploy y email: `node scripts/publish.mjs <slug> [--draft|--send|--schedule <ISO>]`.
-Hace git push (Vercel despliega solo) y crea el email en Buttondown.
+Hace git push (Vercel despliega solo) y crea el email en Buttondown. **En pausa desde noviembre
+2026:** el newsletter se dejó de mandar por email y el sitio quedó como blog.
 
 - **Default `--draft`.** `--send` manda el email a la lista y es irreversible: solo si Pablo lo pide.
 - `publish.mjs` stagea únicamente `content/posts/<slug>.mdx` y `public/images/posts/`. Si querés que
@@ -126,11 +127,12 @@ proponer copy o productos.
 
 - TypeScript en todo. Path alias `@/*` a la raíz.
 - Server Components por defecto; `"use client"` solo donde hace falta estado o eventos
-  (`nav`, `newsletter-form`, `blog-filter`, `components/motion/*`).
+  (`nav`, `kit-form`, `copy-button`, `blog-filter`, `components/motion/*`).
 - Datos de sitio centralizados en `lib/constants.ts` (`SITE`). No hardcodear URLs ni redes.
 - Dependencias de producción mínimas y deliberadas. Antes de agregar una, verificar que no se
   resuelva con lo que ya hay.
-- Todo estático salvo `app/api/subscribe/route.ts` (proxy a Buttondown, oculta la API key).
+- Todo estático, sin rutas de API. Desde noviembre 2026 el sitio no tiene formulario de
+  newsletter (se sacó el de Buttondown); los únicos formularios son los de Kit de las guías de Garmin.
 
 ## Trampas conocidas
 

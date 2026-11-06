@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { NewsletterForm } from "@/components/newsletter-form";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -282,18 +281,6 @@ export default function ObsidianClaudePage() {
           <p className="font-medium text-white">Construí primero el hábito. Después optimizá el sistema alrededor del hábito.</p>
         </div>
       </div>
-
-      {/* CTA */}
-      <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-3">In Production</p>
-        <h2 className="font-serif text-2xl text-white">Cada martes: sistemas, IA y cómo no quedar obsoleto.</h2>
-        <p className="mt-2 text-sm text-neutral-500 max-w-md">
-          Los suscriptores reciben los recursos nuevos antes de que se publiquen acá.
-        </p>
-        <div className="mt-5 max-w-md">
-          <NewsletterForm />
-        </div>
-      </section>
 
     </div>
   );

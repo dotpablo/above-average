@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { PostCard } from "@/components/post-card";
 import { getAllPosts } from "@/lib/posts";
 import { SITE, NEWSLETTER } from "@/lib/constants";
@@ -135,15 +134,6 @@ export default function Home() {
           </StaggerChildren>
         </section>
       )}
-
-      <section className="grid gap-6 rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 sm:grid-cols-2 sm:p-8">
-        <div className="space-y-3">
-          <p className="text-xs uppercase tracking-widest text-neutral-400">El newsletter</p>
-          <h2 className="font-serif text-3xl text-white">{NEWSLETTER.name}</h2>
-          <p className="text-sm leading-relaxed text-neutral-300">{NEWSLETTER.tagline}</p>
-        </div>
-        <div className="self-center"><NewsletterForm /></div>
-      </section>
 
       {/* Tres accesos */}
       <section className="space-y-6">

@@ -46,7 +46,6 @@ export interface Dict {
   switcher: { label: string; other: string; otherHref: (p: string) => string };
   footer: { blog: string; resources: string; talks: string; about: string; videos: string };
   blog: { title: string; editions: (n: number) => string; readMore: string; search: string; all: string };
-  newsletter: { subscribe: string; placeholder: string; ok: string; already: string; error: string; loading: string };
   post: { readingTime: (t: string) => string; alsoIn: string; alsoInEs: string };
 }
 
@@ -61,14 +60,6 @@ export const DICT: Record<Locale, Dict> = {
       readMore: "Leer",
       search: "Buscar posts",
       all: "Todos",
-    },
-    newsletter: {
-      subscribe: "Suscribirme",
-      placeholder: "tu@email.com",
-      ok: "Listo, bienvenido.",
-      already: "Ya estás suscrito. ¡Gracias!",
-      error: "Algo salió mal. Intentá de nuevo.",
-      loading: "...",
     },
     post: {
       readingTime: (t) => t,
@@ -86,14 +77,6 @@ export const DICT: Record<Locale, Dict> = {
       readMore: "Read",
       search: "Search posts",
       all: "All",
-    },
-    newsletter: {
-      subscribe: "Subscribe",
-      placeholder: "you@email.com",
-      ok: "You're in. Welcome.",
-      already: "You're already subscribed. Thanks!",
-      error: "Something went wrong. Try again.",
-      loading: "...",
     },
     post: {
       readingTime: (t) => t,

@@ -5,7 +5,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { format, parseISO } from "date-fns";
 import { enUS } from "date-fns/locale";
 import { getAllPosts, getPostBySlug, getAdjacentPosts, translatedSlug } from "@/lib/posts";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { SITE } from "@/lib/constants";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -162,22 +161,6 @@ export default async function PostPage({ params }: Props) {
         </div>
       </FadeIn>
 
-      {/* Newsletter CTA */}
-      <FadeIn>
-        <div className="mt-16 rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
-          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-3">Newsletter</p>
-          <h2 className="font-serif text-xl text-white leading-snug">
-            In Production
-          </h2>
-          <p className="mt-2 text-sm text-neutral-500">
-            Every Tuesday: what is actually happening with AI inside large
-            enterprises, written by someone implementing it there.
-          </p>
-          <div className="mt-5 max-w-sm">
-            <NewsletterForm />
-          </div>
-        </div>
-      </FadeIn>
 
       {/* Prev / Next navigation */}
       {(prev || next) && (

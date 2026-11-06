@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { SITE } from "@/lib/constants";
-import { SITE_I18N } from "@/lib/i18n";
 import { FadeIn } from "@/components/motion/fade-in";
 
 export const metadata: Metadata = {
@@ -113,18 +111,6 @@ export default function AboutEn() {
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
             Not because he was special. Because he had systems and used them every day.
           </p>
-        </section>
-      </FadeIn>
-
-      <FadeIn>
-        <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
-          <p className="mb-1 text-sm font-medium text-white">In Production</p>
-          <p className="mb-4 text-sm text-neutral-500 tracking-[-0.01em]">
-            {SITE_I18N.en.tagline}
-          </p>
-          <div className="max-w-md">
-            <NewsletterForm locale="en" />
-          </div>
         </section>
       </FadeIn>
     </div>

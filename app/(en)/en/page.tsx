@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { getAllPosts } from "@/lib/posts";
 import { SITE } from "@/lib/constants";
 import { SITE_I18N } from "@/lib/i18n";
@@ -160,17 +159,6 @@ export default function HomeEn() {
             </StaggerChildren>
           </section>
         )}
-
-        <section className="grid gap-6 rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 sm:grid-cols-2 sm:p-8">
-          <div className="space-y-3">
-            <p className="text-xs uppercase tracking-widest text-neutral-400">The newsletter</p>
-            <h2 className="font-serif text-3xl text-white">In Production</h2>
-            <p className="text-sm leading-relaxed text-neutral-300">{SITE_I18N.en.tagline}</p>
-          </div>
-          <div className="self-center">
-            <NewsletterForm locale="en" />
-          </div>
-        </section>
 
         <section className="space-y-6">
           <FadeIn>

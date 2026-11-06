@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import Link from "next/link";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 
@@ -33,13 +32,6 @@ const resources = [
       "Cómo convertir Obsidian en un sistema que piensa con vos. Estructura, plugins, workflows y prompts exactos para cerrar el loop entre lo que consumís y lo que producís.",
     tag: "Gratuito",
     href: "/recursos/obsidian-claude",
-  },
-  {
-    title: "Prompts de entrenamiento con IA",
-    description:
-      "Los prompts exactos que usé para preparar el Maratón de Buenos Aires 2025 (3h14') con IA como entrenador. Adaptables a cualquier distancia.",
-    tag: "Próximamente",
-    href: null,
   },
 ];
 
@@ -111,19 +103,6 @@ export default function RecursosPage() {
         </section>
       </FadeIn>
 
-      <FadeIn>
-        <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
-          <p className="mb-1 text-sm font-medium text-white">
-            Los suscriptores reciben los recursos primero:
-          </p>
-          <p className="mb-4 text-xs text-neutral-500">
-            Cada recurso nuevo sale primero en el newsletter, antes de publicarse acá.
-          </p>
-          <div className="max-w-md">
-            <NewsletterForm />
-          </div>
-        </section>
-      </FadeIn>
     </div>
   );
 }

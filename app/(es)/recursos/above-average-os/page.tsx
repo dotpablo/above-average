@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { NewsletterForm } from "@/components/newsletter-form";
 
 export const metadata: Metadata = {
   title: "Above Average OS v1.0",
@@ -315,18 +314,6 @@ ESPERÁ INPUT. Respondé solo: "Sistema listo. Pegá los datos del calendario."`
           </table>
         </div>
       </Section>
-
-      {/* CTA */}
-      <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
-        <p className="text-xs font-medium uppercase tracking-widest text-neutral-600 mb-3">v2.0 en desarrollo</p>
-        <h2 className="font-serif text-2xl text-white">Suscribite para recibir las actualizaciones.</h2>
-        <p className="mt-2 text-sm text-neutral-500 max-w-md">
-          El OS v2.0 incluye el módulo de negociación salarial y el protocolo de transición de carrera. Los suscriptores lo reciben primero.
-        </p>
-        <div className="mt-5 max-w-md">
-          <NewsletterForm />
-        </div>
-      </section>
     </div>
   );
 }

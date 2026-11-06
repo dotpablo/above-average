@@ -5,7 +5,6 @@ import { enUS } from "date-fns/locale";
 import { getAllPosts } from "@/lib/posts";
 import { SITE } from "@/lib/constants";
 import { SITE_I18N } from "@/lib/i18n";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { FadeIn } from "@/components/motion/fade-in";
 
 export const metadata: Metadata = {
@@ -36,9 +35,6 @@ export default function BlogEnPage() {
         <p className="max-w-xl text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
           {SITE_I18N.en.tagline}
         </p>
-        <div className="max-w-md pt-1">
-          <NewsletterForm locale="en" />
-        </div>
       </header>
 
       <FadeIn>

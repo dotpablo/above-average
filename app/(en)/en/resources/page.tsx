@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { SITE } from "@/lib/constants";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
@@ -35,14 +34,6 @@ const resources = [
     tag: "Free",
     href: "/recursos/obsidian-claude",
     note: "In Spanish",
-  },
-  {
-    title: "AI training prompts",
-    description:
-      "The exact prompts I used to prepare the 2025 Buenos Aires Marathon (3h14) with AI as a coach. Adaptable to any distance.",
-    tag: "Coming soon",
-    href: null,
-    note: null,
   },
 ];
 
@@ -83,17 +74,6 @@ export default function ResourcesEn() {
         ))}
       </StaggerChildren>
 
-      <FadeIn>
-        <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
-          <p className="mb-1 text-sm font-medium text-white">Subscribers get the resources first:</p>
-          <p className="mb-4 text-xs text-neutral-500">
-            Every new resource goes out in the newsletter before it lands here.
-          </p>
-          <div className="max-w-md">
-            <NewsletterForm locale="en" />
-          </div>
-        </section>
-      </FadeIn>
     </div>
   );
 }

@@ -3,7 +3,6 @@ import { SITE } from "@/lib/constants";
 import { BlogFilter } from "@/components/blog-filter";
 import { getAllPosts } from "@/lib/posts";
 import { NEWSLETTER } from "@/lib/constants";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { FadeIn } from "@/components/motion/fade-in";
 
 export const metadata: Metadata = {
@@ -34,9 +33,6 @@ export default function BlogPage() {
         <p className="max-w-xl text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
           {NEWSLETTER.tagline}
         </p>
-        <div className="max-w-md pt-1">
-          <NewsletterForm />
-        </div>
       </header>
 
       <FadeIn>

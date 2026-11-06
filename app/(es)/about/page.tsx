@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { NEWSLETTER } from "@/lib/constants";
 import { FadeIn } from "@/components/motion/fade-in";
 
@@ -109,19 +108,6 @@ export default function AboutPage() {
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
             No porque fuera especial. Porque tenía sistemas y los uso todos los días.
           </p>
-        </section>
-      </FadeIn>
-
-      {/* Newsletter CTA */}
-      <FadeIn>
-        <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
-          <p className="mb-1 text-sm font-medium text-white">{NEWSLETTER.name}</p>
-          <p className="mb-4 text-sm text-neutral-500 tracking-[-0.01em]">
-            {NEWSLETTER.tagline}
-          </p>
-          <div className="max-w-md">
-            <NewsletterForm />
-          </div>
         </section>
       </FadeIn>
     </div>
