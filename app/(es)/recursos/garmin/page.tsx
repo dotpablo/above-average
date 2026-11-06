@@ -21,7 +21,7 @@ export default function GarminHubPage() {
         <div>
           <h1 className="font-serif text-4xl text-white sm:text-5xl">Garmin</h1>
           <p className="mt-4 text-base text-neutral-400 tracking-[-0.01em]">
-            Uso Garmin desde hace más de 15 años y corrí 19 maratones con (y sin) él. Estas son las
+            Uso Garmin desde 2012 y corrí 19 maratones con (y sin) él. Estas son las
             guías que armé para sacarle jugo a tus datos. Gratis, en PDF, te llegan al mail.
           </p>
         </div>
