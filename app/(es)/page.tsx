@@ -39,7 +39,7 @@ const personSchema = {
 const entryPoints = [
   {
     title: NEWSLETTER.name,
-    desc: "El newsletter semanal sobre enterprise e IA. Sale los martes, desde adentro de la máquina.",
+    desc: "51 ediciones sobre enterprise e IA, escritas desde adentro de la máquina. El archivo completo, en español y en inglés.",
     cta: "Leer el archivo",
     href: "/blog",
     external: false,

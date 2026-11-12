@@ -51,9 +51,9 @@ export interface Dict {
 
 export const DICT: Record<Locale, Dict> = {
   es: {
-    nav: { blog: "In Production", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
+    nav: { blog: "Escritos", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
     switcher: { label: "Idioma", other: "English", otherHref: (p) => p },
-    footer: { blog: "In Production", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
+    footer: { blog: "Escritos", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
     blog: {
       title: "In Production",
       editions: (n) => `${n} ediciones`,
@@ -68,9 +68,9 @@ export const DICT: Record<Locale, Dict> = {
     },
   },
   en: {
-    nav: { blog: "In Production", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
+    nav: { blog: "Writing", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
     switcher: { label: "Language", other: "Español", otherHref: (p) => p },
-    footer: { blog: "In Production", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
+    footer: { blog: "Writing", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
     blog: {
       title: "In Production",
       editions: (n) => `${n} editions`,
@@ -93,13 +93,13 @@ export const SITE_I18N: Record<Locale, { title: string; description: string; tag
     description:
       "Uruguayo criado en Venezuela. Padre de dos, 19 maratones, 20 años adentro de corporaciones implementando tecnología. Escribo sobre lo que la IA le está haciendo al trabajo y a la gente.",
     tagline:
-      "Cada martes: qué está pasando de verdad con la IA en las empresas grandes, escrito por alguien que está adentro implementándola. Sin humo, sin hype, sin vender nada.",
+      "Lo que pasa de verdad con la IA adentro de las empresas grandes, escrito por alguien que estuvo adentro implementándola. Sin humo, sin hype, sin vender nada.",
   },
   en: {
     title: "Pablo Marichal",
     description:
       "SAP tech lead. Twenty years inside large enterprises, now leading AI adoption on systems that cannot go down. I write about what AI is actually doing to work, from the inside — not from the news.",
     tagline:
-      "Every Tuesday: what is actually happening with AI inside large enterprises, written by someone implementing it there. No hype, nothing to sell.",
+      "What is actually happening with AI inside large enterprises, written by someone who was there implementing it. No hype, nothing to sell.",
   },
 };

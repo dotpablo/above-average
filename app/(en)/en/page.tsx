@@ -41,7 +41,7 @@ const personSchema = {
 const entryPoints = [
   {
     title: "In Production",
-    desc: "The weekly newsletter on enterprise and AI. Out on Tuesdays, from inside the machine.",
+    desc: "51 editions on enterprise and AI, written from inside the machine. The full archive, in English and Spanish.",
     cta: "Read the archive",
     href: "/en/blog",
     external: false,

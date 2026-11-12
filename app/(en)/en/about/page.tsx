@@ -89,7 +89,7 @@ export default function AboutEn() {
             The philosopher Éric Sadin writes about the <em>vegetalization of humanity</em>: delegating so much cognitive agency to algorithms that we end up as passive nodes in the system rather than agents in it. I see it every day in the corporate world: people copying prompts without understanding what they execute, managers who think Copilot replaces judgment, juniors who cannot debug because they never learned the error from the ground up.
           </p>
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
-            That is what I write about every Tuesday: what is actually happening with AI inside large enterprises, without the smoke and without the hype. That is <strong className="text-neutral-200">In Production</strong>.
+            That is what I wrote 51 editions about: what is actually happening with AI inside large enterprises, without the smoke and without the hype. That is <strong className="text-neutral-200">In Production</strong>, and the whole archive stays up.
           </p>
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
             <strong className="text-neutral-200">Above Average</strong> is something else: the system I arrived at along the way, and the book I am writing about it. Three layers — the biological kernel (a body in shape), the technical extensions (AI, SAP, architecture) and cognitive sovereignty (judgment no AI can replace). Version 1.0 is published and free, in{" "}
