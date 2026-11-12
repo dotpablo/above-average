@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts, translatedSlug } from "@/lib/posts";
 import { SITE } from "@/lib/constants";
+import { ARTICULOS_GARMIN, articuloUrl } from "@/lib/correr";
 
 /**
  * Un solo sitemap con las dos versiones. Cada entrada declara sus alternativas
@@ -43,7 +44,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ];
   });
 
-  const sueltas = ["/recursos/above-average-os", "/recursos/obsidian-claude", "/recursos/garmin", "/recursos/garmin/zonas", "/recursos/garmin/maratones"].map((p) => ({
+  const sueltas = [
+    "/correr",
+    ...ARTICULOS_GARMIN.map(articuloUrl),
+    "/recursos/above-average-os",
+    "/recursos/obsidian-claude",
+    "/recursos/garmin",
+    "/recursos/garmin/zonas",
+    "/recursos/garmin/maratones",
+  ].map((p) => ({
     url: `${SITE.url}${p}`,
     lastModified: ahora,
     changeFrequency: "monthly" as const,

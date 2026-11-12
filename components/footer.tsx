@@ -22,6 +22,7 @@ export function Footer({ locale = "es" as Locale }: { locale?: Locale }) {
     locale === "es"
       ? [
           { href: "/blog", label: t.footer.blog },
+          { href: "/correr", label: t.footer.running },
           { href: "/videos", label: t.footer.videos },
           { href: "/recursos", label: t.footer.resources },
           { href: "/charlas", label: t.footer.talks },

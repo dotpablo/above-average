@@ -42,18 +42,18 @@ export function pathFor(locale: Locale, esPath: string): string {
 }
 
 export interface Dict {
-  nav: { blog: string; resources: string; talks: string; about: string; videos: string };
+  nav: { blog: string; running: string; resources: string; talks: string; about: string; videos: string };
   switcher: { label: string; other: string; otherHref: (p: string) => string };
-  footer: { blog: string; resources: string; talks: string; about: string; videos: string };
+  footer: { blog: string; running: string; resources: string; talks: string; about: string; videos: string };
   blog: { title: string; editions: (n: number) => string; readMore: string; search: string; all: string };
   post: { readingTime: (t: string) => string; alsoIn: string; alsoInEs: string };
 }
 
 export const DICT: Record<Locale, Dict> = {
   es: {
-    nav: { blog: "Escritos", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
+    nav: { blog: "Escritos", running: "Correr", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
     switcher: { label: "Idioma", other: "English", otherHref: (p) => p },
-    footer: { blog: "Escritos", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
+    footer: { blog: "Escritos", running: "Correr", resources: "Recursos", talks: "Charlas", about: "About", videos: "Videos" },
     blog: {
       title: "In Production",
       editions: (n) => `${n} ediciones`,
@@ -68,9 +68,9 @@ export const DICT: Record<Locale, Dict> = {
     },
   },
   en: {
-    nav: { blog: "Writing", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
+    nav: { blog: "Writing", running: "Running", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
     switcher: { label: "Language", other: "Español", otherHref: (p) => p },
-    footer: { blog: "Writing", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
+    footer: { blog: "Writing", running: "Running", resources: "Resources", talks: "Talks", about: "About", videos: "Videos" },
     blog: {
       title: "In Production",
       editions: (n) => `${n} editions`,

@@ -39,6 +39,7 @@ export function Nav({ locale = "es" as Locale }: { locale?: Locale }) {
     locale === "es"
       ? [
           { href: "/blog", label: t.nav.blog },
+          { href: "/correr", label: t.nav.running },
           { href: "/videos", label: t.nav.videos },
           { href: "/recursos", label: t.nav.resources },
           { href: "/charlas", label: t.nav.talks },
