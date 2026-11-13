@@ -19,6 +19,41 @@ export interface Video {
 
 export const VIDEOS: Video[] = [
   {
+    id: "DfmbGEtTW8A",
+    title: "En unos años van a preferir jugar con amigos. Hoy me eligen a mí.",
+    description:
+      "Hay maratones de las que no me acuerdo nada. Pero de este día en la cancha me voy a acordar siempre: los dos metiendo goles y yo pasándola brutal. Es la ley de la vida, y hoy lo aprovecho.",
+    topic: "Vida cotidiana",
+  },
+  {
+    id: "DflTr2QziyN",
+    title: "Si siempre te da 0, no estás corriendo mal.",
+    description:
+      "La condición de rendimiento compara cómo estás hoy con tu nivel de siempre. Cada punto es más o menos un 1 % arriba o abajo. Cero no es malo: es tu día normal. Y negativo es una foto de hoy, no de tu nivel.",
+    topic: "Correr",
+  },
+  {
+    id: "DfhwKPcz-pv",
+    title: "¿Tu peor maratón fue falta de entrenamiento?",
+    description:
+      "Le pasé mis 19 maratones a Claude con los datos de mi Garmin. Nueva York 2022 y Buenos Aires 2025: mismos 70 km por semana, 30 minutos de diferencia. No me faltaba entrenar. Me sobraba salida.",
+    topic: "Correr",
+  },
+  {
+    id: "DfXo37UT2xk",
+    title: "Bajarte de un maratón no es un fracaso.",
+    description:
+      "En maratones hay alrededor de un paro cardíaco cada 100.000 corredores (JAMA, 2025). Bien llevado, no es un deporte extremo: son meses de entrenamiento y saber escucharte. Hoy entrar a un Major es casi una lotería, y bajarte parece un fracaso. No lo es.",
+    topic: "Correr",
+  },
+  {
+    id: "DfS0mX2ToFd",
+    title: "Si nunca tocaste tu Garmin, tus zonas no son tuyas.",
+    description:
+      "Tus zonas salen de una fórmula: 220 menos tu edad. No de tu cuerpo. Después de los videos de zonas lo junté todo en una guía gratis: cómo medir el umbral con banda, cambiar las zonas en la app y en el reloj, y qué reloj compraría hoy.",
+    topic: "Correr",
+  },
+  {
     id: "DfKVOvBzmbV",
     title: "No te compares con los runfluencers.",
     description:
