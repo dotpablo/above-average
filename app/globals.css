@@ -9,6 +9,12 @@
 
 body {
   @apply bg-neutral-950 text-neutral-300 antialiased text-base;
+  background-image: radial-gradient(
+    ellipse 70% 420px at 50% -120px,
+    color-mix(in srgb, var(--color-accent) 9%, transparent),
+    transparent
+  );
+  background-repeat: no-repeat;
 }
 
 ::selection {

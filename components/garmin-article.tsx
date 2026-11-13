@@ -38,12 +38,15 @@ export function GarminArticle({ articulo, children }: { articulo: ArticuloGarmin
 
       <FadeIn>
         <header className="space-y-5">
-          <Link href="/correr" className="text-sm text-neutral-500 hover:text-accent transition-colors">
-            &larr; Correr
-          </Link>
-          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">Garmin</p>
+          <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-neutral-500">
+            <Link href="/correr" className="text-accent transition-colors hover:text-white">
+              Correr
+            </Link>
+            <span aria-hidden="true">/</span>
+            <span>Garmin</span>
+          </p>
           <h1 className="font-serif text-4xl leading-[1.1] text-white sm:text-5xl">{articulo.titulo}</h1>
-          <p className="text-lg text-neutral-400 tracking-[-0.01em]">{articulo.descripcion}</p>
+          <p className="border-l-2 border-accent/60 pl-4 text-lg text-neutral-300 tracking-[-0.01em]">{articulo.descripcion}</p>
         </header>
       </FadeIn>
 
@@ -52,8 +55,8 @@ export function GarminArticle({ articulo, children }: { articulo: ArticuloGarmin
       </FadeIn>
 
       <FadeIn>
-        <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 backdrop-blur-sm">
-          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">Guía gratuita · PDF</p>
+        <section className="rounded-2xl border border-accent/30 bg-gradient-to-b from-accent/[0.07] to-neutral-900/40 p-6 sm:p-8">
+          <p className="text-xs font-medium uppercase tracking-widest text-accent">Guía gratuita · PDF</p>
           <h2 className="mt-3 font-serif text-2xl text-white">Cómo tengo configurado mi Garmin</h2>
           <p className="mt-2 text-sm text-neutral-400">
             Todo esto con capturas de cada pantalla, en 17 páginas. Te llega al mail.
@@ -82,7 +85,7 @@ export function GarminArticle({ articulo, children }: { articulo: ArticuloGarmin
 
       <FadeIn>
         <nav aria-label="Más sobre Garmin" className="space-y-3 border-t border-neutral-900 pt-8">
-          <p className="text-xs font-medium uppercase tracking-widest text-neutral-600">Más sobre Garmin</p>
+          <p className="text-xs font-medium uppercase tracking-widest text-neutral-500">Más sobre Garmin</p>
           <ul className="space-y-2">
             {otros.map((a) => (
               <li key={a.slug}>

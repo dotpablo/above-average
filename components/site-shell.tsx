@@ -37,10 +37,16 @@ export function SiteShell({
           }}
         />
       </head>
-      <body className="mx-auto max-w-2xl px-5 font-sans">
-        <Nav locale={locale} />
-        <main className="min-h-[70vh] py-10">{children}</main>
-        <Footer locale={locale} />
+      <body className="font-sans">
+        {/* Nav y footer van al ancho de la home (960); el contenido conserva
+            el ancho de lectura. Antes el nav era más angosto que la home. */}
+        <div className="mx-auto max-w-[1000px] px-5">
+          <Nav locale={locale} />
+        </div>
+        <main className="mx-auto min-h-[70vh] max-w-2xl px-5 py-10 sm:py-14">{children}</main>
+        <div className="mx-auto max-w-[1000px] px-5">
+          <Footer locale={locale} />
+        </div>
         <Analytics />
       </body>
     </html>

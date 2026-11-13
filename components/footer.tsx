@@ -51,7 +51,7 @@ export function Footer({ locale = "es" as Locale }: { locale?: Locale }) {
         >
           Pablo Marichal
         </Link>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-600">
+        <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-neutral-300">
           {navLinks.map((l) => (
             <Link
               key={l.href}
@@ -62,7 +62,7 @@ export function Footer({ locale = "es" as Locale }: { locale?: Locale }) {
             </Link>
           ))}
         </div>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-400">
+        <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-neutral-500">
           {socials.map((s, i) => (
             <motion.a
               key={s.label}
@@ -79,7 +79,7 @@ export function Footer({ locale = "es" as Locale }: { locale?: Locale }) {
             </motion.a>
           ))}
         </div>
-        <p className="text-xs text-neutral-700">
+        <p className="text-xs text-neutral-600">
           &copy; {new Date().getFullYear()} {SITE.author}
         </p>
       </div>

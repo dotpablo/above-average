@@ -48,22 +48,23 @@ interface Stat {
 
 export function AnimatedStats({ stats }: { stats: Stat[] }) {
   return (
-    <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-neutral-800 pt-4">
+    <div className="grid grid-cols-3 gap-x-6 gap-y-6 border-y border-neutral-800 py-6 sm:flex sm:justify-between">
       {stats.map((s) => {
-        const numMatch = s.value.match(/^(\d+)(.*)$/);
+        // Hasta 3 dígitos: un año ("2010") no es una cantidad y no se cuenta.
+        const numMatch = s.value.match(/^(\d{1,3})(\D.*)?$/);
 
         return (
           // Sin opacity:0 inicial: estos numeros no pueden estar ocultos en el
           // HTML servido, es justamente lo que se estaba rompiendo.
-          <div key={s.label} className="flex items-baseline gap-1.5">
-            <span className="font-serif text-xl text-accent">
+          <div key={s.label} className="flex flex-col gap-1.5">
+            <span className="font-serif text-3xl leading-none text-accent tabular-nums sm:text-4xl">
               {numMatch ? (
-                <CountUp value={parseInt(numMatch[1], 10)} suffix={numMatch[2]} />
+                <CountUp value={parseInt(numMatch[1], 10)} suffix={numMatch[2] ?? ""} />
               ) : (
                 s.value
               )}
             </span>
-            <span className="text-xs text-neutral-600">{s.label}</span>
+            <span className="text-xs uppercase tracking-wider text-neutral-400">{s.label}</span>
           </div>
         );
       })}

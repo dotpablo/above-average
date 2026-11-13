@@ -15,7 +15,7 @@ export function PostCard({ post, showCategory = false, compact = false }: { post
     >
       <Link href={`/blog/${post.slug}`} className="block">
         {showCategory && post.category && (
-          <p className="mb-1.5 text-xs font-medium uppercase tracking-widest text-neutral-600">
+          <p className="mb-1.5 text-xs font-medium uppercase tracking-widest text-accent/80">
             {post.category}
           </p>
         )}
@@ -30,16 +30,16 @@ export function PostCard({ post, showCategory = false, compact = false }: { post
           >
             <span className="hover-underline">{post.title}</span>
           </motion.h3>
-          <time className="shrink-0 text-sm text-neutral-600 tabular-nums">
+          <time className="shrink-0 text-sm text-neutral-500 tabular-nums">
             {post.date
               ? format(parseISO(post.date), "MMM yyyy", { locale: es })
               : ""}
             <span className="mx-2">&middot;</span>
-            <span className="capitalize">{post.readTime.replace('min read', 'min de lectura').replace('read', 'lectura')}</span>
+            <span>{post.readTime.replace('min read', 'min de lectura').replace('read', 'lectura')}</span>
           </time>
         </div>
         {post.description && !compact && (
-          <p className="mt-1.5 text-base leading-relaxed text-neutral-500 line-clamp-2 tracking-[-0.01em]">
+          <p className="mt-1.5 text-base leading-relaxed text-neutral-400 line-clamp-2 tracking-[-0.01em]">
             {post.description}
           </p>
         )}

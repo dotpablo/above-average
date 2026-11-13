@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PostCard } from "@/components/post-card";
 import { getAllPosts } from "@/lib/posts";
 import { SITE, NEWSLETTER } from "@/lib/constants";
+import { GUIAS_GARMIN } from "@/lib/garmin";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 import { AnimatedStats } from "@/components/motion/animated-stats";
@@ -77,18 +78,18 @@ export default function Home() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
     />
-    <div className="space-y-16 lg:relative lg:left-1/2 lg:w-[960px] lg:-translate-x-1/2">
+    <div className="space-y-20 lg:relative lg:left-1/2 lg:w-[960px] lg:-translate-x-1/2">
 
       {/* Apertura: el retrato acompaña; la presentación conserva su ancho. */}
       <section className="space-y-8">
         <div className="grid items-start gap-8 sm:grid-cols-[1fr_200px] lg:grid-cols-[1fr_260px] lg:gap-12">
           <div className="space-y-6">
-            <p className="text-sm text-neutral-400">Pablo Marichal · Trabajo, ideas y vida cotidiana</p>
-            <h1 className="text-balance font-serif text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <p className="text-xs font-medium uppercase tracking-widest text-neutral-400">Trabajo, ideas y vida cotidiana</p>
+            <h1 className="text-balance font-serif text-5xl leading-[1.04] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Veinte años adentro
               <span className="block text-neutral-200">de la <span className="text-accent">máquina</span>.</span>
             </h1>
-            <p className="max-w-xl text-base leading-relaxed text-neutral-300">
+            <p className="max-w-xl text-lg leading-relaxed text-neutral-300">
               Lidero adopción de IA en sistemas que no se pueden caer, en
               corporaciones grandes. Escribo lo que pasa ahí adentro: lo que
               funciona, lo que se rompe y lo que nunca entra en el anuncio.
@@ -97,24 +98,91 @@ export default function Home() {
               También cuento lo que pasa fuera del trabajo: correr, emigrar,
               ser padre y cocinar. En los videos aparece esa parte de mí.
             </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
-              <Link href="/videos" className="text-accent underline underline-offset-4">Mirá los videos &rarr;</Link>
-              <Link href="/about" className="text-neutral-300 underline underline-offset-4">Mi historia &rarr;</Link>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-1 text-sm">
+              <Link
+                href="/videos"
+                className="rounded-full bg-accent px-5 py-2.5 font-medium text-neutral-950 transition-colors hover:bg-white"
+              >
+                Mirá los videos &rarr;
+              </Link>
+              <Link
+                href="/about"
+                className="text-neutral-300 underline decoration-neutral-600 underline-offset-4 transition-colors hover:text-white hover:decoration-accent"
+              >
+                Mi historia &rarr;
+              </Link>
             </div>
           </div>
-          <div className="relative aspect-[4/5] w-40 overflow-hidden rounded-2xl ring-1 ring-neutral-800 sm:w-full">
+          <div className="relative order-first aspect-[4/5] w-40 overflow-hidden rounded-2xl ring-1 ring-neutral-800 sm:order-none sm:w-full">
             <Image src="/images/pablo-hero-2026.jpg" alt="Pablo Marichal" fill sizes="(min-width: 1024px) 260px, (min-width: 640px) 200px, 160px" className="object-cover object-top" priority />
           </div>
         </div>
         <AnimatedStats stats={stats} />
       </section>
 
+      {/* Correr: lo que más crece, con foto y las dos guías a un clic. */}
+      <FadeIn>
+        <section className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 via-neutral-900/60 to-neutral-950">
+          <div
+            className="pointer-events-none absolute -right-24 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-accent/10 blur-3xl"
+            aria-hidden="true"
+          />
+          <div className="relative grid sm:grid-cols-[1fr_240px] lg:grid-cols-[1fr_340px]">
+            <div className="space-y-6 p-6 sm:p-8 lg:p-10">
+              <p className="text-xs font-medium uppercase tracking-widest text-accent">Correr</p>
+              <h2 className="text-balance font-serif text-3xl leading-[1.1] text-white sm:text-4xl">
+                19 maratones, Garmin desde 2012 y una rodilla que últimamente opina.
+              </h2>
+              <ul className="divide-y divide-neutral-800 border-y border-neutral-800">
+                {GUIAS_GARMIN.map((guia) => (
+                  <li key={guia.slug}>
+                    <Link
+                      href={`/recursos/garmin/${guia.slug}`}
+                      className="group flex items-center justify-between gap-4 py-3.5"
+                    >
+                      <span>
+                        <span className="block text-xs text-neutral-500">Guía gratuita · PDF</span>
+                        <span className="font-serif text-lg text-white">
+                          <span className="hover-underline">{guia.titulo}</span>
+                        </span>
+                      </span>
+                      <span
+                        className="text-neutral-600 transition-all group-hover:translate-x-1 group-hover:text-accent"
+                        aria-hidden="true"
+                      >
+                        &rarr;
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/correr"
+                className="inline-block text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
+              >
+                Todo sobre correr &rarr;
+              </Link>
+            </div>
+            <div className="relative hidden sm:block">
+              <Image
+                src="/images/pablo-running.png"
+                alt="Pablo Marichal corriendo una carrera"
+                width={800}
+                height={1200}
+                sizes="(min-width: 1024px) 460px, 340px"
+                className="absolute -top-2 right-[-4%] h-[150%] w-auto max-w-none"
+              />
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
       {/* Recent posts */}
       {recentPosts.length > 0 && (
         <section className="space-y-6">
           <FadeIn>
             <div className="flex items-baseline justify-between">
-              <h2 className="font-serif text-2xl text-white">Últimos posts</h2>
+              <h2 className="font-serif text-3xl text-white">Últimos posts</h2>
               <Link
                 href="/blog"
                 className="text-sm font-medium text-neutral-500 transition-colors hover:text-accent"
@@ -138,7 +206,7 @@ export default function Home() {
       {/* Tres accesos */}
       <section className="space-y-6">
         <FadeIn>
-          <h2 className="font-serif text-2xl text-white">Por acá se sigue</h2>
+          <h2 className="font-serif text-3xl text-white">Por acá se sigue</h2>
         </FadeIn>
         <StaggerChildren className="grid gap-4 sm:grid-cols-3" staggerDelay={0.08}>
           {entryPoints.map((entry) => (
@@ -148,10 +216,10 @@ export default function Home() {
                 {...(entry.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="flex h-full flex-col rounded-xl border border-neutral-800 bg-neutral-900/50 p-5 backdrop-blur-sm transition-colors hover:border-accent/50"
+                className="group flex h-full flex-col rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 transition-all hover:-translate-y-0.5 hover:border-accent/50 hover:bg-neutral-900"
               >
-                <h3 className="font-serif text-lg text-white">{entry.title}</h3>
-                <p className="mt-2 text-sm text-neutral-500 tracking-[-0.01em]">
+                <h3 className="font-serif text-2xl text-white">{entry.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-400 tracking-[-0.01em]">
                   {entry.desc}
                 </p>
                 <span className="mt-4 text-sm font-medium text-accent">
