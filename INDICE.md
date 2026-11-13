@@ -1,6 +1,6 @@
 # Índice de ediciones — Above Average
 
-Newsletter de Pablo Marichal. 51 ediciones publicadas, de la más reciente a la más antigua.
+Newsletter de Pablo Marichal. 53 ediciones publicadas, de la más reciente a la más antigua.
 
 **Fuente:** `content/posts/*.mdx`
 **Criterio de inclusión:** posts en español desde el lanzamiento del newsletter (2025-10-26). Se excluyen las 3 traducciones al inglés que viven en `content/posts/`, todo `content/posts-en/` y el archivo histórico de LinkedIn/Substack anterior a esa fecha.
@@ -8,6 +8,8 @@ Newsletter de Pablo Marichal. 51 ediciones publicadas, de la más reciente a la 
 
 | Ed. | Fecha | Título | Pilar | Tesis | Slug |
 |---:|---|---|---|---|---|
+| 53 | 2026-11-10 | Nadie aprende SAP en un fin de semana | Enterprise & AI Survival | SAP no desaparece: cambia lo que vende, mientras se cierran las rampas de entrada para el talento nuevo. | `nadie-aprende-sap-en-un-fin-de-semana` |
+| 52 | 2026-11-03 | Un 9.9 cae un martes | Enterprise & AI Survival | «El criterio no se automatiza» no es una frazada: es un perímetro que se achica. | `un-9-9-cae-un-martes` |
 | 51 | 2026-10-27 | La deuda técnica es solo una lista de cosas que nadie iba a revisar | Enterprise & AI Survival | La deuda técnica no desaparece con tests generados por IA: consigue un mejor rastro de papeles. | `la-deuda-tecnica-es-una-lista-de-cosas-que-nadie-iba-a-revisar` |
 | 50 | 2026-10-20 | Cada advertencia en MAYÚSCULAS es un fin de semana que alguien perdió | Enterprise & AI Survival | Lo caro es saber qué instrucciones tienen un fin de semana atrás, y eso no está en la nota. | `cada-advertencia-en-mayusculas-es-un-fin-de-semana-perdido` |
 | 49 | 2026-10-13 | La empresa autónoma no te va a reemplazar. Te va a ascender a corrector. | Enterprise & AI Survival | El riesgo no es la extinción sino la degradación: quedar adentro del proceso, del lado de corregir. | `la-empresa-autonoma-te-va-a-ascender-a-corrector` |
@@ -66,12 +68,12 @@ Newsletter de Pablo Marichal. 51 ediciones publicadas, de la más reciente a la 
 
 | Pilar | Ediciones | % |
 |---|---:|---:|
-| Enterprise & AI Survival | 32 | 63% |
-| Full Stack Human | 14 | 27% |
+| Enterprise & AI Survival | 34 | 64% |
+| Full Stack Human | 14 | 26% |
 | Builder Mindset | 4 | 8% |
 | Biological Clean Core | 1 | 2% |
 
-El pilar biológico está prácticamente sin cubrir: una sola edición en 51 (la 7). La 36 podría contarse como segunda si se reclasifica.
+El pilar biológico está prácticamente sin cubrir: una sola edición en 53 (la 7). La 36 podría contarse como segunda si se reclasifica.
 
 Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real sobre `indice-completo.json` era 23. Corregido acá.
 
@@ -81,7 +83,7 @@ Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real s
 
 | Grupo | Ediciones | Nivel |
 |---|---|---|
-| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34, 41, 42, 51 | Muy alto — es el eje del newsletter |
+| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34, 41, 42, 51, 52 | Muy alto — es el eje del newsletter; la 52 admite que parte de ese criterio era reconocimiento de patrones |
 | Vender criterio, no tiempo | 16, 17, 20, 40, 45 | Muy alto — párrafo repetido casi textual entre la 16 y la 17 |
 | Las 3 reglas del Operador | 27, 28, 29 | Muy alto — misma lista tres semanas seguidas |
 | Sistemas vs. motivación / metas | 3, 6, 9 | Alto — la 3 y la 9 usan el mismo dato de Strava |
@@ -91,8 +93,8 @@ Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real s
 | El vibe coding produce demos que mueren | 16, 19, 35 | Medio |
 | «El que entiende los fundamentos orquesta…» | 22, 28, 31, 32 | Estilístico — frase-firma en 4 cierres |
 | Sección «Antes de que me des la razón» con autodeclaración de no-neutralidad | 41, 42 | **Muy alto — párrafo casi textual en dos ediciones consecutivas** |
-| Quién firma / quién responde por lo que ejecuta el agente | 38, 40, 41, 44, 45, 47, 49, 50 | Alto — eje en consolidación |
-| El que sabe por qué está ese campo en la tabla | 42, 45, 48 | Alto — la 48 le da vuelta el argumento |
+| Quién firma / quién responde por lo que ejecuta el agente | 38, 40, 41, 44, 45, 47, 49, 50, 52 | Alto — eje en consolidación; la 52 dice que ese resto se achica |
+| El que sabe por qué está ese campo en la tabla | 42, 45, 48, 53 | Alto — la 48 le da vuelta el argumento; la 53 repite el de la 45 (sin juniors no se fabrica el contexto) |
 | La fricción como filtro, no como burocracia | 44, 46, 47, 51 | Alto — las tres primeras citan la licencia de veinte dólares; la 51 pide «menos compuertas que atrapen algo real» |
 | Lo que funciona en la demo miente en producción | 32, 35, 43 | Medio-alto — la 43 es el caso propio |
 | Homero en la planta nuclear como cierre | 50, 51 | Medio — estilístico, en dos ediciones consecutivas |
@@ -122,6 +124,8 @@ Si en ese hueco hubo una edición que no está en el repo, **todos los números 
 | 10 | `tu-vida-es-un-sistema-legacy…` | Sin fuentes externas. |
 | 13 | `la-trampa-del-mwd…` | Sin fuentes externas (el acrónimo es propio). |
 | 36 | `corro-hace-16-anos…` | Autobiográfico puro, sin fuentes. |
+| 52 | `un-9-9-cae-un-martes` | Sin sección de fuentes; el CVSS 9.9 del Patch Day de octubre va sin nota ni CVE. Abre con «segundo martes del mes» y salió el primer martes (2026-11-03). |
+| 53 | `nadie-aprende-sap-en-un-fin-de-semana` | Sin sección de fuentes; la baja del ABAP Cloud Developer Trial, Prior Labs, TechWolf y los 10.000 millones trimestrales van sin medio ni link. |
 
 ### 3. Fuentes incompletas
 - **Ed. 4:** «72% de los padres trabajadores» sin fuente.

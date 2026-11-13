@@ -11,9 +11,31 @@
       "the-death-of-the-man-hour-are-you-paid-for-your-time-or-your-token-budget"
     ],
     "nota_numeracion": "Ningún archivo trae el número de edición en el frontmatter. La numeración es secuencial por fecha desde 2025-10-26 = 1. Se corrobora con la edición del 2026-01-06, que dice 'If you have been reading me for the past 11 weeks' y cae exactamente en la posición 11.",
-    "total_ediciones": 51
+    "total_ediciones": 53
   },
   "ediciones": [
+    {
+      "edicion": 53,
+      "fecha": "2026-11-10",
+      "titulo": "Nadie aprende SAP en un fin de semana",
+      "slug": "nadie-aprende-sap-en-un-fin-de-semana",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "SAP no desaparece: cambia lo que vende, mientras se cierran las rampas de entrada para el talento nuevo.",
+      "temas": "abap cloud developer trial, prior labs, techwolf, autonomous enterprise, christian klein, btp free tier, rise, juniors",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    },
+    {
+      "edicion": 52,
+      "fecha": "2026-11-03",
+      "titulo": "Un 9.9 cae un martes",
+      "slug": "un-9-9-cae-un-martes",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "«El criterio no se automatiza» no es una frazada: es un perímetro que se achica.",
+      "temas": "patch day, cvss 9.9, fiori, reconocimiento de patrones, criterio, autorización, matriz de aplicabilidad",
+      "fuentes_clave": null,
+      "enlaza_a": []
+    },
     {
       "edicion": 51,
       "fecha": "2026-10-27",
@@ -864,6 +886,16 @@
         "edicion": 48,
         "slug": "el-mejor-test-de-tu-arquitectura-es-irte-dos-semanas",
         "detalle": "Sin bibliografía a propósito: el propio texto cierra con 'Referencias: hoy no hubo bibliografía'. Es una edición de argumento, no de datos."
+      },
+      {
+        "edicion": 52,
+        "slug": "un-9-9-cae-un-martes",
+        "detalle": "Sin sección de fuentes. La vulnerabilidad CVSS 9.9 del Patch Day de octubre 2026 (rol de Fiori que permite ejecutar ABAP) se cita sin número de nota ni CVE. Además el texto abre con 'segundo martes del mes' y la fecha de publicación (2026-11-03) es el primer martes."
+      },
+      {
+        "edicion": 53,
+        "slug": "nadie-aprende-sap-en-un-fin-de-semana",
+        "detalle": "Sin sección de fuentes. La baja del ABAP Cloud Developer Trial, la inversión en Prior Labs (más de 1.000 millones de euros, julio 2026), la compra de TechWolf (octubre 2026) y los 10.000 millones de facturación trimestral se citan sin medio ni link."
       }
     ],
     "fuentes_incompletas": [
@@ -985,10 +1017,11 @@
         34,
         41,
         42,
-        51
+        51,
+        52
       ],
       "nivel": "muy alto — es el eje central del newsletter",
-      "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31. La 41 lo trae por Sadin y el reflejo de apretar aceptar sin leer; la 42 por el caso Brett, que deja la IA tras 18 meses porque dejó de entender su propio sistema. La 51 lo lleva a la vegetalización de Sadin y las sillas de WALL-E."
+      "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31. La 41 lo trae por Sadin y el reflejo de apretar aceptar sin leer; la 42 por el caso Brett, que deja la IA tras 18 meses porque dejó de entender su propio sistema. La 51 lo lleva a la vegetalización de Sadin y las sillas de WALL-E. La 52 le da una vuelta: buena parte de lo que se llamaba criterio era reconocimiento de patrones, y eso sí se automatiza."
     },
     {
       "grupo": "Vender criterio, no tiempo",
@@ -1064,20 +1097,22 @@
         45,
         47,
         49,
-        50
+        50,
+        52
       ],
       "nivel": "alto",
-      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias. La 44 lo aterriza en el registro de agentes; la 45 advierte que dejarle al humano solo la firma es 'teatro de gobernanza'. La 47 lo lleva al usuario de negocio que tiene que firmar un número que no puede auditar; la 49 advierte que dejarle solo la corrección es degradación, no gobernanza. La 50 lo cierra con 'quién pierde el sábado cuando sale mal'."
+      "detalle": "Eje que se está consolidando: la 38 lo plantea como mantener y firmar, la 40 como decidir qué agente entra al landscape, la 41 como la autorización que abre la burocracia. Las tres terminan en que un agente puede ejecutar pero no hacerse cargo de las consecuencias. La 44 lo aterriza en el registro de agentes; la 45 advierte que dejarle al humano solo la firma es 'teatro de gobernanza'. La 47 lo lleva al usuario de negocio que tiene que firmar un número que no puede auditar; la 49 advierte que dejarle solo la corrección es degradación, no gobernanza. La 50 lo cierra con 'quién pierde el sábado cuando sale mal'. La 52 lo reduce a una frase ('un agente te puede decir que la nota aplica; no lo pueden echar por cuándo la aplicás') y enseguida admite que ese resto se achica."
     },
     {
       "grupo": "El que sabe por qué está ese campo en la tabla",
       "ediciones": [
         42,
         45,
-        48
+        48,
+        53
       ],
       "nivel": "alto — la imagen se repite casi textual con tres semanas de distancia",
-      "detalle": "La 42 construye toda la edición sobre el campo que una sola persona sabe explicar. La 45 reusa la imagen ('el que sabe por qué está ese campo ahí, por qué ese proceso tiene un paso que parece de más') para definir al senior que sí sobrevive. Es continuidad deliberada, pero la formulación es casi idéntica. La 48 le da vuelta el argumento: ese conocimiento exclusivo también es una jaula."
+      "detalle": "La 42 construye toda la edición sobre el campo que una sola persona sabe explicar. La 45 reusa la imagen ('el que sabe por qué está ese campo ahí, por qué ese proceso tiene un paso que parece de más') para definir al senior que sí sobrevive. Es continuidad deliberada, pero la formulación es casi idéntica. La 48 le da vuelta el argumento: ese conocimiento exclusivo también es una jaula. La 53 vuelve al mismo personaje como 'muro demográfico' (les quedan entre cinco y quince años) y repite el argumento de la 45: sin juniors rompiendo cosas en DEV, ese contexto no se fabrica."
     },
     {
       "grupo": "Lo que funciona en la demo miente en producción",

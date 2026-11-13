@@ -40,7 +40,7 @@ const personSchema = {
 const entryPoints = [
   {
     title: NEWSLETTER.name,
-    desc: "51 ediciones sobre enterprise e IA, escritas desde adentro de la máquina. El archivo completo, en español y en inglés.",
+    desc: "53 ediciones sobre enterprise e IA, escritas desde adentro de la máquina. El archivo completo, en español y en inglés.",
     cta: "Leer el archivo",
     href: "/blog",
     external: false,

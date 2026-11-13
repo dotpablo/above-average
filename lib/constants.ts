@@ -23,7 +23,7 @@ export const SITE = {
 export const NEWSLETTER = {
   name: "In Production",
   tagline:
-    "Lo que pasa de verdad con la IA adentro de las empresas grandes, escrito por alguien que estuvo adentro implementándola. 51 ediciones, en español y en inglés. Sin humo, sin hype, sin vender nada.",
+    "Lo que pasa de verdad con la IA adentro de las empresas grandes, escrito por alguien que estuvo adentro implementándola. 53 ediciones, en español y en inglés. Sin humo, sin hype, sin vender nada.",
 };
 
 /**

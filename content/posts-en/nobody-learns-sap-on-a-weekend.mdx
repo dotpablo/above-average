@@ -1,0 +1,60 @@
+---
+title: "Nobody learns SAP on a weekend"
+date: "2026-11-10"
+description: "On the quiet death of the ABAP Developer Trial, SAP's €1B bet on tabular AI and task-mapping, and what happens when the entry ramps close."
+source: "linkedin"
+category: "Enterprise & AI Survival"
+originalSlug: "nadie-aprende-sap-en-un-fin-de-semana"
+---
+
+## Where the context actually came from
+
+Nobody enters the SAP ecosystem the way people learn Python or React. You didn't download SAP on a college laptop and play around over the weekend.
+
+Most of us got in because a consulting firm or an enterprise IT department took a bet, handed us credentials to a shared IDES box or a client's DEV client, and let us loose. You learned by cloning a terrible Z report, putting a SELECT inside a LOOP, triggering a TIME_OUT dump in ST22, and spending four hours figuring out how to fix it before the transport moved to QA. It was messy, and somebody had to absorb the cost of your mistakes, which is exactly how you built real system intuition.
+
+Today, both halves of that equation are disappearing at the same time.
+
+First, the sandbox for experimenting on your own is gone. On the Friday right after TechEd Berlin, SAP quietly killed the ABAP Cloud Developer Trial (both the Docker image and the CAL template). If you wanted to test something outside a client's landscape without begging Basis for authorizations or paying for cloud credits, that was your only free local option. Now the official answer is the BTP free tier: 90 days, shared, and strictly locked down to ABAP Cloud.
+
+Second, look at what SAP is buying while they lock down the environment.
+
+## Three moves in the same quarter (follow the money...)
+
+In July, SAP committed over a billion euros to Prior Labs, an eighteen-month-old company building foundation models that reason over tables and structured ERP data rather than text. In October, they acquired TechWolf, which maps the tasks people actually perform by reading system footprints, tickets, and code instead of relying on HR job descriptions.
+
+Put those two together and you get an engine that understands enterprise tables paired with an exact map of which human tasks are repetitive enough to automate.
+
+If you ask me, this sounds like a roadmap.
+
+> That is the Autonomous Enterprise strategy Christian Klein has been talking about for two years, with the pieces finally bought rather than described.
+
+I want to be careful here, because the conspiracy version of this writes itself and I don't think it's accurate. Shutting down a free Docker image probably has a dull corporate explanation: it costs money to maintain, and SAP wants everyone forced into BTP and Clean Core.
+
+So I'll leave the intent alone. The combined effect is what matters here...
+
+## The demographic wall
+
+Walk into any large SAP project room and look at the age distribution. The people who actually understand why an enterprise process behaves the way it does, where the standard tables lie, why a BAPI fails silently, how a finance posting really hits the ledger, have somewhere between five and fifteen years left in the profession.
+
+Historically, that deep context was passed down because firms hired juniors, put them next to seniors on real landscapes, and let them break things in DEV until they understood the plumbing.
+
+Now, consulting firms are shrinking their junior intake because agents are supposed to handle entry-level work, and SAP is replacing open sandboxes with ninety-day guided cloud trials. Ninety days of restricted ABAP Cloud is a product demo or maybe a POC. It isn't a place where you learn how an ERP actually breathes.
+
+## How I'm reading this (right now)
+
+Every few months a new wave of tech commentary predicts that AI agents will kill traditional ERPs and make SAP obsolete. I don't buy it.
+
+Look at the acquisitions and the numbers: SAP isn't waiting to be replaced by AI; it is repositioning itself to sell hands-free enterprise operations.
+
+The Autonomous Enterprise pitch is simple: instead of selling you software and requiring you to hire an army of people to run it, SAP wants to sell you a self-driving system managed by agents. Whether that makes SAP an AI company, a traditional ERP vendor, or a strange hybrid of both is still an open question that we can discuss in the comments.
+
+What isn't an open question is what happens to the people working inside it.
+
+Under RISE, classic Basis work and repetitive ABAP are gradually being swallowed by the platform, which mimics what's happening outside SAP's bubble. At the same time, the entry ramps for new talent are closing, which means those of us with ten to twenty-five years of real system context are becoming more scarce for a window of time, not less.
+
+The mistake is spending that window looking backward. If SAP is turning into a hybrid of enterprise core and autonomous agents, the only logical move is to get as close to the AI layer as possible right now (unless your dream is to become an artisan of the SPRO or the ABAPer who programs ALVs by hand, and yes using the keyboard). Stop hoarding legacy tricks from ECC 6.0 and start understanding how models actually reason, how agents are orchestrated, how token economics work, and how to expose clean ERP context so those agents don't hallucinate over twenty years of custom code.
+
+SAP isn't disappearing (just crossed the €10 billion quarterly revenue milestone for the first time in its history). It's changing what it sells. We should probably do the same if we want to stay in the same game (if we still have a position in this mutating lineup)...
+
+Pablo

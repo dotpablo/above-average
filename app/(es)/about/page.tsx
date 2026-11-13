@@ -90,7 +90,7 @@ export default function AboutPage() {
             El filósofo Éric Sadin habla de la <em>vegetalización de la humanidad</em>: delegar tanta agencia cognitiva a los algoritmos que terminamos siendo nodos pasivos del sistema, no agentes. Lo veo todos los días en el mundo corporativo: gente que copia prompts sin entender lo que ejecuta, managers que creen que Copilot reemplaza el criterio, juniors que no saben debuggear porque nunca aprendieron el error de raíz.
           </p>
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
-            Contra eso escribí 51 ediciones: qué está pasando de verdad con la IA adentro de las empresas grandes, sin humo y sin hype. Eso es <strong className="text-neutral-200">{NEWSLETTER.name}</strong>, y queda publicado entero.
+            Contra eso escribí 53 ediciones: qué está pasando de verdad con la IA adentro de las empresas grandes, sin humo y sin hype. Eso es <strong className="text-neutral-200">{NEWSLETTER.name}</strong>, y queda publicado entero.
           </p>
           <p className="text-base leading-relaxed text-neutral-400 tracking-[-0.01em]">
             <strong className="text-neutral-200">Above Average</strong> es otra cosa: el sistema al que fui llegando por el camino, y el libro en el que lo estoy escribiendo. Tres capas — el kernel biológico (el cuerpo en forma), las extensiones técnicas (IA, SAP, arquitectura) y la soberanía cognitiva (juicio propio que ninguna IA puede reemplazar). La v1.0 está publicada y es gratuita, en <a href="/recursos/above-average-os" className="text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors">Recursos</a>.
