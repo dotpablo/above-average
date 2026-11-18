@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import Link from "next/link";
+import { KofiButton } from "@/components/kofi-button";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 
@@ -103,6 +104,9 @@ export default function RecursosPage() {
         </section>
       </FadeIn>
 
+      <FadeIn>
+        <KofiButton que="Todo lo de esta página es gratis" />
+      </FadeIn>
     </div>
   );
 }

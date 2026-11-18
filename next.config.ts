@@ -24,6 +24,8 @@ const nextConfig: NextConfig = {
       { source: "/garmin/zonas", destination: "/recursos/garmin/zonas", permanent: false },
       // Link de la bio para la guía de maratones.
       { source: "/maratones", destination: "/recursos/garmin/maratones", permanent: false },
+      // Link de la bio para la guía del bot de Telegram.
+      { source: "/bot", destination: "/recursos/garmin/bot", permanent: false },
       // /media paso a llamarse /charlas. La URL vieja esta indexada.
       { source: "/media", destination: "/charlas", permanent: true },
       // /newsletter y /blog hacian lo mismo: las dos listaban el archivo

@@ -11,6 +11,7 @@ export const SITE = {
     linkedin: "https://www.linkedin.com/in/pablomarichal/",
     youtube: "https://www.youtube.com/channel/UCdN9d7T7HZ6Pqmf0nGn8Ngg",
     instagram: "https://www.instagram.com/pablomarichal_",
+    kofi: "https://ko-fi.com/D6B42AVYDK",
     instagramCooking: "https://www.instagram.com/pablo_cocinando/",
     tiktok: "https://www.tiktok.com/@pablomarichal_",
     threads: "https://www.threads.net/@pablomarichal_",
@@ -35,4 +36,6 @@ export const NEWSLETTER = {
 export const KIT = {
   garminFormId: "10134124",
   maratonesFormId: "10139453",
+  // Formulario "garminbot" (tag garminbot). Formulario nuevo de noviembre 2026.
+  botFormId: "10209183",
 };

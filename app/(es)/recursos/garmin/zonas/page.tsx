@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { KIT, SITE } from "@/lib/constants";
 import { KitForm } from "@/components/kit-form";
+import { KofiButton } from "@/components/kofi-button";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerChildren, StaggerItem } from "@/components/motion/stagger-children";
 
@@ -147,6 +148,10 @@ export default function GarminPage() {
             <KitForm formId={KIT.garminFormId} cta="Quiero la guía" />
           </div>
         </section>
+      </FadeIn>
+
+      <FadeIn>
+        <KofiButton />
       </FadeIn>
     </div>
   );

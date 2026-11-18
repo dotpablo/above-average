@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/recursos/garmin",
     "/recursos/garmin/zonas",
     "/recursos/garmin/maratones",
+    "/recursos/garmin/bot",
   ].map((p) => ({
     url: `${SITE.url}${p}`,
     lastModified: ahora,
