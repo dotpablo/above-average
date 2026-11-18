@@ -1,6 +1,6 @@
 # Índice de ediciones — Above Average
 
-Newsletter de Pablo Marichal. 53 ediciones publicadas, de la más reciente a la más antigua.
+Newsletter de Pablo Marichal. 54 ediciones publicadas, de la más reciente a la más antigua.
 
 **Fuente:** `content/posts/*.mdx`
 **Criterio de inclusión:** posts en español desde el lanzamiento del newsletter (2025-10-26). Se excluyen las 3 traducciones al inglés que viven en `content/posts/`, todo `content/posts-en/` y el archivo histórico de LinkedIn/Substack anterior a esa fecha.
@@ -8,6 +8,7 @@ Newsletter de Pablo Marichal. 53 ediciones publicadas, de la más reciente a la 
 
 | Ed. | Fecha | Título | Pilar | Tesis | Slug |
 |---:|---|---|---|---|---|
+| 54 | 2026-11-17 | Nadie te pidió que sepas eso | Enterprise & AI Survival | Lo que no se puede especificar corre sobre cosas que nadie te pidió aprender: seguí aprendiéndolas. | `nadie-te-pidio-que-sepas-eso` |
 | 53 | 2026-11-10 | Nadie aprende SAP en un fin de semana | Enterprise & AI Survival | SAP no desaparece: cambia lo que vende, mientras se cierran las rampas de entrada para el talento nuevo. | `nadie-aprende-sap-en-un-fin-de-semana` |
 | 52 | 2026-11-03 | Un 9.9 cae un martes | Enterprise & AI Survival | «El criterio no se automatiza» no es una frazada: es un perímetro que se achica. | `un-9-9-cae-un-martes` |
 | 51 | 2026-10-27 | La deuda técnica es solo una lista de cosas que nadie iba a revisar | Enterprise & AI Survival | La deuda técnica no desaparece con tests generados por IA: consigue un mejor rastro de papeles. | `la-deuda-tecnica-es-una-lista-de-cosas-que-nadie-iba-a-revisar` |
@@ -68,12 +69,12 @@ Newsletter de Pablo Marichal. 53 ediciones publicadas, de la más reciente a la 
 
 | Pilar | Ediciones | % |
 |---|---:|---:|
-| Enterprise & AI Survival | 34 | 64% |
+| Enterprise & AI Survival | 35 | 65% |
 | Full Stack Human | 14 | 26% |
-| Builder Mindset | 4 | 8% |
+| Builder Mindset | 4 | 7% |
 | Biological Clean Core | 1 | 2% |
 
-El pilar biológico está prácticamente sin cubrir: una sola edición en 53 (la 7). La 36 podría contarse como segunda si se reclasifica.
+El pilar biológico está prácticamente sin cubrir: una sola edición en 54 (la 7). La 36 podría contarse como segunda si se reclasifica.
 
 Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real sobre `indice-completo.json` era 23. Corregido acá.
 
@@ -83,7 +84,7 @@ Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real s
 
 | Grupo | Ediciones | Nivel |
 |---|---|---|
-| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34, 41, 42, 51, 52 | Muy alto — es el eje del newsletter; la 52 admite que parte de ese criterio era reconocimiento de patrones |
+| Delegar el criterio a la IA te atrofia | 8, 19, 21, 22, 24, 31, 34, 41, 42, 51, 52, 54 | Muy alto — es el eje del newsletter; la 52 admite que parte de ese criterio era reconocimiento de patrones |
 | Vender criterio, no tiempo | 16, 17, 20, 40, 45 | Muy alto — párrafo repetido casi textual entre la 16 y la 17 |
 | Las 3 reglas del Operador | 27, 28, 29 | Muy alto — misma lista tres semanas seguidas |
 | Sistemas vs. motivación / metas | 3, 6, 9 | Alto — la 3 y la 9 usan el mismo dato de Strava |
@@ -98,6 +99,7 @@ Nota: la tabla anterior contaba 24 en Enterprise & AI Survival; el conteo real s
 | La fricción como filtro, no como burocracia | 44, 46, 47, 51 | Alto — las tres primeras citan la licencia de veinte dólares; la 51 pide «menos compuertas que atrapen algo real» |
 | Lo que funciona en la demo miente en producción | 32, 35, 43 | Medio-alto — la 43 es el caso propio |
 | Homero en la planta nuclear como cierre | 50, 51 | Medio — estilístico, en dos ediciones consecutivas |
+| Lo automatizado era lo que tenía especificación | 52, 54 | **Muy alto — mismos ejemplos (el dump, la matriz de aplicabilidad) con dos semanas de distancia** |
 
 Detalle completo en `indice-completo.json`.
 
@@ -135,6 +137,7 @@ Si en ese hueco hubo una edición que no está en el repo, **todos los números 
 - **Ed. 23:** el gráfico de adopción de IA se atribuye solo a «lo vi en LinkedIn».
 - **Ed. 24:** sin sección de referencias; las fuentes se reconstruyeron del cuerpo.
 - **Ed. 50:** las dos notas de SAP Connect 2026 se citan solo por título, sin medio ni link.
+- **Ed. 54:** la única fuente (Christian Klein en el Australian Financial Review, junio 2026) va sin título ni link.
 - **Ed. 51:** la entrevista a Paul Hardy se cita como «SAPinsider» sin título ni link; el CVSS 9.9 de los Patch Days y la idea de Éric Sadin, sin fuente.
 
 ### 4. Contenido perdido en la migración desde LinkedIn

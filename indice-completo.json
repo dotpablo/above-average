@@ -11,9 +11,22 @@
       "the-death-of-the-man-hour-are-you-paid-for-your-time-or-your-token-budget"
     ],
     "nota_numeracion": "Ningún archivo trae el número de edición en el frontmatter. La numeración es secuencial por fecha desde 2025-10-26 = 1. Se corrobora con la edición del 2026-01-06, que dice 'If you have been reading me for the past 11 weeks' y cae exactamente en la posición 11.",
-    "total_ediciones": 53
+    "total_ediciones": 54
   },
   "ediciones": [
+    {
+      "edicion": 54,
+      "fecha": "2026-11-17",
+      "titulo": "Nadie te pidió que sepas eso",
+      "slug": "nadie-te-pidio-que-sepas-eso",
+      "pilar": "Enterprise & AI Survival",
+      "tesis": "Lo que no se puede especificar corre sobre cosas que nadie te pidió aprender: seguí aprendiéndolas.",
+      "temas": "especificación, certificaciones, visión periférica, christian klein, australian financial review, management, empatía, da vinci",
+      "fuentes_clave": [
+        "Australian Financial Review — entrevista a Christian Klein, junio 2026"
+      ],
+      "enlaza_a": []
+    },
     {
       "edicion": 53,
       "fecha": "2026-11-10",
@@ -900,6 +913,10 @@
     ],
     "fuentes_incompletas": [
       {
+        "edicion": 54,
+        "detalle": "Única fuente: la entrevista de Christian Klein al Australian Financial Review (junio 2026), citada sin título ni link. Sin sección de referencias."
+      },
+      {
         "edicion": 50,
         "detalle": "Las dos notas de SAP Connect 2026 se citan solo por título, sin medio ni link."
       },
@@ -1018,7 +1035,8 @@
         41,
         42,
         51,
-        52
+        52,
+        54
       ],
       "nivel": "muy alto — es el eje central del newsletter",
       "detalle": "Siete ediciones defienden la misma idea desde ángulos distintos: piedra filosofal (8), DKaaS (19), silla de ruedas vs. exoesqueleto (21 y 22), multiplicador por cero (24), delegación vs. rendición cognitiva (31) y la versión institucional (34). El framing 'silla de ruedas o exoesqueleto' aparece literal en la 21 y la 22 (semanas consecutivas). El meme 'el tipo más tonto que conocés está siendo felicitado por una IA' se cita en la 19 y en la 31. La 41 lo trae por Sadin y el reflejo de apretar aceptar sin leer; la 42 por el caso Brett, que deja la IA tras 18 meses porque dejó de entender su propio sistema. La 51 lo lleva a la vegetalización de Sadin y las sillas de WALL-E. La 52 le da una vuelta: buena parte de lo que se llamaba criterio era reconocimiento de patrones, y eso sí se automatiza."
@@ -1143,6 +1161,15 @@
       ],
       "nivel": "medio",
       "detalle": "Dos ediciones consecutivas usan a Homero en la planta nuclear (el pájaro bebedor en la 50, 'pulling a Homer' en la 51) para la misma idea: el humano que no mira. Estilístico más que temático, pero se nota leídas seguidas."
+    },
+    {
+      "grupo": "Lo automatizado era lo que tenía especificación / el criterio era reconocimiento de patrones",
+      "ediciones": [
+        52,
+        54
+      ],
+      "nivel": "muy alto — mismos ejemplos con dos semanas de distancia",
+      "detalle": "La 52 y la 54 hacen la misma concesión con los mismos ejemplos: leer un dump y saber dónde mirar, averiguar si una corrección aplica (la matriz de aplicabilidad 'que resultó ser un reporte'). La 54 lo cita casi textual ('five years ago I'd have sworn the applicability analysis was pure judgement, and it turned out to be a report') y avanza: lo que queda es la parte donde la especificación está mal, y se sostiene aprendiendo lo que nadie te pide."
     }
   ]
 }
